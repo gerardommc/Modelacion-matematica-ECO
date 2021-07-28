@@ -1,0 +1,13 @@
+---
+title: "Modelos Matemáticos en Ecología I"
+description: "Licenciatura en Ecología"
+author: "Gerardo Martín"
+output:
+   prettydoc::html_pretty:
+      theme: architect
+      highlight: github
+---
+
+# Sobre este curso
+
+El curso **Modelos matemáticos en ecología** es...
