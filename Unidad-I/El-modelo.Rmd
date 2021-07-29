@@ -1,0 +1,9 @@
+Imaginemos a seis personas invidentes, con la tarea de encontrar qué es el objeto que está frente a ellas usando únicamente el tacto. En la parábola de los seis hombres ciegos, el objeto es un elefante, de modo que la imágen que cada uno de ellos se forma del objeto depende enteramente de la parte del elefante que están tocando.
+
+```{r echo =FALSE, fig.align='center', fig.cap="La parábola de los seis hombres ciegos inspeccionando un elefante.", fig.dim="40%"}
+knitr::include_graphics("Unidad-I/elefante.png")
+```
+
+Quien toque los colmillos podrá pensar que se trata de una lanza, la trompa podría tratarse de una serpiente, la cola de una cuerda. Es evidente que todas las hipótesis presentadas después de la inspección fueron erróneas, y que cuando estudiamos al mundo lo haremos igual, con la descripción de tan sólo una fracción de éste. Al igual que los ciegos, no sabremos que estmos frente a un elefante, aunque en nuestro caso, en ecología, estudiaremos a un sistema. El elefante, está compuesto de sus partes (orejas, cola, extremidades, piezas dentales) las cuales están conectadas y hacer que el elefante funcione como uno solo, los sistemas ecológicos también tienen componentes interconectados. Así llegamos a la definición de sistema, el objeto de estudio de la ecología, y las matemáticas, son una manera de representarlos
+
+Los hombres ciegos de la parábola, enombraron una hipótesis sobre la identidad del objeto basados en sus experiencias de vida. Los modelos matemáticos entonces, representan hipótesis sobre cómo creemos que los sistemas ecológicos funcionan. Podemos entonces ver que al igual que los ciegos, si sólo nos enfocamos en un aspecto aislado del sistema de estudio, es muy probable que nuestra hipótesis sean erróneas.

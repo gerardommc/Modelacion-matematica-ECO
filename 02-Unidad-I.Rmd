@@ -1,0 +1,25 @@
+# Unidad I: Introducción a la modelación
+
+## Introducción al concepto de modelo matemático
+
+```{r echo = F, child="Unidad-I/El-modelo.Rmd"}
+
+```
+
+## Cómo construir un modelo
+
+## Discusión sobre las distintas herramientas matemáticas empleadas en la modelación matemática
+## Uso de los modelos matemáticos en ecología
+## Tipos de modelos en ecología
+
+### Modelos deterministas (generalidades)
+      
+### Modelos estocásticos (generalidades)
+
+
+
+## Funciones complementarias y su representación en dos y tres dimensiones
+
+## La línea recta como modelo “universal”
+
+## Modelación de sistemas sociales y ambientales
