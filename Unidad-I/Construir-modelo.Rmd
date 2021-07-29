@@ -1,0 +1,11 @@
+¿Cómo se construye un modelo? Es una pregunta difícil de responder, pues difícilmente existe un sólo modo de hacerlo que funcione para tod@s. Aquí voy a hablar de mi propia experiencia, y cómo aprendí a utilizar las matemáticas y estadística para entender los sistemas ecológicos. Los pasos generales que sigo son:
+
+1. Identificar el sistema y sus componentes
+2. Crear un modelo conceptual, haciendo dibujos
+3. Identificar las herramientas matemáticas disponibles para representar el modelo conceptual
+4. Establecer objetivos claros y alcanzables
+5. Proponer una serie de modelos alternativos
+6. Determinar una estrategia para seleccionar uno solo de los modelos que propuse para logar el objetivo
+
+La estrategia general que les doy puede, por el momento, sonar un tanto abstracta, pero la iremos poniendo en práctica conforme avanza el curso para que al final, esperemos, tenga más sentido que ahorita.
+

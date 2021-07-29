@@ -1,4 +1,4 @@
-fig:unnamed-chunk-3
+fig:unnamed-chunk-5
 sobre-este-curso
 criterios-de-evaluación
 unidad-i-introducción-a-la-modelación
@@ -9,9 +9,6 @@ uso-de-los-modelos-matemáticos-en-ecología
 tipos-de-modelos-en-ecología
 modelos-deterministas-generalidades
 modelos-estocásticos-generalidades
-funciones-complementarias-y-su-representación-en-dos-y-tres-dimensiones
-la-línea-recta-como-modelo-universal
-modelación-de-sistemas-sociales-y-ambientales
 methods
 applications
 example-one

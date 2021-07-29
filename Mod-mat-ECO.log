@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded format=xelatex 2021.6.30)  29 JUL 2021 11:26
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded format=xelatex 2021.6.30)  29 JUL 2021 13:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -830,28 +830,23 @@ Overfull \hbox (515.47562pt too wide) in paragraph at lines 121--122
 
 LaTeX Warning: Float too large for page by 24.05469pt on input line 126.
 
-
-Underfull \hbox (badness 3039) in paragraph at lines 151--151
-[]\TU/lmr/bx/n/14.4 Funciones complementarias y su repre-
- []
-
-[9] [10] [11] [12
-
-]
+[9] [10] [11] [12]
 Chapter 4.
-[13] [14
+[13
+
+] [14
 
 ]
 Chapter 5.
 No file Mod-mat-ECO.bbl.
 [15] (./Mod-mat-ECO.aux) ) 
 Here is how much of TeX's memory you used:
- 18378 strings out of 477220
- 322228 string characters out of 5832722
- 803412 words of memory out of 5000000
- 37810 multiletter control sequences out of 15000+600000
+ 18373 strings out of 477220
+ 322060 string characters out of 5832722
+ 804316 words of memory out of 5000000
+ 37805 multiletter control sequences out of 15000+600000
  409881 words of font info for 80 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 98i,6n,122p,840b,360s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 98i,6n,122p,711b,376s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on Mod-mat-ECO.pdf (15 pages).
