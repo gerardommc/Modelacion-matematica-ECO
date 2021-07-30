@@ -1,6 +1,6 @@
 Imaginemos a seis personas invidentes, con la tarea de encontrar qué es el objeto que está frente a ellas usando únicamente el tacto. En la parábola de los seis hombres ciegos, el objeto es un elefante, de modo que la imágen que cada uno de ellos se forma del objeto depende enteramente de la parte del elefante que están tocando.
 
-```{r echo =FALSE, fig.align='center', fig.cap="La parábola de los seis hombres ciegos inspeccionando un elefante.", fig.dim="40%"}
+```{r echo =FALSE, fig.align='center', fig.cap="La parábola de los seis hombres ciegos inspeccionando un elefante.", fig.width=4}
 knitr::include_graphics("Unidad-I/elefante.png")
 ```
 

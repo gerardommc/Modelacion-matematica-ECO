@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded format=xelatex 2021.6.30)  29 JUL 2021 13:00
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded format=xelatex 2021.6.30)  30 JUL 2021 17:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -778,23 +778,23 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 
 ] (./Mod-mat-ECO.toc
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 4.
+(Font)              scaled to size 7.0pt on input line 3.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 4.
+(Font)              scaled to size 5.0pt on input line 3.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00092pt on input line 4.
+(Font)              scaled to size 10.00092pt on input line 3.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.00064pt on input line 4.
+(Font)              scaled to size 7.00064pt on input line 3.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00046pt on input line 4.
+(Font)              scaled to size 5.00046pt on input line 3.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 4.
+(Font)              scaled to size 9.99893pt on input line 3.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 4.
+(Font)              scaled to size 6.99925pt on input line 3.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 4.
+(Font)              scaled to size 4.99947pt on input line 3.
 
-Underfull \hbox (badness 1107) in paragraph at lines 6--6
+Underfull \hbox (badness 1107) in paragraph at lines 11--11
  [][] [][]\TU/lmr/m/n/10 Discusión sobre las distintas herramientas matemáticas
  em- 
  []
@@ -811,42 +811,48 @@ Chapter 1.
 
 ]
 Chapter 2.
-[7] [8
-
-]
+[7] [8]
 Chapter 3.
 
-Overfull \hbox (22.9343pt too wide) in paragraph at lines 115--115
+Overfull \hbox (22.9343pt too wide) in paragraph at lines 152--152
 []\TU/lmr/bx/n/14.4 Introducción al concepto de modelo matemático 
  []
 
 File: Unidad-I/elefante.png Graphic file (type bmp)
 <Unidad-I/elefante.png>
 
-Overfull \hbox (515.47562pt too wide) in paragraph at lines 121--122
+Overfull \hbox (515.47562pt too wide) in paragraph at lines 158--159
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 24.05469pt on input line 126.
+LaTeX Warning: Float too large for page by 24.05469pt on input line 163.
 
-[9] [10] [11] [12]
+[9
+
+] [10]
+File: Unidad-I/Diagrama-dearrollo.pdf Graphic file (type pdf)
+<use Unidad-I/Diagrama-dearrollo.pdf>
+
+LaTeX Warning: Float too large for page by 24.07199pt on input line 200.
+
+[11] [12] [13] [14
+
+]
 Chapter 4.
-[13
-
-] [14
+[15] [16
 
 ]
 Chapter 5.
 No file Mod-mat-ECO.bbl.
-[15] (./Mod-mat-ECO.aux) ) 
+[17] (./Mod-mat-ECO.aux) ) 
 Here is how much of TeX's memory you used:
- 18373 strings out of 477220
- 322060 string characters out of 5832722
- 804316 words of memory out of 5000000
- 37805 multiletter control sequences out of 15000+600000
+ 18390 strings out of 477220
+ 322434 string characters out of 5832722
+ 804616 words of memory out of 5000000
+ 37821 multiletter control sequences out of 15000+600000
  409881 words of font info for 80 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 98i,6n,122p,711b,376s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 98i,6n,122p,711b,398s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Mod-mat-ECO.pdf (15 pages).
+Output written on Mod-mat-ECO.pdf (17 pages).

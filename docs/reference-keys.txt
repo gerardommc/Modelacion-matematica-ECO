@@ -1,9 +1,15 @@
 fig:unnamed-chunk-5
+fig:unnamed-chunk-6
 sobre-este-curso
+encuadre-de-la-materia
 criterios-de-evaluación
+cómo-se-darán-las-clases
+reglas-del-salón
+contacto
 unidad-i-introducción-a-la-modelación
 introducción-al-concepto-de-modelo-matemático
 cómo-construir-un-modelo
+ejemplos
 discusión-sobre-las-distintas-herramientas-matemáticas-empleadas-en-la-modelación-matemática
 uso-de-los-modelos-matemáticos-en-ecología
 tipos-de-modelos-en-ecología

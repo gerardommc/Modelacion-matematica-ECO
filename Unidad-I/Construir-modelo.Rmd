@@ -7,5 +7,21 @@
 5. Proponer una serie de modelos alternativos
 6. Determinar una estrategia para seleccionar uno solo de los modelos que propuse para logar el objetivo
 
+```{r echo = F, fig.width=5, fig.cap = " Diagrama de mi estrategia para desarrollar modelos.", fig.align='center'}
+knitr::include_graphics("Unidad-I/Diagrama-dearrollo.png")
+```
+
 La estrategia general que les doy puede, por el momento, sonar un tanto abstracta, pero la iremos poniendo en práctica conforme avanza el curso para que al final, esperemos, tenga más sentido que ahorita.
+
+### Ejemplos
+
+La presente pandemia ha puesto en boca de todxs muchos aspectos de la modelación matemática y estadística. Como es de esperarse, los modelos son distintos dependiendo del objetido que se quiera conseguir con ellos:
+
+1. Determinar el número reproductivo básico ($R_0$) de COVID-19
+2. Predecir la ocupación hospitalaria ante ciertas medidas  de restricción de movilidad
+3. Estimar cómo cambiaría el número reproductivo básico ante ciertas medidas de restricción
+4. Predecir localidades geográficas donde surgirán nuevas cepas
+5. Predecir las cualidades infecciosas o virulentas de las nuevas cepas
+
+Todos estos objetivos puede de cierta manera conseguirse por medio de modelos matemáticos, todos ellos con modelos muy distintos, algunos con herramientas muy diferentes unos de otros.
 
