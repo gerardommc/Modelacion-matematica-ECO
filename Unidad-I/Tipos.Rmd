@@ -1,0 +1,46 @@
+La clasificación de los modelos depende de la herramienta que se utiliza para desarrollarlos. En la sección "Cómo construir un modelo", mencioné brevemente que uno de los pasos es la formulación de un modelo "conceptual", en forma de un esquema o diagrama. Esta clasificación la podemos ampliar un poco:
+
+1. **Modelo conceptual o verbal**. Descripciones en lenguaje natural.
+2. **Diagramático**. Representación gráfica (diagramas de flujo o cajas).
+3. **Físico**. Representación a escala de sistema (sistemas hidráulicos).
+4. **Formal**. Matemático (algebráico o sistemas de ecuaciones).
+
+Aquí nos centraremos en ver a mayor profundidad los modelos formales, en clasificar los modelos matemáticos. @haefner1998modeling sugiere la siguiente clave dicotómica de clasificación:
+
+1. **¿Las matemáticas representan de manera explícita el proceso de interés?**
+
+    1.1. **Sí**: Modelo mecanístico
+    
+    1.2. **No**: Modelo descriptivo, fenomenológico
+    
+2. **¿Las matemáticas representan de manera explícita las condiciones del estado futuro del sistem?**
+
+    2.1. **Sí**: Modelo dinámico
+    
+    2.2. **No**: Modelo estático
+    
+3. **¿Las matemáticas representan el tiempo de manera contínua?**
+
+    3.1. **Sí**: Modelo conínuo
+    
+    3.2. **No**: Modelo discreto (el tiempo sólo toma valores enteros, un día, un año)
+
+4. **¿Las matemáticas representan explícitamente el espacio?**
+
+    4.1. **Sí**: Modelo espacialmente heterogéneo
+    
+    4.2. **No**: Modelo espacialmente homogéneo
+    
+5. **¿Las matemáticas permiten la ocurrencia de eventos aleatorios?**
+
+    5.1. **Sí**: Modelo estocástico
+    
+    5.2. **No**: Modelo determinístico
+
+
+
+### Modelos determinisicos (generalidades)
+
+
+      
+### Modelos estocásticos (generalidades)

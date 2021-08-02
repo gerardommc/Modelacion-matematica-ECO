@@ -20,8 +20,14 @@
 
 ## Uso de los modelos matemáticos en ecología
 
-## Tipos de modelos en ecología
+```{r echo = F, child = "Unidad-I/Usos.Rmd"}
 
-### Modelos deterministas (generalidades)
-      
-### Modelos estocásticos (generalidades)
+```
+
+
+## Tipos de modelos
+
+```{r echo = F, child = "Unidad-I/Tipos.Rmd"}
+
+```
+

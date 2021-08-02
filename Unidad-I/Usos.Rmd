@@ -1,0 +1,32 @@
+Como ya mencionamos anteriormente, una alta proporción de las publicaciones académicas en ecología utiliza modelos matemáticos para predecir. Existen sin embargo otros usos de los modelos matemáticos que se pueden describir en términos generales como analíticos, es decir para analizar y entender cómo los diferentes componentes de un sistema afectan su coportamiento. Otras veces, los modelos se utilizan para medir las respuestas del sistema de interés ante perturbaciones, haciendo muchas simulaciones. Veamos una serie de ejemplos de estos diferentes usos de los modelos.
+
+### Analíticos: Dinámicas depredador-presa
+
+En 1928, Vito Volterra [@volterra1928variations] desarrolló un modelo matemático para describir cómo varía el número de individuos de una especie de depredador y una presa. Como ya es conocido, este modelo replica muy bien el comportamiento oscilatorio de ambas poblaciones (Figura \@ref(fig:volterra)).
+
+```{r volterra, echo = F, fig.align='center', fig.cap="Simulación del modelo [Lotka-Volterra](https://scipy-cookbook.readthedocs.io/items/LoktaVolterraTutorial.html)."}
+knitr::include_graphics("Unidad-I/volterra.png")
+```
+
+El comportamiento oscilatorio resulta *obvio* desde una perspectiva biológica: los depredadores no se pueden reproducir a menos que se alimenten de sus presas, pero cuando hay muchos depredadores, estos consumen las presas disminuyendo sus números, resultando en menor potencial reproductivo para el depredador. Pero matemáticamente, ¿qué hace posible estas oscilaciones? Para responder esta pregunta se necesita entender bajo qué condiciones el sistema de ecuaciones que describe el sistema es estable, es decir cuándo los cambios de ambas poblaciones son cero, es decir bajo qué situaciones el sistema como un todo no experimenta cambio alguno. Este análisis matemático tiene un resultado un tanto sorprendente, pues las condiciones bajo las que dicha condición ocurre son un número imaginario, lo que indica que el sistema como tal es inestable, y por lo tanto **siempre** tiende a oscilar. El análisis de matemático de los modelos es en su mayoría netamente simbólico y requiere de buenas bases matemáticas.
+
+### Simulaciones: Dinámica de enfermedades infecciosas
+
+Los sistemas ecológicos pueden ser muy complejos, lo que resulta en sistemas de ecuaciones igualmente complejos con muchas variables de estado y parámetros, y a la vez hace que el análisis sea muy complicado o imposible. En vista de ello se puede entonces *resolver* el modelo utilizando herramientas computacionales. Un ejemplo que me gusta mucho es el estudio de la leptospirosis (infección por bacteria del género *Leptospira*) en ratones *Mastomys* de @holt2006model. Los autores formularon un modelo relativamente simple de ecuaciones diferenciales para ver cómo las constantes de su modelo afectan el número de ratones *Mastomys* y de bacterias *Leptospira* en el ambiente. Ello lo consiguieron aumentando en 10% los valores de cada una de las constantes y midiendo el cambio tras cada simulación.
+
+```{r lepto, echo = F, fig.align='center', fig.cap="Las barras (eje $y$) indican el cambio proporcional de las diferentes cantidades de interés (color de las barras), ante el aumento del valor de cada parámetro (eje $x$), [@holt2006model]."}
+knitr::include_graphics("Unidad-I/lepto.png")
+```
+
+Los análisis de sensibilidad mostrados en la Figura \@ref(fig:lepto) son en realidad una serie de predicciones del sistema. De hecho la predicción generalmente echa mano de modelos matemáticos, así que nos centraremos en resumir: la predicción requiere de la planeación de una serie de escenarios para identificar áreas de intervención (alteración del hábitat por ejemplo) para obtener un resultado favorable de acuerdo con el modelo.
+
+### Mal uso de los modelos
+
+Así como existe un uso adecuado de los modelos, es muy fácil darles un mal uso, generalmente relacionado con la calidad de los datos que los respaldan, el grado de entendimiento del sistema en cuestión, y con la relación entre las herramientas matemáticas utilizadas y la naturaleza del problema. @holling1978adaptive y @karplus1975place, sumarizan los siguientes usos potenciales de los modelos en relación a la calidad de los datos (1-baja calidad, 6-alta calidad):
+
+1. Atención del público
+2. Aprendizaje sobre el sistema
+3. Prueba de teorías
+4. Juegos "qué pasaría si..."
+5. Recomendación de acciones
+6. Diseño de productos

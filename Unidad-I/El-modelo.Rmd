@@ -1,3 +1,7 @@
+Para comenzar a hablar de modelos matemáticos es preciso tener una idea de por qué las matemáticas forman parte de un grado en ciencias naturales. Los autores @otto2011biologist, dan cuenta de qué tan comunes son las matemáticas en la labor del biólogo/ecólogo. Hacia el año 2006, una búsqueda sistemática del material publicado en revistas científicas contentiendo la palabra clave "math" sugiere que había ~900 mil artículos, la mayoría concentrados en revistas especializadas como *Bulletin of Mathematical Biology*, otros en las más prestigiosas *Nature* o *Science*. Una mirada más cercana a las revistas especializadas *Ecology and Evolution* y *American Naturalist* que el 35 y 60% respectivametne de las publicaciones utilizaron algún modelo matemático para mostrar predicciones. En resumen, la labor de un ecólogo requiere del uso frecuente de matemáticas, si no es mediante el desarrollo de algún modelo, requiere de su entendimiento.
+
+### ¿Qué es un modelo?
+
 Imaginemos a seis personas invidentes, con la tarea de encontrar qué es el objeto que está frente a ellas usando únicamente el tacto. En la parábola de los seis hombres ciegos, el objeto es un elefante, de modo que la imágen que cada uno de ellos se forma del objeto depende enteramente de la parte del elefante que están tocando.
 
 ```{r echo =FALSE, fig.align='center', fig.cap="La parábola de los seis hombres ciegos inspeccionando un elefante.", fig.width=4}
@@ -8,5 +12,5 @@ Quien toque los colmillos podrá pensar que se trata de una lanza, la trompa pod
 
 Al estudiar los sistemas ecológicos, al igual que los ciegos, no sabremos que estamos frente a un elefante. Los sistemas ecológicos, al igual que los elefantes, también tienen componentes interconectados, y nosotros los ecólogos somos como los hombres ciegos, sólo podemos observar ciertas partes de los ecosistemas. En nuestro trabajo entonces, aprender a identificar y proponer hipótesis sobre cómo funcionan los sistemas ecológicos. 
 
-Las hipótesis propuestas por los seis hombres representan modelos, es decir simplificaciones del mundo que nos ayudan a entenderlo. Los modelos matemáticos son simplificaciones formales del mundo utilizando otro lenguaje, las matemáticas.
+Las hipótesis propuestas por los seis hombres representan modelos, es decir simplificaciones del mundo que nos ayudan a entenderlo. Los modelos matemáticos son simplificaciones formales del mundo utilizando otro lenguaje, las matemáticas  [@haefner1998modeling].
 
