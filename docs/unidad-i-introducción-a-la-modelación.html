@@ -95,7 +95,7 @@ div.csl-indent {
 <li><a href="./">Modelos Matemáticos en Ecología I</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Sobre este curso</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preámbulo</a></li>
 <li class="chapter" data-level="2" data-path="encuadre-de-la-materia.html"><a href="encuadre-de-la-materia.html"><i class="fa fa-check"></i><b>2</b> Encuadre de la materia</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="encuadre-de-la-materia.html"><a href="encuadre-de-la-materia.html#criterios-de-evaluación"><i class="fa fa-check"></i><b>2.1</b> Criterios de evaluación</a></li>
@@ -122,8 +122,9 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="3.5" data-path="unidad-i-introducción-a-la-modelación.html"><a href="unidad-i-introducción-a-la-modelación.html#tipos-de-modelos"><i class="fa fa-check"></i><b>3.5</b> Tipos de modelos</a>
 <ul>
-<li class="chapter" data-level="3.5.1" data-path="unidad-i-introducción-a-la-modelación.html"><a href="unidad-i-introducción-a-la-modelación.html#modelos-determinisicos-generalidades"><i class="fa fa-check"></i><b>3.5.1</b> Modelos determinisicos (generalidades)</a></li>
-<li class="chapter" data-level="3.5.2" data-path="unidad-i-introducción-a-la-modelación.html"><a href="unidad-i-introducción-a-la-modelación.html#modelos-estocásticos-generalidades"><i class="fa fa-check"></i><b>3.5.2</b> Modelos estocásticos (generalidades)</a></li>
+<li class="chapter" data-level="3.5.1" data-path="unidad-i-introducción-a-la-modelación.html"><a href="unidad-i-introducción-a-la-modelación.html#ejemplos-1"><i class="fa fa-check"></i><b>3.5.1</b> Ejemplos</a></li>
+<li class="chapter" data-level="3.5.2" data-path="unidad-i-introducción-a-la-modelación.html"><a href="unidad-i-introducción-a-la-modelación.html#modelos-determinisicos"><i class="fa fa-check"></i><b>3.5.2</b> Modelos determinisicos</a></li>
+<li class="chapter" data-level="3.5.3" data-path="unidad-i-introducción-a-la-modelación.html"><a href="unidad-i-introducción-a-la-modelación.html#modelos-estocásticos"><i class="fa fa-check"></i><b>3.5.3</b> Modelos estocásticos</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>4</b> Methods</a></li>
@@ -161,7 +162,7 @@ div.csl-indent {
 <div id="qué-es-un-modelo" class="section level3" number="3.1.1">
 <h3><span class="header-section-number">3.1.1</span> ¿Qué es un modelo?</h3>
 <p>Imaginemos a seis personas invidentes, con la tarea de encontrar qué es el objeto que está frente a ellas usando únicamente el tacto. En la parábola de los seis hombres ciegos, el objeto es un elefante, de modo que la imágen que cada uno de ellos se forma del objeto depende enteramente de la parte del elefante que están tocando.</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-7"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-8"></span>
 <img src="Unidad-I/elefante.png" alt="La parábola de los seis hombres ciegos inspeccionando un elefante." width="582" />
 <p class="caption">
 Figure 3.1: La parábola de los seis hombres ciegos inspeccionando un elefante.
@@ -183,7 +184,7 @@ Figure 3.1: La parábola de los seis hombres ciegos inspeccionando un elefante.
 <li>Proponer una serie de modelos alternativos</li>
 <li>Determinar una estrategia para seleccionar uno solo de los modelos que propuse para logar el objetivo</li>
 </ol>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-8"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-9"></span>
 <img src="Unidad-I/Diagrama-dearrollo.png" alt=" Diagrama de mi estrategia para desarrollar modelos." width="306" />
 <p class="caption">
 Figure 3.2:  Diagrama de mi estrategia para desarrollar modelos.
@@ -267,7 +268,7 @@ Figure 3.4: Las barras (eje <span class="math inline">\(y\)</span>) indican el c
 <li><p><strong>¿Las matemáticas representan de manera explícita el proceso de interés?</strong></p>
 <p>1.1. <strong>Sí</strong>: Modelo mecanístico</p>
 <p>1.2. <strong>No</strong>: Modelo descriptivo, fenomenológico</p></li>
-<li><p><strong>¿Las matemáticas representan de manera explícita las condiciones del estado futuro del sistem?</strong></p>
+<li><p><strong>¿Las matemáticas representan de manera explícita las condiciones del estado futuro del sistema?</strong></p>
 <p>2.1. <strong>Sí</strong>: Modelo dinámico</p>
 <p>2.2. <strong>No</strong>: Modelo estático</p></li>
 <li><p><strong>¿Las matemáticas representan el tiempo de manera contínua?</strong></p>
@@ -280,11 +281,30 @@ Figure 3.4: Las barras (eje <span class="math inline">\(y\)</span>) indican el c
 <p>5.1. <strong>Sí</strong>: Modelo estocástico</p>
 <p>5.2. <strong>No</strong>: Modelo determinístico</p></li>
 </ol>
-<div id="modelos-determinisicos-generalidades" class="section level3" number="3.5.1">
-<h3><span class="header-section-number">3.5.1</span> Modelos determinisicos (generalidades)</h3>
+<div id="ejemplos-1" class="section level3" number="3.5.1">
+<h3><span class="header-section-number">3.5.1</span> Ejemplos</h3>
+<div id="modelo-de-presa-depredador-de-el-modelo-de-lotka-volterra--volterra1928variations" class="section level4" number="3.5.1.1">
+<h4><span class="header-section-number">3.5.1.1</span> Modelo de presa-depredador de El modelo de Lotka-Volterra <span class="citation">(<a href="#ref-volterra1928variations" role="doc-biblioref">1928</a>)</span></h4>
+<p>Este modelo representa cómo cambia el número de liebres y linces a través del tiempo con un sistema de ecuaciones diferenciales. El cambio en los números de individuos depdende de</p>
+<ol style="list-style-type: decimal">
+<li>Crecimiento poblacional del depredador en relación a las presas disponibles para que el depredador se alimente</li>
+<li>Crecimiento poblacional innato de las presas</li>
+<li>Mortalidad de presas en relación a la cantidad de depredadores</li>
+<li>Mortalidad innata del depredador</li>
+</ol>
+<p>El modelo entonces representa el mecanismo del sistema, por lo que es un modelo <strong>mecanístico</strong>. Debido a que representa el cambio del número de individuos en el tiempo, es un modelo <strong>dinámico</strong>. Por el momento no contamos con información suficiente para decir si es contínuo o discreto, pero no hay mención del componente espacial, por lo que podemos suponer que se trata de un modelo <strong>espacialmente homogéneo</strong>. La solución al modelo clásico de la figura <a href="unidad-i-introducción-a-la-modelación.html#fig:volterra">3.3</a>, muestra un patrón regular, lo cual se debe a que todos los parámetros son constantes, y por lo tanto es un modelo <strong>determinista</strong>.</p>
 </div>
-<div id="modelos-estocásticos-generalidades" class="section level3" number="3.5.2">
-<h3><span class="header-section-number">3.5.2</span> Modelos estocásticos (generalidades)</h3>
+<div id="modelo-del-panal-de-abejas" class="section level4" number="3.5.1.2">
+<h4><span class="header-section-number">3.5.1.2</span> Modelo del panal de abejas</h4>
+<p><span class="citation">(<a href="#ref-wilensksi2003honey" role="doc-biblioref"><strong>wilensksi2003honey?</strong></a>)</span> desarrolló un modelo para representar cómo las abejas construyen un panal, por medio de una serie de reglas que rigen el comportamiento de abejas individuales. Debido a que el mecanismo está representado en el comportamiento colectivo de las abejas, es un modelo <strong>mecanístico</strong>. El modelo también muestra la progresión de la construcción del panal, por lo que es un modelo <strong>dinámico</strong>, y debido a que cualquiera de los eventos posibles pueden ocurrir en cualquier momento es en tiempo <strong>contínuo</strong>. También representa la estructura del panal en unidades espaciales, por lo que es <strong>espacialmente heterogéneo</strong>. Finalmente, los eventos que ocurren son aleatorios, o sea que el resultado de una realización del modelo será diferente de otra, por lo que es un modelo <strong>estocástico</strong>. Te invito a explorar este modelo por medio de la aplicación en línea de <a href="https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Honeycomb.nlogo">NetLogo</a>.</p>
+<p>A continuación veremos a mayor profundidad los modelos deterministicos y estocásticos.</p>
+</div>
+</div>
+<div id="modelos-determinisicos" class="section level3" number="3.5.2">
+<h3><span class="header-section-number">3.5.2</span> Modelos determinisicos</h3>
+</div>
+<div id="modelos-estocásticos" class="section level3" number="3.5.3">
+<h3><span class="header-section-number">3.5.3</span> Modelos estocásticos</h3>
 
 </div>
 </div>

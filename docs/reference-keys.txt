@@ -1,8 +1,8 @@
-fig:unnamed-chunk-7
 fig:unnamed-chunk-8
+fig:unnamed-chunk-9
 fig:volterra
 fig:lepto
-sobre-este-curso
+preámbulo
 encuadre-de-la-materia
 criterios-de-evaluación
 cómo-se-darán-las-clases
@@ -19,8 +19,11 @@ analíticos-dinámicas-depredador-presa
 simulaciones-dinámica-de-enfermedades-infecciosas
 mal-uso-de-los-modelos
 tipos-de-modelos
-modelos-determinisicos-generalidades
-modelos-estocásticos-generalidades
+ejemplos-1
+modelo-de-presa-depredador-de-el-modelo-de-lotka-volterra--volterra1928variations
+modelo-del-panal-de-abejas
+modelos-determinisicos
+modelos-estocásticos
 methods
 applications
 example-one

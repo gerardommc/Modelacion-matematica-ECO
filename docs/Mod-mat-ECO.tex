@@ -86,8 +86,10 @@
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
-\hypertarget{sobre-este-curso}{%
-\chapter{Sobre este curso}\label{sobre-este-curso}}
+\hypertarget{preuxe1mbulo}{%
+\chapter{Preámbulo}\label{preuxe1mbulo}}
+
+\begin{center}\includegraphics[width=20.83in]{logo} \end{center}
 
 En el curso \textbf{Modelos matemáticos en ecología} aprenderemos a utilizar algunas herramientas matemáticas para entender procesos en ecología. Los contenidos del índice se apegan al \href{Programa-curso.pdf}{programa completo del curso}, el cual se impartirá en los \href{Horario.pdf}{horarios normales establecidos}. Para conocer cuándo, cómo y qué temas se se impartirán puedes consultar la \href{Estrategia-docente.pdf}{estrategia docente}.
 
@@ -164,7 +166,7 @@ Imaginemos a seis personas invidentes, con la tarea de encontrar qué es el obje
 
 }
 
-\caption{La parábola de los seis hombres ciegos inspeccionando un elefante.}\label{fig:unnamed-chunk-7}
+\caption{La parábola de los seis hombres ciegos inspeccionando un elefante.}\label{fig:unnamed-chunk-8}
 \end{figure}
 
 Quien toque los colmillos podrá pensar que se trata de una lanza, la trompa podría tratarse de una serpiente, la cola de una cuerda, las patas troncos de árbol y el cuerpo una pared. Es evidente que todas las hipótesis presentadas después de la inspección fueron erróneas, y que cuando estudiamos al mundo lo haremos igual, con la descripción de tan sólo una fracción de éste. Un séptimo hombre que pregunte a los otros seis qué fue lo que vieron podría formarse una imágen más completa del \emph{sistema} para proponer otra hipótesis: se trata de un objeto grande reposando sobre cuatro columnas con apéndices adelante y atrás.
@@ -201,7 +203,7 @@ Las hipótesis propuestas por los seis hombres representan modelos, es decir sim
 
 }
 
-\caption{ Diagrama de mi estrategia para desarrollar modelos.}\label{fig:unnamed-chunk-8}
+\caption{ Diagrama de mi estrategia para desarrollar modelos.}\label{fig:unnamed-chunk-9}
 \end{figure}
 
 La estrategia general que les doy puede, por el momento, sonar un tanto abstracta, pero la iremos poniendo en práctica conforme avanza el curso para que al final, esperemos, tenga más sentido que ahorita.
@@ -338,7 +340,7 @@ Aquí nos centraremos en ver a mayor profundidad los modelos formales, en clasif
 
   1.2. \textbf{No}: Modelo descriptivo, fenomenológico
 \item
-  \textbf{¿Las matemáticas representan de manera explícita las condiciones del estado futuro del sistem?}
+  \textbf{¿Las matemáticas representan de manera explícita las condiciones del estado futuro del sistema?}
 
   2.1. \textbf{Sí}: Modelo dinámico
 
@@ -363,11 +365,41 @@ Aquí nos centraremos en ver a mayor profundidad los modelos formales, en clasif
   5.2. \textbf{No}: Modelo determinístico
 \end{enumerate}
 
-\hypertarget{modelos-determinisicos-generalidades}{%
-\subsection{Modelos determinisicos (generalidades)}\label{modelos-determinisicos-generalidades}}
+\hypertarget{ejemplos-1}{%
+\subsection{Ejemplos}\label{ejemplos-1}}
 
-\hypertarget{modelos-estocuxe1sticos-generalidades}{%
-\subsection{Modelos estocásticos (generalidades)}\label{modelos-estocuxe1sticos-generalidades}}
+\hypertarget{modelo-de-presa-depredador-de-el-modelo-de-lotka-volterra--volterra1928variations}{%
+\subsubsection{\texorpdfstring{Modelo de presa-depredador de El modelo de Lotka-Volterra \citeyearpar{volterra1928variations}}{Modelo de presa-depredador de El modelo de Lotka-Volterra {[}-@volterra1928variations{]}}}\label{modelo-de-presa-depredador-de-el-modelo-de-lotka-volterra--volterra1928variations}}
+
+Este modelo representa cómo cambia el número de liebres y linces a través del tiempo con un sistema de ecuaciones diferenciales. El cambio en los números de individuos depdende de
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Crecimiento poblacional del depredador en relación a las presas disponibles para que el depredador se alimente
+\item
+  Crecimiento poblacional innato de las presas
+\item
+  Mortalidad de presas en relación a la cantidad de depredadores
+\item
+  Mortalidad innata del depredador
+\end{enumerate}
+
+El modelo entonces representa el mecanismo del sistema, por lo que es un modelo \textbf{mecanístico}. Debido a que representa el cambio del número de individuos en el tiempo, es un modelo \textbf{dinámico}. Por el momento no contamos con información suficiente para decir si es contínuo o discreto, pero no hay mención del componente espacial, por lo que podemos suponer que se trata de un modelo \textbf{espacialmente homogéneo}. La solución al modelo clásico de la figura \ref{fig:volterra}, muestra un patrón regular, lo cual se debe a que todos los parámetros son constantes, y por lo tanto es un modelo \textbf{determinista}.
+
+\hypertarget{modelo-del-panal-de-abejas}{%
+\subsubsection{Modelo del panal de abejas}\label{modelo-del-panal-de-abejas}}
+
+\citet{wilensksi2003honey} desarrolló un modelo para representar cómo las abejas construyen un panal, por medio de una serie de reglas que rigen el comportamiento de abejas individuales. Debido a que el mecanismo está representado en el comportamiento colectivo de las abejas, es un modelo \textbf{mecanístico}. El modelo también muestra la progresión de la construcción del panal, por lo que es un modelo \textbf{dinámico}, y debido a que cualquiera de los eventos posibles pueden ocurrir en cualquier momento es en tiempo \textbf{contínuo}. También representa la estructura del panal en unidades espaciales, por lo que es \textbf{espacialmente heterogéneo}. Finalmente, los eventos que ocurren son aleatorios, o sea que el resultado de una realización del modelo será diferente de otra, por lo que es un modelo \textbf{estocástico}. Te invito a explorar este modelo por medio de la aplicación en línea de \href{https://www.netlogoweb.org/launch\#https://www.netlogoweb.org/assets/modelslib/Sample\%20Models/Biology/Honeycomb.nlogo}{NetLogo}.
+
+A continuación veremos a mayor profundidad los modelos deterministicos y estocásticos.
+
+\hypertarget{modelos-determinisicos}{%
+\subsection{Modelos determinisicos}\label{modelos-determinisicos}}
+
+\hypertarget{modelos-estocuxe1sticos}{%
+\subsection{Modelos estocásticos}\label{modelos-estocuxe1sticos}}
 
 \hypertarget{methods}{%
 \chapter{Methods}\label{methods}}

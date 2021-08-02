@@ -13,7 +13,7 @@ Aquí nos centraremos en ver a mayor profundidad los modelos formales, en clasif
     
     1.2. **No**: Modelo descriptivo, fenomenológico
     
-2. **¿Las matemáticas representan de manera explícita las condiciones del estado futuro del sistem?**
+2. **¿Las matemáticas representan de manera explícita las condiciones del estado futuro del sistema?**
 
     2.1. **Sí**: Modelo dinámico
     
@@ -37,10 +37,27 @@ Aquí nos centraremos en ver a mayor profundidad los modelos formales, en clasif
     
     5.2. **No**: Modelo determinístico
 
+### Ejemplos
 
+#### Modelo de presa-depredador de El modelo de Lotka-Volterra [-@volterra1928variations]
 
-### Modelos determinisicos (generalidades)
+Este modelo representa cómo cambia el número de liebres y linces a través del tiempo con un sistema de ecuaciones diferenciales. El cambio en los números de individuos depdende de
+
+1. Crecimiento poblacional del depredador en relación a las presas disponibles para que el depredador se alimente
+2. Crecimiento poblacional innato de las presas
+3. Mortalidad de presas en relación a la cantidad de depredadores
+4. Mortalidad innata del depredador
+
+El modelo entonces representa el mecanismo del sistema, por lo que es un modelo **mecanístico**. Debido a que representa el cambio del número de individuos en el tiempo, es un modelo **dinámico**. Por el momento no contamos con información suficiente para decir si es contínuo o discreto, pero no hay mención del componente espacial, por lo que podemos suponer que se trata de un modelo **espacialmente homogéneo**. La solución al modelo clásico de la figura \@ref(fig:volterra), muestra un patrón regular, lo cual se debe a que todos los parámetros son constantes, y por lo tanto es un modelo **determinista**.
+
+#### Modelo del panal de abejas
+
+@wilensksi2003honey desarrolló un modelo para representar cómo las abejas construyen un panal, por medio de una serie de reglas que rigen el comportamiento de abejas individuales. Debido a que el mecanismo está representado en el comportamiento colectivo de las abejas, es un modelo **mecanístico**. El modelo también muestra la progresión de la construcción del panal, por lo que es un modelo **dinámico**, y debido a que cualquiera de los eventos posibles pueden ocurrir en cualquier momento es en tiempo **contínuo**. También representa la estructura del panal en unidades espaciales, por lo que es **espacialmente heterogéneo**. Finalmente, los eventos que ocurren son aleatorios, o sea que el resultado de  una realización del modelo será diferente de otra, por lo que es un modelo **estocástico**. Te invito a explorar este modelo por medio de la aplicación en línea de [NetLogo](https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Honeycomb.nlogo).
+
+A continuación veremos a mayor profundidad los modelos deterministicos y estocásticos.
+
+### Modelos determinisicos
 
 
       
-### Modelos estocásticos (generalidades)
+### Modelos estocásticos
