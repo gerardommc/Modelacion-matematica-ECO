@@ -24,7 +24,7 @@
 <meta name="author" content="Gerardo Martín" />
 
 
-<meta name="date" content="2021-08-02" />
+<meta name="date" content="2021-08-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -123,8 +123,7 @@ div.csl-indent {
 <li class="chapter" data-level="3.5" data-path="unidad-i-introducción-a-la-modelación.html"><a href="unidad-i-introducción-a-la-modelación.html#tipos-de-modelos"><i class="fa fa-check"></i><b>3.5</b> Tipos de modelos</a>
 <ul>
 <li class="chapter" data-level="3.5.1" data-path="unidad-i-introducción-a-la-modelación.html"><a href="unidad-i-introducción-a-la-modelación.html#ejemplos-1"><i class="fa fa-check"></i><b>3.5.1</b> Ejemplos</a></li>
-<li class="chapter" data-level="3.5.2" data-path="unidad-i-introducción-a-la-modelación.html"><a href="unidad-i-introducción-a-la-modelación.html#modelos-determinisicos"><i class="fa fa-check"></i><b>3.5.2</b> Modelos determinisicos</a></li>
-<li class="chapter" data-level="3.5.3" data-path="unidad-i-introducción-a-la-modelación.html"><a href="unidad-i-introducción-a-la-modelación.html#modelos-estocásticos"><i class="fa fa-check"></i><b>3.5.3</b> Modelos estocásticos</a></li>
+<li class="chapter" data-level="3.5.2" data-path="unidad-i-introducción-a-la-modelación.html"><a href="unidad-i-introducción-a-la-modelación.html#modelos-determinísticos-y-estocásticos"><i class="fa fa-check"></i><b>3.5.2</b> Modelos determinísticos y estocásticos</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>4</b> Methods</a></li>
@@ -165,7 +164,7 @@ div.csl-indent {
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-8"></span>
 <img src="Unidad-I/elefante.png" alt="La parábola de los seis hombres ciegos inspeccionando un elefante." width="582" />
 <p class="caption">
-Figure 3.1: La parábola de los seis hombres ciegos inspeccionando un elefante.
+Figura 3.1: La parábola de los seis hombres ciegos inspeccionando un elefante.
 </p>
 </div>
 <p>Quien toque los colmillos podrá pensar que se trata de una lanza, la trompa podría tratarse de una serpiente, la cola de una cuerda, las patas troncos de árbol y el cuerpo una pared. Es evidente que todas las hipótesis presentadas después de la inspección fueron erróneas, y que cuando estudiamos al mundo lo haremos igual, con la descripción de tan sólo una fracción de éste. Un séptimo hombre que pregunte a los otros seis qué fue lo que vieron podría formarse una imágen más completa del <em>sistema</em> para proponer otra hipótesis: se trata de un objeto grande reposando sobre cuatro columnas con apéndices adelante y atrás.</p>
@@ -187,7 +186,7 @@ Figure 3.1: La parábola de los seis hombres ciegos inspeccionando un elefante.
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-9"></span>
 <img src="Unidad-I/Diagrama-dearrollo.png" alt=" Diagrama de mi estrategia para desarrollar modelos." width="306" />
 <p class="caption">
-Figure 3.2:  Diagrama de mi estrategia para desarrollar modelos.
+Figura 3.2:  Diagrama de mi estrategia para desarrollar modelos.
 </p>
 </div>
 <p>La estrategia general que les doy puede, por el momento, sonar un tanto abstracta, pero la iremos poniendo en práctica conforme avanza el curso para que al final, esperemos, tenga más sentido que ahorita.</p>
@@ -225,7 +224,7 @@ Figure 3.2:  Diagrama de mi estrategia para desarrollar modelos.
 <div class="figure" style="text-align: center"><span id="fig:volterra"></span>
 <img src="Unidad-I/volterra.png" alt="Simulación del modelo [Lotka-Volterra](https://scipy-cookbook.readthedocs.io/items/LoktaVolterraTutorial.html)." width="400" />
 <p class="caption">
-Figure 3.3: Simulación del modelo <a href="https://scipy-cookbook.readthedocs.io/items/LoktaVolterraTutorial.html">Lotka-Volterra</a>.
+Figura 3.3: Simulación del modelo <a href="https://scipy-cookbook.readthedocs.io/items/LoktaVolterraTutorial.html">Lotka-Volterra</a>.
 </p>
 </div>
 <p>El comportamiento oscilatorio resulta <em>obvio</em> desde una perspectiva biológica: los depredadores no se pueden reproducir a menos que se alimenten de sus presas, pero cuando hay muchos depredadores, estos consumen las presas disminuyendo sus números, resultando en menor potencial reproductivo para el depredador. Pero matemáticamente, ¿qué hace posible estas oscilaciones? Para responder esta pregunta se necesita entender bajo qué condiciones el sistema de ecuaciones que describe el sistema es estable, es decir cuándo los cambios de ambas poblaciones son cero, es decir bajo qué situaciones el sistema como un todo no experimenta cambio alguno. Este análisis matemático tiene un resultado un tanto sorprendente, pues las condiciones bajo las que dicha condición ocurre son un número imaginario, lo que indica que el sistema como tal es inestable, y por lo tanto <strong>siempre</strong> tiende a oscilar. El análisis de matemático de los modelos es en su mayoría netamente simbólico y requiere de buenas bases matemáticas.</p>
@@ -236,7 +235,7 @@ Figure 3.3: Simulación del modelo <a href="https://scipy-cookbook.readthedocs.i
 <div class="figure" style="text-align: center"><span id="fig:lepto"></span>
 <img src="Unidad-I/lepto.png" alt="Las barras (eje $y$) indican el cambio proporcional de las diferentes cantidades de interés (color de las barras), ante el aumento del valor de cada parámetro (eje $x$), [@holt2006model]." width="820" />
 <p class="caption">
-Figure 3.4: Las barras (eje <span class="math inline">\(y\)</span>) indican el cambio proporcional de las diferentes cantidades de interés (color de las barras), ante el aumento del valor de cada parámetro (eje <span class="math inline">\(x\)</span>), <span class="citation">(<a href="#ref-holt2006model" role="doc-biblioref">Holt, Davis, and Leirs 2006</a>)</span>.
+Figura 3.4: Las barras (eje <span class="math inline">\(y\)</span>) indican el cambio proporcional de las diferentes cantidades de interés (color de las barras), ante el aumento del valor de cada parámetro (eje <span class="math inline">\(x\)</span>), <span class="citation">(<a href="#ref-holt2006model" role="doc-biblioref">Holt, Davis, and Leirs 2006</a>)</span>.
 </p>
 </div>
 <p>Los análisis de sensibilidad mostrados en la Figura <a href="unidad-i-introducción-a-la-modelación.html#fig:lepto">3.4</a> son en realidad una serie de predicciones del sistema. De hecho la predicción generalmente echa mano de modelos matemáticos, así que nos centraremos en resumir: la predicción requiere de la planeación de una serie de escenarios para identificar áreas de intervención (alteración del hábitat por ejemplo) para obtener un resultado favorable de acuerdo con el modelo.</p>
@@ -285,6 +284,12 @@ Figure 3.4: Las barras (eje <span class="math inline">\(y\)</span>) indican el c
 <h3><span class="header-section-number">3.5.1</span> Ejemplos</h3>
 <div id="modelo-de-presa-depredador-de-el-modelo-de-lotka-volterra--volterra1928variations" class="section level4" number="3.5.1.1">
 <h4><span class="header-section-number">3.5.1.1</span> Modelo de presa-depredador de El modelo de Lotka-Volterra <span class="citation">(<a href="#ref-volterra1928variations" role="doc-biblioref">1928</a>)</span></h4>
+<div class="figure" style="text-align: center"><span id="fig:volterra-diag"></span>
+<img src="Unidad-I/Volterra/Volterra.png" alt="Modelo diagramático basado en el modelo matemático depredador-presa de Lotka-Volterra" width="438" />
+<p class="caption">
+Figura 3.5: Modelo diagramático basado en el modelo matemático depredador-presa de Lotka-Volterra
+</p>
+</div>
 <p>Este modelo representa cómo cambia el número de liebres y linces a través del tiempo con un sistema de ecuaciones diferenciales. El cambio en los números de individuos depdende de</p>
 <ol style="list-style-type: decimal">
 <li>Crecimiento poblacional del depredador en relación a las presas disponibles para que el depredador se alimente</li>
@@ -292,20 +297,76 @@ Figure 3.4: Las barras (eje <span class="math inline">\(y\)</span>) indican el c
 <li>Mortalidad de presas en relación a la cantidad de depredadores</li>
 <li>Mortalidad innata del depredador</li>
 </ol>
-<p>El modelo entonces representa el mecanismo del sistema, por lo que es un modelo <strong>mecanístico</strong>. Debido a que representa el cambio del número de individuos en el tiempo, es un modelo <strong>dinámico</strong>. Por el momento no contamos con información suficiente para decir si es contínuo o discreto, pero no hay mención del componente espacial, por lo que podemos suponer que se trata de un modelo <strong>espacialmente homogéneo</strong>. La solución al modelo clásico de la figura <a href="unidad-i-introducción-a-la-modelación.html#fig:volterra">3.3</a>, muestra un patrón regular, lo cual se debe a que todos los parámetros son constantes, y por lo tanto es un modelo <strong>determinista</strong>.</p>
+<p>El modelo entonces representa el mecanismo del sistema, por lo que es un modelo <strong>mecanístico</strong>. Debido a que representa el cambio del número de individuos en el tiempo, es un modelo <strong>dinámico</strong>. Por el momento no contamos con información suficiente para decir si es contínuo o discreto, pero no hay mención del componente espacial, por lo que podemos suponer que se trata de un modelo <strong>espacialmente homogéneo</strong>. La solución al modelo clásico de la figura <a href="unidad-i-introducción-a-la-modelación.html#fig:volterra-diag">3.5</a>, muestra un patrón regular, lo cual se debe a que todos los parámetros son constantes, y por lo tanto es un modelo <strong>determinista</strong>.</p>
 </div>
 <div id="modelo-del-panal-de-abejas" class="section level4" number="3.5.1.2">
 <h4><span class="header-section-number">3.5.1.2</span> Modelo del panal de abejas</h4>
-<p><span class="citation">(<a href="#ref-wilensksi2003honey" role="doc-biblioref"><strong>wilensksi2003honey?</strong></a>)</span> desarrolló un modelo para representar cómo las abejas construyen un panal, por medio de una serie de reglas que rigen el comportamiento de abejas individuales. Debido a que el mecanismo está representado en el comportamiento colectivo de las abejas, es un modelo <strong>mecanístico</strong>. El modelo también muestra la progresión de la construcción del panal, por lo que es un modelo <strong>dinámico</strong>, y debido a que cualquiera de los eventos posibles pueden ocurrir en cualquier momento es en tiempo <strong>contínuo</strong>. También representa la estructura del panal en unidades espaciales, por lo que es <strong>espacialmente heterogéneo</strong>. Finalmente, los eventos que ocurren son aleatorios, o sea que el resultado de una realización del modelo será diferente de otra, por lo que es un modelo <strong>estocástico</strong>. Te invito a explorar este modelo por medio de la aplicación en línea de <a href="https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Honeycomb.nlogo">NetLogo</a>.</p>
+<p><span class="citation"><a href="#ref-wilenski2003honey" role="doc-biblioref">Wilenski</a> (<a href="#ref-wilenski2003honey" role="doc-biblioref">2003</a>)</span> desarrolló un modelo para representar cómo las abejas construyen un panal, por medio de una serie de reglas que rigen el comportamiento de abejas individuales. Debido a que el mecanismo está representado en el comportamiento colectivo de las abejas, es un modelo <strong>mecanístico</strong>. El modelo también muestra la progresión de la construcción del panal, por lo que es un modelo <strong>dinámico</strong>, y debido a que cualquiera de los eventos posibles pueden ocurrir en cualquier momento es en tiempo <strong>contínuo</strong>. También representa la estructura del panal en unidades espaciales, por lo que es <strong>espacialmente heterogéneo</strong>. Finalmente, los eventos que ocurren son aleatorios, o sea que el resultado de una realización del modelo será diferente de otra, por lo que es un modelo <strong>estocástico</strong>. Te invito a explorar este modelo por medio de la aplicación en línea de <a href="https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Honeycomb.nlogo">NetLogo</a>.</p>
 <p>A continuación veremos a mayor profundidad los modelos deterministicos y estocásticos.</p>
 </div>
 </div>
-<div id="modelos-determinisicos" class="section level3" number="3.5.2">
-<h3><span class="header-section-number">3.5.2</span> Modelos determinisicos</h3>
+<div id="modelos-determinísticos-y-estocásticos" class="section level3" number="3.5.2">
+<h3><span class="header-section-number">3.5.2</span> Modelos determinísticos y estocásticos</h3>
+<p>Imaginemos que necesitamos un librero, y para ello necesitamos medir las dimensiones del espacio donde lo colocaremos. Solamente contamos con una cinta en pulgadas, pero el carpintero, para hacer el presupuesto, necesita las medidas en centímetros. Entonces para hacer la conversión de pulgadas a centímetros utilizamos el siguiente modelo:</p>
+<p><span class="math display" id="eq:pulgadas">\[\begin{equation}
+    cm = 2.54 \times in  \tag{3.1}
+\end{equation}\]</span></p>
+<p>donde <span class="math inline">\(in\)</span> son las pulgadas, <span class="math inline">\(cm\)</span> los centímetros, y <span class="math inline">\(2.54\)</span> es la constante de conversión. Entonces ya tenemos así un modelo que siempre nos dará la misma respuesta para cada valor de entrada:</p>
+<ul>
+<li><span class="math inline">\(2in \rightarrow 2 \times 2.54cm = 5.08cm\)</span></li>
+<li><span class="math inline">\(11in \rightarrow 11 \times 2.54cm = 27.94cm\)</span></li>
+</ul>
+<p>Imaginemos ahora que la constante de conversión no fuera una sola, <span class="math inline">\(2.54\)</span>, sino cientos, o miles de posibles valores cercanos a <span class="math inline">\(2.54\)</span>, y cada vez que resolvemos el modelo <a href="unidad-i-introducción-a-la-modelación.html#eq:pulgadas">(3.1)</a> obtenemos un valor distinto. El primero es un modelo deterministico, siempre da la misma respuesta. El segundo, es un modelo estocástico. Te preguntarás entonces ¿para qué querríamos un modelo que de respuestas inconsistentes? La principal razón es que en ecología, como en otras áreas del conocimiento, los sistemas de estudio son muy variables, y los modelos estocásticos nos sirven para representar esa variabilidad y conocer algunos de los posibles resultados. En pocas palabras, si un sistema es determinista, siempre podemos conocer su comportamiento con alta precisión, mientras que en los estocáticos, no.</p>
+<div id="deterministicos" class="section level4" number="3.5.2.1">
+<h4><span class="header-section-number">3.5.2.1</span> Deterministicos</h4>
+<p>En vista de mi comentario “… los sistemas de estudio son muy variables…” tal vez te surja otra pregunta, ¿entonces por qué estudiamos los modelos deterministas? Y no hay una pregunta mmuy sencilla, pero la principal es que son más sencillos. Por otra parte, si pensamos en los modelos desde un punto de vista estadístico, se podría también sugerir que podemos utilizar los modelos determinísticos para estudiar el comportamiento “promedio,” o para caracterizar ese componente, el determinista, de nuestro sistema de estudio. En este sentido, se considera entonces que la mayoría de los sistemas y procesos ecológicos tienen un componente determinístico y uno estocástico. La mejor manera de modelar los sistemas ecológicos, entonces, es utilizando ambos. Por lo tanto, para modelar los sistemas ecológicos con ambos métodos, necesitamos aprender a utilizarlos por separado.</p>
+<p>Una de las grandes bondades de los modelos determinísticos es que nos permiten analizar el comportamiento del sistema de estudio. Los modelos de cambio temporal, por ejemplo, han sido muy importantes en el desarrollo de la teoría del caos, la cual sirve para explicar por qué ciertos procesos del mundo natural nunca alcanzan un nivel de estabilidad (¡dinámicas depredaror-presa!).</p>
 </div>
-<div id="modelos-estocásticos" class="section level3" number="3.5.3">
-<h3><span class="header-section-number">3.5.3</span> Modelos estocásticos</h3>
+<div id="estocásticos" class="section level4" number="3.5.2.2">
+<h4><span class="header-section-number">3.5.2.2</span> Estocásticos</h4>
+<p>A diferencia de los modelos deterministas, los estocásticos nunca dan el mismo resultado. Existe un gran variedad de herramientas computacionales y formulaciones matemáticas para conseguir este tipo de comportamiento. En la mayoría de los casos, los modelos deterministas constan de dos componentes, uno determinista, relacionado con los mecanismos propios del sistema de estudio, y uno aleatorio, encargado de generar los eventos posibles o de simular la variación en el componente determinista. Esto lo podemos ilustrar con el modelo de conversión de pulgadas a centímetros:</p>
+<p><span class="math display">\[
+in = 2.54 \times cm
+\]</span>
+el cual es determinista. Sin embargo, podemos formular una versión estocástica, que añada una pequeña cantidad a la conversión determinística cada vez que la calculamos:</p>
+<p><span class="math display">\[
+cm = 2.54 \times in + \varepsilon
+\]</span></p>
+<p>donde <span class="math display">\[\varepsilon\]</span> es el <em>error</em> que hemos introducido. Técnicamente para hacer esto utilizamos un generador de números aleatorios en el lenguaje de programación <strong>R</strong>. Veamos una serie de conversiones:</p>
+<table>
+<caption><span id="tab:unnamed-chunk-12">Tabla 3.1: </span>Cinco realizaciones para la conversión de dos pulgadas a centímetros con el modelo determinista y estocástico.</caption>
+<thead>
+<tr class="header">
+<th align="center">Determinista</th>
+<th align="center">Estocástico</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">5.08</td>
+<td align="center">5.225339</td>
+</tr>
+<tr class="even">
+<td align="center">5.08</td>
+<td align="center">4.858696</td>
+</tr>
+<tr class="odd">
+<td align="center">5.08</td>
+<td align="center">4.790793</td>
+</tr>
+<tr class="even">
+<td align="center">5.08</td>
+<td align="center">5.199422</td>
+</tr>
+<tr class="odd">
+<td align="center">5.08</td>
+<td align="center">4.935093</td>
+</tr>
+</tbody>
+</table>
+<p>Este tipo de <em>inconsistencias</em> de los modelos estocásticos tienen implicaciones muy importantes para el comportamiento de modelos como el de Lotka-Volterra, que veremos más adelante.</p>
 
+</div>
 </div>
 </div>
 </div>
@@ -328,6 +389,9 @@ Otto, Sarah P, and Troy Day. 2011. <em>A Biologist’s Guide to Mathematical Mod
 </div>
 <div id="ref-volterra1928variations" class="csl-entry">
 Volterra, Vito. 1928. <span>“Variations and Fluctuations of the Number of Individuals in Animal Species Living Together.”</span> <em>ICES Journal of Marine Science</em> 3 (1): 3–51.
+</div>
+<div id="ref-wilenski2003honey" class="csl-entry">
+Wilenski, Ulrich. 2003. <span>“NetLogo Honeycomb Model.”</span> <a href="http://ccl.northwestern.edu/netlogo/models/Honeycomb">http://ccl.northwestern.edu/netlogo/models/Honeycomb</a>.
 </div>
 </div>
             </section>

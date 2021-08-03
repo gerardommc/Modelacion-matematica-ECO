@@ -2,6 +2,9 @@ fig:unnamed-chunk-8
 fig:unnamed-chunk-9
 fig:volterra
 fig:lepto
+fig:volterra-diag
+eq:pulgadas
+tab:unnamed-chunk-12
 preámbulo
 encuadre-de-la-materia
 criterios-de-evaluación
@@ -22,8 +25,9 @@ tipos-de-modelos
 ejemplos-1
 modelo-de-presa-depredador-de-el-modelo-de-lotka-volterra--volterra1928variations
 modelo-del-panal-de-abejas
-modelos-determinisicos
-modelos-estocásticos
+modelos-determinísticos-y-estocásticos
+deterministicos
+estocásticos
 methods
 applications
 example-one

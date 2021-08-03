@@ -77,7 +77,7 @@
 
 \title{Modelos Matemáticos en Ecología I}
 \author{Gerardo Martín}
-\date{2021-08-02}
+\date{2021-08-03}
 
 \begin{document}
 \maketitle
@@ -371,6 +371,15 @@ Aquí nos centraremos en ver a mayor profundidad los modelos formales, en clasif
 \hypertarget{modelo-de-presa-depredador-de-el-modelo-de-lotka-volterra--volterra1928variations}{%
 \subsubsection{\texorpdfstring{Modelo de presa-depredador de El modelo de Lotka-Volterra \citeyearpar{volterra1928variations}}{Modelo de presa-depredador de El modelo de Lotka-Volterra {[}-@volterra1928variations{]}}}\label{modelo-de-presa-depredador-de-el-modelo-de-lotka-volterra--volterra1928variations}}
 
+\begin{figure}
+
+{\centering \includegraphics[width=12.18in]{Unidad-I/Volterra/Volterra} 
+
+}
+
+\caption{Modelo diagramático basado en el modelo matemático depredador-presa de Lotka-Volterra}\label{fig:volterra-diag}
+\end{figure}
+
 Este modelo representa cómo cambia el número de liebres y linces a través del tiempo con un sistema de ecuaciones diferenciales. El cambio en los números de individuos depdende de
 
 \begin{enumerate}
@@ -386,20 +395,81 @@ Este modelo representa cómo cambia el número de liebres y linces a través del
   Mortalidad innata del depredador
 \end{enumerate}
 
-El modelo entonces representa el mecanismo del sistema, por lo que es un modelo \textbf{mecanístico}. Debido a que representa el cambio del número de individuos en el tiempo, es un modelo \textbf{dinámico}. Por el momento no contamos con información suficiente para decir si es contínuo o discreto, pero no hay mención del componente espacial, por lo que podemos suponer que se trata de un modelo \textbf{espacialmente homogéneo}. La solución al modelo clásico de la figura \ref{fig:volterra}, muestra un patrón regular, lo cual se debe a que todos los parámetros son constantes, y por lo tanto es un modelo \textbf{determinista}.
+El modelo entonces representa el mecanismo del sistema, por lo que es un modelo \textbf{mecanístico}. Debido a que representa el cambio del número de individuos en el tiempo, es un modelo \textbf{dinámico}. Por el momento no contamos con información suficiente para decir si es contínuo o discreto, pero no hay mención del componente espacial, por lo que podemos suponer que se trata de un modelo \textbf{espacialmente homogéneo}. La solución al modelo clásico de la figura \ref{fig:volterra-diag}, muestra un patrón regular, lo cual se debe a que todos los parámetros son constantes, y por lo tanto es un modelo \textbf{determinista}.
 
 \hypertarget{modelo-del-panal-de-abejas}{%
 \subsubsection{Modelo del panal de abejas}\label{modelo-del-panal-de-abejas}}
 
-\citet{wilensksi2003honey} desarrolló un modelo para representar cómo las abejas construyen un panal, por medio de una serie de reglas que rigen el comportamiento de abejas individuales. Debido a que el mecanismo está representado en el comportamiento colectivo de las abejas, es un modelo \textbf{mecanístico}. El modelo también muestra la progresión de la construcción del panal, por lo que es un modelo \textbf{dinámico}, y debido a que cualquiera de los eventos posibles pueden ocurrir en cualquier momento es en tiempo \textbf{contínuo}. También representa la estructura del panal en unidades espaciales, por lo que es \textbf{espacialmente heterogéneo}. Finalmente, los eventos que ocurren son aleatorios, o sea que el resultado de una realización del modelo será diferente de otra, por lo que es un modelo \textbf{estocástico}. Te invito a explorar este modelo por medio de la aplicación en línea de \href{https://www.netlogoweb.org/launch\#https://www.netlogoweb.org/assets/modelslib/Sample\%20Models/Biology/Honeycomb.nlogo}{NetLogo}.
+\citet{wilenski2003honey} desarrolló un modelo para representar cómo las abejas construyen un panal, por medio de una serie de reglas que rigen el comportamiento de abejas individuales. Debido a que el mecanismo está representado en el comportamiento colectivo de las abejas, es un modelo \textbf{mecanístico}. El modelo también muestra la progresión de la construcción del panal, por lo que es un modelo \textbf{dinámico}, y debido a que cualquiera de los eventos posibles pueden ocurrir en cualquier momento es en tiempo \textbf{contínuo}. También representa la estructura del panal en unidades espaciales, por lo que es \textbf{espacialmente heterogéneo}. Finalmente, los eventos que ocurren son aleatorios, o sea que el resultado de una realización del modelo será diferente de otra, por lo que es un modelo \textbf{estocástico}. Te invito a explorar este modelo por medio de la aplicación en línea de \href{https://www.netlogoweb.org/launch\#https://www.netlogoweb.org/assets/modelslib/Sample\%20Models/Biology/Honeycomb.nlogo}{NetLogo}.
 
 A continuación veremos a mayor profundidad los modelos deterministicos y estocásticos.
 
-\hypertarget{modelos-determinisicos}{%
-\subsection{Modelos determinisicos}\label{modelos-determinisicos}}
+\hypertarget{modelos-determinuxedsticos-y-estocuxe1sticos}{%
+\subsection{Modelos determinísticos y estocásticos}\label{modelos-determinuxedsticos-y-estocuxe1sticos}}
 
-\hypertarget{modelos-estocuxe1sticos}{%
-\subsection{Modelos estocásticos}\label{modelos-estocuxe1sticos}}
+Imaginemos que necesitamos un librero, y para ello necesitamos medir las dimensiones del espacio donde lo colocaremos. Solamente contamos con una cinta en pulgadas, pero el carpintero, para hacer el presupuesto, necesita las medidas en centímetros. Entonces para hacer la conversión de pulgadas a centímetros utilizamos el siguiente modelo:
+
+\begin{equation}
+    cm = 2.54 \times in  \label{eq:pulgadas}
+\end{equation}
+
+donde \(in\) son las pulgadas, \(cm\) los centímetros, y \(2.54\) es la constante de conversión. Entonces ya tenemos así un modelo que siempre nos dará la misma respuesta para cada valor de entrada:
+
+\begin{itemize}
+\tightlist
+\item
+  \(2in \rightarrow 2 \times 2.54cm = 5.08cm\)
+\item
+  \(11in \rightarrow 11 \times 2.54cm = 27.94cm\)
+\end{itemize}
+
+Imaginemos ahora que la constante de conversión no fuera una sola, \(2.54\), sino cientos, o miles de posibles valores cercanos a \(2.54\), y cada vez que resolvemos el modelo \eqref{eq:pulgadas} obtenemos un valor distinto. El primero es un modelo deterministico, siempre da la misma respuesta. El segundo, es un modelo estocástico. Te preguntarás entonces ¿para qué querríamos un modelo que de respuestas inconsistentes? La principal razón es que en ecología, como en otras áreas del conocimiento, los sistemas de estudio son muy variables, y los modelos estocásticos nos sirven para representar esa variabilidad y conocer algunos de los posibles resultados. En pocas palabras, si un sistema es determinista, siempre podemos conocer su comportamiento con alta precisión, mientras que en los estocáticos, no.
+
+\hypertarget{deterministicos}{%
+\subsubsection{Deterministicos}\label{deterministicos}}
+
+En vista de mi comentario ``\ldots{} los sistemas de estudio son muy variables\ldots{}'' tal vez te surja otra pregunta, ¿entonces por qué estudiamos los modelos deterministas? Y no hay una pregunta mmuy sencilla, pero la principal es que son más sencillos. Por otra parte, si pensamos en los modelos desde un punto de vista estadístico, se podría también sugerir que podemos utilizar los modelos determinísticos para estudiar el comportamiento ``promedio'', o para caracterizar ese componente, el determinista, de nuestro sistema de estudio. En este sentido, se considera entonces que la mayoría de los sistemas y procesos ecológicos tienen un componente determinístico y uno estocástico. La mejor manera de modelar los sistemas ecológicos, entonces, es utilizando ambos. Por lo tanto, para modelar los sistemas ecológicos con ambos métodos, necesitamos aprender a utilizarlos por separado.
+
+Una de las grandes bondades de los modelos determinísticos es que nos permiten analizar el comportamiento del sistema de estudio. Los modelos de cambio temporal, por ejemplo, han sido muy importantes en el desarrollo de la teoría del caos, la cual sirve para explicar por qué ciertos procesos del mundo natural nunca alcanzan un nivel de estabilidad (¡dinámicas depredaror-presa!).
+
+\hypertarget{estocuxe1sticos}{%
+\subsubsection{Estocásticos}\label{estocuxe1sticos}}
+
+A diferencia de los modelos deterministas, los estocásticos nunca dan el mismo resultado. Existe un gran variedad de herramientas computacionales y formulaciones matemáticas para conseguir este tipo de comportamiento. En la mayoría de los casos, los modelos deterministas constan de dos componentes, uno determinista, relacionado con los mecanismos propios del sistema de estudio, y uno aleatorio, encargado de generar los eventos posibles o de simular la variación en el componente determinista. Esto lo podemos ilustrar con el modelo de conversión de pulgadas a centímetros:
+
+\[
+in = 2.54 \times cm
+\]
+el cual es determinista. Sin embargo, podemos formular una versión estocástica, que añada una pequeña cantidad a la conversión determinística cada vez que la calculamos:
+
+\[
+cm = 2.54 \times in + \varepsilon
+\]
+
+donde \[\varepsilon\] es el \emph{error} que hemos introducido. Técnicamente para hacer esto utilizamos un generador de números aleatorios en el lenguaje de programación \textbf{R}. Veamos una serie de conversiones:
+
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-12}Cinco realizaciones para la conversión de dos pulgadas a centímetros con el modelo determinista y estocástico.}
+\centering
+\begin{tabular}[t]{c|c}
+\hline
+Determinista & Estocástico\\
+\hline
+5.08 & 4.720164\\
+\hline
+5.08 & 4.725235\\
+\hline
+5.08 & 5.296882\\
+\hline
+5.08 & 4.734873\\
+\hline
+5.08 & 5.163951\\
+\hline
+\end{tabular}
+\end{table}
+
+Este tipo de \emph{inconsistencias} de los modelos estocásticos tienen implicaciones muy importantes para el comportamiento de modelos como el de Lotka-Volterra, que veremos más adelante.
 
 \hypertarget{methods}{%
 \chapter{Methods}\label{methods}}

@@ -1,0 +1,21 @@
+A diferencia de los modelos deterministas, los estocásticos nunca dan el mismo resultado. Existe un gran variedad de herramientas computacionales y formulaciones matemáticas para conseguir este tipo de comportamiento. En la mayoría de los casos, los modelos deterministas constan de dos componentes, uno determinista, relacionado con los mecanismos propios del sistema de estudio, y uno aleatorio, encargado de generar los eventos posibles o de simular la variación en el componente determinista. Esto lo podemos ilustrar con el modelo de conversión de pulgadas a centímetros:
+
+$$
+cm = 2.54 \times in
+$$
+el cual es determinista. Sin embargo, podemos formular una versión estocástica, que añada una pequeña cantidad a la conversión determinística cada vez que la calculamos:
+
+$$
+cm = 2.54 \times in + \varepsilon
+$$
+
+donde $$\varepsilon$$ es el *error* que hemos introducido. Técnicamente para hacer esto utilizamos un generador de números aleatorios en el lenguaje de programación **R**. Veamos una serie de conversiones:
+
+```{r echo = F}
+Determinista <- 2 * 2.54
+Estocastico <- Determinista + rnorm(5, 0, 0.25)
+df.1 <- expand.grid(Determinista, Estocastico)
+names(df.1) <- c("Determinista", "Estocástico")
+knitr::kable(df.1, align = "c", caption = "Cinco realizaciones para la conversión de dos pulgadas a centímetros con el modelo determinista y estocástico.")
+```
+Este tipo de *inconsistencias* de los modelos estocásticos tienen implicaciones muy importantes para el comportamiento de modelos como el de Lotka-Volterra, que veremos más adelante.

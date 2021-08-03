@@ -41,6 +41,11 @@ Aquí nos centraremos en ver a mayor profundidad los modelos formales, en clasif
 
 #### Modelo de presa-depredador de El modelo de Lotka-Volterra [-@volterra1928variations]
 
+```{r volterra-diag, echo = F, fig.align="center", fig.cap="Modelo diagramático basado en el modelo matemático depredador-presa de Lotka-Volterra", fig.dim="50%"}
+knitr::include_graphics("Unidad-I/Volterra/Volterra.png")
+```
+
+
 Este modelo representa cómo cambia el número de liebres y linces a través del tiempo con un sistema de ecuaciones diferenciales. El cambio en los números de individuos depdende de
 
 1. Crecimiento poblacional del depredador en relación a las presas disponibles para que el depredador se alimente
@@ -48,16 +53,37 @@ Este modelo representa cómo cambia el número de liebres y linces a través del
 3. Mortalidad de presas en relación a la cantidad de depredadores
 4. Mortalidad innata del depredador
 
-El modelo entonces representa el mecanismo del sistema, por lo que es un modelo **mecanístico**. Debido a que representa el cambio del número de individuos en el tiempo, es un modelo **dinámico**. Por el momento no contamos con información suficiente para decir si es contínuo o discreto, pero no hay mención del componente espacial, por lo que podemos suponer que se trata de un modelo **espacialmente homogéneo**. La solución al modelo clásico de la figura \@ref(fig:volterra), muestra un patrón regular, lo cual se debe a que todos los parámetros son constantes, y por lo tanto es un modelo **determinista**.
+El modelo entonces representa el mecanismo del sistema, por lo que es un modelo **mecanístico**. Debido a que representa el cambio del número de individuos en el tiempo, es un modelo **dinámico**. Por el momento no contamos con información suficiente para decir si es contínuo o discreto, pero no hay mención del componente espacial, por lo que podemos suponer que se trata de un modelo **espacialmente homogéneo**. La solución al modelo clásico de la figura \@ref(fig:volterra-diag), muestra un patrón regular, lo cual se debe a que todos los parámetros son constantes, y por lo tanto es un modelo **determinista**.
 
 #### Modelo del panal de abejas
 
-@wilensksi2003honey desarrolló un modelo para representar cómo las abejas construyen un panal, por medio de una serie de reglas que rigen el comportamiento de abejas individuales. Debido a que el mecanismo está representado en el comportamiento colectivo de las abejas, es un modelo **mecanístico**. El modelo también muestra la progresión de la construcción del panal, por lo que es un modelo **dinámico**, y debido a que cualquiera de los eventos posibles pueden ocurrir en cualquier momento es en tiempo **contínuo**. También representa la estructura del panal en unidades espaciales, por lo que es **espacialmente heterogéneo**. Finalmente, los eventos que ocurren son aleatorios, o sea que el resultado de  una realización del modelo será diferente de otra, por lo que es un modelo **estocástico**. Te invito a explorar este modelo por medio de la aplicación en línea de [NetLogo](https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Honeycomb.nlogo).
+@wilenski2003honey desarrolló un modelo para representar cómo las abejas construyen un panal, por medio de una serie de reglas que rigen el comportamiento de abejas individuales. Debido a que el mecanismo está representado en el comportamiento colectivo de las abejas, es un modelo **mecanístico**. El modelo también muestra la progresión de la construcción del panal, por lo que es un modelo **dinámico**, y debido a que cualquiera de los eventos posibles pueden ocurrir en cualquier momento es en tiempo **contínuo**. También representa la estructura del panal en unidades espaciales, por lo que es **espacialmente heterogéneo**. Finalmente, los eventos que ocurren son aleatorios, o sea que el resultado de  una realización del modelo será diferente de otra, por lo que es un modelo **estocástico**. Te invito a explorar este modelo por medio de la aplicación en línea de [NetLogo](https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Honeycomb.nlogo).
 
 A continuación veremos a mayor profundidad los modelos deterministicos y estocásticos.
 
-### Modelos determinisicos
+### Modelos determinísticos y estocásticos
 
+Imaginemos que necesitamos un librero, y para ello necesitamos medir las dimensiones del espacio donde lo colocaremos. Solamente contamos con una cinta en pulgadas, pero el carpintero, para hacer el presupuesto, necesita las medidas en centímetros. Entonces para hacer la conversión de pulgadas a centímetros utilizamos el siguiente modelo:
 
-      
-### Modelos estocásticos
+\begin{equation}
+    cm = 2.54 \times in  (\#eq:pulgadas)
+\end{equation}
+
+donde $in$ son las pulgadas, $cm$ los centímetros, y $2.54$ es la constante de conversión. Entonces ya tenemos así un modelo que siempre nos dará la misma respuesta para cada valor de entrada:
+
+- $2in \rightarrow 2 \times 2.54cm = 5.08cm$
+- $11in \rightarrow 11 \times 2.54cm = 27.94cm$
+
+Imaginemos ahora que la constante de conversión no fuera una sola, $2.54$, sino cientos, o miles de posibles valores cercanos a $2.54$, y cada vez que resolvemos el modelo \@ref(eq:pulgadas) obtenemos un valor distinto. El primero es un modelo deterministico, siempre da la misma respuesta. El segundo, es un modelo estocástico. Te preguntarás entonces ¿para qué querríamos un modelo que de respuestas inconsistentes? La principal razón es que en ecología, como en otras áreas del conocimiento, los sistemas de estudio son muy variables, y los modelos estocásticos nos sirven para representar esa variabilidad y conocer algunos de los posibles resultados. En pocas palabras, si un sistema es determinista, siempre podemos conocer su comportamiento con alta precisión, mientras que en los estocáticos, no.
+
+#### Deterministicos
+
+```{r echo = F, child = "Determin.Rmd"}
+
+```
+
+#### Estocásticos
+
+```{r echo = F, child = "Estoc.Rmd"}
+
+```
