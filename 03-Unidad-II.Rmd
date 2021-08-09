@@ -1,0 +1,17 @@
+# Unidad II: Introducción a los modelos determinísticos
+
+```{r echo = F, child="Unidad-II/Recta.Rmd"}
+
+```
+
+```{r echo = F, child = "Unidad-II/Parabola.Rmd"}
+
+```
+
+```{r echo = F, child = "Unidad-II/Conicas.Rmd"}
+
+```
+
+```{r echo = F, child = "Unidad-II/Curva-normal.Rmd"}
+
+```

@@ -77,7 +77,7 @@
 
 \title{Modelos Matemáticos en Ecología I}
 \author{Gerardo Martín}
-\date{2021-08-03}
+\date{2021-08-09}
 
 \begin{document}
 \maketitle
@@ -166,7 +166,7 @@ Imaginemos a seis personas invidentes, con la tarea de encontrar qué es el obje
 
 }
 
-\caption{La parábola de los seis hombres ciegos inspeccionando un elefante.}\label{fig:unnamed-chunk-8}
+\caption{La parábola de los seis hombres ciegos inspeccionando un elefante.}\label{fig:unnamed-chunk-12}
 \end{figure}
 
 Quien toque los colmillos podrá pensar que se trata de una lanza, la trompa podría tratarse de una serpiente, la cola de una cuerda, las patas troncos de árbol y el cuerpo una pared. Es evidente que todas las hipótesis presentadas después de la inspección fueron erróneas, y que cuando estudiamos al mundo lo haremos igual, con la descripción de tan sólo una fracción de éste. Un séptimo hombre que pregunte a los otros seis qué fue lo que vieron podría formarse una imágen más completa del \emph{sistema} para proponer otra hipótesis: se trata de un objeto grande reposando sobre cuatro columnas con apéndices adelante y atrás.
@@ -203,7 +203,7 @@ Las hipótesis propuestas por los seis hombres representan modelos, es decir sim
 
 }
 
-\caption{ Diagrama de mi estrategia para desarrollar modelos.}\label{fig:unnamed-chunk-9}
+\caption{ Diagrama de mi estrategia para desarrollar modelos.}\label{fig:unnamed-chunk-13}
 \end{figure}
 
 La estrategia general que les doy puede, por el momento, sonar un tanto abstracta, pero la iremos poniendo en práctica conforme avanza el curso para que al final, esperemos, tenga más sentido que ahorita.
@@ -438,7 +438,7 @@ Una de las grandes bondades de los modelos determinísticos es que nos permiten 
 A diferencia de los modelos deterministas, los estocásticos nunca dan el mismo resultado. Existe un gran variedad de herramientas computacionales y formulaciones matemáticas para conseguir este tipo de comportamiento. En la mayoría de los casos, los modelos deterministas constan de dos componentes, uno determinista, relacionado con los mecanismos propios del sistema de estudio, y uno aleatorio, encargado de generar los eventos posibles o de simular la variación en el componente determinista. Esto lo podemos ilustrar con el modelo de conversión de pulgadas a centímetros:
 
 \[
-in = 2.54 \times cm
+cm = 2.54 \times in
 \]
 el cual es determinista. Sin embargo, podemos formular una versión estocástica, que añada una pequeña cantidad a la conversión determinística cada vez que la calculamos:
 
@@ -450,42 +450,239 @@ donde \[\varepsilon\] es el \emph{error} que hemos introducido. Técnicamente pa
 
 \begin{table}
 
-\caption{\label{tab:unnamed-chunk-12}Cinco realizaciones para la conversión de dos pulgadas a centímetros con el modelo determinista y estocástico.}
+\caption{\label{tab:unnamed-chunk-16}Cinco realizaciones para la conversión de dos pulgadas a centímetros con el modelo determinista y estocástico.}
 \centering
 \begin{tabular}[t]{c|c}
 \hline
 Determinista & Estocástico\\
 \hline
-5.08 & 4.720164\\
+5.08 & 5.351191\\
 \hline
-5.08 & 4.725235\\
+5.08 & 5.392189\\
 \hline
-5.08 & 5.296882\\
+5.08 & 5.166747\\
 \hline
-5.08 & 4.734873\\
+5.08 & 5.267774\\
 \hline
-5.08 & 5.163951\\
+5.08 & 5.114500\\
 \hline
 \end{tabular}
 \end{table}
 
 Este tipo de \emph{inconsistencias} de los modelos estocásticos tienen implicaciones muy importantes para el comportamiento de modelos como el de Lotka-Volterra, que veremos más adelante.
 
-\hypertarget{methods}{%
-\chapter{Methods}\label{methods}}
+\hypertarget{unidad-ii-introducciuxf3n-a-los-modelos-determinuxedsticos}{%
+\chapter{Unidad II: Introducción a los modelos determinísticos}\label{unidad-ii-introducciuxf3n-a-los-modelos-determinuxedsticos}}
 
-We describe our methods in this chapter.
+\hypertarget{la-luxednea-recta}{%
+\subsection{La línea recta}\label{la-luxednea-recta}}
 
-\hypertarget{applications}{%
-\chapter{Applications}\label{applications}}
+Una línea recta se puede representar matemáticamente de varias maneras, la más común de ellas es por medio de una función. Una función, en cambio es una expresión matemática que indica una serie de operaciones (aritméticas por ejemplo), que serán aplicadas a un conjunto de números en sucesión (los números reales, p.~ej.) para producir otro conjunto. Así la, función lineal más sencilla puede ser:
 
-Some \emph{significant} applications are demonstrated in this chapter.
+\begin{equation}
+    y(x) = x
+\end{equation}
 
-\hypertarget{example-one}{%
-\section{Example one}\label{example-one}}
+Lo que quiere decir que \(y\) es una función de \(x\), y cada valor de \(y\) será igual a cada valor de \(x\). En lenguaje matemático, el conjunto de números de \(x\) se llama el dominio, y \(y(x)\) el codominio. Algunas funciones lineales más complejas son:
 
-\hypertarget{example-two}{%
-\section{Example two}\label{example-two}}
+\begin{equation}
+    y(x) = ax
+\end{equation}
+
+donde \(a\) es una constante, lo que quiere decir que cada valor de \(y(x)\) será producido por el producto \(a \times x\). Finalmente, la expresión más común de una ecuación lineal es:
+
+\begin{equation}
+    y(x) = b + ax
+\end{equation}
+
+donde \(b\) también es una constante que se llama intercepto, y \(a\) es la pendiente, pues esta última determina la inclinación de la línea recta representada en el plano cartesiano.
+
+\hypertarget{representaciones-gruxe1ficas-de-la-recta}{%
+\subsubsection{Representaciones gráficas de la recta}\label{representaciones-gruxe1ficas-de-la-recta}}
+
+Comencemos por dar un repaso del plano cartesiano. Este consiste de la representación de dos conjuntos de números reales en los que representamos una función, como una regla de correspondencia entre los valores de cada conjunto, de modo que a cada valor de \(x\) corresponde uno y sólo uno de los valores de \(y\). Cada conjunto se puede representar como una recta, y cuando éstas se disponen perperdiculares dan origen al plano.
+
+\begin{figure}
+
+{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/unnamed-chunk-17-1} 
+
+}
+
+\caption{Ejemplo del plano cartesiado mostrando en rojo la correspondencia de valores para $y(x) = x$, donde los puntos corresponden a los pares de valores $(x = -1, y = -1), (-0.5, -0.5), (0, 0), (0.5, 0.5), (1, 1)$.}\label{fig:unnamed-chunk-17}
+\end{figure}
+
+Ahora veamos, con un ejemplo gráfico por qué la constante \(a\) recibe el nombre de \emph{pendiente}.
+
+\begin{figure}
+
+{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/unnamed-chunk-18-1} 
+
+}
+
+\caption{Gráficas de las funciones $y(x) = 0.5 x$ (en rojo) y $y(x) = 0.5 + 0.5 x$ (azul). Las líneas punteadas en colores indican el efecto de las constantes $a$ y $b$, mientas que Δ$x$ denota el cambio de una unidad de $x$.}\label{fig:unnamed-chunk-18}
+\end{figure}
+
+Como podemos ver, de manera más general, la línea recta es generada por una regla de correspondencia muy sencilla, un conjunto de valores \(X\) son multiplicados por un escalar \(a\), a los que se les puede añadir un \emph{intercepto} \(b\). El intercepto siempre es el valor de \(y(x)\) cuando \(x = 0\).
+
+Ya se podrán imaginar que puede existir un sinnúmero de modelos lineales distintos, por ejemplo si \(y\) es una función de un gran número de conjuntos \(X\):
+
+\begin{equation}
+y(x_1, x_2, \dots, x_{n-1}, x_n) = b + a_1 x_1 + a_2 x_2 + \dots + a_{n-1} x_{n-1} + a_n x_n
+\end{equation}
+
+Gráficamente, estamos prácticamente limitados a explorar \(y(x_1, x_2)\), pero existen muchas herramientas matemáticas para entender modelos lineales más complejos que veremos más adelante. Estas herramientas y las implicaciones generales de la simplicidad del modelo lineal lo hacen uno de los modelos más útiles con que contamos para estudiar matemáticamente fenómenos dinámicos (que cambian de estado a lo largo del tiempo), como para estudiarlos de manera probabilística (con estadística). De hecho, el modelo lineal nos puede servir para entender modelos, como la parábola y el exponencial, que geométricamente no se parecen a la línea recta.
+
+\hypertarget{la-paruxe1bola}{%
+\subsection{La parábola}\label{la-paruxe1bola}}
+
+Geométricamente, la parábola es muy distinta de la recta:
+
+\begin{figure}
+
+{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/parabola-1} 
+
+}
+
+\caption{Ejemplo del plano cartesiado mostrando en rojo la correspondencia de valores para $y(x) = x^2$, donde los puntos corresponden a los pares de valores $(x = -1, y = 1), (-0.5, 0.25), (0, 0), (0.5, 0.25), (1, 1)$.}\label{fig:parabola}
+\end{figure}
+
+La función matemática más sencilla que puede describir esta forma en el plano cartesiano es:
+
+\begin{equation}
+    y(x) = x^2
+\end{equation}
+
+Al igual que con los modelos lineales, las parábolas pueden representarse matemáticamente de otras formas más complejas:
+
+\begin{itemize}
+\tightlist
+\item
+  \(y(x) = a + bx + cx^2\)
+\item
+  \(y(x) = a + cx^2\)
+\item
+  \(y(x) = -x^2\)
+\end{itemize}
+
+Si uno es observador, se dará cuenta de que estas ecuaciones son muy similares a la recta, y es que es posible considerar que \(x^2\) se puede considerar como otro conjunto tal que \(x' = x^2\), resultando así en funciones perferctamente lineales:
+
+\begin{itemize}
+\tightlist
+\item
+  \(y(x) = a + bx + cx'\)
+\item
+  \(y(x) = a + cx'\)
+\item
+  \(y(x) = -x'\)
+\end{itemize}
+
+Entonce, lo que realmente distingue matemáticamente a una parábola de una recta, es la doble ocurrencia de cada valor de \(y\) para los distintos valores de \(x\):
+
+\begin{figure}
+
+{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/parabola-2-1} 
+
+}
+
+\caption{Correspondencia de dos valores distintos de $x$ para el mismo valor de $y$}\label{fig:parabola-2}
+\end{figure}
+
+Cuando esto ocurre, las funciones tiene un solo punto a lo largo de todos los valores de \(x\), donde sólo va a ocurrir un valor único de \(y\). A estos puntos se les conocen como mínimos (par de valores con coordenadas \((0, 0)\) en la figura \ref{fig:parabola-2}). Los máximos, en cambio están ilustrados en la figura \ref{fig:parabola-3}, e igual corresponde al punto con coordenadas \((0, 0)\).
+
+\begin{figure}
+
+{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/parabola-3-1} 
+
+}
+
+\caption{Correspondencia de valores para $y = -x^2$.}\label{fig:parabola-3}
+\end{figure}
+
+En los modelos parabólicos más sencillos (\(y(x) = x^2, y(x) = -x^2\)), los puntos mínimos y máximos siempre estarán en las coordenadas \((x = 0, y = 0)\), pero es posible alterarlos. Por ejemplo en \(y(x) = 2 + x^2\), el mínimo estará en \((x = 0, y = 2)\). Para verificarlo resuelve \(y(x) = 2 + x^2\) para \(y(0)\), sustituyendo \(x\) por \(0\).
+
+\hypertarget{ejercicio}{%
+\subsubsection{Ejercicio}\label{ejercicio}}
+
+A estas alturas, ya te podrás haber dado cuenta de ciertas propiedades de las parábolas, contesta las siguientes preguntas:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  ¿Qué tipo de punto único (mínimo o máximo) habrá en las siguientes parábolas?
+
+  1.1. \(y(x) = 2 - x^2\)
+  1.2. \(y(x) = 2x - 2x^2\)
+  1.3. \(y(x) = 1 - x + 3x^2\)
+  1.4. \(y(x) = x/2 - 4x^2/x\)
+  1.5. \(y(x) = (5x)^2 - 3x + 1\)
+\end{enumerate}
+
+\hypertarget{cuxf3nicas}{%
+\subsection{Cónicas}\label{cuxf3nicas}}
+
+De manera muy general, una cónica es el conjunto de soluciones para una ecuación cuadrática cuando menos en dos variables. En este sentido, las parábolas, vistas en la sección anterior, son un tipo de cónica. Ejemplos:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(x^2 + y^2 = -1\)
+\item
+  \(x^2 + y^2 = 0\)
+\item
+  \(x^2 - y^2 = 0\)
+\item
+  \(xy - 1 = 0\)
+\item
+  \(x^2 - y = 0\)
+\end{enumerate}
+
+Debido a la generalidad de la definición de \emph{cónicas}, las ecuaciones 1-5 tienen una variedad de formas muy distintas, en comparación con las secciones de rectas y parábolas (Figura \ref{fig:conicas}). La mayoría de estas forman surgen como solución a la intersección de un plano bidimensional con una línea rotando sobre un eje definido dentro de ella en un espacio tridimencional (\href{https://www.mathplanet.com/Oldsite/media/28029/conic.png}{ver ejemplo})
+
+\begin{figure}
+
+{\centering \includegraphics[width=6.93in]{Unidad-II/conicas} 
+
+}
+
+\caption{Representación gráfica de las ecuaciones 1-5.}\label{fig:conicas}
+\end{figure}
+
+\hypertarget{la-curva-normal}{%
+\subsection{La curva normal}\label{la-curva-normal}}
+
+En el curso de probabilidad y estadística, se acordarán, se mencionó repetidamente a la distribución normal. En cuestión de matemáticas, la distribución normal puede ser representada como una ecuación:
+
+\begin{equation}
+    y(x) = \frac{1}{\sigma \sqrt{2\pi}}e^{-\frac{(x-\mu)^2}{2\sigma^2}} \label{eq:normal}
+\end{equation}
+
+donde \(\mu\) es la media aritmética, \(\sigma^2\) es la varianza y \(x\) son todos los valores de la variable que observamos. Cuando tenemos datos de un experimento y los analizamos haciendo el cálculo del promedio estimamos justamente a \(\mu\) de la ecuación \eqref{eq:normal}, y al estimar la varianza obtenemos a \(\sigma^2\) de la misma ecuación. Como es importante notar, al hacer estos cálculos estamos asumiendo que nuestros datos tienen una distribución (un histograma) que puede ser descrita por la ecuación \eqref{eq:normal}.
+
+Como vimos en la sección de parábolas, las funciones que no son monótonas (los valores de \(y\) no aumentan o disminuyen a lo largo de \(x\)), tienen un punto máximo o mínimo. La curva normal, tiene propiedades similares, aunque debido a la presencia de la función exponencial (\(e^{\dots}\)), los valores de \(y(x)\) \textbf{siempre serán positivos}. Por lo tanto, la curva normal tiene un punto máximo que corresponde a \(y(\mu)\), o sea, \(y\) alcanza su punto máximo cuando \(x=\mu\) (Figura \ref{fig:normal}).
+
+\begin{figure}
+
+{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/normal-1} 
+
+}
+
+\caption{Representación gráfica de la curva normal.}\label{fig:normal}
+\end{figure}
+
+En estadística, esta función representa en el eje de las \(y\) la \emph{densidad} de la variable \(x\). Densidad se refiere a la proporción de observaciones de \(x\) dentro de un intervalo definido de \(x\). Por lo tanto, la curva normal, representa la probabilidad de observar ese valor de \(x\), de ahí que \(\mu\) sea el valor teórico más probable. En lo que respecta a \(\sigma^2\), éste representa qué tan concentrados estarán los valores de \(x\) alrededor de \(\mu\). Altos valores de \(\sigma\) se traducirán en baja concentración alrededor de \(\mu\) (Figura \ref{fig:vari}).
+
+\begin{figure}
+
+{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/vari-1} 
+
+}
+
+\caption{Efecto de  la varianza sobre la la dispersión alrededor de la media.}\label{fig:vari}
+\end{figure}
+
+\hypertarget{unidad-iii---introducciuxf3n-al-cuxe1culo-diferencial-e-integral}{%
+\chapter{Unidad III - Introducción al cáculo diferencial e integral}\label{unidad-iii---introducciuxf3n-al-cuxe1culo-diferencial-e-integral}}
 
   \bibliography{book.bib,packages.bib,citas.bib}
 

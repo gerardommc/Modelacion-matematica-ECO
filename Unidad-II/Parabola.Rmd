@@ -1,0 +1,74 @@
+### La parábola
+
+Geométricamente, la parábola es muy distinta de la recta:
+
+```{r parabola, echo = F, fig.height=4.5, fig.width=4, fig.cap="Ejemplo del plano cartesiado mostrando en rojo la correspondencia de valores para $y(x) = x^2$, donde los puntos corresponden a los pares de valores $(x = -1, y = 1), (-0.5, 0.25), (0, 0), (0.5, 0.25), (1, 1)$.", fig.align="center"}
+plot(NA, NA, xlim = c(-1, 1), ylim= c(0, 1),
+     xlab = "x", ylab = "y")
+for(i in seq(-1, 1, by = 0.25)) abline(v = i, lty = 3, col = "lightgrey")
+for(i in seq(0, 1, by = 0.125)) abline(h = i, lty = 3, col = "lightgrey")
+abline(v = 0, col = "darkgrey")
+abline(h = 0, col = "darkgrey")
+points(seq(-1, 1, by = 0.5), seq(-1, 1, by = 0.5)^2, pch = 20, col = "red")
+lines(seq(-1, 1, by = 0.01), seq(-1, 1, by = 0.01)^2, col = "red")
+```
+La función matemática más sencilla que puede describir esta forma en el plano cartesiano es:
+
+\begin{equation}
+    y(x) = x^2
+\end{equation}
+
+Al igual que con los modelos lineales, las parábolas pueden representarse matemáticamente de otras formas más complejas:
+
+- $y(x) = a + bx + cx^2$
+- $y(x) = a + cx^2$
+- $y(x) = -x^2$
+
+Si uno es observador, se dará cuenta de que estas ecuaciones son muy similares a la recta, y es que es posible considerar que $x^2$ se puede considerar como otro conjunto tal que $x' = x^2$, resultando así en funciones perferctamente lineales:
+
+- $y(x) = a + bx + cx'$
+- $y(x) = a + cx'$
+- $y(x) = -x'$
+
+Entonce, lo que realmente distingue matemáticamente a una parábola de una recta, es la doble ocurrencia de cada valor de $y$ para los distintos valores de $x$:
+
+```{r parabola-2, echo = F, fig.height=4.5, fig.width=4, fig.cap="Correspondencia de dos valores distintos de $x$ para el mismo valor de $y$", fig.align="center"}
+plot(NA, NA, xlim = c(-1, 1), ylim= c(0, 1),
+     xlab = "x", ylab = "y")
+for(i in seq(-1, 1, by = 0.25)) abline(v = i, lty = 3, col = "lightgrey")
+for(i in seq(0, 1, by = 0.125)) abline(h = i, lty = 3, col = "lightgrey")
+abline(v = 0, col = "darkgrey")
+abline(h = 0, col = "darkgrey")
+points(seq(-1, 1, by = 0.5), seq(-1, 1, by = 0.5)^2, pch = 20, col = "red")
+lines(seq(-1, 1, by = 0.01), seq(-1, 1, by = 0.01)^2, col = "red")
+
+abline(h = 0.25, lty = 2, col = "red", lwd = 0.5)
+```
+Cuando esto ocurre, las funciones tiene un solo punto a lo largo de todos los valores de $x$, donde sólo va a ocurrir un valor único de $y$. A estos puntos se les conocen como mínimos (par de valores con coordenadas $(0, 0)$ en la figura \@ref(fig:parabola-2)). Los máximos, en cambio están ilustrados en la figura \@ref(fig:parabola-3), e igual corresponde al punto con coordenadas $(0, 0)$.
+
+```{r parabola-3, echo = F, fig.height=4.5, fig.width=4, fig.cap="Correspondencia de valores para $y = -x^2$.", fig.align="center"}
+plot(NA, NA, xlim = c(-1, 1), ylim= c(-1, 0),
+     xlab = "x", ylab = "y")
+for(i in seq(-1, 1, by = 0.25)) abline(v = i, lty = 3, col = "lightgrey")
+for(i in seq(-1, 0, by = 0.125)) abline(h = i, lty = 3, col = "lightgrey")
+abline(v = 0, col = "darkgrey")
+abline(h = 0, col = "darkgrey")
+points(seq(-1, 1, by = 0.5), -seq(-1, 1, by = 0.5)^2, pch = 20, col = "red")
+lines(seq(-1, 1, by = 0.01), -seq(-1, 1, by = 0.01)^2, col = "red")
+```
+
+En los modelos parabólicos más sencillos ($y(x) = x^2, y(x) = -x^2$), los puntos mínimos y máximos siempre estarán en las coordenadas $(x = 0, y = 0)$, pero es posible alterarlos. Por ejemplo en $y(x) = 2 + x^2$, el mínimo estará en $(x = 0, y = 2)$. Para verificarlo resuelve $y(x) = 2 + x^2$ para $y(0)$, sustituyendo $x$ por $0$.
+
+#### Ejercicio
+
+A estas alturas, ya te podrás haber dado cuenta de ciertas propiedades de las parábolas, contesta las siguientes preguntas:
+
+1. ¿Qué tipo de punto único (mínimo o máximo) habrá en las siguientes parábolas?
+
+    1.1. $y(x) = 2 - x^2$
+    1.2. $y(x) = 2x - 2x^2$
+    1.3. $y(x) = 1 - x + 3x^2$
+    1.4. $y(x) = x/2 - 4x^2/x$
+    1.5. $y(x) = (5x)^2 - 3x + 1$
+
+

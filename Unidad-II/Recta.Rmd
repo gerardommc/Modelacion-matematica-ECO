@@ -1,0 +1,82 @@
+### La línea recta
+
+Una línea recta se puede representar matemáticamente de varias maneras, la más común de ellas es por medio de una función. Una función, en cambio es una expresión matemática que indica una serie de operaciones (aritméticas por ejemplo), que serán aplicadas a un conjunto de números en sucesión (los números reales, p. ej.) para producir otro conjunto. Así la, función lineal más sencilla puede ser:
+
+\begin{equation}
+    y(x) = x
+\end{equation}
+
+Lo que quiere decir que $y$ es una función de $x$, y cada valor de $y$ será igual a cada valor de $x$. En lenguaje matemático, el conjunto de números de $x$ se llama el dominio, y $y(x)$ el codominio. Algunas funciones lineales más complejas son:
+
+\begin{equation}
+    y(x) = ax
+\end{equation}
+
+donde $a$ es una constante, lo que quiere decir que cada valor de $y(x)$ será producido por el producto $a \times x$. Finalmente, la expresión más común de una ecuación lineal es:
+
+\begin{equation}
+    y(x) = b + ax
+\end{equation}
+
+donde $b$ también es una constante que se llama intercepto, y $a$ es la pendiente, pues esta última determina la inclinación de la línea recta representada en el plano cartesiano.
+
+#### Representaciones gráficas de la recta
+
+Comencemos por dar un repaso del plano cartesiano. Este consiste de la representación de dos conjuntos de números reales en los que representamos una función, como una regla de correspondencia entre los valores de cada conjunto, de modo que a cada valor de $x$ corresponde uno y sólo uno de los valores de $y$. Cada conjunto se puede representar como una recta, y cuando éstas se disponen perperdiculares dan origen al plano.
+
+```{r echo = F, fig.height=4.5, fig.width=4, fig.cap="Ejemplo del plano cartesiado mostrando en rojo la correspondencia de valores para $y(x) = x$, donde los puntos corresponden a los pares de valores $(x = -1, y = -1), (-0.5, -0.5), (0, 0), (0.5, 0.5), (1, 1)$.", fig.align="center"}
+
+plot(NA, NA, xlim = c(-1, 1), ylim= c(-1, 1),
+     xlab = "x", ylab = "y")
+for(i in seq(-1, 1, by = 0.25)) abline(v = i, lty = 3, col = "lightgrey")
+for(i in seq(-1, 1, by = 0.25)) abline(h = i, lty = 3, col = "lightgrey")
+abline(v = 0, col = "darkgrey")
+abline(h = 0, col = "darkgrey")
+points(seq(-1, 1, by = 0.5), seq(-1, 1, by = 0.5), pch = 20, col = "red")
+lines(seq(-1, 1, by = 0.5), seq(-1, 1, by = 0.5), col = "red")
+
+```
+
+Ahora veamos, con un ejemplo gráfico por qué la constante $a$ recibe el nombre de *pendiente*.
+
+```{r echo = F, , fig.height=4.5, fig.width=4, fig.align="center", fig.cap = "Gráficas de las funciones $y(x) = 0.5 x$ (en rojo) y $y(x) = 0.5 + 0.5 x$ (azul). Las líneas punteadas en colores indican el efecto de las constantes $a$ y $b$, mientas que Δ$x$ denota el cambio de una unidad de $x$."}
+
+plot(NA, NA, xlim = c(-1, 1), ylim= c(-1, 1),
+     xlab = "x", ylab = "y")
+for(i in seq(-1, 1, by = 0.25)) abline(v = i, lty = 3, col = "lightgrey")
+for(i in seq(-1, 1, by = 0.25)) abline(h = i, lty = 3, col = "lightgrey")
+abline(v = 0, col = "darkgrey")
+abline(h = 0, col = "darkgrey")
+points(seq(-1, 1, by = 0.5), seq(-1, 1, by = 0.5) * 0.5, pch = 20, col = "red")
+lines(seq(-1, 1, by = 0.5), seq(-1, 1, by = 0.5) * 0.5, col = "red")
+
+lines(c(-1, 0), c(-0.5, -0.5), lty = 3, col = "red")
+lines(c(-1, -1), c(-0.5, 0), lty = 3, col = "red")
+
+text(x = -0.75, y = -0.25, labels = expression(italic(a)))
+text(x = -0.5, y = -0.625, labels = expression(paste(Delta, italic(x), sep = "")))
+
+points(seq(-1, 1, by = 0.5), seq(-1, 1, by = 0.5) * 0.5 + 0.5, pch = 20, col = "blue")
+lines(seq(-1, 1, by = 0.5), seq(-1, 1, by = 0.5) * 0.5 + 0.5, col = "blue")
+
+lines(c(0, 0), c(0, 0.5), lty = 3, col = "blue")
+lines(c(0, 1), c(0.5, 0.5), lty = 3, col = "blue")
+lines(c(1, 1), c(0.5, 1), lty = 3, col = "blue")
+text(x = -0.25, y = 0.25, label = expression(italic(b)))
+text(x = 0.75, y = 0.75, label = expression(italic(a)))
+    
+```
+
+Como podemos ver, de manera más general, la línea recta es generada por una regla de correspondencia muy sencilla, un conjunto de valores $X$ son multiplicados por un escalar $a$, a los que se les puede añadir un *intercepto*  $b$. El intercepto siempre es el valor de $y(x)$ cuando $x = 0$.
+
+Ya se podrán imaginar que puede existir un sinnúmero de modelos lineales distintos, por ejemplo si $y$ es una función de un gran número de conjuntos $X$:
+
+\begin{equation}
+y(x_1, x_2, \dots, x_{n-1}, x_n) = b + a_1 x_1 + a_2 x_2 + \dots + a_{n-1} x_{n-1} + a_n x_n
+\end{equation}
+
+Gráficamente, estamos prácticamente limitados a explorar $y(x_1, x_2)$, pero existen muchas herramientas matemáticas para entender modelos lineales más complejos que veremos más adelante. Estas herramientas y las implicaciones generales de la simplicidad del modelo lineal lo hacen uno de los modelos más útiles con que contamos para estudiar matemáticamente fenómenos dinámicos (que cambian de estado a lo largo del tiempo), como para estudiarlos de manera probabilística (con estadística). De hecho, el modelo lineal nos puede servir para entender modelos, como la parábola y el exponencial, que geométricamente no se parecen a la línea recta.
+
+
+
+

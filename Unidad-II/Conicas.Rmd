@@ -1,0 +1,16 @@
+### Cónicas
+
+De manera muy general, una cónica es el conjunto de soluciones para una ecuación cuadrática cuando menos en dos variables. En este sentido, las parábolas, vistas en la sección anterior, son un tipo de cónica. Ejemplos:
+
+1. $x^2 + y^2 = -1$
+2. $x^2 + y^2 = 0$
+3. $x^2 - y^2 = 0$
+4. $xy - 1 = 0$
+5. $x^2 - y = 0$
+
+Debido a la generalidad de la definición de *cónicas*, las ecuaciones 1-5 tienen una variedad de formas muy distintas, en comparación con las secciones de rectas y parábolas (Figura \@ref(fig:conicas)). La mayoría de estas forman surgen como solución a la intersección de un plano bidimensional con una línea rotando sobre un eje definido dentro de ella en un espacio tridimencional ([ver ejemplo](https://www.mathplanet.com/Oldsite/media/28029/conic.png))
+
+```{r conicas, echo = F, fig.align='center', fig.cap="Representación gráfica de las ecuaciones 1-5."}
+knitr::include_graphics("Unidad-II/conicas.png")
+```
+

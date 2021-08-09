@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title> 4 Unidad II: Introducción a los modelos determinísticos | Modelos Matemáticos en Ecología I</title>
+  <meta name="description" content="Sitio del curso de la Licenciatura en Ecología de la ENES unidad Mérida" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content=" 4 Unidad II: Introducción a los modelos determinísticos | Modelos Matemáticos en Ecología I" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Sitio del curso de la Licenciatura en Ecología de la ENES unidad Mérida" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content=" 4 Unidad II: Introducción a los modelos determinísticos | Modelos Matemáticos en Ecología I" />
+  
+  <meta name="twitter:description" content="Sitio del curso de la Licenciatura en Ecología de la ENES unidad Mérida" />
+  
+
+<meta name="author" content="Gerardo Martín" />
+
+
+<meta name="date" content="2021-08-09" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="unidad-i-introducción-a-la-modelación.html"/>
+<link rel="next" href="unidad-iii-introducción-al-cáculo-diferencial-e-integral.html"/>
+<script src="libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Modelos Matemáticos en Ecología I</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preámbulo</a></li>
+<li class="chapter" data-level="2" data-path="encuadre-de-la-materia.html"><a href="encuadre-de-la-materia.html"><i class="fa fa-check"></i><b>2</b> Encuadre de la materia</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="encuadre-de-la-materia.html"><a href="encuadre-de-la-materia.html#criterios-de-evaluación"><i class="fa fa-check"></i><b>2.1</b> Criterios de evaluación</a></li>
+<li class="chapter" data-level="2.2" data-path="encuadre-de-la-materia.html"><a href="encuadre-de-la-materia.html#cómo-se-darán-las-clases"><i class="fa fa-check"></i><b>2.2</b> ¿Cómo se darán las clases?</a></li>
+<li class="chapter" data-level="2.3" data-path="encuadre-de-la-materia.html"><a href="encuadre-de-la-materia.html#reglas-del-salón"><i class="fa fa-check"></i><b>2.3</b> Reglas del salón</a></li>
+<li class="chapter" data-level="2.4" data-path="encuadre-de-la-materia.html"><a href="encuadre-de-la-materia.html#contacto"><i class="fa fa-check"></i><b>2.4</b> Contacto</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="unidad-i-introducción-a-la-modelación.html"><a href="unidad-i-introducción-a-la-modelación.html"><i class="fa fa-check"></i><b>3</b> Unidad I: Introducción a la modelación</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="unidad-i-introducción-a-la-modelación.html"><a href="unidad-i-introducción-a-la-modelación.html#introducción-al-concepto-de-modelo-matemático"><i class="fa fa-check"></i><b>3.1</b> Introducción al concepto de modelo matemático</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="unidad-i-introducción-a-la-modelación.html"><a href="unidad-i-introducción-a-la-modelación.html#qué-es-un-modelo"><i class="fa fa-check"></i><b>3.1.1</b> ¿Qué es un modelo?</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="unidad-i-introducción-a-la-modelación.html"><a href="unidad-i-introducción-a-la-modelación.html#cómo-construir-un-modelo"><i class="fa fa-check"></i><b>3.2</b> Cómo construir un modelo</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="unidad-i-introducción-a-la-modelación.html"><a href="unidad-i-introducción-a-la-modelación.html#ejemplos"><i class="fa fa-check"></i><b>3.2.1</b> Ejemplos</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="unidad-i-introducción-a-la-modelación.html"><a href="unidad-i-introducción-a-la-modelación.html#discusión-sobre-las-distintas-herramientas-matemáticas-empleadas-en-la-modelación-matemática"><i class="fa fa-check"></i><b>3.3</b> Discusión sobre las distintas herramientas matemáticas empleadas en la modelación matemática</a></li>
+<li class="chapter" data-level="3.4" data-path="unidad-i-introducción-a-la-modelación.html"><a href="unidad-i-introducción-a-la-modelación.html#uso-de-los-modelos-matemáticos-en-ecología"><i class="fa fa-check"></i><b>3.4</b> Uso de los modelos matemáticos en ecología</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="unidad-i-introducción-a-la-modelación.html"><a href="unidad-i-introducción-a-la-modelación.html#analíticos-dinámicas-depredador-presa"><i class="fa fa-check"></i><b>3.4.1</b> Analíticos: Dinámicas depredador-presa</a></li>
+<li class="chapter" data-level="3.4.2" data-path="unidad-i-introducción-a-la-modelación.html"><a href="unidad-i-introducción-a-la-modelación.html#simulaciones-dinámica-de-enfermedades-infecciosas"><i class="fa fa-check"></i><b>3.4.2</b> Simulaciones: Dinámica de enfermedades infecciosas</a></li>
+<li class="chapter" data-level="3.4.3" data-path="unidad-i-introducción-a-la-modelación.html"><a href="unidad-i-introducción-a-la-modelación.html#mal-uso-de-los-modelos"><i class="fa fa-check"></i><b>3.4.3</b> Mal uso de los modelos</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="unidad-i-introducción-a-la-modelación.html"><a href="unidad-i-introducción-a-la-modelación.html#tipos-de-modelos"><i class="fa fa-check"></i><b>3.5</b> Tipos de modelos</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="unidad-i-introducción-a-la-modelación.html"><a href="unidad-i-introducción-a-la-modelación.html#ejemplos-1"><i class="fa fa-check"></i><b>3.5.1</b> Ejemplos</a></li>
+<li class="chapter" data-level="3.5.2" data-path="unidad-i-introducción-a-la-modelación.html"><a href="unidad-i-introducción-a-la-modelación.html#modelos-determinísticos-y-estocásticos"><i class="fa fa-check"></i><b>3.5.2</b> Modelos determinísticos y estocásticos</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="unidad-ii-introducción-a-los-modelos-determinísticos.html"><a href="unidad-ii-introducción-a-los-modelos-determinísticos.html"><i class="fa fa-check"></i><b>4</b> Unidad II: Introducción a los modelos determinísticos</a>
+<ul>
+<li class="chapter" data-level="4.0.1" data-path="unidad-ii-introducción-a-los-modelos-determinísticos.html"><a href="unidad-ii-introducción-a-los-modelos-determinísticos.html#la-línea-recta"><i class="fa fa-check"></i><b>4.0.1</b> La línea recta</a></li>
+<li class="chapter" data-level="4.0.2" data-path="unidad-ii-introducción-a-los-modelos-determinísticos.html"><a href="unidad-ii-introducción-a-los-modelos-determinísticos.html#la-parábola"><i class="fa fa-check"></i><b>4.0.2</b> La parábola</a></li>
+<li class="chapter" data-level="4.0.3" data-path="unidad-ii-introducción-a-los-modelos-determinísticos.html"><a href="unidad-ii-introducción-a-los-modelos-determinísticos.html#cónicas"><i class="fa fa-check"></i><b>4.0.3</b> Cónicas</a></li>
+<li class="chapter" data-level="4.0.4" data-path="unidad-ii-introducción-a-los-modelos-determinísticos.html"><a href="unidad-ii-introducción-a-los-modelos-determinísticos.html#la-curva-normal"><i class="fa fa-check"></i><b>4.0.4</b> La curva normal</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="unidad-iii-introducción-al-cáculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cáculo-diferencial-e-integral.html"><i class="fa fa-check"></i><b>5</b> Unidad III - Introducción al cáculo diferencial e integral</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/gerardommc" target="blank">Publicado con bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Modelos Matemáticos en Ecología I</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="unidad-ii-introducción-a-los-modelos-determinísticos" class="section level1" number="4">
+<h1><span class="header-section-number"> 4</span> Unidad II: Introducción a los modelos determinísticos</h1>
+<div id="la-línea-recta" class="section level3" number="4.0.1">
+<h3><span class="header-section-number">4.0.1</span> La línea recta</h3>
+<p>Una línea recta se puede representar matemáticamente de varias maneras, la más común de ellas es por medio de una función. Una función, en cambio es una expresión matemática que indica una serie de operaciones (aritméticas por ejemplo), que serán aplicadas a un conjunto de números en sucesión (los números reales, p. ej.) para producir otro conjunto. Así la, función lineal más sencilla puede ser:</p>
+<p><span class="math display">\[\begin{equation}
+    y(x) = x
+\end{equation}\]</span></p>
+<p>Lo que quiere decir que <span class="math inline">\(y\)</span> es una función de <span class="math inline">\(x\)</span>, y cada valor de <span class="math inline">\(y\)</span> será igual a cada valor de <span class="math inline">\(x\)</span>. En lenguaje matemático, el conjunto de números de <span class="math inline">\(x\)</span> se llama el dominio, y <span class="math inline">\(y(x)\)</span> el codominio. Algunas funciones lineales más complejas son:</p>
+<p><span class="math display">\[\begin{equation}
+    y(x) = ax
+\end{equation}\]</span></p>
+<p>donde <span class="math inline">\(a\)</span> es una constante, lo que quiere decir que cada valor de <span class="math inline">\(y(x)\)</span> será producido por el producto <span class="math inline">\(a \times x\)</span>. Finalmente, la expresión más común de una ecuación lineal es:</p>
+<p><span class="math display">\[\begin{equation}
+    y(x) = b + ax
+\end{equation}\]</span></p>
+<p>donde <span class="math inline">\(b\)</span> también es una constante que se llama intercepto, y <span class="math inline">\(a\)</span> es la pendiente, pues esta última determina la inclinación de la línea recta representada en el plano cartesiano.</p>
+<div id="representaciones-gráficas-de-la-recta" class="section level4" number="4.0.1.1">
+<h4><span class="header-section-number">4.0.1.1</span> Representaciones gráficas de la recta</h4>
+<p>Comencemos por dar un repaso del plano cartesiano. Este consiste de la representación de dos conjuntos de números reales en los que representamos una función, como una regla de correspondencia entre los valores de cada conjunto, de modo que a cada valor de <span class="math inline">\(x\)</span> corresponde uno y sólo uno de los valores de <span class="math inline">\(y\)</span>. Cada conjunto se puede representar como una recta, y cuando éstas se disponen perperdiculares dan origen al plano.</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-17"></span>
+<img src="Mod-mat-ECO_files/figure-html/unnamed-chunk-17-1.png" alt="Ejemplo del plano cartesiado mostrando en rojo la correspondencia de valores para $y(x) = x$, donde los puntos corresponden a los pares de valores $(x = -1, y = -1), (-0.5, -0.5), (0, 0), (0.5, 0.5), (1, 1)$." width="384" />
+<p class="caption">
+Figura 4.1: Ejemplo del plano cartesiado mostrando en rojo la correspondencia de valores para <span class="math inline">\(y(x) = x\)</span>, donde los puntos corresponden a los pares de valores <span class="math inline">\((x = -1, y = -1), (-0.5, -0.5), (0, 0), (0.5, 0.5), (1, 1)\)</span>.
+</p>
+</div>
+<p>Ahora veamos, con un ejemplo gráfico por qué la constante <span class="math inline">\(a\)</span> recibe el nombre de <em>pendiente</em>.</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-18"></span>
+<img src="Mod-mat-ECO_files/figure-html/unnamed-chunk-18-1.png" alt="Gráficas de las funciones $y(x) = 0.5 x$ (en rojo) y $y(x) = 0.5 + 0.5 x$ (azul). Las líneas punteadas en colores indican el efecto de las constantes $a$ y $b$, mientas que Δ$x$ denota el cambio de una unidad de $x$." width="384" />
+<p class="caption">
+Figura 4.2: Gráficas de las funciones <span class="math inline">\(y(x) = 0.5 x\)</span> (en rojo) y <span class="math inline">\(y(x) = 0.5 + 0.5 x\)</span> (azul). Las líneas punteadas en colores indican el efecto de las constantes <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span>, mientas que Δ<span class="math inline">\(x\)</span> denota el cambio de una unidad de <span class="math inline">\(x\)</span>.
+</p>
+</div>
+<p>Como podemos ver, de manera más general, la línea recta es generada por una regla de correspondencia muy sencilla, un conjunto de valores <span class="math inline">\(X\)</span> son multiplicados por un escalar <span class="math inline">\(a\)</span>, a los que se les puede añadir un <em>intercepto</em> <span class="math inline">\(b\)</span>. El intercepto siempre es el valor de <span class="math inline">\(y(x)\)</span> cuando <span class="math inline">\(x = 0\)</span>.</p>
+<p>Ya se podrán imaginar que puede existir un sinnúmero de modelos lineales distintos, por ejemplo si <span class="math inline">\(y\)</span> es una función de un gran número de conjuntos <span class="math inline">\(X\)</span>:</p>
+<p><span class="math display">\[\begin{equation}
+y(x_1, x_2, \dots, x_{n-1}, x_n) = b + a_1 x_1 + a_2 x_2 + \dots + a_{n-1} x_{n-1} + a_n x_n
+\end{equation}\]</span></p>
+<p>Gráficamente, estamos prácticamente limitados a explorar <span class="math inline">\(y(x_1, x_2)\)</span>, pero existen muchas herramientas matemáticas para entender modelos lineales más complejos que veremos más adelante. Estas herramientas y las implicaciones generales de la simplicidad del modelo lineal lo hacen uno de los modelos más útiles con que contamos para estudiar matemáticamente fenómenos dinámicos (que cambian de estado a lo largo del tiempo), como para estudiarlos de manera probabilística (con estadística). De hecho, el modelo lineal nos puede servir para entender modelos, como la parábola y el exponencial, que geométricamente no se parecen a la línea recta.</p>
+</div>
+</div>
+<div id="la-parábola" class="section level3" number="4.0.2">
+<h3><span class="header-section-number">4.0.2</span> La parábola</h3>
+<p>Geométricamente, la parábola es muy distinta de la recta:</p>
+<div class="figure" style="text-align: center"><span id="fig:parabola"></span>
+<img src="Mod-mat-ECO_files/figure-html/parabola-1.png" alt="Ejemplo del plano cartesiado mostrando en rojo la correspondencia de valores para $y(x) = x^2$, donde los puntos corresponden a los pares de valores $(x = -1, y = 1), (-0.5, 0.25), (0, 0), (0.5, 0.25), (1, 1)$." width="384" />
+<p class="caption">
+Figura 4.3: Ejemplo del plano cartesiado mostrando en rojo la correspondencia de valores para <span class="math inline">\(y(x) = x^2\)</span>, donde los puntos corresponden a los pares de valores <span class="math inline">\((x = -1, y = 1), (-0.5, 0.25), (0, 0), (0.5, 0.25), (1, 1)\)</span>.
+</p>
+</div>
+<p>La función matemática más sencilla que puede describir esta forma en el plano cartesiano es:</p>
+<p><span class="math display">\[\begin{equation}
+    y(x) = x^2
+\end{equation}\]</span></p>
+<p>Al igual que con los modelos lineales, las parábolas pueden representarse matemáticamente de otras formas más complejas:</p>
+<ul>
+<li><span class="math inline">\(y(x) = a + bx + cx^2\)</span></li>
+<li><span class="math inline">\(y(x) = a + cx^2\)</span></li>
+<li><span class="math inline">\(y(x) = -x^2\)</span></li>
+</ul>
+<p>Si uno es observador, se dará cuenta de que estas ecuaciones son muy similares a la recta, y es que es posible considerar que <span class="math inline">\(x^2\)</span> se puede considerar como otro conjunto tal que <span class="math inline">\(x&#39; = x^2\)</span>, resultando así en funciones perferctamente lineales:</p>
+<ul>
+<li><span class="math inline">\(y(x) = a + bx + cx&#39;\)</span></li>
+<li><span class="math inline">\(y(x) = a + cx&#39;\)</span></li>
+<li><span class="math inline">\(y(x) = -x&#39;\)</span></li>
+</ul>
+<p>Entonce, lo que realmente distingue matemáticamente a una parábola de una recta, es la doble ocurrencia de cada valor de <span class="math inline">\(y\)</span> para los distintos valores de <span class="math inline">\(x\)</span>:</p>
+<div class="figure" style="text-align: center"><span id="fig:parabola-2"></span>
+<img src="Mod-mat-ECO_files/figure-html/parabola-2-1.png" alt="Correspondencia de dos valores distintos de $x$ para el mismo valor de $y$" width="384" />
+<p class="caption">
+Figura 4.4: Correspondencia de dos valores distintos de <span class="math inline">\(x\)</span> para el mismo valor de <span class="math inline">\(y\)</span>
+</p>
+</div>
+<p>Cuando esto ocurre, las funciones tiene un solo punto a lo largo de todos los valores de <span class="math inline">\(x\)</span>, donde sólo va a ocurrir un valor único de <span class="math inline">\(y\)</span>. A estos puntos se les conocen como mínimos (par de valores con coordenadas <span class="math inline">\((0, 0)\)</span> en la figura <a href="unidad-ii-introducción-a-los-modelos-determinísticos.html#fig:parabola-2">4.4</a>). Los máximos, en cambio están ilustrados en la figura <a href="unidad-ii-introducción-a-los-modelos-determinísticos.html#fig:parabola-3">4.5</a>, e igual corresponde al punto con coordenadas <span class="math inline">\((0, 0)\)</span>.</p>
+<div class="figure" style="text-align: center"><span id="fig:parabola-3"></span>
+<img src="Mod-mat-ECO_files/figure-html/parabola-3-1.png" alt="Correspondencia de valores para $y = -x^2$." width="384" />
+<p class="caption">
+Figura 4.5: Correspondencia de valores para <span class="math inline">\(y = -x^2\)</span>.
+</p>
+</div>
+<p>En los modelos parabólicos más sencillos (<span class="math inline">\(y(x) = x^2, y(x) = -x^2\)</span>), los puntos mínimos y máximos siempre estarán en las coordenadas <span class="math inline">\((x = 0, y = 0)\)</span>, pero es posible alterarlos. Por ejemplo en <span class="math inline">\(y(x) = 2 + x^2\)</span>, el mínimo estará en <span class="math inline">\((x = 0, y = 2)\)</span>. Para verificarlo resuelve <span class="math inline">\(y(x) = 2 + x^2\)</span> para <span class="math inline">\(y(0)\)</span>, sustituyendo <span class="math inline">\(x\)</span> por <span class="math inline">\(0\)</span>.</p>
+<div id="ejercicio" class="section level4" number="4.0.2.1">
+<h4><span class="header-section-number">4.0.2.1</span> Ejercicio</h4>
+<p>A estas alturas, ya te podrás haber dado cuenta de ciertas propiedades de las parábolas, contesta las siguientes preguntas:</p>
+<ol style="list-style-type: decimal">
+<li><p>¿Qué tipo de punto único (mínimo o máximo) habrá en las siguientes parábolas?</p>
+<p>1.1. <span class="math inline">\(y(x) = 2 - x^2\)</span>
+1.2. <span class="math inline">\(y(x) = 2x - 2x^2\)</span>
+1.3. <span class="math inline">\(y(x) = 1 - x + 3x^2\)</span>
+1.4. <span class="math inline">\(y(x) = x/2 - 4x^2/x\)</span>
+1.5. <span class="math inline">\(y(x) = (5x)^2 - 3x + 1\)</span></p></li>
+</ol>
+</div>
+</div>
+<div id="cónicas" class="section level3" number="4.0.3">
+<h3><span class="header-section-number">4.0.3</span> Cónicas</h3>
+<p>De manera muy general, una cónica es el conjunto de soluciones para una ecuación cuadrática cuando menos en dos variables. En este sentido, las parábolas, vistas en la sección anterior, son un tipo de cónica. Ejemplos:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(x^2 + y^2 = -1\)</span></li>
+<li><span class="math inline">\(x^2 + y^2 = 0\)</span></li>
+<li><span class="math inline">\(x^2 - y^2 = 0\)</span></li>
+<li><span class="math inline">\(xy - 1 = 0\)</span></li>
+<li><span class="math inline">\(x^2 - y = 0\)</span></li>
+</ol>
+<p>Debido a la generalidad de la definición de <em>cónicas</em>, las ecuaciones 1-5 tienen una variedad de formas muy distintas, en comparación con las secciones de rectas y parábolas (Figura <a href="unidad-ii-introducción-a-los-modelos-determinísticos.html#fig:conicas">4.6</a>). La mayoría de estas forman surgen como solución a la intersección de un plano bidimensional con una línea rotando sobre un eje definido dentro de ella en un espacio tridimencional (<a href="https://www.mathplanet.com/Oldsite/media/28029/conic.png">ver ejemplo</a>)</p>
+<div class="figure" style="text-align: center"><span id="fig:conicas"></span>
+<img src="Unidad-II/conicas.png" alt="Representación gráfica de las ecuaciones 1-5." width="250" />
+<p class="caption">
+Figura 4.6: Representación gráfica de las ecuaciones 1-5.
+</p>
+</div>
+</div>
+<div id="la-curva-normal" class="section level3" number="4.0.4">
+<h3><span class="header-section-number">4.0.4</span> La curva normal</h3>
+<p>En el curso de probabilidad y estadística, se acordarán, se mencionó repetidamente a la distribución normal. En cuestión de matemáticas, la distribución normal puede ser representada como una ecuación:</p>
+<p><span class="math display" id="eq:normal">\[\begin{equation}
+    y(x) = \frac{1}{\sigma \sqrt{2\pi}}e^{-\frac{(x-\mu)^2}{2\sigma^2}} \tag{4.1}
+\end{equation}\]</span></p>
+<p>donde <span class="math inline">\(\mu\)</span> es la media aritmética, <span class="math inline">\(\sigma^2\)</span> es la varianza y <span class="math inline">\(x\)</span> son todos los valores de la variable que observamos. Cuando tenemos datos de un experimento y los analizamos haciendo el cálculo del promedio estimamos justamente a <span class="math inline">\(\mu\)</span> de la ecuación <a href="unidad-ii-introducción-a-los-modelos-determinísticos.html#eq:normal">(4.1)</a>, y al estimar la varianza obtenemos a <span class="math inline">\(\sigma^2\)</span> de la misma ecuación. Como es importante notar, al hacer estos cálculos estamos asumiendo que nuestros datos tienen una distribución (un histograma) que puede ser descrita por la ecuación <a href="unidad-ii-introducción-a-los-modelos-determinísticos.html#eq:normal">(4.1)</a>.</p>
+<p>Como vimos en la sección de parábolas, las funciones que no son monótonas (los valores de <span class="math inline">\(y\)</span> no aumentan o disminuyen a lo largo de <span class="math inline">\(x\)</span>), tienen un punto máximo o mínimo. La curva normal, tiene propiedades similares, aunque debido a la presencia de la función exponencial (<span class="math inline">\(e^{\dots}\)</span>), los valores de <span class="math inline">\(y(x)\)</span> <strong>siempre serán positivos</strong>. Por lo tanto, la curva normal tiene un punto máximo que corresponde a <span class="math inline">\(y(\mu)\)</span>, o sea, <span class="math inline">\(y\)</span> alcanza su punto máximo cuando <span class="math inline">\(x=\mu\)</span> (Figura <a href="unidad-ii-introducción-a-los-modelos-determinísticos.html#fig:normal">4.7</a>).</p>
+<div class="figure" style="text-align: center"><span id="fig:normal"></span>
+<img src="Mod-mat-ECO_files/figure-html/normal-1.png" alt="Representación gráfica de la curva normal." width="384" />
+<p class="caption">
+Figura 4.7: Representación gráfica de la curva normal.
+</p>
+</div>
+<p>En estadística, esta función representa en el eje de las <span class="math inline">\(y\)</span> la <em>densidad</em> de la variable <span class="math inline">\(x\)</span>. Densidad se refiere a la proporción de observaciones de <span class="math inline">\(x\)</span> dentro de un intervalo definido de <span class="math inline">\(x\)</span>. Por lo tanto, la curva normal, representa la probabilidad de observar ese valor de <span class="math inline">\(x\)</span>, de ahí que <span class="math inline">\(\mu\)</span> sea el valor teórico más probable. En lo que respecta a <span class="math inline">\(\sigma^2\)</span>, éste representa qué tan concentrados estarán los valores de <span class="math inline">\(x\)</span> alrededor de <span class="math inline">\(\mu\)</span>. Altos valores de <span class="math inline">\(\sigma\)</span> se traducirán en baja concentración alrededor de <span class="math inline">\(\mu\)</span> (Figura <a href="unidad-ii-introducción-a-los-modelos-determinísticos.html#fig:vari">4.8</a>).</p>
+<div class="figure" style="text-align: center"><span id="fig:vari"></span>
+<img src="Mod-mat-ECO_files/figure-html/vari-1.png" alt="Efecto de  la varianza sobre la la dispersión alrededor de la media." width="384" />
+<p class="caption">
+Figura 4.8: Efecto de la varianza sobre la la dispersión alrededor de la media.
+</p>
+</div>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="unidad-i-introducción-a-la-modelación.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="unidad-iii-introducción-al-cáculo-diferencial-e-integral.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Mod-mat-ECO.pdf", "Mod-mat-ECO.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

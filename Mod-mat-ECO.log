@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded format=xelatex 2021.6.30)  3 AUG 2021 16:34
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded format=xelatex 2021.6.30)  9 AUG 2021 10:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -889,20 +889,95 @@ LaTeX Warning: Float too large for page by 35.96959pt on input line 381.
 Chapter 4.
 [25
 
-] [26
+]
+File: Mod-mat-ECO_files/figure-latex/unnamed-chunk-17-1.pdf Graphic file (type 
+pdf)
+<use Mod-mat-ECO_files/figure-latex/unnamed-chunk-17-1.pdf>
+File: Mod-mat-ECO_files/figure-latex/unnamed-chunk-18-1.pdf Graphic file (type 
+pdf)
+<use Mod-mat-ECO_files/figure-latex/unnamed-chunk-18-1.pdf>
+
+Underfull \vbox (badness 1168) has occurred while \output is active []
+
+
+Overfull \hbox (52.83453pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 26 \TU/lmr/m/sl/10 CHAPTER 4.  UNIDAD II: INTRODUCCIÓN A LOS MOD
+ELOS DETERMINÍSTICOS
+ []
+
+[26] [27]
+File: Mod-mat-ECO_files/figure-latex/parabola-1.pdf Graphic file (type pdf)
+<use Mod-mat-ECO_files/figure-latex/parabola-1.pdf>
+
+Overfull \hbox (52.83453pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 28 \TU/lmr/m/sl/10 CHAPTER 4.  UNIDAD II: INTRODUCCIÓN A LOS MOD
+ELOS DETERMINÍSTICOS
+ []
+
+[28]
+File: Mod-mat-ECO_files/figure-latex/parabola-2-1.pdf Graphic file (type pdf)
+<use Mod-mat-ECO_files/figure-latex/parabola-2-1.pdf>
+[29]
+File: Mod-mat-ECO_files/figure-latex/parabola-3-1.pdf Graphic file (type pdf)
+<use Mod-mat-ECO_files/figure-latex/parabola-3-1.pdf>
+
+Underfull \vbox (badness 2799) has occurred while \output is active []
+
+
+Overfull \hbox (52.83453pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 30 \TU/lmr/m/sl/10 CHAPTER 4.  UNIDAD II: INTRODUCCIÓN A LOS MOD
+ELOS DETERMINÍSTICOS
+ []
+
+[30]
+File: Unidad-II/conicas.png Graphic file (type bmp)
+<Unidad-II/conicas.png>
+
+Overfull \hbox (155.85472pt too wide) in paragraph at lines 644--645
+ [][] 
+ []
+
+File: Mod-mat-ECO_files/figure-latex/normal-1.pdf Graphic file (type pdf)
+<use Mod-mat-ECO_files/figure-latex/normal-1.pdf>
+[31]
+Overfull \hbox (52.83453pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 32 \TU/lmr/m/sl/10 CHAPTER 4.  UNIDAD II: INTRODUCCIÓN A LOS MOD
+ELOS DETERMINÍSTICOS
+ []
+
+[32] [33]
+File: Mod-mat-ECO_files/figure-latex/vari-1.pdf Graphic file (type pdf)
+<use Mod-mat-ECO_files/figure-latex/vari-1.pdf>
+
+Overfull \hbox (52.83453pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 34 \TU/lmr/m/sl/10 CHAPTER 4.  UNIDAD II: INTRODUCCIÓN A LOS MOD
+ELOS DETERMINÍSTICOS
+ []
+
+[34]
+Chapter 5.
+(./Mod-mat-ECO.bbl [35
 
 ]
-Chapter 5.
-(./Mod-mat-ECO.bbl [27] [28
+Overfull \hbox (75.64233pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 36 \TU/lmr/m/sl/10 CHAPTER 5.  UNIDAD III - INTRODUCCIÓN AL CÁCU
+LO DIFERENCIAL E INTEGRAL
+ []
 
-]) [29] (./Mod-mat-ECO.aux) ) 
+[36
+
+]) [37] (./Mod-mat-ECO.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 18466 strings out of 477220
- 324081 string characters out of 5832722
- 808098 words of memory out of 5000000
- 37891 multiletter control sequences out of 15000+600000
+ 18539 strings out of 477220
+ 326923 string characters out of 5832722
+ 810589 words of memory out of 5000000
+ 37954 multiletter control sequences out of 15000+600000
  409881 words of font info for 80 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  98i,8n,122p,1088b,420s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Mod-mat-ECO.pdf (29 pages).
+Output written on Mod-mat-ECO.pdf (37 pages).

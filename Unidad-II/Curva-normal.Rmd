@@ -1,0 +1,32 @@
+### La curva normal
+
+En el curso de probabilidad y estadística, se acordarán, se mencionó repetidamente a la distribución normal. En cuestión de matemáticas, la distribución normal puede ser representada como una ecuación:
+
+\begin{equation}
+    y(x) = \frac{1}{\sigma \sqrt{2\pi}}e^{-\frac{(x-\mu)^2}{2\sigma^2}} (\#eq:normal)
+\end{equation}
+
+donde $\mu$ es la media aritmética, $\sigma^2$ es la varianza y $x$ son todos los valores de la variable que observamos. Cuando tenemos datos de un experimento y los analizamos haciendo el cálculo del promedio estimamos justamente a $\mu$ de la ecuación \@ref(eq:normal), y al estimar la varianza obtenemos a $\sigma^2$ de la misma ecuación. Como es importante notar, al hacer estos cálculos estamos asumiendo que nuestros datos tienen una distribución (un histograma) que puede ser descrita por la ecuación \@ref(eq:normal).
+
+Como vimos en la sección de parábolas, las funciones que no son monótonas (los valores de $y$ no aumentan o disminuyen a lo largo de $x$), tienen un punto máximo o mínimo. La curva normal, tiene propiedades similares, aunque debido a la presencia de la función exponencial ($e^{\dots}$), los valores de $y(x)$ **siempre serán positivos**. Por lo tanto, la curva normal tiene un punto máximo que corresponde a $y(\mu)$, o sea, $y$ alcanza su punto máximo cuando $x=\mu$ (Figura \@ref(fig:normal)).
+
+```{r normal, echo = F, fig.height=4.5, fig.width=4, fig.align='center', fig.cap="Representación gráfica de la curva normal."}
+curve(dnorm(x), from = -2, 2, ylab = "y(x)", main = "Curva normal")
+abline(v = 0, col = "red")
+abline(v = c(-1, 1), col = "red", lty = 3)
+
+text(-0.2, 0.25, label = expression(mu))
+text(-1.2, 0.3, label = expression(sigma))
+```
+En estadística, esta función representa en el eje de las $y$ la *densidad* de la variable $x$. Densidad se refiere a la proporción de observaciones de $x$ dentro de un intervalo definido de $x$. Por lo tanto, la curva normal, representa la probabilidad de observar ese valor de $x$, de ahí que $\mu$ sea el valor teórico más probable. En lo que respecta a $\sigma^2$, éste representa qué tan concentrados estarán los valores de $x$ alrededor de $\mu$. Altos valores de $\sigma$ se traducirán en baja concentración alrededor de $\mu$ (Figura \@ref(fig:vari)).
+
+```{r vari, echo = F, fig.height=4.5, fig.width=4, fig.align='center', fig.cap = "Efecto de  la varianza sobre la la dispersión alrededor de la media."}
+curve(dnorm(x, mean = 0, sd = 0.5), from = -4, to = 4, ylab = "y(x)", main = "Efecto de varianza")
+curve(dnorm(x, mean = 0, sd = 1), from = -4, to = 4, add = T, col = "red")
+curve(dnorm(x, mean = 0, sd = 1.5), from = -4, to = 4, add = T, col = "blue")
+curve(dnorm(x, mean = 0, sd = 2), from = -4, to = 4, add = T, col = "magenta")
+legend(1.5, 0.8, legend = c(0.5, 1, 1.5, 2),  col = c("black", "red", "blue", "magenta"),
+       lty = 1, bty = "n")
+```
+
+

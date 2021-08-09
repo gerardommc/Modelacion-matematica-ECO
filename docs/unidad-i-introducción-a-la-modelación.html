@@ -24,7 +24,7 @@
 <meta name="author" content="Gerardo Martín" />
 
 
-<meta name="date" content="2021-08-03" />
+<meta name="date" content="2021-08-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="encuadre-de-la-materia.html"/>
-<link rel="next" href="methods.html"/>
+<link rel="next" href="unidad-ii-introducción-a-los-modelos-determinísticos.html"/>
 <script src="libs/header-attrs-2.8/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -126,12 +126,14 @@ div.csl-indent {
 <li class="chapter" data-level="3.5.2" data-path="unidad-i-introducción-a-la-modelación.html"><a href="unidad-i-introducción-a-la-modelación.html#modelos-determinísticos-y-estocásticos"><i class="fa fa-check"></i><b>3.5.2</b> Modelos determinísticos y estocásticos</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>4</b> Methods</a></li>
-<li class="chapter" data-level="5" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>5</b> Applications</a>
+<li class="chapter" data-level="4" data-path="unidad-ii-introducción-a-los-modelos-determinísticos.html"><a href="unidad-ii-introducción-a-los-modelos-determinísticos.html"><i class="fa fa-check"></i><b>4</b> Unidad II: Introducción a los modelos determinísticos</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>5.1</b> Example one</a></li>
-<li class="chapter" data-level="5.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>5.2</b> Example two</a></li>
+<li class="chapter" data-level="4.0.1" data-path="unidad-ii-introducción-a-los-modelos-determinísticos.html"><a href="unidad-ii-introducción-a-los-modelos-determinísticos.html#la-línea-recta"><i class="fa fa-check"></i><b>4.0.1</b> La línea recta</a></li>
+<li class="chapter" data-level="4.0.2" data-path="unidad-ii-introducción-a-los-modelos-determinísticos.html"><a href="unidad-ii-introducción-a-los-modelos-determinísticos.html#la-parábola"><i class="fa fa-check"></i><b>4.0.2</b> La parábola</a></li>
+<li class="chapter" data-level="4.0.3" data-path="unidad-ii-introducción-a-los-modelos-determinísticos.html"><a href="unidad-ii-introducción-a-los-modelos-determinísticos.html#cónicas"><i class="fa fa-check"></i><b>4.0.3</b> Cónicas</a></li>
+<li class="chapter" data-level="4.0.4" data-path="unidad-ii-introducción-a-los-modelos-determinísticos.html"><a href="unidad-ii-introducción-a-los-modelos-determinísticos.html#la-curva-normal"><i class="fa fa-check"></i><b>4.0.4</b> La curva normal</a></li>
 </ul></li>
+<li class="chapter" data-level="5" data-path="unidad-iii-introducción-al-cáculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cáculo-diferencial-e-integral.html"><i class="fa fa-check"></i><b>5</b> Unidad III - Introducción al cáculo diferencial e integral</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/gerardommc" target="blank">Publicado con bookdown</a></li>
@@ -161,7 +163,7 @@ div.csl-indent {
 <div id="qué-es-un-modelo" class="section level3" number="3.1.1">
 <h3><span class="header-section-number">3.1.1</span> ¿Qué es un modelo?</h3>
 <p>Imaginemos a seis personas invidentes, con la tarea de encontrar qué es el objeto que está frente a ellas usando únicamente el tacto. En la parábola de los seis hombres ciegos, el objeto es un elefante, de modo que la imágen que cada uno de ellos se forma del objeto depende enteramente de la parte del elefante que están tocando.</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-8"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-12"></span>
 <img src="Unidad-I/elefante.png" alt="La parábola de los seis hombres ciegos inspeccionando un elefante." width="582" />
 <p class="caption">
 Figura 3.1: La parábola de los seis hombres ciegos inspeccionando un elefante.
@@ -183,7 +185,7 @@ Figura 3.1: La parábola de los seis hombres ciegos inspeccionando un elefante.
 <li>Proponer una serie de modelos alternativos</li>
 <li>Determinar una estrategia para seleccionar uno solo de los modelos que propuse para logar el objetivo</li>
 </ol>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-9"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-13"></span>
 <img src="Unidad-I/Diagrama-dearrollo.png" alt=" Diagrama de mi estrategia para desarrollar modelos." width="306" />
 <p class="caption">
 Figura 3.2:  Diagrama de mi estrategia para desarrollar modelos.
@@ -326,7 +328,7 @@ Figura 3.5: Modelo diagramático basado en el modelo matemático depredador-pres
 <h4><span class="header-section-number">3.5.2.2</span> Estocásticos</h4>
 <p>A diferencia de los modelos deterministas, los estocásticos nunca dan el mismo resultado. Existe un gran variedad de herramientas computacionales y formulaciones matemáticas para conseguir este tipo de comportamiento. En la mayoría de los casos, los modelos deterministas constan de dos componentes, uno determinista, relacionado con los mecanismos propios del sistema de estudio, y uno aleatorio, encargado de generar los eventos posibles o de simular la variación en el componente determinista. Esto lo podemos ilustrar con el modelo de conversión de pulgadas a centímetros:</p>
 <p><span class="math display">\[
-in = 2.54 \times cm
+cm = 2.54 \times in
 \]</span>
 el cual es determinista. Sin embargo, podemos formular una versión estocástica, que añada una pequeña cantidad a la conversión determinística cada vez que la calculamos:</p>
 <p><span class="math display">\[
@@ -334,7 +336,7 @@ cm = 2.54 \times in + \varepsilon
 \]</span></p>
 <p>donde <span class="math display">\[\varepsilon\]</span> es el <em>error</em> que hemos introducido. Técnicamente para hacer esto utilizamos un generador de números aleatorios en el lenguaje de programación <strong>R</strong>. Veamos una serie de conversiones:</p>
 <table>
-<caption><span id="tab:unnamed-chunk-12">Tabla 3.1: </span>Cinco realizaciones para la conversión de dos pulgadas a centímetros con el modelo determinista y estocástico.</caption>
+<caption><span id="tab:unnamed-chunk-16">Tabla 3.1: </span>Cinco realizaciones para la conversión de dos pulgadas a centímetros con el modelo determinista y estocástico.</caption>
 <thead>
 <tr class="header">
 <th align="center">Determinista</th>
@@ -344,23 +346,23 @@ cm = 2.54 \times in + \varepsilon
 <tbody>
 <tr class="odd">
 <td align="center">5.08</td>
-<td align="center">5.225339</td>
+<td align="center">4.939070</td>
 </tr>
 <tr class="even">
 <td align="center">5.08</td>
-<td align="center">4.858696</td>
+<td align="center">5.334789</td>
 </tr>
 <tr class="odd">
 <td align="center">5.08</td>
-<td align="center">4.790793</td>
+<td align="center">4.823042</td>
 </tr>
 <tr class="even">
 <td align="center">5.08</td>
-<td align="center">5.199422</td>
+<td align="center">5.198367</td>
 </tr>
 <tr class="odd">
 <td align="center">5.08</td>
-<td align="center">4.935093</td>
+<td align="center">4.934527</td>
 </tr>
 </tbody>
 </table>
@@ -400,7 +402,7 @@ Wilenski, Ulrich. 2003. <span>“NetLogo Honeycomb Model.”</span> <a href="htt
         </div>
       </div>
 <a href="encuadre-de-la-materia.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="methods.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="unidad-ii-introducción-a-los-modelos-determinísticos.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
