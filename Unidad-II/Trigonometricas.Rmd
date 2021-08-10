@@ -1,0 +1,114 @@
+
+### Funciones trigonométricas
+
+En esta sección revisaremos algunas de las funciones trigonométricas y cómo se representan en el plano cartesiano. 
+
+La trigonometría es una rama de las matemáticas que se comenzó a desarrollar a partir de la necesidad de medir distancias de manera indirecta. Por ejemplo, la distancia entre la luna y la tierra y la tierra y el sol, la distancia entre dos barcos, la distancia entre un barco y el puero más cercano. Las herramientas trigonométricas entonces se comenzaron a desarrollar utilizando la geometría de triángulos rectángulos. Aquí es preciso describir el teorema de los triángulos proporcionales, dados dos triángulos con ángulos internos idénticos y longitudes de lados diferentes, los cocientes de las longitudes de sus lados serán iguales (Figura \@ref(fig:trian-prop)).
+
+
+```{r trian-prop, echo = F, fig.align='center', fig.cap="El teorema de los ángulos proporcionales es la base para las fórmulas geométricas de las funciones trigonométricas."}
+knitr::include_graphics("Unidad-II/Trian-prop.png")
+```
+
+De modo que sin importar las longitudes de los lados, los cocientes de las longitudes siempre serán iguales, lo cual se puede extender a todos los triángulos rectángulos, la base geométrica para la trigonometría. Aquí veremos entonces las funciones trognométricas básicas seno, coseno y tangente.
+
+#### Nomenclatura de triángulos para trigonometría básica
+
+Hay una serie de términos tradicionales que se emplean en trigonometría, los cuales utilizaremos a lo largo del curso. Se trata de los nombres que se dan a los lados y ángulos internos de un triángulo rectángulo. Por lo general, el triángulo rectángulo lo interpretaremos como una representación del plano cartesiano, de modo que los **catetos** corresponden a los ejes de las $x$ y $y$, y son los lados que forman un ángulo recto al cruzarse. El lado que los une en secante, es la **hipotenusa**. El ángulo que forma la hipotenusa con el eje de las $x$ tradicionalmente recibe el nombre con la letra griega $\theta$ (teta). 
+
+```{r nomen-trig, echo = F, fig.align='center', fig.cap="Representación gráfica de las partes del triángulo y los nombres que reciben tradicionalmente en trigonometría plana."}
+knitr::include_graphics("Unidad-II/nomenclatura.png")
+```
+
+#### Las funciones trigonométricas básicas
+
+Todas las funciones trigonométricas representan una descripción del ángulo $\theta$ como el cociente de la longitud de dos lados del triángulo rectángulo de modo que:
+
+1. **Seno**: $\sin(\theta) = \frac{\mathrm{Opuesto}}{\mathrm{Hipotenusa}}$
+2. **Coseno**: $\cos(\theta) = \frac{\mathrm{Adyacente}}{\mathrm{Hipotenusa}}$
+3. **Tangente**: $\tan(\theta) = \frac{\mathrm{Opuesto}}{\mathrm{Adyacente}}$
+
+Para recordar las fórmulas de cada función podemos utilizar la mnemotecnia:
+
+- **Seno**: SOH (Seno, Opuesto, Hipotenusa)
+- **Coseno**: CAH (Coseno, Adyacente, Hipotenusa)
+- **Tangente**: TOA (Tangente, Opuesto, Adyacente)
+
+#### Representación gráfica de las funciones trigonométricas
+
+Para entender por qué las funciones trigonométricas se comportan como lo hacen es útil tener en cuenta que representan el cociente de dos números que cambian uno en relación del otro. Esto queda de manifiesto en la Figura \@ref(fig:catetos). Como se puede apreciar, la hipotenusa ($H$ en la misma figura) se mantiene constante, pues representa el radio de la circunferencia, mientras que los catetos se alargan o encojen conforme la hipotenusa se acerca a los ejes $x$ o $y$.
+
+```{r catetos, echo = F, fig.align='center', fig.cap="Representación gráfica del efecto del ángulo sobre la longitud de los catetos."}
+knitr::include_graphics("Unidad-II/Func-trigo.png")
+```
+
+Como es de esperarse, los valores del seno y coseno están limitados por 1 y -1 cuando la longitud del cateto es igual a la hipotenusa. La tangente, por otro lado, puede tomar valores que van de $-\infty, +\infty$ cuando el cateto adyacente tiene longitud cero $0$. Aquí, mediremos los ángulos en radianes, o unidades de $\pi$, donde $\pi = 180°$
+
+```{r graf-trig, echo=F, fig.height=4, fig.width=8, fig.align='center', fig.cap="Gráfica de las funciones trigonométricas básicas."}
+
+x <- seq(-2 * pi, 2 * pi, len = 100)
+y1 <- sin(x)
+y2 <- cos(x)
+y3 <- tan(seq(-pi/2.01, pi/2.01 - 0.0001, len = 100))
+
+par(mfrow = c(1, 2))
+plot(x, y1, type = "l", xlab = "Ángulo", ylab = "Seno/Coseno")
+lines(x = x, y = y2, col = "red")
+legend(x = - 6, y = -0.5, legend = c("seno", "coseno"), lty = 1, col = c("black", "red"))
+
+plot(seq(-pi/2.01 , pi/2.01, len = 100), y3, type = "l", xlab = "Ángulo", ylab = "Tangente")
+```
+
+Las funciones seno, coseno y tangente son las básicas en trigonometría. Otras funciones comunes, pasadas en la inversión de las mecionadas son la secante, cosecante y cotangente respectivamente. Al igual que otras operaciones aritméticas, para las funciones trigonométricas, existen inversiones. La inversión de una multiplicación es una divisón, de la suma es la resta, del exponente es la raíz. Las inversiones de las funciones trigonométricas reciben el nombre de Arco-$f(\theta)$, de modo que al aplicarlas al resultado de la función obtenemos el valor del ángulo:
+
+1. $\theta = \arcsin \left(\frac{0}{H}\right)$
+2. $\theta = \arccos \left(\frac{A}{H}\right)$
+3. $\theta = \arctan \left(\frac{O}{A} \right)$
+
+#### Aplicaciones de las funciones trigonométricas
+
+En mi experiencia, las dos funciones con más aplicaciones en modelación de sistemas ambientales son la tangente y el coseno. Para comenzar, la tangente de un ángulo tiene una relación directa con la pendiente de una recta. Si recordamos la recta está descrita por la ecuación:
+
+\begin{equation}
+    y = a + bx (\#eq:lin-2)
+\end{equation}
+
+donde $b$ es la pendiente de la recta que se forma al graficar $x$ y $y$ en el plano cartesiano. En realidad $b$ es la tangente del ánguo que se forma entre la recta y el eje de las $x$. Por lo tanto, cuando nos encontramos ante un modelo formulado por medio de ecuaciones diferenciales, por ejemplo, lo valores que obtenemos al hacer los cálculos de ese sistema es una pendiente o tangente.
+
+El coseno, por otro lado, nos es muy útil para forzar la oscilación de algún parámetro. Ello es necesario cuando estamos interesados en representar fenómenos cíclicos como la temperatura diaria o anual. En la práctica, podemos reemplazar la pendiente $b$ de la ecuación \@ref(eq:lin-2) por una función coseno.
+
+```{r coseno-forz, echo =FALSE, fig.align='center', fig.cap="Gráfica de la función $y = 2 cos(x)^2 + 0.1  x$.", fig.width=6, fig.height=4}
+x <- seq(-10, 10, len = 100)
+y = 2*cos(x)^2 + 0.1 * x
+plot(x, y, xlab = "x", ylab = "y", type = "l")
+```
+#### Representación en 3D
+
+Hasta ahora sólo hemos visto representaciones de las funciones en dos dimensiones. Las representaciones de las funciones en 3d, sin embargo pueden ser confusas. Veamos por ejemplo la representación 3d de un plano:
+
+```{r 3d-1, echo=F, fig.align='center', fig.height=4, fig.width=5, fig.cap="Representación gráfica de la función $z(x, y) = x + y$."}
+library(lattice)
+
+df.1 <- expand.grid(x = -5:5, y = -5:5)
+df.1$z <- with(df.1, x + y)
+wireframe(z ~ x + y, df.1, drape = T)
+```
+
+Para poder hacer esta gráfica, es necesario hacer los cáculos para todas las combinaciones posibles de $x$ y $y$, de modo que conocemos todos los valores posibles de $z$ para cada par de valores del dominio. Si en la representación en dos dimensiones, necesitamos $n$ valores, en la representación 3d necesitamos $2 \times n^2$, lo cual produce $n^2$ diferentes valores de $z$.
+
+Las funciones trigonométricas pueden representarse 
+
+```{r trig-3d, echo=F, fig.align='center', fig.cap="Representación en 3d de la función trigonométrica z = cos(x) sen(y).", fig.height=4, fig.width=5}
+library(plot3D)
+df.1 <- expand.grid(x = seq(-pi, pi, len = 20),
+                    y = seq(-pi, pi, len = 20))
+df.1$z <- with(df.1, cos(y) * sin(x))
+
+mat <- matrix(df.1$z, nrow = 20, ncol = 20)
+
+wireframe(z ~ x + y, df.1, drape = T)
+```
+
+
+
+

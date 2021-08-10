@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded format=xelatex 2021.6.30)  9 AUG 2021 10:10
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded format=xelatex 2021.6.30)  10 AUG 2021 17:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -872,7 +872,7 @@ cipy-
 File: Unidad-I/lepto.png Graphic file (type bmp)
 <Unidad-I/lepto.png>
 
-Underfull \vbox (badness 4505) has occurred while \output is active []
+Underfull \vbox (badness 2012) has occurred while \output is active []
 
 [16] [17] [18] [19]
 File: Unidad-I/Volterra/Volterra.pdf Graphic file (type pdf)
@@ -890,12 +890,12 @@ Chapter 4.
 [25
 
 ]
-File: Mod-mat-ECO_files/figure-latex/unnamed-chunk-17-1.pdf Graphic file (type 
-pdf)
-<use Mod-mat-ECO_files/figure-latex/unnamed-chunk-17-1.pdf>
 File: Mod-mat-ECO_files/figure-latex/unnamed-chunk-18-1.pdf Graphic file (type 
 pdf)
 <use Mod-mat-ECO_files/figure-latex/unnamed-chunk-18-1.pdf>
+File: Mod-mat-ECO_files/figure-latex/unnamed-chunk-19-1.pdf Graphic file (type 
+pdf)
+<use Mod-mat-ECO_files/figure-latex/unnamed-chunk-19-1.pdf>
 
 Underfull \vbox (badness 1168) has occurred while \output is active []
 
@@ -948,36 +948,95 @@ ELOS DETERMINÍSTICOS
 [32] [33]
 File: Mod-mat-ECO_files/figure-latex/vari-1.pdf Graphic file (type pdf)
 <use Mod-mat-ECO_files/figure-latex/vari-1.pdf>
+File: Unidad-II/Trian-prop.png Graphic file (type bmp)
+<Unidad-II/Trian-prop.png>
+
+Overfull \hbox (292.90344pt too wide) in paragraph at lines 693--694
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 36.0789pt on input line 698.
+
 
 Overfull \hbox (52.83453pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 34 \TU/lmr/m/sl/10 CHAPTER 4.  UNIDAD II: INTRODUCCIÓN A LOS MOD
 ELOS DETERMINÍSTICOS
  []
 
-[34]
+[34] [35]
+File: Unidad-II/nomenclatura.png Graphic file (type bmp)
+<Unidad-II/nomenclatura.png>
+
+Overfull \hbox (223.09508pt too wide) in paragraph at lines 709--710
+ [][] 
+ []
+
+File: Unidad-II/Func-trigo.png Graphic file (type bmp)
+<Unidad-II/Func-trigo.png>
+
+Overfull \hbox (343.58131pt too wide) in paragraph at lines 751--752
+ [][] 
+ []
+
+File: Mod-mat-ECO_files/figure-latex/graf-trig-1.pdf Graphic file (type pdf)
+<use Mod-mat-ECO_files/figure-latex/graf-trig-1.pdf>
+
+Overfull \hbox (52.83453pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 36 \TU/lmr/m/sl/10 CHAPTER 4.  UNIDAD II: INTRODUCCIÓN A LOS MOD
+ELOS DETERMINÍSTICOS
+ []
+
+[36] [37]
+Overfull \hbox (52.83453pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 38 \TU/lmr/m/sl/10 CHAPTER 4.  UNIDAD II: INTRODUCCIÓN A LOS MOD
+ELOS DETERMINÍSTICOS
+ []
+
+[38]
+File: Mod-mat-ECO_files/figure-latex/coseno-forz-1.pdf Graphic file (type pdf)
+<use Mod-mat-ECO_files/figure-latex/coseno-forz-1.pdf>
+[39]
+File: Mod-mat-ECO_files/figure-latex/3d-1-1.pdf Graphic file (type pdf)
+<use Mod-mat-ECO_files/figure-latex/3d-1-1.pdf>
+File: Mod-mat-ECO_files/figure-latex/trig-3d-1.pdf Graphic file (type pdf)
+<use Mod-mat-ECO_files/figure-latex/trig-3d-1.pdf>
+
+Overfull \hbox (52.83453pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 40 \TU/lmr/m/sl/10 CHAPTER 4.  UNIDAD II: INTRODUCCIÓN A LOS MOD
+ELOS DETERMINÍSTICOS
+ []
+
+[40] [41]
+Overfull \hbox (52.83453pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 42 \TU/lmr/m/sl/10 CHAPTER 4.  UNIDAD II: INTRODUCCIÓN A LOS MOD
+ELOS DETERMINÍSTICOS
+ []
+
+[42]
 Chapter 5.
-(./Mod-mat-ECO.bbl [35
+(./Mod-mat-ECO.bbl [43
 
 ]
 Overfull \hbox (75.64233pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 36 \TU/lmr/m/sl/10 CHAPTER 5.  UNIDAD III - INTRODUCCIÓN AL CÁCU
+\TU/lmr/m/n/10 44 \TU/lmr/m/sl/10 CHAPTER 5.  UNIDAD III - INTRODUCCIÓN AL CÁCU
 LO DIFERENCIAL E INTEGRAL
  []
 
-[36
+[44
 
-]) [37] (./Mod-mat-ECO.aux)
+]) [45] (./Mod-mat-ECO.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 18539 strings out of 477220
- 326923 string characters out of 5832722
- 810589 words of memory out of 5000000
- 37954 multiletter control sequences out of 15000+600000
- 409881 words of font info for 80 fonts, out of 8000000 for 9000
+ 18622 strings out of 477220
+ 329549 string characters out of 5832722
+ 813867 words of memory out of 5000000
+ 38026 multiletter control sequences out of 15000+600000
+ 409897 words of font info for 82 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  98i,8n,122p,1088b,420s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Mod-mat-ECO.pdf (37 pages).
+Output written on Mod-mat-ECO.pdf (45 pages).

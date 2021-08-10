@@ -77,7 +77,7 @@
 
 \title{Modelos Matemáticos en Ecología I}
 \author{Gerardo Martín}
-\date{2021-08-09}
+\date{2021-08-10}
 
 \begin{document}
 \maketitle
@@ -166,7 +166,7 @@ Imaginemos a seis personas invidentes, con la tarea de encontrar qué es el obje
 
 }
 
-\caption{La parábola de los seis hombres ciegos inspeccionando un elefante.}\label{fig:unnamed-chunk-12}
+\caption{La parábola de los seis hombres ciegos inspeccionando un elefante.}\label{fig:unnamed-chunk-13}
 \end{figure}
 
 Quien toque los colmillos podrá pensar que se trata de una lanza, la trompa podría tratarse de una serpiente, la cola de una cuerda, las patas troncos de árbol y el cuerpo una pared. Es evidente que todas las hipótesis presentadas después de la inspección fueron erróneas, y que cuando estudiamos al mundo lo haremos igual, con la descripción de tan sólo una fracción de éste. Un séptimo hombre que pregunte a los otros seis qué fue lo que vieron podría formarse una imágen más completa del \emph{sistema} para proponer otra hipótesis: se trata de un objeto grande reposando sobre cuatro columnas con apéndices adelante y atrás.
@@ -203,7 +203,7 @@ Las hipótesis propuestas por los seis hombres representan modelos, es decir sim
 
 }
 
-\caption{ Diagrama de mi estrategia para desarrollar modelos.}\label{fig:unnamed-chunk-13}
+\caption{ Diagrama de mi estrategia para desarrollar modelos.}\label{fig:unnamed-chunk-14}
 \end{figure}
 
 La estrategia general que les doy puede, por el momento, sonar un tanto abstracta, pero la iremos poniendo en práctica conforme avanza el curso para que al final, esperemos, tenga más sentido que ahorita.
@@ -235,7 +235,7 @@ Todos estos objetivos puede de cierta manera conseguirse por medio de modelos ma
 
 Las matemáticas son un área de conocimiento muy extenso, por lo que hablar de todas las herramientas disponibles ¡nos podría llevar años! En este curso nos vamos a enfocar en un tipo general de modelo y de sistema ecológico: aquellos que cambian rápidamente con el tiempo, también llamados dinámicos.
 
-Las herramientas matemáticas más comunmente utilizadas para estudiar estos sistemas son las ecuaciones diferenciales ordinarias y el álgebra de matrices. Las ecuaciones diferenciales nos ayudan a medir los cambios que sufre el sistema ecológico a través del tiempo en cada uno de sus componentes, y son muy útiles para representar las ideas plasmadas en forma de modelos conceptuales. El álgebra de matrices, por otro lado, nos sirve para \emph{conectar} los cambios de los diferentes componentes del sistema de estudio, y así hacer cálculos sobre sus cambios \emph{como un todo}.
+Las herramientas matemáticas más comunmente utilizadas para estudiar estos sistemas son las ecuaciones diferenciales ordinarias, ecuaciones por diferencias finitas y el álgebra de matrices. Las ecuaciones diferenciales y por diferencias finitas son muy parecidas entre sí, porque nos representar y medir los cambios que sufre un sistema ecológico a través del tiempo en cada uno de sus componentes. Además es fácil representar las ideas plasmadas diagramáticamente en ellas. El álgebra de matrices, por otro lado, nos sirve para \emph{conectar} los cambios de los diferentes componentes del sistema de estudio, y así hacer cálculos sobre sus cambios \emph{como un todo}.
 
 Como podemos ver, gran parte de este curso estará enfocado en \emph{entender y medir los cambios}. Te preguntarás entonces ¿cambios de qué? En ecología, estos son algunos de los cambios que nos interesa observar:
 
@@ -450,21 +450,21 @@ donde \[\varepsilon\] es el \emph{error} que hemos introducido. Técnicamente pa
 
 \begin{table}
 
-\caption{\label{tab:unnamed-chunk-16}Cinco realizaciones para la conversión de dos pulgadas a centímetros con el modelo determinista y estocástico.}
+\caption{\label{tab:unnamed-chunk-17}Cinco realizaciones para la conversión de dos pulgadas a centímetros con el modelo determinista y estocástico.}
 \centering
 \begin{tabular}[t]{c|c}
 \hline
 Determinista & Estocástico\\
 \hline
-5.08 & 5.351191\\
+5.08 & 5.147022\\
 \hline
-5.08 & 5.392189\\
+5.08 & 4.834200\\
 \hline
-5.08 & 5.166747\\
+5.08 & 5.216069\\
 \hline
-5.08 & 5.267774\\
+5.08 & 4.913143\\
 \hline
-5.08 & 5.114500\\
+5.08 & 5.363936\\
 \hline
 \end{tabular}
 \end{table}
@@ -504,22 +504,22 @@ Comencemos por dar un repaso del plano cartesiano. Este consiste de la represent
 
 \begin{figure}
 
-{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/unnamed-chunk-17-1} 
+{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/unnamed-chunk-18-1} 
 
 }
 
-\caption{Ejemplo del plano cartesiado mostrando en rojo la correspondencia de valores para $y(x) = x$, donde los puntos corresponden a los pares de valores $(x = -1, y = -1), (-0.5, -0.5), (0, 0), (0.5, 0.5), (1, 1)$.}\label{fig:unnamed-chunk-17}
+\caption{Ejemplo del plano cartesiado mostrando en rojo la correspondencia de valores para $y(x) = x$, donde los puntos corresponden a los pares de valores $(x = -1, y = -1), (-0.5, -0.5), (0, 0), (0.5, 0.5), (1, 1)$.}\label{fig:unnamed-chunk-18}
 \end{figure}
 
 Ahora veamos, con un ejemplo gráfico por qué la constante \(a\) recibe el nombre de \emph{pendiente}.
 
 \begin{figure}
 
-{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/unnamed-chunk-18-1} 
+{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/unnamed-chunk-19-1} 
 
 }
 
-\caption{Gráficas de las funciones $y(x) = 0.5 x$ (en rojo) y $y(x) = 0.5 + 0.5 x$ (azul). Las líneas punteadas en colores indican el efecto de las constantes $a$ y $b$, mientas que Δ$x$ denota el cambio de una unidad de $x$.}\label{fig:unnamed-chunk-18}
+\caption{Gráficas de las funciones $y(x) = 0.5 x$ (en rojo) y $y(x) = 0.5 + 0.5 x$ (azul). Las líneas punteadas en colores indican el efecto de las constantes $a$ y $b$, mientas que Δ$x$ denota el cambio de una unidad de $x$.}\label{fig:unnamed-chunk-19}
 \end{figure}
 
 Como podemos ver, de manera más general, la línea recta es generada por una regla de correspondencia muy sencilla, un conjunto de valores \(X\) son multiplicados por un escalar \(a\), a los que se les puede añadir un \emph{intercepto} \(b\). El intercepto siempre es el valor de \(y(x)\) cuando \(x = 0\).
@@ -679,6 +679,153 @@ En estadística, esta función representa en el eje de las \(y\) la \emph{densid
 }
 
 \caption{Efecto de  la varianza sobre la la dispersión alrededor de la media.}\label{fig:vari}
+\end{figure}
+
+\hypertarget{funciones-trigonomuxe9tricas}{%
+\subsection{Funciones trigonométricas}\label{funciones-trigonomuxe9tricas}}
+
+En esta sección revisaremos algunas de las funciones trigonométricas y cómo se representan en el plano cartesiano.
+
+La trigonometría es una rama de las matemáticas que se comenzó a desarrollar a partir de la necesidad de medir distancias de manera indirecta. Por ejemplo, la distancia entre la luna y la tierra y la tierra y el sol, la distancia entre dos barcos, la distancia entre un barco y el puero más cercano. Las herramientas trigonométricas entonces se comenzaron a desarrollar utilizando la geometría de triángulos rectángulos. Aquí es preciso describir el teorema de los triángulos proporcionales, dados dos triángulos con ángulos internos idénticos y longitudes de lados diferentes, los cocientes de las longitudes de sus lados serán iguales (Figura \ref{fig:trian-prop}).
+
+\begin{figure}
+
+{\centering \includegraphics[width=8.97in]{Unidad-II/Trian-prop} 
+
+}
+
+\caption{El teorema de los ángulos proporcionales es la base para las fórmulas geométricas de las funciones trigonométricas.}\label{fig:trian-prop}
+\end{figure}
+
+De modo que sin importar las longitudes de los lados, los cocientes de las longitudes siempre serán iguales, lo cual se puede extender a todos los triángulos rectángulos, la base geométrica para la trigonometría. Aquí veremos entonces las funciones trognométricas básicas seno, coseno y tangente.
+
+\hypertarget{nomenclatura-de-triuxe1ngulos-para-trigonometruxeda-buxe1sica}{%
+\subsubsection{Nomenclatura de triángulos para trigonometría básica}\label{nomenclatura-de-triuxe1ngulos-para-trigonometruxeda-buxe1sica}}
+
+Hay una serie de términos tradicionales que se emplean en trigonometría, los cuales utilizaremos a lo largo del curso. Se trata de los nombres que se dan a los lados y ángulos internos de un triángulo rectángulo. Por lo general, el triángulo rectángulo lo interpretaremos como una representación del plano cartesiano, de modo que los \textbf{catetos} corresponden a los ejes de las \(x\) y \(y\), y son los lados que forman un ángulo recto al cruzarse. El lado que los une en secante, es la \textbf{hipotenusa}. El ángulo que forma la hipotenusa con el eje de las \(x\) tradicionalmente recibe el nombre con la letra griega \(\theta\) (teta).
+
+\begin{figure}
+
+{\centering \includegraphics[width=7.86in]{Unidad-II/nomenclatura} 
+
+}
+
+\caption{Representación gráfica de las partes del triángulo y los nombres que reciben tradicionalmente en trigonometría plana.}\label{fig:nomen-trig}
+\end{figure}
+
+\hypertarget{las-funciones-trigonomuxe9tricas-buxe1sicas}{%
+\subsubsection{Las funciones trigonométricas básicas}\label{las-funciones-trigonomuxe9tricas-buxe1sicas}}
+
+Todas las funciones trigonométricas representan una descripción del ángulo \(\theta\) como el cociente de la longitud de dos lados del triángulo rectángulo de modo que:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Seno}: \(\sin(\theta) = \frac{\mathrm{Opuesto}}{\mathrm{Hipotenusa}}\)
+\item
+  \textbf{Coseno}: \(\cos(\theta) = \frac{\mathrm{Adyacente}}{\mathrm{Hipotenusa}}\)
+\item
+  \textbf{Tangente}: \(\tan(\theta) = \frac{\mathrm{Opuesto}}{\mathrm{Adyacente}}\)
+\end{enumerate}
+
+Para recordar las fórmulas de cada función podemos utilizar la mnemotecnia:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Seno}: SOH (Seno, Opuesto, Hipotenusa)
+\item
+  \textbf{Coseno}: CAH (Coseno, Adyacente, Hipotenusa)
+\item
+  \textbf{Tangente}: TOA (Tangente, Opuesto, Adyacente)
+\end{itemize}
+
+\hypertarget{representaciuxf3n-gruxe1fica-de-las-funciones-trigonomuxe9tricas}{%
+\subsubsection{Representación gráfica de las funciones trigonométricas}\label{representaciuxf3n-gruxe1fica-de-las-funciones-trigonomuxe9tricas}}
+
+Para entender por qué las funciones trigonométricas se comportan como lo hacen es útil tener en cuenta que representan el cociente de dos números que cambian uno en relación del otro. Esto queda de manifiesto en la Figura \ref{fig:catetos}. Como se puede apreciar, la hipotenusa (\(H\) en la misma figura) se mantiene constante, pues representa el radio de la circunferencia, mientras que los catetos se alargan o encojen conforme la hipotenusa se acerca a los ejes \(x\) o \(y\).
+
+\begin{figure}
+
+{\centering \includegraphics[width=9.53in]{Unidad-II/Func-trigo} 
+
+}
+
+\caption{Representación gráfica del efecto del ángulo sobre la longitud de los catetos.}\label{fig:catetos}
+\end{figure}
+
+Como es de esperarse, los valores del seno y coseno están limitados por 1 y -1 cuando la longitud del cateto es igual a la hipotenusa. La tangente, por otro lado, puede tomar valores que van de \(-\infty, +\infty\) cuando el cateto adyacente tiene longitud cero \(0\). Aquí, mediremos los ángulos en radianes, o unidades de \(\pi\), donde \(\pi = 180°\)
+
+\begin{figure}
+
+{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/graf-trig-1} 
+
+}
+
+\caption{Gráfica de las funciones trigonométricas básicas.}\label{fig:graf-trig}
+\end{figure}
+
+Las funciones seno, coseno y tangente son las básicas en trigonometría. Otras funciones comunes, pasadas en la inversión de las mecionadas son la secante, cosecante y cotangente respectivamente. Al igual que otras operaciones aritméticas, para las funciones trigonométricas, existen inversiones. La inversión de una multiplicación es una divisón, de la suma es la resta, del exponente es la raíz. Las inversiones de las funciones trigonométricas reciben el nombre de Arco-\(f(\theta)\), de modo que al aplicarlas al resultado de la función obtenemos el valor del ángulo:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\theta = \arcsin \left(\frac{0}{H}\right)\)
+\item
+  \(\theta = \arccos \left(\frac{A}{H}\right)\)
+\item
+  \(\theta = \arctan \left(\frac{O}{A} \right)\)
+\end{enumerate}
+
+\hypertarget{aplicaciones-de-las-funciones-trigonomuxe9tricas}{%
+\subsubsection{Aplicaciones de las funciones trigonométricas}\label{aplicaciones-de-las-funciones-trigonomuxe9tricas}}
+
+En mi experiencia, las dos funciones con más aplicaciones en modelación de sistemas ambientales son la tangente y el coseno. Para comenzar, la tangente de un ángulo tiene una relación directa con la pendiente de una recta. Si recordamos la recta está descrita por la ecuación:
+
+\begin{equation}
+    y = a + bx \label{eq:lin-2}
+\end{equation}
+
+donde \(b\) es la pendiente de la recta que se forma al graficar \(x\) y \(y\) en el plano cartesiano. En realidad \(b\) es la tangente del ánguo que se forma entre la recta y el eje de las \(x\). Por lo tanto, cuando nos encontramos ante un modelo formulado por medio de ecuaciones diferenciales, por ejemplo, lo valores que obtenemos al hacer los cálculos de ese sistema es una pendiente o tangente.
+
+El coseno, por otro lado, nos es muy útil para forzar la oscilación de algún parámetro. Ello es necesario cuando estamos interesados en representar fenómenos cíclicos como la temperatura diaria o anual. En la práctica, podemos reemplazar la pendiente \(b\) de la ecuación \eqref{eq:lin-2} por una función coseno.
+
+\begin{figure}
+
+{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/coseno-forz-1} 
+
+}
+
+\caption{Gráfica de la función $y = 2 cos(x)^2 + 0.1  x$.}\label{fig:coseno-forz}
+\end{figure}
+
+\hypertarget{representaciuxf3n-en-3d}{%
+\subsubsection{Representación en 3D}\label{representaciuxf3n-en-3d}}
+
+Hasta ahora sólo hemos visto representaciones de las funciones en dos dimensiones. Las representaciones de las funciones en 3d, sin embargo pueden ser confusas. Veamos por ejemplo la representación 3d de un plano:
+
+\begin{figure}
+
+{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/3d-1-1} 
+
+}
+
+\caption{Representación gráfica de la función $z(x, y) = x + y$.}\label{fig:3d-1}
+\end{figure}
+
+Para poder hacer esta gráfica, es necesario hacer los cáculos para todas las combinaciones posibles de \(x\) y \(y\), de modo que conocemos todos los valores posibles de \(z\) para cada par de valores del dominio. Si en la representación en dos dimensiones, necesitamos \(n\) valores, en la representación 3d necesitamos \(2 \times n^2\), lo cual produce \(n^2\) diferentes valores de \(z\).
+
+Las funciones trigonométricas pueden representarse
+
+\begin{figure}
+
+{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/trig-3d-1} 
+
+}
+
+\caption{Representación en 3d de la función trigonométrica z = cos(x) sen(y).}\label{fig:trig-3d}
 \end{figure}
 
 \hypertarget{unidad-iii---introducciuxf3n-al-cuxe1culo-diferencial-e-integral}{%

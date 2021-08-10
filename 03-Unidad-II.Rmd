@@ -15,3 +15,8 @@
 ```{r echo = F, child = "Unidad-II/Curva-normal.Rmd"}
 
 ```
+
+```{r echo = F, child = "Unidad-II/Trigonometricas.Rmd"}
+
+```
+

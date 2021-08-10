@@ -24,7 +24,7 @@
 <meta name="author" content="Gerardo Martín" />
 
 
-<meta name="date" content="2021-08-09" />
+<meta name="date" content="2021-08-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -132,6 +132,7 @@ div.csl-indent {
 <li class="chapter" data-level="4.0.2" data-path="unidad-ii-introducción-a-los-modelos-determinísticos.html"><a href="unidad-ii-introducción-a-los-modelos-determinísticos.html#la-parábola"><i class="fa fa-check"></i><b>4.0.2</b> La parábola</a></li>
 <li class="chapter" data-level="4.0.3" data-path="unidad-ii-introducción-a-los-modelos-determinísticos.html"><a href="unidad-ii-introducción-a-los-modelos-determinísticos.html#cónicas"><i class="fa fa-check"></i><b>4.0.3</b> Cónicas</a></li>
 <li class="chapter" data-level="4.0.4" data-path="unidad-ii-introducción-a-los-modelos-determinísticos.html"><a href="unidad-ii-introducción-a-los-modelos-determinísticos.html#la-curva-normal"><i class="fa fa-check"></i><b>4.0.4</b> La curva normal</a></li>
+<li class="chapter" data-level="4.0.5" data-path="unidad-ii-introducción-a-los-modelos-determinísticos.html"><a href="unidad-ii-introducción-a-los-modelos-determinísticos.html#funciones-trigonométricas"><i class="fa fa-check"></i><b>4.0.5</b> Funciones trigonométricas</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="unidad-iii-introducción-al-cáculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cáculo-diferencial-e-integral.html"><i class="fa fa-check"></i><b>5</b> Unidad III - Introducción al cáculo diferencial e integral</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
@@ -163,7 +164,7 @@ div.csl-indent {
 <div id="qué-es-un-modelo" class="section level3" number="3.1.1">
 <h3><span class="header-section-number">3.1.1</span> ¿Qué es un modelo?</h3>
 <p>Imaginemos a seis personas invidentes, con la tarea de encontrar qué es el objeto que está frente a ellas usando únicamente el tacto. En la parábola de los seis hombres ciegos, el objeto es un elefante, de modo que la imágen que cada uno de ellos se forma del objeto depende enteramente de la parte del elefante que están tocando.</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-12"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-13"></span>
 <img src="Unidad-I/elefante.png" alt="La parábola de los seis hombres ciegos inspeccionando un elefante." width="582" />
 <p class="caption">
 Figura 3.1: La parábola de los seis hombres ciegos inspeccionando un elefante.
@@ -185,7 +186,7 @@ Figura 3.1: La parábola de los seis hombres ciegos inspeccionando un elefante.
 <li>Proponer una serie de modelos alternativos</li>
 <li>Determinar una estrategia para seleccionar uno solo de los modelos que propuse para logar el objetivo</li>
 </ol>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-13"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-14"></span>
 <img src="Unidad-I/Diagrama-dearrollo.png" alt=" Diagrama de mi estrategia para desarrollar modelos." width="306" />
 <p class="caption">
 Figura 3.2:  Diagrama de mi estrategia para desarrollar modelos.
@@ -208,7 +209,7 @@ Figura 3.2:  Diagrama de mi estrategia para desarrollar modelos.
 <div id="discusión-sobre-las-distintas-herramientas-matemáticas-empleadas-en-la-modelación-matemática" class="section level2" number="3.3">
 <h2><span class="header-section-number">3.3</span> Discusión sobre las distintas herramientas matemáticas empleadas en la modelación matemática</h2>
 <p>Las matemáticas son un área de conocimiento muy extenso, por lo que hablar de todas las herramientas disponibles ¡nos podría llevar años! En este curso nos vamos a enfocar en un tipo general de modelo y de sistema ecológico: aquellos que cambian rápidamente con el tiempo, también llamados dinámicos.</p>
-<p>Las herramientas matemáticas más comunmente utilizadas para estudiar estos sistemas son las ecuaciones diferenciales ordinarias y el álgebra de matrices. Las ecuaciones diferenciales nos ayudan a medir los cambios que sufre el sistema ecológico a través del tiempo en cada uno de sus componentes, y son muy útiles para representar las ideas plasmadas en forma de modelos conceptuales. El álgebra de matrices, por otro lado, nos sirve para <em>conectar</em> los cambios de los diferentes componentes del sistema de estudio, y así hacer cálculos sobre sus cambios <em>como un todo</em>.</p>
+<p>Las herramientas matemáticas más comunmente utilizadas para estudiar estos sistemas son las ecuaciones diferenciales ordinarias, ecuaciones por diferencias finitas y el álgebra de matrices. Las ecuaciones diferenciales y por diferencias finitas son muy parecidas entre sí, porque nos representar y medir los cambios que sufre un sistema ecológico a través del tiempo en cada uno de sus componentes. Además es fácil representar las ideas plasmadas diagramáticamente en ellas. El álgebra de matrices, por otro lado, nos sirve para <em>conectar</em> los cambios de los diferentes componentes del sistema de estudio, y así hacer cálculos sobre sus cambios <em>como un todo</em>.</p>
 <p>Como podemos ver, gran parte de este curso estará enfocado en <em>entender y medir los cambios</em>. Te preguntarás entonces ¿cambios de qué? En ecología, estos son algunos de los cambios que nos interesa observar:</p>
 <ol style="list-style-type: decimal">
 <li>Número de individuos de una especie</li>
@@ -336,7 +337,7 @@ cm = 2.54 \times in + \varepsilon
 \]</span></p>
 <p>donde <span class="math display">\[\varepsilon\]</span> es el <em>error</em> que hemos introducido. Técnicamente para hacer esto utilizamos un generador de números aleatorios en el lenguaje de programación <strong>R</strong>. Veamos una serie de conversiones:</p>
 <table>
-<caption><span id="tab:unnamed-chunk-16">Tabla 3.1: </span>Cinco realizaciones para la conversión de dos pulgadas a centímetros con el modelo determinista y estocástico.</caption>
+<caption><span id="tab:unnamed-chunk-17">Tabla 3.1: </span>Cinco realizaciones para la conversión de dos pulgadas a centímetros con el modelo determinista y estocástico.</caption>
 <thead>
 <tr class="header">
 <th align="center">Determinista</th>
@@ -346,23 +347,23 @@ cm = 2.54 \times in + \varepsilon
 <tbody>
 <tr class="odd">
 <td align="center">5.08</td>
-<td align="center">4.939070</td>
+<td align="center">5.277919</td>
 </tr>
 <tr class="even">
 <td align="center">5.08</td>
-<td align="center">5.334789</td>
+<td align="center">4.926360</td>
 </tr>
 <tr class="odd">
 <td align="center">5.08</td>
-<td align="center">4.823042</td>
+<td align="center">4.891276</td>
 </tr>
 <tr class="even">
 <td align="center">5.08</td>
-<td align="center">5.198367</td>
+<td align="center">5.588225</td>
 </tr>
 <tr class="odd">
 <td align="center">5.08</td>
-<td align="center">4.934527</td>
+<td align="center">5.210386</td>
 </tr>
 </tbody>
 </table>
