@@ -30,3 +30,10 @@ Así como existe un uso adecuado de los modelos, es muy fácil darles un mal uso
 4. Juegos "qué pasaría si..."
 5. Recomendación de acciones
 6. Diseño de productos
+
+@haefner1998modeling sumariza estos usos potenciales de los modelos de acuerdo con el nivel de entendimiento y calidad de datos en distintas áreas del conocimieto.
+
+```{r echo = F, fig.align='center', fig.cap="Relación entre el entendimiento y calidad de los datos, y los potenciales usos de los modelos en las diferentes disciplinas científicas [@haefner1998modeling]."}
+knitr::include_graphics("Unidad-I/uso-modelos.png")
+```
+

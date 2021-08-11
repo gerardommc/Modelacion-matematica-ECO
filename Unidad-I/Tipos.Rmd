@@ -39,7 +39,7 @@ Aquí nos centraremos en ver a mayor profundidad los modelos formales, en clasif
 
 ### Ejemplos
 
-#### Modelo de presa-depredador de El modelo de Lotka-Volterra [-@volterra1928variations]
+#### Modelo de presa-depredador de Lotka-Volterra [-@volterra1928variations]
 
 ```{r volterra-diag, echo = F, fig.align="center", fig.cap="Modelo diagramático basado en el modelo matemático depredador-presa de Lotka-Volterra", fig.dim="50%"}
 knitr::include_graphics("Unidad-I/Volterra/Volterra.png")

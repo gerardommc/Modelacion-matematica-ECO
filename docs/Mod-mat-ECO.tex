@@ -77,7 +77,7 @@
 
 \title{Modelos Matemáticos en Ecología I}
 \author{Gerardo Martín}
-\date{2021-08-10}
+\date{2021-08-11}
 
 \begin{document}
 \maketitle
@@ -252,6 +252,13 @@ Como podemos ver, gran parte de este curso estará enfocado en \emph{entender y 
   Probabilidad de extinción de una especie
 \end{enumerate}
 
+\hypertarget{relaciuxf3n-entre-las-herramientas-matemuxe1ticas-y-los-sistemas-ecoluxf3gicos}{%
+\subsection{Relación entre las herramientas matemáticas y los sistemas ecológicos}\label{relaciuxf3n-entre-las-herramientas-matemuxe1ticas-y-los-sistemas-ecoluxf3gicos}}
+
+Los sistemas ecológicos son muy variados, de modo que las herramientas matemáticas disponibles o que conocemos no siempre reflejan ciertos aspectos importantes de los sistemas ecológicos. Un ejemplo notable de ello es la variación de atributos entre individuos de una población. Supongamos que estamos modelando el crecimiento de una población, y la tasa neta de crecimiento depende de la cantidad de adultos reproductores y del crecimiento exponencial de los gametos fértiles en cada adulto reproductor, lo cual ocurre en corales y algunas plantas.
+
+El crecimiento poblacional como tal, puede modelarse con ecuaciones diferenciales ordinarias, mientras que el crecimiento de los gametos fértiles dentro de cada adulto requiere de otras herramientas mucho más avanzadas.
+
 \hypertarget{uso-de-los-modelos-matemuxe1ticos-en-ecologuxeda}{%
 \section{Uso de los modelos matemáticos en ecología}\label{uso-de-los-modelos-matemuxe1ticos-en-ecologuxeda}}
 
@@ -311,6 +318,17 @@ Así como existe un uso adecuado de los modelos, es muy fácil darles un mal uso
   Diseño de productos
 \end{enumerate}
 
+\citet{haefner1998modeling} sumariza estos usos potenciales de los modelos de acuerdo con el nivel de entendimiento y calidad de datos en distintas áreas del conocimieto.
+
+\begin{figure}
+
+{\centering \includegraphics[width=17.99in]{Unidad-I/uso-modelos} 
+
+}
+
+\caption{Relación entre el entendimiento y calidad de los datos, y los potenciales usos de los modelos en las diferentes disciplinas científicas [@haefner1998modeling].}\label{fig:unnamed-chunk-15}
+\end{figure}
+
 \hypertarget{tipos-de-modelos}{%
 \section{Tipos de modelos}\label{tipos-de-modelos}}
 
@@ -368,8 +386,8 @@ Aquí nos centraremos en ver a mayor profundidad los modelos formales, en clasif
 \hypertarget{ejemplos-1}{%
 \subsection{Ejemplos}\label{ejemplos-1}}
 
-\hypertarget{modelo-de-presa-depredador-de-el-modelo-de-lotka-volterra--volterra1928variations}{%
-\subsubsection{\texorpdfstring{Modelo de presa-depredador de El modelo de Lotka-Volterra \citeyearpar{volterra1928variations}}{Modelo de presa-depredador de El modelo de Lotka-Volterra {[}-@volterra1928variations{]}}}\label{modelo-de-presa-depredador-de-el-modelo-de-lotka-volterra--volterra1928variations}}
+\hypertarget{modelo-de-presa-depredador-de-lotka-volterra--volterra1928variations}{%
+\subsubsection{\texorpdfstring{Modelo de presa-depredador de Lotka-Volterra \citeyearpar{volterra1928variations}}{Modelo de presa-depredador de Lotka-Volterra {[}-@volterra1928variations{]}}}\label{modelo-de-presa-depredador-de-lotka-volterra--volterra1928variations}}
 
 \begin{figure}
 
@@ -450,21 +468,21 @@ donde \[\varepsilon\] es el \emph{error} que hemos introducido. Técnicamente pa
 
 \begin{table}
 
-\caption{\label{tab:unnamed-chunk-17}Cinco realizaciones para la conversión de dos pulgadas a centímetros con el modelo determinista y estocástico.}
+\caption{\label{tab:unnamed-chunk-18}Cinco realizaciones para la conversión de dos pulgadas a centímetros con el modelo determinista y estocástico.}
 \centering
 \begin{tabular}[t]{c|c}
 \hline
 Determinista & Estocástico\\
 \hline
-5.08 & 5.147022\\
+5.08 & 5.050700\\
 \hline
-5.08 & 4.834200\\
+5.08 & 5.071578\\
 \hline
-5.08 & 5.216069\\
+5.08 & 5.201302\\
 \hline
-5.08 & 4.913143\\
+5.08 & 5.234129\\
 \hline
-5.08 & 5.363936\\
+5.08 & 4.966553\\
 \hline
 \end{tabular}
 \end{table}
@@ -504,22 +522,22 @@ Comencemos por dar un repaso del plano cartesiano. Este consiste de la represent
 
 \begin{figure}
 
-{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/unnamed-chunk-18-1} 
+{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/unnamed-chunk-19-1} 
 
 }
 
-\caption{Ejemplo del plano cartesiado mostrando en rojo la correspondencia de valores para $y(x) = x$, donde los puntos corresponden a los pares de valores $(x = -1, y = -1), (-0.5, -0.5), (0, 0), (0.5, 0.5), (1, 1)$.}\label{fig:unnamed-chunk-18}
+\caption{Ejemplo del plano cartesiado mostrando en rojo la correspondencia de valores para $y(x) = x$, donde los puntos corresponden a los pares de valores $(x = -1, y = -1), (-0.5, -0.5), (0, 0), (0.5, 0.5), (1, 1)$.}\label{fig:unnamed-chunk-19}
 \end{figure}
 
 Ahora veamos, con un ejemplo gráfico por qué la constante \(a\) recibe el nombre de \emph{pendiente}.
 
 \begin{figure}
 
-{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/unnamed-chunk-19-1} 
+{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/unnamed-chunk-20-1} 
 
 }
 
-\caption{Gráficas de las funciones $y(x) = 0.5 x$ (en rojo) y $y(x) = 0.5 + 0.5 x$ (azul). Las líneas punteadas en colores indican el efecto de las constantes $a$ y $b$, mientas que Δ$x$ denota el cambio de una unidad de $x$.}\label{fig:unnamed-chunk-19}
+\caption{Gráficas de las funciones $y(x) = 0.5 x$ (en rojo) y $y(x) = 0.5 + 0.5 x$ (azul). Las líneas punteadas en colores indican el efecto de las constantes $a$ y $b$, mientas que Δ$x$ denota el cambio de una unidad de $x$.}\label{fig:unnamed-chunk-20}
 \end{figure}
 
 Como podemos ver, de manera más general, la línea recta es generada por una regla de correspondencia muy sencilla, un conjunto de valores \(X\) son multiplicados por un escalar \(a\), a los que se les puede añadir un \emph{intercepto} \(b\). El intercepto siempre es el valor de \(y(x)\) cuando \(x = 0\).

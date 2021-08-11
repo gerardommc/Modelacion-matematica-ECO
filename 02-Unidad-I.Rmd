@@ -24,7 +24,6 @@
 
 ```
 
-
 ## Tipos de modelos
 
 ```{r echo = F, child = "Unidad-I/Tipos.Rmd"}

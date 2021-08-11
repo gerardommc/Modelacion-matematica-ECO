@@ -24,7 +24,7 @@
 <meta name="author" content="Gerardo Martín" />
 
 
-<meta name="date" content="2021-08-10" />
+<meta name="date" content="2021-08-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -113,7 +113,10 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="3.2.1" data-path="unidad-i-introducción-a-la-modelación.html"><a href="unidad-i-introducción-a-la-modelación.html#ejemplos"><i class="fa fa-check"></i><b>3.2.1</b> Ejemplos</a></li>
 </ul></li>
-<li class="chapter" data-level="3.3" data-path="unidad-i-introducción-a-la-modelación.html"><a href="unidad-i-introducción-a-la-modelación.html#discusión-sobre-las-distintas-herramientas-matemáticas-empleadas-en-la-modelación-matemática"><i class="fa fa-check"></i><b>3.3</b> Discusión sobre las distintas herramientas matemáticas empleadas en la modelación matemática</a></li>
+<li class="chapter" data-level="3.3" data-path="unidad-i-introducción-a-la-modelación.html"><a href="unidad-i-introducción-a-la-modelación.html#discusión-sobre-las-distintas-herramientas-matemáticas-empleadas-en-la-modelación-matemática"><i class="fa fa-check"></i><b>3.3</b> Discusión sobre las distintas herramientas matemáticas empleadas en la modelación matemática</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="unidad-i-introducción-a-la-modelación.html"><a href="unidad-i-introducción-a-la-modelación.html#relación-entre-las-herramientas-matemáticas-y-los-sistemas-ecológicos"><i class="fa fa-check"></i><b>3.3.1</b> Relación entre las herramientas matemáticas y los sistemas ecológicos</a></li>
+</ul></li>
 <li class="chapter" data-level="3.4" data-path="unidad-i-introducción-a-la-modelación.html"><a href="unidad-i-introducción-a-la-modelación.html#uso-de-los-modelos-matemáticos-en-ecología"><i class="fa fa-check"></i><b>3.4</b> Uso de los modelos matemáticos en ecología</a>
 <ul>
 <li class="chapter" data-level="3.4.1" data-path="unidad-i-introducción-a-la-modelación.html"><a href="unidad-i-introducción-a-la-modelación.html#analíticos-dinámicas-depredador-presa"><i class="fa fa-check"></i><b>3.4.1</b> Analíticos: Dinámicas depredador-presa</a></li>
@@ -217,6 +220,11 @@ Figura 3.2:  Diagrama de mi estrategia para desarrollar modelos.
 <li>Calorías consumidas por una población de aves</li>
 <li>Probabilidad de extinción de una especie</li>
 </ol>
+<div id="relación-entre-las-herramientas-matemáticas-y-los-sistemas-ecológicos" class="section level3" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> Relación entre las herramientas matemáticas y los sistemas ecológicos</h3>
+<p>Los sistemas ecológicos son muy variados, de modo que las herramientas matemáticas disponibles o que conocemos no siempre reflejan ciertos aspectos importantes de los sistemas ecológicos. Un ejemplo notable de ello es la variación de atributos entre individuos de una población. Supongamos que estamos modelando el crecimiento de una población, y la tasa neta de crecimiento depende de la cantidad de adultos reproductores y del crecimiento exponencial de los gametos fértiles en cada adulto reproductor, lo cual ocurre en corales y algunas plantas.</p>
+<p>El crecimiento poblacional como tal, puede modelarse con ecuaciones diferenciales ordinarias, mientras que el crecimiento de los gametos fértiles dentro de cada adulto requiere de otras herramientas mucho más avanzadas.</p>
+</div>
 </div>
 <div id="uso-de-los-modelos-matemáticos-en-ecología" class="section level2" number="3.4">
 <h2><span class="header-section-number">3.4</span> Uso de los modelos matemáticos en ecología</h2>
@@ -254,6 +262,13 @@ Figura 3.4: Las barras (eje <span class="math inline">\(y\)</span>) indican el c
 <li>Recomendación de acciones</li>
 <li>Diseño de productos</li>
 </ol>
+<p><span class="citation"><a href="#ref-haefner1998modeling" role="doc-biblioref">Haefner</a> (<a href="#ref-haefner1998modeling" role="doc-biblioref">1998</a>)</span> sumariza estos usos potenciales de los modelos de acuerdo con el nivel de entendimiento y calidad de datos en distintas áreas del conocimieto.</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-15"></span>
+<img src="Unidad-I/uso-modelos.png" alt="Relación entre el entendimiento y calidad de los datos, y los potenciales usos de los modelos en las diferentes disciplinas científicas [@haefner1998modeling]." width="648" />
+<p class="caption">
+Figura 3.5: Relación entre el entendimiento y calidad de los datos, y los potenciales usos de los modelos en las diferentes disciplinas científicas <span class="citation">(<a href="#ref-haefner1998modeling" role="doc-biblioref">Haefner 1998</a>)</span>.
+</p>
+</div>
 </div>
 </div>
 <div id="tipos-de-modelos" class="section level2" number="3.5">
@@ -285,12 +300,12 @@ Figura 3.4: Las barras (eje <span class="math inline">\(y\)</span>) indican el c
 </ol>
 <div id="ejemplos-1" class="section level3" number="3.5.1">
 <h3><span class="header-section-number">3.5.1</span> Ejemplos</h3>
-<div id="modelo-de-presa-depredador-de-el-modelo-de-lotka-volterra--volterra1928variations" class="section level4" number="3.5.1.1">
-<h4><span class="header-section-number">3.5.1.1</span> Modelo de presa-depredador de El modelo de Lotka-Volterra <span class="citation">(<a href="#ref-volterra1928variations" role="doc-biblioref">1928</a>)</span></h4>
+<div id="modelo-de-presa-depredador-de-lotka-volterra--volterra1928variations" class="section level4" number="3.5.1.1">
+<h4><span class="header-section-number">3.5.1.1</span> Modelo de presa-depredador de Lotka-Volterra <span class="citation">(<a href="#ref-volterra1928variations" role="doc-biblioref">1928</a>)</span></h4>
 <div class="figure" style="text-align: center"><span id="fig:volterra-diag"></span>
 <img src="Unidad-I/Volterra/Volterra.png" alt="Modelo diagramático basado en el modelo matemático depredador-presa de Lotka-Volterra" width="438" />
 <p class="caption">
-Figura 3.5: Modelo diagramático basado en el modelo matemático depredador-presa de Lotka-Volterra
+Figura 3.6: Modelo diagramático basado en el modelo matemático depredador-presa de Lotka-Volterra
 </p>
 </div>
 <p>Este modelo representa cómo cambia el número de liebres y linces a través del tiempo con un sistema de ecuaciones diferenciales. El cambio en los números de individuos depdende de</p>
@@ -300,7 +315,7 @@ Figura 3.5: Modelo diagramático basado en el modelo matemático depredador-pres
 <li>Mortalidad de presas en relación a la cantidad de depredadores</li>
 <li>Mortalidad innata del depredador</li>
 </ol>
-<p>El modelo entonces representa el mecanismo del sistema, por lo que es un modelo <strong>mecanístico</strong>. Debido a que representa el cambio del número de individuos en el tiempo, es un modelo <strong>dinámico</strong>. Por el momento no contamos con información suficiente para decir si es contínuo o discreto, pero no hay mención del componente espacial, por lo que podemos suponer que se trata de un modelo <strong>espacialmente homogéneo</strong>. La solución al modelo clásico de la figura <a href="unidad-i-introducción-a-la-modelación.html#fig:volterra-diag">3.5</a>, muestra un patrón regular, lo cual se debe a que todos los parámetros son constantes, y por lo tanto es un modelo <strong>determinista</strong>.</p>
+<p>El modelo entonces representa el mecanismo del sistema, por lo que es un modelo <strong>mecanístico</strong>. Debido a que representa el cambio del número de individuos en el tiempo, es un modelo <strong>dinámico</strong>. Por el momento no contamos con información suficiente para decir si es contínuo o discreto, pero no hay mención del componente espacial, por lo que podemos suponer que se trata de un modelo <strong>espacialmente homogéneo</strong>. La solución al modelo clásico de la figura <a href="unidad-i-introducción-a-la-modelación.html#fig:volterra-diag">3.6</a>, muestra un patrón regular, lo cual se debe a que todos los parámetros son constantes, y por lo tanto es un modelo <strong>determinista</strong>.</p>
 </div>
 <div id="modelo-del-panal-de-abejas" class="section level4" number="3.5.1.2">
 <h4><span class="header-section-number">3.5.1.2</span> Modelo del panal de abejas</h4>
@@ -337,7 +352,7 @@ cm = 2.54 \times in + \varepsilon
 \]</span></p>
 <p>donde <span class="math display">\[\varepsilon\]</span> es el <em>error</em> que hemos introducido. Técnicamente para hacer esto utilizamos un generador de números aleatorios en el lenguaje de programación <strong>R</strong>. Veamos una serie de conversiones:</p>
 <table>
-<caption><span id="tab:unnamed-chunk-17">Tabla 3.1: </span>Cinco realizaciones para la conversión de dos pulgadas a centímetros con el modelo determinista y estocástico.</caption>
+<caption><span id="tab:unnamed-chunk-18">Tabla 3.1: </span>Cinco realizaciones para la conversión de dos pulgadas a centímetros con el modelo determinista y estocástico.</caption>
 <thead>
 <tr class="header">
 <th align="center">Determinista</th>
@@ -347,23 +362,23 @@ cm = 2.54 \times in + \varepsilon
 <tbody>
 <tr class="odd">
 <td align="center">5.08</td>
-<td align="center">5.277919</td>
+<td align="center">4.935995</td>
 </tr>
 <tr class="even">
 <td align="center">5.08</td>
-<td align="center">4.926360</td>
+<td align="center">5.166951</td>
 </tr>
 <tr class="odd">
 <td align="center">5.08</td>
-<td align="center">4.891276</td>
+<td align="center">5.123571</td>
 </tr>
 <tr class="even">
 <td align="center">5.08</td>
-<td align="center">5.588225</td>
+<td align="center">5.127262</td>
 </tr>
 <tr class="odd">
 <td align="center">5.08</td>
-<td align="center">5.210386</td>
+<td align="center">5.331394</td>
 </tr>
 </tbody>
 </table>

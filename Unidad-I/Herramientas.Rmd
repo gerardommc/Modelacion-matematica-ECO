@@ -8,3 +8,9 @@ Como podemos ver, gran parte de este curso estará enfocado en *entender y medir
 2. Cantidad de materia orgánica almacenada en la vegetación
 3. Calorías consumidas por una población de aves
 4. Probabilidad de extinción de una especie
+
+### Relación entre las herramientas matemáticas y los sistemas ecológicos
+
+Los sistemas ecológicos son muy variados, de modo que las herramientas matemáticas disponibles o que conocemos no siempre reflejan ciertos aspectos importantes de los sistemas ecológicos. Un ejemplo notable de ello es la variación de atributos entre individuos de una población. Supongamos que estamos modelando el crecimiento de una población, y la tasa neta de crecimiento depende de la cantidad de adultos reproductores y del crecimiento exponencial de los gametos fértiles en cada adulto reproductor, lo cual ocurre en corales y algunas plantas. 
+
+El crecimiento poblacional como tal, puede modelarse con ecuaciones diferenciales ordinarias, mientras que el crecimiento de los gametos fértiles dentro de cada adulto requiere de  otras herramientas mucho más avanzadas.
