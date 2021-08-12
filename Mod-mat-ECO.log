@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded format=xelatex 2021.6.30)  11 AUG 2021 09:56
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded format=xelatex 2021.6.30)  12 AUG 2021 15:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -859,12 +859,12 @@ PLEADAS EN LA MODELACIÓN MATEMÁTICA \TU/lmr/m/n/10 15
 File: Unidad-I/volterra.png Graphic file (type bmp)
 <Unidad-I/volterra.png>
 
-Overfull \hbox (233.18617pt too wide) in paragraph at lines 274--275
+Overfull \hbox (233.18617pt too wide) in paragraph at lines 276--277
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 278--278
+Underfull \hbox (badness 10000) in paragraph at lines 280--280
 []\TU/lmr/m/n/10 Figure 3.3: []Simulación del modelo [Lotka-Volterra](https://s
 cipy-
  []
@@ -873,39 +873,39 @@ cipy-
 File: Unidad-I/lepto.png Graphic file (type bmp)
 <Unidad-I/lepto.png>
 
-Overfull \hbox (499.03407pt too wide) in paragraph at lines 290--291
+Overfull \hbox (499.03407pt too wide) in paragraph at lines 292--293
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 48.4868pt on input line 295.
+LaTeX Warning: Float too large for page by 48.4868pt on input line 297.
 
 File: Unidad-I/uso-modelos.png Graphic file (type bmp)
 <Unidad-I/uso-modelos.png>
 
-Overfull \hbox (416.75163pt too wide) in paragraph at lines 325--326
+Overfull \hbox (416.75163pt too wide) in paragraph at lines 327--328
  [][] 
  []
 
 
-Underfull \hbox (badness 1147) in paragraph at lines 329--329
+Underfull \hbox (badness 1147) in paragraph at lines 331--331
 []\TU/lmr/m/n/10 Figure 3.5: []Relación entre el entendimiento y calidad de los
  datos, y
  []
 
 
-LaTeX Warning: Float too large for page by 48.49055pt on input line 330.
+LaTeX Warning: Float too large for page by 48.49055pt on input line 332.
 
 [18] [19] [20]
 File: Unidad-I/Volterra/Volterra.pdf Graphic file (type pdf)
 <use Unidad-I/Volterra/Volterra.pdf>
 
-Overfull \hbox (366.80304pt too wide) in paragraph at lines 394--395
+Overfull \hbox (366.80304pt too wide) in paragraph at lines 396--397
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 35.96959pt on input line 399.
+LaTeX Warning: Float too large for page by 35.96959pt on input line 401.
 
 [21] [22] [23] [24] [25] [26
 
@@ -955,7 +955,7 @@ ELOS DETERMINÍSTICOS
 File: Unidad-II/conicas.png Graphic file (type bmp)
 <Unidad-II/conicas.png>
 
-Overfull \hbox (155.85472pt too wide) in paragraph at lines 662--663
+Overfull \hbox (155.85472pt too wide) in paragraph at lines 664--665
  [][] 
  []
 
@@ -973,12 +973,12 @@ File: Mod-mat-ECO_files/figure-latex/vari-1.pdf Graphic file (type pdf)
 File: Unidad-II/Trian-prop.png Graphic file (type bmp)
 <Unidad-II/Trian-prop.png>
 
-Overfull \hbox (292.90344pt too wide) in paragraph at lines 711--712
+Overfull \hbox (292.90344pt too wide) in paragraph at lines 713--714
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 36.0789pt on input line 716.
+LaTeX Warning: Float too large for page by 36.0789pt on input line 718.
 
 
 Overfull \hbox (52.83453pt too wide) has occurred while \output is active
@@ -990,14 +990,14 @@ ELOS DETERMINÍSTICOS
 File: Unidad-II/nomenclatura.png Graphic file (type bmp)
 <Unidad-II/nomenclatura.png>
 
-Overfull \hbox (223.09508pt too wide) in paragraph at lines 727--728
+Overfull \hbox (223.09508pt too wide) in paragraph at lines 729--730
  [][] 
  []
 
 File: Unidad-II/Func-trigo.png Graphic file (type bmp)
 <Unidad-II/Func-trigo.png>
 
-Overfull \hbox (343.58131pt too wide) in paragraph at lines 769--770
+Overfull \hbox (343.58131pt too wide) in paragraph at lines 771--772
  [][] 
  []
 
@@ -1059,6 +1059,6 @@ Here is how much of TeX's memory you used:
  38038 multiletter control sequences out of 15000+600000
  409897 words of font info for 82 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 98i,8n,122p,1088b,424s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 98i,8n,122p,1088b,420s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on Mod-mat-ECO.pdf (47 pages).
