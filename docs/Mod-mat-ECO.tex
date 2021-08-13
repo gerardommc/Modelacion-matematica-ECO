@@ -77,7 +77,7 @@
 
 \title{Modelos Matemáticos en Ecología I}
 \author{Gerardo Martín}
-\date{2021-08-12}
+\date{2021-08-13}
 
 \begin{document}
 \maketitle
@@ -254,12 +254,48 @@ Como podemos ver, gran parte de este curso estará enfocado en \emph{entender y 
 
 Cuando medimos cambios entonces, es necesario observar el estado del mundo natural en diferentes puntos a lo largo del tiempo. Por lo tanto, la modelación matemática también requiere desarrollar buenas habilidades estadísticas. Estas últimas nos permitirán entender probabilísticamente a los sistemas ecológicos a partir de los mecanismos que representamos en los modelos matemáticos. Más adelante veremos a qué nos referimos con \emph{probabilísticamente}.
 
+Antes de entrar en estos temas más filosóficos, sin embargo, debemos que conocer algunas expresiones algebráicas y geométricas que utilizaremos rutinariamente para representar fenómenos. Algunas de las expresiones y herramientas geométricas más comunes son:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  La recta, descrita por expresiones como \(y = a + bx\)
+\item
+  La parábola, \(y = x^2\)
+\item
+  Las Cónicas, \(y = 1/x\), o \(y^2 - x^2 = 1\) y muchas otras
+\item
+  Las funciones trigonométricas, \(\sin \theta = \frac{O}{H}\)
+\end{enumerate}
+
+Estas expresiones pueden ser combinadas dentro de un sistema de ecuaciones. Con sistema de ecuaciones nos referimos a ecuaciones separadas que están conectadas por términos en común y que representan \emph{flujos}. Veamos un sencillo sistema de ecuaciones estructuradas por edad con crecimiento logístico:
+
+\begin{equation}
+    \dot{J} = rA - \gamma A^2 - \kappa J \label{eq:juv}
+\end{equation}
+
+\begin{equation}
+    \dot{A} = \kappa J \label{eq:ad}
+\end{equation}
+
+La expresión \(rA - \gamma A^2\) es claramente una parábola, y representa el crecimiento logístico. Por otra parte \(- \kappa J\) es un término lineal que, debido a su signo negativo representa un flujo de salida del compartimento \(J\) y es una entrada al compartimento \(A\). Este modelo relativamente sencillo representa la dinámica poblacional de un bicho con estados de desarrollo juvenil \(J\) y adulto \(A\), donde el nacimiento de individuos juveniles depende el número de adultos, y el crecimiento de los adultos ocurre a medida que los juveniles maduran y entran al compartimento de adultos a una tasa \(\kappa\).
+
+\begin{figure}
+
+{\centering \includegraphics[width=7.29in]{Unidad-I/juve-adult} 
+
+}
+
+\caption{Representación gráfica del modelo de crecimiento poblacional con estados de desarrollo.}\label{fig:juve-ad}
+\end{figure}
+
 \hypertarget{relaciuxf3n-entre-las-herramientas-matemuxe1ticas-y-los-sistemas-ecoluxf3gicos}{%
 \subsection{Relación entre las herramientas matemáticas y los sistemas ecológicos}\label{relaciuxf3n-entre-las-herramientas-matemuxe1ticas-y-los-sistemas-ecoluxf3gicos}}
 
-Los sistemas ecológicos son muy variados, de modo que las herramientas matemáticas disponibles o que conocemos no siempre reflejan ciertos aspectos importantes de los sistemas ecológicos. Un ejemplo notable de ello es la variación de atributos entre individuos de una población. Supongamos que estamos modelando el crecimiento de una población, y la tasa neta de crecimiento depende de la cantidad de adultos reproductores y del crecimiento exponencial de los gametos fértiles en cada adulto reproductor, lo cual ocurre en corales y algunas plantas.
+Los sistemas ecológicos son muy variados, de modo que las herramientas matemáticas disponibles o que conocemos no siempre reflejan ciertos aspectos importantes de los sistemas ecológicos. Un ejemplo notable de ello es la variación de atributos entre individuos de una población. Supongamos que estamos modelando el crecimiento de una población (como en las ecuaciones \eqref{eq:juv} y \eqref{eq:ad}), y la tasa neta de crecimiento depende de la cantidad de adultos reproductores y del crecimiento exponencial de los gametos fértiles en cada adulto reproductor, lo cual ocurre en corales y algunas plantas.
 
-El crecimiento poblacional como tal, puede modelarse con ecuaciones diferenciales ordinarias, mientras que el crecimiento de los gametos fértiles dentro de cada adulto requiere de otras herramientas mucho más avanzadas.
+El crecimiento poblacional como tal, puede modelarse con ecuaciones diferenciales ordinarias, mientras que representar el crecimiento de los gametos fértiles dentro de cada adulto en un sistema de ecuaciones ordinarias requiere de otras herramientas mucho más avanzadas.
 
 \hypertarget{uso-de-los-modelos-matemuxe1ticos-en-ecologuxeda}{%
 \section{Uso de los modelos matemáticos en ecología}\label{uso-de-los-modelos-matemuxe1ticos-en-ecologuxeda}}
@@ -476,15 +512,15 @@ donde \[\varepsilon\] es el \emph{error} que hemos introducido. Técnicamente pa
 \hline
 Determinista & Estocástico\\
 \hline
-5.08 & 5.147744\\
+5.08 & 5.396277\\
 \hline
-5.08 & 4.939361\\
+5.08 & 5.194200\\
 \hline
-5.08 & 5.304274\\
+5.08 & 4.895674\\
 \hline
-5.08 & 5.236860\\
+5.08 & 4.922496\\
 \hline
-5.08 & 4.852426\\
+5.08 & 5.523975\\
 \hline
 \end{tabular}
 \end{table}

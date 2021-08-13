@@ -1,5 +1,8 @@
 fig:unnamed-chunk-13
 fig:unnamed-chunk-14
+eq:juv
+eq:ad
+fig:juve-ad
 fig:volterra
 fig:lepto
 fig:unnamed-chunk-15

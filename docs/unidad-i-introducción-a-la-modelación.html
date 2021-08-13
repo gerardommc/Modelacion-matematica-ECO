@@ -24,7 +24,7 @@
 <meta name="author" content="Gerardo Martín" />
 
 
-<meta name="date" content="2021-08-12" />
+<meta name="date" content="2021-08-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -221,10 +221,31 @@ Figura 3.2:  Diagrama de mi estrategia para desarrollar modelos.
 <li>Probabilidad de extinción de una especie</li>
 </ol>
 <p>Cuando medimos cambios entonces, es necesario observar el estado del mundo natural en diferentes puntos a lo largo del tiempo. Por lo tanto, la modelación matemática también requiere desarrollar buenas habilidades estadísticas. Estas últimas nos permitirán entender probabilísticamente a los sistemas ecológicos a partir de los mecanismos que representamos en los modelos matemáticos. Más adelante veremos a qué nos referimos con <em>probabilísticamente</em>.</p>
+<p>Antes de entrar en estos temas más filosóficos, sin embargo, debemos que conocer algunas expresiones algebráicas y geométricas que utilizaremos rutinariamente para representar fenómenos. Algunas de las expresiones y herramientas geométricas más comunes son:</p>
+<ol style="list-style-type: decimal">
+<li>La recta, descrita por expresiones como <span class="math inline">\(y = a + bx\)</span></li>
+<li>La parábola, <span class="math inline">\(y = x^2\)</span></li>
+<li>Las Cónicas, <span class="math inline">\(y = 1/x\)</span>, o <span class="math inline">\(y^2 - x^2 = 1\)</span> y muchas otras</li>
+<li>Las funciones trigonométricas, <span class="math inline">\(\sin \theta = \frac{O}{H}\)</span></li>
+</ol>
+<p>Estas expresiones pueden ser combinadas dentro de un sistema de ecuaciones. Con sistema de ecuaciones nos referimos a ecuaciones separadas que están conectadas por términos en común y que representan <em>flujos</em>. Veamos un sencillo sistema de ecuaciones estructuradas por edad con crecimiento logístico:</p>
+<p><span class="math display" id="eq:juv">\[\begin{equation}
+    \dot{J} = rA - \gamma A^2 - \kappa J \tag{3.1}
+\end{equation}\]</span></p>
+<p><span class="math display" id="eq:ad">\[\begin{equation}
+    \dot{A} = \kappa J \tag{3.2}
+\end{equation}\]</span></p>
+<p>La expresión <span class="math inline">\(rA - \gamma A^2\)</span> es claramente una parábola, y representa el crecimiento logístico. Por otra parte <span class="math inline">\(- \kappa J\)</span> es un término lineal que, debido a su signo negativo representa un flujo de salida del compartimento <span class="math inline">\(J\)</span> y es una entrada al compartimento <span class="math inline">\(A\)</span>. Este modelo relativamente sencillo representa la dinámica poblacional de un bicho con estados de desarrollo juvenil <span class="math inline">\(J\)</span> y adulto <span class="math inline">\(A\)</span>, donde el nacimiento de individuos juveniles depende el número de adultos, y el crecimiento de los adultos ocurre a medida que los juveniles maduran y entran al compartimento de adultos a una tasa <span class="math inline">\(\kappa\)</span>.</p>
+<div class="figure" style="text-align: center"><span id="fig:juve-ad"></span>
+<img src="Unidad-I/juve-adult.png" alt="Representación gráfica del modelo de crecimiento poblacional con estados de desarrollo." width="262" />
+<p class="caption">
+Figura 3.3: Representación gráfica del modelo de crecimiento poblacional con estados de desarrollo.
+</p>
+</div>
 <div id="relación-entre-las-herramientas-matemáticas-y-los-sistemas-ecológicos" class="section level3" number="3.3.1">
 <h3><span class="header-section-number">3.3.1</span> Relación entre las herramientas matemáticas y los sistemas ecológicos</h3>
-<p>Los sistemas ecológicos son muy variados, de modo que las herramientas matemáticas disponibles o que conocemos no siempre reflejan ciertos aspectos importantes de los sistemas ecológicos. Un ejemplo notable de ello es la variación de atributos entre individuos de una población. Supongamos que estamos modelando el crecimiento de una población, y la tasa neta de crecimiento depende de la cantidad de adultos reproductores y del crecimiento exponencial de los gametos fértiles en cada adulto reproductor, lo cual ocurre en corales y algunas plantas.</p>
-<p>El crecimiento poblacional como tal, puede modelarse con ecuaciones diferenciales ordinarias, mientras que el crecimiento de los gametos fértiles dentro de cada adulto requiere de otras herramientas mucho más avanzadas.</p>
+<p>Los sistemas ecológicos son muy variados, de modo que las herramientas matemáticas disponibles o que conocemos no siempre reflejan ciertos aspectos importantes de los sistemas ecológicos. Un ejemplo notable de ello es la variación de atributos entre individuos de una población. Supongamos que estamos modelando el crecimiento de una población (como en las ecuaciones <a href="unidad-i-introducción-a-la-modelación.html#eq:juv">(3.1)</a> y <a href="unidad-i-introducción-a-la-modelación.html#eq:ad">(3.2)</a>), y la tasa neta de crecimiento depende de la cantidad de adultos reproductores y del crecimiento exponencial de los gametos fértiles en cada adulto reproductor, lo cual ocurre en corales y algunas plantas.</p>
+<p>El crecimiento poblacional como tal, puede modelarse con ecuaciones diferenciales ordinarias, mientras que representar el crecimiento de los gametos fértiles dentro de cada adulto en un sistema de ecuaciones ordinarias requiere de otras herramientas mucho más avanzadas.</p>
 </div>
 </div>
 <div id="uso-de-los-modelos-matemáticos-en-ecología" class="section level2" number="3.4">
@@ -232,11 +253,11 @@ Figura 3.2:  Diagrama de mi estrategia para desarrollar modelos.
 <p>Como ya mencionamos anteriormente, una alta proporción de las publicaciones académicas en ecología utiliza modelos matemáticos para predecir. Existen sin embargo otros usos de los modelos matemáticos que se pueden describir en términos generales como analíticos, es decir para analizar y entender cómo los diferentes componentes de un sistema afectan su coportamiento. Otras veces, los modelos se utilizan para medir las respuestas del sistema de interés ante perturbaciones, haciendo muchas simulaciones. Veamos una serie de ejemplos de estos diferentes usos de los modelos.</p>
 <div id="analíticos-dinámicas-depredador-presa" class="section level3" number="3.4.1">
 <h3><span class="header-section-number">3.4.1</span> Analíticos: Dinámicas depredador-presa</h3>
-<p>En 1928, Vito Volterra <span class="citation">(<a href="#ref-volterra1928variations" role="doc-biblioref">Volterra 1928</a>)</span> desarrolló un modelo matemático para describir cómo varía el número de individuos de una especie de depredador y una presa. Como ya es conocido, este modelo replica muy bien el comportamiento oscilatorio de ambas poblaciones (Figura <a href="unidad-i-introducción-a-la-modelación.html#fig:volterra">3.3</a>).</p>
+<p>En 1928, Vito Volterra <span class="citation">(<a href="#ref-volterra1928variations" role="doc-biblioref">Volterra 1928</a>)</span> desarrolló un modelo matemático para describir cómo varía el número de individuos de una especie de depredador y una presa. Como ya es conocido, este modelo replica muy bien el comportamiento oscilatorio de ambas poblaciones (Figura <a href="unidad-i-introducción-a-la-modelación.html#fig:volterra">3.4</a>).</p>
 <div class="figure" style="text-align: center"><span id="fig:volterra"></span>
 <img src="Unidad-I/volterra.png" alt="Simulación del modelo [Lotka-Volterra](https://scipy-cookbook.readthedocs.io/items/LoktaVolterraTutorial.html)." width="400" />
 <p class="caption">
-Figura 3.3: Simulación del modelo <a href="https://scipy-cookbook.readthedocs.io/items/LoktaVolterraTutorial.html">Lotka-Volterra</a>.
+Figura 3.4: Simulación del modelo <a href="https://scipy-cookbook.readthedocs.io/items/LoktaVolterraTutorial.html">Lotka-Volterra</a>.
 </p>
 </div>
 <p>El comportamiento oscilatorio resulta <em>obvio</em> desde una perspectiva biológica: los depredadores no se pueden reproducir a menos que se alimenten de sus presas, pero cuando hay muchos depredadores, estos consumen las presas disminuyendo sus números, resultando en menor potencial reproductivo para el depredador. Pero matemáticamente, ¿qué hace posible estas oscilaciones? Para responder esta pregunta se necesita entender bajo qué condiciones el sistema de ecuaciones que describe el sistema es estable, es decir cuándo los cambios de ambas poblaciones son cero, es decir bajo qué situaciones el sistema como un todo no experimenta cambio alguno. Este análisis matemático tiene un resultado un tanto sorprendente, pues las condiciones bajo las que dicha condición ocurre son un número imaginario, lo que indica que el sistema como tal es inestable, y por lo tanto <strong>siempre</strong> tiende a oscilar. El análisis de matemático de los modelos es en su mayoría netamente simbólico y requiere de buenas bases matemáticas.</p>
@@ -247,10 +268,10 @@ Figura 3.3: Simulación del modelo <a href="https://scipy-cookbook.readthedocs.i
 <div class="figure" style="text-align: center"><span id="fig:lepto"></span>
 <img src="Unidad-I/lepto.png" alt="Las barras (eje $y$) indican el cambio proporcional de las diferentes cantidades de interés (color de las barras), ante el aumento del valor de cada parámetro (eje $x$), [@holt2006model]." width="820" />
 <p class="caption">
-Figura 3.4: Las barras (eje <span class="math inline">\(y\)</span>) indican el cambio proporcional de las diferentes cantidades de interés (color de las barras), ante el aumento del valor de cada parámetro (eje <span class="math inline">\(x\)</span>), <span class="citation">(<a href="#ref-holt2006model" role="doc-biblioref">Holt, Davis, and Leirs 2006</a>)</span>.
+Figura 3.5: Las barras (eje <span class="math inline">\(y\)</span>) indican el cambio proporcional de las diferentes cantidades de interés (color de las barras), ante el aumento del valor de cada parámetro (eje <span class="math inline">\(x\)</span>), <span class="citation">(<a href="#ref-holt2006model" role="doc-biblioref">Holt, Davis, and Leirs 2006</a>)</span>.
 </p>
 </div>
-<p>Los análisis de sensibilidad mostrados en la Figura <a href="unidad-i-introducción-a-la-modelación.html#fig:lepto">3.4</a> son en realidad una serie de predicciones del sistema. De hecho la predicción generalmente echa mano de modelos matemáticos, así que nos centraremos en resumir: la predicción requiere de la planeación de una serie de escenarios para identificar áreas de intervención (alteración del hábitat por ejemplo) para obtener un resultado favorable de acuerdo con el modelo.</p>
+<p>Los análisis de sensibilidad mostrados en la Figura <a href="unidad-i-introducción-a-la-modelación.html#fig:lepto">3.5</a> son en realidad una serie de predicciones del sistema. De hecho la predicción generalmente echa mano de modelos matemáticos, así que nos centraremos en resumir: la predicción requiere de la planeación de una serie de escenarios para identificar áreas de intervención (alteración del hábitat por ejemplo) para obtener un resultado favorable de acuerdo con el modelo.</p>
 </div>
 <div id="mal-uso-de-los-modelos" class="section level3" number="3.4.3">
 <h3><span class="header-section-number">3.4.3</span> Mal uso de los modelos</h3>
@@ -267,7 +288,7 @@ Figura 3.4: Las barras (eje <span class="math inline">\(y\)</span>) indican el c
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-15"></span>
 <img src="Unidad-I/uso-modelos.png" alt="Relación entre el entendimiento y calidad de los datos, y los potenciales usos de los modelos en las diferentes disciplinas científicas [@haefner1998modeling]." width="648" />
 <p class="caption">
-Figura 3.5: Relación entre el entendimiento y calidad de los datos, y los potenciales usos de los modelos en las diferentes disciplinas científicas <span class="citation">(<a href="#ref-haefner1998modeling" role="doc-biblioref">Haefner 1998</a>)</span>.
+Figura 3.6: Relación entre el entendimiento y calidad de los datos, y los potenciales usos de los modelos en las diferentes disciplinas científicas <span class="citation">(<a href="#ref-haefner1998modeling" role="doc-biblioref">Haefner 1998</a>)</span>.
 </p>
 </div>
 </div>
@@ -306,7 +327,7 @@ Figura 3.5: Relación entre el entendimiento y calidad de los datos, y los poten
 <div class="figure" style="text-align: center"><span id="fig:volterra-diag"></span>
 <img src="Unidad-I/Volterra/Volterra.png" alt="Modelo diagramático basado en el modelo matemático depredador-presa de Lotka-Volterra" width="438" />
 <p class="caption">
-Figura 3.6: Modelo diagramático basado en el modelo matemático depredador-presa de Lotka-Volterra
+Figura 3.7: Modelo diagramático basado en el modelo matemático depredador-presa de Lotka-Volterra
 </p>
 </div>
 <p>Este modelo representa cómo cambia el número de liebres y linces a través del tiempo con un sistema de ecuaciones diferenciales. El cambio en los números de individuos depdende de</p>
@@ -316,7 +337,7 @@ Figura 3.6: Modelo diagramático basado en el modelo matemático depredador-pres
 <li>Mortalidad de presas en relación a la cantidad de depredadores</li>
 <li>Mortalidad innata del depredador</li>
 </ol>
-<p>El modelo entonces representa el mecanismo del sistema, por lo que es un modelo <strong>mecanístico</strong>. Debido a que representa el cambio del número de individuos en el tiempo, es un modelo <strong>dinámico</strong>. Por el momento no contamos con información suficiente para decir si es contínuo o discreto, pero no hay mención del componente espacial, por lo que podemos suponer que se trata de un modelo <strong>espacialmente homogéneo</strong>. La solución al modelo clásico de la figura <a href="unidad-i-introducción-a-la-modelación.html#fig:volterra-diag">3.6</a>, muestra un patrón regular, lo cual se debe a que todos los parámetros son constantes, y por lo tanto es un modelo <strong>determinista</strong>.</p>
+<p>El modelo entonces representa el mecanismo del sistema, por lo que es un modelo <strong>mecanístico</strong>. Debido a que representa el cambio del número de individuos en el tiempo, es un modelo <strong>dinámico</strong>. Por el momento no contamos con información suficiente para decir si es contínuo o discreto, pero no hay mención del componente espacial, por lo que podemos suponer que se trata de un modelo <strong>espacialmente homogéneo</strong>. La solución al modelo clásico de la figura <a href="unidad-i-introducción-a-la-modelación.html#fig:volterra-diag">3.7</a>, muestra un patrón regular, lo cual se debe a que todos los parámetros son constantes, y por lo tanto es un modelo <strong>determinista</strong>.</p>
 </div>
 <div id="modelo-del-panal-de-abejas" class="section level4" number="3.5.1.2">
 <h4><span class="header-section-number">3.5.1.2</span> Modelo del panal de abejas</h4>
@@ -328,14 +349,14 @@ Figura 3.6: Modelo diagramático basado en el modelo matemático depredador-pres
 <h3><span class="header-section-number">3.5.2</span> Modelos determinísticos y estocásticos</h3>
 <p>Imaginemos que necesitamos un librero, y para ello necesitamos medir las dimensiones del espacio donde lo colocaremos. Solamente contamos con una cinta en pulgadas, pero el carpintero, para hacer el presupuesto, necesita las medidas en centímetros. Entonces para hacer la conversión de pulgadas a centímetros utilizamos el siguiente modelo:</p>
 <p><span class="math display" id="eq:pulgadas">\[\begin{equation}
-    cm = 2.54 \times in  \tag{3.1}
+    cm = 2.54 \times in  \tag{3.3}
 \end{equation}\]</span></p>
 <p>donde <span class="math inline">\(in\)</span> son las pulgadas, <span class="math inline">\(cm\)</span> los centímetros, y <span class="math inline">\(2.54\)</span> es la constante de conversión. Entonces ya tenemos así un modelo que siempre nos dará la misma respuesta para cada valor de entrada:</p>
 <ul>
 <li><span class="math inline">\(2in \rightarrow 2 \times 2.54cm = 5.08cm\)</span></li>
 <li><span class="math inline">\(11in \rightarrow 11 \times 2.54cm = 27.94cm\)</span></li>
 </ul>
-<p>Imaginemos ahora que la constante de conversión no fuera una sola, <span class="math inline">\(2.54\)</span>, sino cientos, o miles de posibles valores cercanos a <span class="math inline">\(2.54\)</span>, y cada vez que resolvemos el modelo <a href="unidad-i-introducción-a-la-modelación.html#eq:pulgadas">(3.1)</a> obtenemos un valor distinto. El primero es un modelo deterministico, siempre da la misma respuesta. El segundo, es un modelo estocástico. Te preguntarás entonces ¿para qué querríamos un modelo que de respuestas inconsistentes? La principal razón es que en ecología, como en otras áreas del conocimiento, los sistemas de estudio son muy variables, y los modelos estocásticos nos sirven para representar esa variabilidad y conocer algunos de los posibles resultados. En pocas palabras, si un sistema es determinista, siempre podemos conocer su comportamiento con alta precisión, mientras que en los estocáticos, no.</p>
+<p>Imaginemos ahora que la constante de conversión no fuera una sola, <span class="math inline">\(2.54\)</span>, sino cientos, o miles de posibles valores cercanos a <span class="math inline">\(2.54\)</span>, y cada vez que resolvemos el modelo <a href="unidad-i-introducción-a-la-modelación.html#eq:pulgadas">(3.3)</a> obtenemos un valor distinto. El primero es un modelo deterministico, siempre da la misma respuesta. El segundo, es un modelo estocástico. Te preguntarás entonces ¿para qué querríamos un modelo que de respuestas inconsistentes? La principal razón es que en ecología, como en otras áreas del conocimiento, los sistemas de estudio son muy variables, y los modelos estocásticos nos sirven para representar esa variabilidad y conocer algunos de los posibles resultados. En pocas palabras, si un sistema es determinista, siempre podemos conocer su comportamiento con alta precisión, mientras que en los estocáticos, no.</p>
 <div id="deterministicos" class="section level4" number="3.5.2.1">
 <h4><span class="header-section-number">3.5.2.1</span> Deterministicos</h4>
 <p>En vista de mi comentario “… los sistemas de estudio son muy variables…” tal vez te surja otra pregunta, ¿entonces por qué estudiamos los modelos deterministas? Y no hay una pregunta mmuy sencilla, pero la principal es que son más sencillos. Por otra parte, si pensamos en los modelos desde un punto de vista estadístico, se podría también sugerir que podemos utilizar los modelos determinísticos para estudiar el comportamiento “promedio,” o para caracterizar ese componente, el determinista, de nuestro sistema de estudio. En este sentido, se considera entonces que la mayoría de los sistemas y procesos ecológicos tienen un componente determinístico y uno estocástico. La mejor manera de modelar los sistemas ecológicos, entonces, es utilizando ambos. Por lo tanto, para modelar los sistemas ecológicos con ambos métodos, necesitamos aprender a utilizarlos por separado.</p>
@@ -363,23 +384,23 @@ cm = 2.54 \times in + \varepsilon
 <tbody>
 <tr class="odd">
 <td align="center">5.08</td>
-<td align="center">5.364342</td>
+<td align="center">5.387997</td>
 </tr>
 <tr class="even">
 <td align="center">5.08</td>
-<td align="center">5.032483</td>
+<td align="center">4.941818</td>
 </tr>
 <tr class="odd">
 <td align="center">5.08</td>
-<td align="center">5.166254</td>
+<td align="center">4.890129</td>
 </tr>
 <tr class="even">
 <td align="center">5.08</td>
-<td align="center">4.821982</td>
+<td align="center">5.115093</td>
 </tr>
 <tr class="odd">
 <td align="center">5.08</td>
-<td align="center">5.009192</td>
+<td align="center">5.118054</td>
 </tr>
 </tbody>
 </table>
