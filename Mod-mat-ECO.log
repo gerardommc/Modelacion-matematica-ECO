@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded format=xelatex 2021.6.30)  13 AUG 2021 07:43
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded format=xelatex 2021.6.30)  13 AUG 2021 10:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -827,19 +827,19 @@ Chapter 2.
 [9] [10]
 Chapter 3.
 
-Overfull \hbox (22.9343pt too wide) in paragraph at lines 154--154
+Overfull \hbox (22.9343pt too wide) in paragraph at lines 156--156
 []\TU/lmr/bx/n/14.4 Introducción al concepto de modelo matemático 
  []
 
 File: Unidad-I/elefante.png Graphic file (type bmp)
 <Unidad-I/elefante.png>
 
-Overfull \hbox (515.47562pt too wide) in paragraph at lines 165--166
+Overfull \hbox (515.47562pt too wide) in paragraph at lines 167--168
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 24.05469pt on input line 170.
+LaTeX Warning: Float too large for page by 24.05469pt on input line 172.
 
 [11
 
@@ -847,7 +847,7 @@ LaTeX Warning: Float too large for page by 24.05469pt on input line 170.
 File: Unidad-I/Diagrama-dearrollo.pdf Graphic file (type pdf)
 <use Unidad-I/Diagrama-dearrollo.pdf>
 
-LaTeX Warning: Float too large for page by 24.07199pt on input line 207.
+LaTeX Warning: Float too large for page by 24.07199pt on input line 209.
 
 [13] [14]
 Overfull \hbox (267.46906pt too wide) has occurred while \output is active
@@ -859,7 +859,7 @@ PLEADAS EN LA MODELACIÓN MATEMÁTICA \TU/lmr/m/n/10 15
 File: Unidad-I/juve-adult.png Graphic file (type bmp)
 <Unidad-I/juve-adult.png>
 
-Overfull \hbox (181.87096pt too wide) in paragraph at lines 286--287
+Overfull \hbox (181.87096pt too wide) in paragraph at lines 288--289
  [][] 
  []
 
@@ -873,12 +873,12 @@ PLEADAS EN LA MODELACIÓN MATEMÁTICA \TU/lmr/m/n/10 17
 File: Unidad-I/volterra.png Graphic file (type bmp)
 <Unidad-I/volterra.png>
 
-Overfull \hbox (233.18617pt too wide) in paragraph at lines 312--313
+Overfull \hbox (233.18617pt too wide) in paragraph at lines 314--315
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 316--316
+Underfull \hbox (badness 10000) in paragraph at lines 318--318
 []\TU/lmr/m/n/10 Figure 3.4: []Simulación del modelo [Lotka-Volterra](https://s
 cipy-
  []
@@ -886,40 +886,40 @@ cipy-
 File: Unidad-I/lepto.png Graphic file (type bmp)
 <Unidad-I/lepto.png>
 
-Overfull \hbox (499.03407pt too wide) in paragraph at lines 328--329
+Overfull \hbox (499.03407pt too wide) in paragraph at lines 330--331
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 48.4868pt on input line 333.
+LaTeX Warning: Float too large for page by 48.4868pt on input line 335.
 
 [18] [19] [20]
 File: Unidad-I/uso-modelos.png Graphic file (type bmp)
 <Unidad-I/uso-modelos.png>
 
-Overfull \hbox (416.75163pt too wide) in paragraph at lines 363--364
+Overfull \hbox (416.75163pt too wide) in paragraph at lines 365--366
  [][] 
  []
 
 
-Underfull \hbox (badness 1147) in paragraph at lines 367--367
+Underfull \hbox (badness 1147) in paragraph at lines 369--369
 []\TU/lmr/m/n/10 Figure 3.6: []Relación entre el entendimiento y calidad de los
  datos, y
  []
 
 
-LaTeX Warning: Float too large for page by 48.49055pt on input line 368.
+LaTeX Warning: Float too large for page by 48.49055pt on input line 370.
 
 [21] [22]
 File: Unidad-I/Volterra/Volterra.pdf Graphic file (type pdf)
 <use Unidad-I/Volterra/Volterra.pdf>
 
-Overfull \hbox (366.80304pt too wide) in paragraph at lines 432--433
+Overfull \hbox (366.80304pt too wide) in paragraph at lines 434--435
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 35.96959pt on input line 437.
+LaTeX Warning: Float too large for page by 35.96959pt on input line 439.
 
 [23] [24] [25] [26] [27] [28
 
@@ -969,7 +969,7 @@ ELOS DETERMINÍSTICOS
 File: Unidad-II/conicas.png Graphic file (type bmp)
 <Unidad-II/conicas.png>
 
-Overfull \hbox (155.85472pt too wide) in paragraph at lines 700--701
+Overfull \hbox (155.85472pt too wide) in paragraph at lines 702--703
  [][] 
  []
 
@@ -987,12 +987,12 @@ File: Mod-mat-ECO_files/figure-latex/vari-1.pdf Graphic file (type pdf)
 File: Unidad-II/Trian-prop.png Graphic file (type bmp)
 <Unidad-II/Trian-prop.png>
 
-Overfull \hbox (292.90344pt too wide) in paragraph at lines 749--750
+Overfull \hbox (292.90344pt too wide) in paragraph at lines 751--752
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 36.0789pt on input line 754.
+LaTeX Warning: Float too large for page by 36.0789pt on input line 756.
 
 
 Overfull \hbox (52.83453pt too wide) has occurred while \output is active
@@ -1004,14 +1004,14 @@ ELOS DETERMINÍSTICOS
 File: Unidad-II/nomenclatura.png Graphic file (type bmp)
 <Unidad-II/nomenclatura.png>
 
-Overfull \hbox (223.09508pt too wide) in paragraph at lines 765--766
+Overfull \hbox (223.09508pt too wide) in paragraph at lines 767--768
  [][] 
  []
 
 File: Unidad-II/Func-trigo.png Graphic file (type bmp)
 <Unidad-II/Func-trigo.png>
 
-Overfull \hbox (343.58131pt too wide) in paragraph at lines 807--808
+Overfull \hbox (343.58131pt too wide) in paragraph at lines 809--810
  [][] 
  []
 
