@@ -9,7 +9,7 @@ $$
 cm = 2.54 \times in + \varepsilon
 $$
 
-donde $$\varepsilon$$ es el *error* que hemos introducido. Técnicamente para hacer esto utilizamos un generador de números aleatorios en el lenguaje de programación **R**. Veamos una serie de conversiones:
+donde $\varepsilon$ es el *error* que hemos introducido. Técnicamente para hacer esto utilizamos un generador de números aleatorios en el lenguaje de programación **R**. Veamos una serie de conversiones:
 
 ```{r echo = F}
 Determinista <- 2 * 2.54
