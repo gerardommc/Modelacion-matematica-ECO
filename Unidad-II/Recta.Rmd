@@ -1,5 +1,3 @@
-### La línea recta
-
 Una línea recta se puede representar matemáticamente de varias maneras, la más común de ellas es por medio de una función. Una función, en cambio es una expresión matemática que indica una serie de operaciones (aritméticas por ejemplo), que serán aplicadas a un conjunto de números en sucesión (los números reales, p. ej.) para producir otro conjunto. Así la, función lineal más sencilla puede ser:
 
 \begin{equation}

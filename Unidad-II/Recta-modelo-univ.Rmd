@@ -1,0 +1,65 @@
+
+De los modelos vistos anteriormente, la línea recta es el más flexible y común de todos. Por su simplicidad, puede ser utilizado para representar muchos fenómenos de la naturaleza, incluso aquellos cuyo comportamiento es... !no lineal¡
+
+Cuando decimos no lineal, nos referimos generalmente a los casos en que cuando una relación de correspondencia es representada en el plano cartesiano los puntos que la forman no dibujan una línea recta. Como vimos anteriormente, matemáticamente es posible concebir como lineales reglas de corresondencia que no son lineales en el plano cartesiano, de ahí que la función de la línea recta pueda ser tan flexible. Para que una ecuación sea considerada como lineal, debe cumplir con las siguientes características:
+
+1. Las variables sólo pueden ser añadidas unas con otras
+2. La multiplicación sólo puede ocurrir con constantes
+3. Las variables están elevadas a la potencia 1
+
+Con base en estas definiciones, las siguientes ecuaciones no son lineales
+
+1. $xy = 1$
+2. $y = a + b x^2$
+3. $y = e^x$
+
+Aún cuando estas expresiones no son lineales, es posible transformar algunas de ellas para que adquieran propiedades lineales. Para comenzar, el caso 1, no puede ser linealizado. Para el caso 2, ya vimos un transformación posible, si asumimos que existe una $x'$ tal que $x' = x^2$. Para el caso 3 hay que usar un poco más de conocimiento de dos funciones matemáticas, el logaritmo y la exponencial.
+
+### El logaritmo
+
+Para entender cómo funciona la transformación logaritmica, revisemos el significado del logaritmo. Supongamos que queremos encontrar el valor de la incógnita $x$ en la siguiente ecuación:
+
+$$10^x = 20$$
+La operación necesaria para invertir el radical $10^x$ y encontrar el valor de $x$ es precisamente el logaritmo base 10, de modo que:
+
+$$\log_{10} 10^x = \log_{10} 20$$
+$$x \log_{10} 10 = \log_{10} 20$$
+sabemos que $\log_{10} 10 = 1$ pues $10^1 = 10$ por lo que:
+
+$$x = \log_{10} 20 \approx 1.3$$
+Así como en esta ocasión utilizamos $\log_{10}$ (logaritmo base 10), se puede utilizar como base cualquier número $b > 0$ positivo que esté en el conjunto de los números reales. El logaritmo más común recibe el nombre de natural, que utiliza de base la constante $e = 2.718282 ...$ de Euler. La convención en escritura de logaritmos es:
+
+- Logaritmo natural: $\ln$
+- Logaritmo base 10: $\log$
+- Logaritmo base $b > 0,  b \in \mathbb{R}$
+
+Aún cuando esta es la convención más común, en la modelación, la mayoría de las veces que se utiliza $\log$ se refiere a $\ln$, de modo que a menos que se especifique la base, $\log$ y $\ln$ significan $\log_e$.
+
+### La función exponencial
+
+Una de las funciones más comunes en aplicaciones matemáticas es la exponencial que se denota por $\exp(x)$, que significa $e^x$. De este modo cuando $y$ es una función exponencial de $x$, tenemos que:
+
+$$y(x) = \exp(x) = e^x$$
+La función exponencial puede tomar formas más complejas, por ejemplo, conteniendo una ecuación lineal:
+
+$$y(x) = \exp(a + bx) = e^{a + bx}$$
+
+### Linealizado la función exponencial
+
+Como se ha mostrado en esta sección, transformar una función exponencial en lineal es relativamente sencillo. En sentido literal, las transformaciones logaritmicas no son lineales sino log-lineales pues:
+
+\begin{equation}
+    y(x) = e^{a + bx} (\#eq:expon)
+\end{equation}
+
+se convierte en:
+
+\begin{equation}
+    \log y(x) = a + bx (\#eq:log-lin)
+\end{equation}
+
+donde el lado izquierdo es una función logarítmica y el derecho es estrictamente lineal. Matemáticamente entonces, la transformación es lineal $\forall x \in \mathbb{R}$, puesto que $\log y$ puede tomar cualquier valor entre $-\infty$ y $+\infty$. Entonces, la ecuación número 3 de la lista de ecuaciones no-lineales al principio de esta sección es:
+
+$$\log y(x) = \ln y(x) = x$$
+
+Esta equivalencia, como veremos más adelante y como verán en modelación estadística, es súper útil en la modelación de sistemas que cambian con el tiempo.

@@ -1,5 +1,3 @@
-### Cónicas
-
 De manera muy general, una cónica es el conjunto de soluciones para una ecuación cuadrática cuando menos en dos variables. En este sentido, las parábolas, vistas en la sección anterior, son un tipo de cónica. Ejemplos:
 
 1. $x^2 + y^2 = -1$

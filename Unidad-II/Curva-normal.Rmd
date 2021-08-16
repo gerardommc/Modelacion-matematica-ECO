@@ -1,5 +1,3 @@
-### La curva normal
-
 En el curso de probabilidad y estadística, se acordarán, se mencionó repetidamente a la distribución normal. En cuestión de matemáticas, la distribución normal puede ser representada como una ecuación:
 
 \begin{equation}
