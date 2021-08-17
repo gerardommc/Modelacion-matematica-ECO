@@ -28,6 +28,10 @@ fig:3d-1
 fig:trig-3d
 eq:expon
 eq:log-lin
+fig:expon
+fig:popn-wd
+eq:poblac
+fig:log
 preámbulo
 encuadre-de-la-materia
 criterios-de-evaluación
@@ -69,4 +73,7 @@ la-recta-como-modelo-universal-y-sus-transformaciones
 el-logaritmo
 la-función-exponencial
 linealizado-la-función-exponencial
+representación-gráfica-de-la-función-exponencial
+representación-gráfica-del-logaritmo
+relevancia-de-la-recta
 unidad-iii---introducción-al-cáculo-diferencial-e-integral

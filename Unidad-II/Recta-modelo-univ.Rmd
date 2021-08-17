@@ -63,3 +63,49 @@ donde el lado izquierdo es una función logarítmica y el derecho es estrictamen
 $$\log y(x) = \ln y(x) = x$$
 
 Esta equivalencia, como veremos más adelante y como verán en modelación estadística, es súper útil en la modelación de sistemas que cambian con el tiempo.
+
+#### Representación gráfica de la función exponencial
+
+En la función exponencial, la variable $y$ crece muy rápido. De hecho, su crecimiento en cualquier punto es proporcional al valor que tiene en ese punto. Es decir que si tomamos un punto cualquiera en $y$ y dibujamos una tangente a ese punto, la pendiente de esa recta tendrá el mismo valor que $y$.
+
+```{r expon, echo=F, fig.align='center', fig.cap="Representación gráfica de la función exponencial. El punto rojo representa y = exp(1.5), de modo que la pendiente de la recta tangente a la curva (en rojo) en ese punto es precisamente exp(1.5).", fig.height=5, fig.width=5}
+x <- seq(-2, 2, len = 100)
+y = exp(x)
+plot(x, y, type = "l", main = "Función exponencial")
+points(1.5, exp(1.5), col = "red", pch = 20)
+abline(a = -2.227, b = exp(1.5), lty = 2, col = "red")
+```
+Esta relación entre el valor de la curva y la pendiente tiene implicaciones importantísimas en modelación de poblaciones, pues expone las razones por las cuales el crecimiento demográfico puede ser descrito como *exponencial*: el crecimiento neto de una población, el total de individuos nuevos que se incorporarán a la población, en ese instante es proporcional al número de individuos repoductivos de esa población. Es por esta razón que el número total de individuos que nacen en una población es más grande cuantos más individuos haya, a pesar de que la tasa reproductiva por unidad de tiempo sea la misma. 
+
+Veamos como ejemplo, que el crecimiento de la humanidad, desde que se pueden obtener estimaciones, es aproximadamente exponencial \@ref(fig:popn-wd).
+
+```{r popn-wd, echo=F, fig.align='center', fig.cap="Población humana a lo largo del tiempo, según estimaciones de [Our world in data](https://ourworldindata.org/world-population-growth)."}
+knitr::include_graphics("Unidad-II/popn.png")
+```
+
+A diferencia del ejemplo de la figura \@ref(fig:expon), donde $y = \exp(x)$, para representar el crecimiento de la población humana tenemos que medir la tasa reproductiva, de modo que podamos representar a la pobación como una función del tiempo:
+
+\begin{equation}
+N(t) = \exp(r \cdot t) (\#eq:poblac)
+\end{equation}
+
+Donde $r$ es la tasa reproductiva de la población y utilizamos $N$ en lugar de $y$ para representar al número de individuos, y $t$ en lugar de $x$ para dejar claro que las unidades de $x$ representan al tiempo. Si utilizamos el conocimiento de la subsección anterior, veremos que al aplicar el logaritmo a ambos lados de la ecuación \@ref(eq:poblac) obtenemos ¡una ecuación lineal!
+
+\begin{equation}
+    \log N = r \cdot t
+\end{equation}
+
+
+#### Representación gráfica del logaritmo
+
+A diferencia de la función exponencial, donde el crecimiento de $y$ es cada vez más *rápido*, en el logaritmo es más lento (figura \@ref(fig:log)).
+
+```{r log, echo = F, fig.align='center', fig.width=5, fig.height=5, fig.cap="Representación gráfica del logaritmo con y = log x."}
+x2 <- seq(0.001, 100, len = 100)
+y2 = log(x2)
+plot(x2, y2, type = "l", main = "Función logarítmica", ylab = "y", xlab ="x")
+```
+
+### Relevancia de la recta
+
+Una vez cubiertas las funciones logarítmicas y exponenciales, hemos comenzado a vislumbrar la relevancia más amplia de la recta para fenómenos que no son lineales. En el cálculi diferencial, la recta nos da los elementos para entender el significado de la derivada, y también es el bloque que utilizaremos para implementar métodos para integrar de manera relativamente sencilla ecuaciones que no se pueden integrar a mano.

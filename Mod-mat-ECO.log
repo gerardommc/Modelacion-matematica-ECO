@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded format=xelatex 2021.6.30)  16 AUG 2021 11:43
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded format=xelatex 2021.6.30)  17 AUG 2021 12:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1062,35 +1062,75 @@ TU/lmr/m/n/10 47
  []
 
 [47]
+File: Mod-mat-ECO_files/figure-latex/expon-1.pdf Graphic file (type pdf)
+<use Mod-mat-ECO_files/figure-latex/expon-1.pdf>
+
 Overfull \hbox (52.83453pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 48 \TU/lmr/m/sl/10 CHAPTER 4.  UNIDAD II: INTRODUCCIÓN A LOS MOD
 ELOS DETERMINÍSTICOS
  []
 
 [48]
+Overfull \hbox (35.34233pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/10 4.6.  LA RECTA COMO MODELO “UNIVERSAL” Y SUS TRANSFORMACIONES \
+TU/lmr/m/n/10 49
+ []
+
+[49]
+File: Unidad-II/popn.png Graphic file (type bmp)
+<Unidad-II/popn.png>
+
+Overfull \hbox (538.07536pt too wide) in paragraph at lines 1000--1001
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 36.49675pt on input line 1005.
+
+File: Mod-mat-ECO_files/figure-latex/log-1.pdf Graphic file (type pdf)
+<use Mod-mat-ECO_files/figure-latex/log-1.pdf>
+
+Overfull \hbox (52.83453pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 50 \TU/lmr/m/sl/10 CHAPTER 4.  UNIDAD II: INTRODUCCIÓN A LOS MOD
+ELOS DETERMINÍSTICOS
+ []
+
+[50]
+Overfull \hbox (35.34233pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/10 4.6.  LA RECTA COMO MODELO “UNIVERSAL” Y SUS TRANSFORMACIONES \
+TU/lmr/m/n/10 51
+ []
+
+[51]
+Overfull \hbox (52.83453pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 52 \TU/lmr/m/sl/10 CHAPTER 4.  UNIDAD II: INTRODUCCIÓN A LOS MOD
+ELOS DETERMINÍSTICOS
+ []
+
+[52]
 Chapter 5.
-(./Mod-mat-ECO.bbl [49
+(./Mod-mat-ECO.bbl [53
 
 ]
 Overfull \hbox (75.64233pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 50 \TU/lmr/m/sl/10 CHAPTER 5.  UNIDAD III - INTRODUCCIÓN AL CÁCU
+\TU/lmr/m/n/10 54 \TU/lmr/m/sl/10 CHAPTER 5.  UNIDAD III - INTRODUCCIÓN AL CÁCU
 LO DIFERENCIAL E INTEGRAL
  []
 
-[50
+[54
 
-]) [51] (./Mod-mat-ECO.aux)
+]) [55] (./Mod-mat-ECO.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 18661 strings out of 477220
- 330370 string characters out of 5832722
- 814842 words of memory out of 5000000
- 38063 multiletter control sequences out of 15000+600000
+ 18693 strings out of 477220
+ 331295 string characters out of 5832722
+ 815611 words of memory out of 5000000
+ 38092 multiletter control sequences out of 15000+600000
  409897 words of font info for 82 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  98i,8n,122p,1088b,422s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Mod-mat-ECO.pdf (51 pages).
+Output written on Mod-mat-ECO.pdf (55 pages).

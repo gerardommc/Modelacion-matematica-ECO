@@ -24,7 +24,7 @@
 <meta name="author" content="Gerardo Martín" />
 
 
-<meta name="date" content="2021-08-16" />
+<meta name="date" content="2021-08-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -141,6 +141,7 @@ div.csl-indent {
 <li class="chapter" data-level="4.6.1" data-path="unidad-ii-introducción-a-los-modelos-determinísticos.html"><a href="unidad-ii-introducción-a-los-modelos-determinísticos.html#el-logaritmo"><i class="fa fa-check"></i><b>4.6.1</b> El logaritmo</a></li>
 <li class="chapter" data-level="4.6.2" data-path="unidad-ii-introducción-a-los-modelos-determinísticos.html"><a href="unidad-ii-introducción-a-los-modelos-determinísticos.html#la-función-exponencial"><i class="fa fa-check"></i><b>4.6.2</b> La función exponencial</a></li>
 <li class="chapter" data-level="4.6.3" data-path="unidad-ii-introducción-a-los-modelos-determinísticos.html"><a href="unidad-ii-introducción-a-los-modelos-determinísticos.html#linealizado-la-función-exponencial"><i class="fa fa-check"></i><b>4.6.3</b> Linealizado la función exponencial</a></li>
+<li class="chapter" data-level="4.6.4" data-path="unidad-ii-introducción-a-los-modelos-determinísticos.html"><a href="unidad-ii-introducción-a-los-modelos-determinísticos.html#relevancia-de-la-recta"><i class="fa fa-check"></i><b>4.6.4</b> Relevancia de la recta</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="unidad-iii-introducción-al-cáculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cáculo-diferencial-e-integral.html"><i class="fa fa-check"></i><b>5</b> Unidad III - Introducción al cáculo diferencial e integral</a></li>
@@ -445,6 +446,46 @@ La función exponencial puede tomar formas más complejas, por ejemplo, contenie
 <p>donde el lado izquierdo es una función logarítmica y el derecho es estrictamente lineal. Matemáticamente entonces, la transformación es lineal <span class="math inline">\(\forall x \in \mathbb{R}\)</span>, puesto que <span class="math inline">\(\log y\)</span> puede tomar cualquier valor entre <span class="math inline">\(-\infty\)</span> y <span class="math inline">\(+\infty\)</span>. Entonces, la ecuación número 3 de la lista de ecuaciones no-lineales al principio de esta sección es:</p>
 <p><span class="math display">\[\log y(x) = \ln y(x) = x\]</span></p>
 <p>Esta equivalencia, como veremos más adelante y como verán en modelación estadística, es súper útil en la modelación de sistemas que cambian con el tiempo.</p>
+<div id="representación-gráfica-de-la-función-exponencial" class="section level4" number="4.6.3.1">
+<h4><span class="header-section-number">4.6.3.1</span> Representación gráfica de la función exponencial</h4>
+<p>En la función exponencial, la variable <span class="math inline">\(y\)</span> crece muy rápido. De hecho, su crecimiento en cualquier punto es proporcional al valor que tiene en ese punto. Es decir que si tomamos un punto cualquiera en <span class="math inline">\(y\)</span> y dibujamos una tangente a ese punto, la pendiente de esa recta tendrá el mismo valor que <span class="math inline">\(y\)</span>.</p>
+<div class="figure" style="text-align: center"><span id="fig:expon"></span>
+<img src="Mod-mat-ECO_files/figure-html/expon-1.png" alt="Representación gráfica de la función exponencial. El punto rojo representa y = exp(1.5), de modo que la pendiente de la recta tangente a la curva (en rojo) en ese punto es precisamente exp(1.5)." width="480" />
+<p class="caption">
+Figura 4.16: Representación gráfica de la función exponencial. El punto rojo representa y = exp(1.5), de modo que la pendiente de la recta tangente a la curva (en rojo) en ese punto es precisamente exp(1.5).
+</p>
+</div>
+<p>Esta relación entre el valor de la curva y la pendiente tiene implicaciones importantísimas en modelación de poblaciones, pues expone las razones por las cuales el crecimiento demográfico puede ser descrito como <em>exponencial</em>: el crecimiento neto de una población, el total de individuos nuevos que se incorporarán a la población, en ese instante es proporcional al número de individuos repoductivos de esa población. Es por esta razón que el número total de individuos que nacen en una población es más grande cuantos más individuos haya, a pesar de que la tasa reproductiva por unidad de tiempo sea la misma.</p>
+<p>Veamos como ejemplo, que el crecimiento de la humanidad, desde que se pueden obtener estimaciones, es aproximadamente exponencial <a href="unidad-ii-introducción-a-los-modelos-determinísticos.html#fig:popn-wd">4.17</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:popn-wd"></span>
+<img src="Unidad-II/popn.png" alt="Población humana a lo largo del tiempo, según estimaciones de [Our world in data](https://ourworldindata.org/world-population-growth)." width="1376" />
+<p class="caption">
+Figura 4.17: Población humana a lo largo del tiempo, según estimaciones de <a href="https://ourworldindata.org/world-population-growth">Our world in data</a>.
+</p>
+</div>
+<p>A diferencia del ejemplo de la figura <a href="unidad-ii-introducción-a-los-modelos-determinísticos.html#fig:expon">4.16</a>, donde <span class="math inline">\(y = \exp(x)\)</span>, para representar el crecimiento de la población humana tenemos que medir la tasa reproductiva, de modo que podamos representar a la pobación como una función del tiempo:</p>
+<p><span class="math display" id="eq:poblac">\[\begin{equation}
+N(t) = \exp(r \cdot t) \tag{4.5}
+\end{equation}\]</span></p>
+<p>Donde <span class="math inline">\(r\)</span> es la tasa reproductiva de la población y utilizamos <span class="math inline">\(N\)</span> en lugar de <span class="math inline">\(y\)</span> para representar al número de individuos, y <span class="math inline">\(t\)</span> en lugar de <span class="math inline">\(x\)</span> para dejar claro que las unidades de <span class="math inline">\(x\)</span> representan al tiempo. Si utilizamos el conocimiento de la subsección anterior, veremos que al aplicar el logaritmo a ambos lados de la ecuación <a href="unidad-ii-introducción-a-los-modelos-determinísticos.html#eq:poblac">(4.5)</a> obtenemos ¡una ecuación lineal!</p>
+<p><span class="math display">\[\begin{equation}
+    \log N = r \cdot t
+\end{equation}\]</span></p>
+</div>
+<div id="representación-gráfica-del-logaritmo" class="section level4" number="4.6.3.2">
+<h4><span class="header-section-number">4.6.3.2</span> Representación gráfica del logaritmo</h4>
+<p>A diferencia de la función exponencial, donde el crecimiento de <span class="math inline">\(y\)</span> es cada vez más <em>rápido</em>, en el logaritmo es más lento (figura <a href="unidad-ii-introducción-a-los-modelos-determinísticos.html#fig:log">4.18</a>).</p>
+<div class="figure" style="text-align: center"><span id="fig:log"></span>
+<img src="Mod-mat-ECO_files/figure-html/log-1.png" alt="Representación gráfica del logaritmo con y = log x." width="480" />
+<p class="caption">
+Figura 4.18: Representación gráfica del logaritmo con y = log x.
+</p>
+</div>
+</div>
+</div>
+<div id="relevancia-de-la-recta" class="section level3" number="4.6.4">
+<h3><span class="header-section-number">4.6.4</span> Relevancia de la recta</h3>
+<p>Una vez cubiertas las funciones logarítmicas y exponenciales, hemos comenzado a vislumbrar la relevancia más amplia de la recta para fenómenos que no son lineales. En el cálculi diferencial, la recta nos da los elementos para entender el significado de la derivada, y también es el bloque que utilizaremos para implementar métodos para integrar de manera relativamente sencilla ecuaciones que no se pueden integrar a mano.</p>
 
 </div>
 </div>
