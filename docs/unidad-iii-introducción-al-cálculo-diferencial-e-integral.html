@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Modelos Matemáticos en Ecología I</title>
+  <title> 5 Unidad III: Introducción al cálculo diferencial e integral | Modelos Matemáticos en Ecología I</title>
   <meta name="description" content="Sitio del curso de la Licenciatura en Ecología de la ENES unidad Mérida" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Modelos Matemáticos en Ecología I" />
+  <meta property="og:title" content=" 5 Unidad III: Introducción al cálculo diferencial e integral | Modelos Matemáticos en Ecología I" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Modelos Matemáticos en Ecología I" />
+  <meta name="twitter:title" content=" 5 Unidad III: Introducción al cálculo diferencial e integral | Modelos Matemáticos en Ecología I" />
   
   <meta name="twitter:description" content="Sitio del curso de la Licenciatura en Ecología de la ENES unidad Mérida" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="encuadre-de-la-materia.html"/>
+<link rel="prev" href="unidad-ii-introducción-a-los-modelos-determinísticos.html"/>
+<link rel="next" href="references.html"/>
 <script src="libs/header-attrs-2.8/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -180,24 +180,128 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Modelos Matemáticos en Ecología I</h1>
-<p class="author"><em>Gerardo Martín</em></p>
-<p class="date" style="margin-top: 1.5em;"><em>2021-08-23</em></p>
+<div id="unidad-iii-introducción-al-cálculo-diferencial-e-integral" class="section level1" number="5">
+<h1><span class="header-section-number"> 5</span> Unidad III: Introducción al cálculo diferencial e integral</h1>
+<div id="sucesiones" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Sucesiones</h2>
+<p>En matemáticas, de manera muy general, las sucesiones pueden ser entendidas como una función cuyo dominio <strong>siempre</strong> es el conjunto o un subconjunto de los números naturales, mientras que el codominio puede pertenecer a cualquier otro conjunto. En notación tradicional de funciones tenemos entonces que <span class="math inline">\(x \in \mathbb{N}\)</span>, mientras que:</p>
+<p><span class="math display">\[\begin{equation}
+y(x) \in \begin{cases}\mathbb{R}\\ \mathbb{Z}\\ \mathbb{N} \end{cases}
+\end{equation}\]</span></p>
+<p>Otra característica de las sucesiones es que sus elementos están ordenados, es decir, cada elemento en el dominio y codominio tiene un sitio particular, de modo que si los conjuntos <span class="math inline">\(a_n = \{A, B, C\}\)</span> y <span class="math inline">\(a_m = \{C, A, B\}\)</span>, <span class="math inline">\(a_n \neq a_m\)</span>, puesto que, aunque contengan los mismos elementos <span class="math inline">\(A, B\)</span> y <span class="math inline">\(C\)</span>, estos tienen posiciones diferentes dentro de <span class="math inline">\(a_n\)</span> y <span class="math inline">\(a_m\)</span>.</p>
 </div>
-<div id="preámbulo" class="section level1" number="1">
-<h1><span class="header-section-number"> 1</span> Preámbulo</h1>
-<p><img src="logo.png" width="750" style="display: block; margin: auto;" /></p>
-<p>En el curso <strong>Modelos matemáticos en ecología</strong> aprenderemos a utilizar algunas herramientas matemáticas para entender procesos en ecología. Los contenidos del índice se apegan al <a href="Programa-curso.pdf">programa completo del curso</a>, el cual se impartirá en los <a href="Horario.pdf">horarios normales establecidos</a>. Para conocer cuándo, cómo y qué temas se se impartirán puedes consultar la <a href="Estrategia-docente.pdf">estrategia docente</a>.</p>
+<div id="notación-de-sucesiones" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> Notación de sucesiones</h2>
+<p>Una sucesión de los números naturales suele nombrarse como <span class="math inline">\(\{a_n\}\)</span>, seguida de la regla de correspondencia entre el conjunto <span class="math inline">\(n\)</span> y <span class="math inline">\(a\)</span>. Así por ejemplo:</p>
+<p><span class="math display" id="eq:a2n">\[\begin{equation} 
+    \{a_n\} = 2n \tag{5.1}
+\end{equation}\]</span></p>
+<p>es una sucesión de los números naturales pares, tal que:</p>
+<p><span class="math display">\[a_1 = 1, a_2 = 4, a_3 = 6, a_4 = 8 \dots\]</span>
+Esta notación, sin embargo no es universal, por ejemplo:</p>
+<p>-<span class="math inline">\((a_n) = a_1, a_2, a_3, \dots\)</span></p>
+<p>-<span class="math inline">\((a_k)_{k=1}^m = a_1, a_2, a_3, \dots, a_m\)</span></p>
+<p>-<span class="math inline">\(\{a_n\}_{n \in \mathbb{N}} = a_1, a_2, a_3, \dots\)</span></p>
+</div>
+<div id="tipos-de-sucesiones" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> Tipos de sucesiones</h2>
+<p>La sucesión anterior es un ejemplo muy sencillo y poco útil en la modelación ecológica, pero es un punto de partida para entender la notación y el concepto. Existen sucesiones, sin embargo, que tienen implicaciones importantes para el desarrollo de modelos dinámicos, como las <strong>sucesiones por recurrencia</strong>.</p>
+<div id="sucesiones-por-recurrencia" class="section level3" number="5.3.1">
+<h3><span class="header-section-number">5.3.1</span> Sucesiones por recurrencia</h3>
+<p>En estas sucesiones, la regla de correspondencia indica algún tipo de operación con elementos de <span class="math inline">\(n\)</span> en posiciones previas. Así por ejemplo, la sucesión:</p>
+<p><span class="math display" id="eq:fibonacci">\[\begin{equation}
+\{a_n\} = a_{n-1} + a_{n-2} \tag{5.2}
+\end{equation}\]</span></p>
+<p>se conoce como sucesión de Fibonacci, en la que, el elemento <span class="math inline">\(n\)</span> se obtiene sumando los elementos <span class="math inline">\(n-1\)</span> y <span class="math inline">\(n-2\)</span> de la secuencia <span class="math inline">\(\{a_n\}\)</span>.</p>
+<table>
+<caption><span id="tab:fibo-tabla">Tabla 5.1: </span>Secuencia de Fibonacci para los diez primeros números naturales.</caption>
+<thead>
+<tr class="header">
+<th align="right">n</th>
+<th align="right">a</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="right">1</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="right">2</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="right">3</td>
+</tr>
+<tr class="odd">
+<td align="right">5</td>
+<td align="right">5</td>
+</tr>
+<tr class="even">
+<td align="right">6</td>
+<td align="right">8</td>
+</tr>
+<tr class="odd">
+<td align="right">7</td>
+<td align="right">13</td>
+</tr>
+<tr class="even">
+<td align="right">8</td>
+<td align="right">21</td>
+</tr>
+<tr class="odd">
+<td align="right">9</td>
+<td align="right">34</td>
+</tr>
+<tr class="even">
+<td align="right">10</td>
+<td align="right">55</td>
+</tr>
+</tbody>
+</table>
+<p>La secuencia de finonacci, tiene un comportamiento parecido a la función exponencial, en el sentido de que el crecimiento de <span class="math inline">\(a\)</span> es más rápido conforme los valores de <span class="math inline">\(a\)</span> son mayores.</p>
+<div class="figure" style="text-align: center"><span id="fig:fibo-fig"></span>
+<img src="Mod-mat-ECO_files/figure-html/fibo-fig-1.png" alt="Representación gráfica de la secuencia de Fibonacci." width="480" />
+<p class="caption">
+Figura 5.1: Representación gráfica de la secuencia de Fibonacci.
+</p>
+</div>
+</div>
+<div id="otras-sucesiones" class="section level3" number="5.3.2">
+<h3><span class="header-section-number">5.3.2</span> Otras sucesiones</h3>
+<p>A diferencia de la sucesión de la ecuación <a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#eq:a2n">(5.1)</a>, la sucesión de Fibonacci, utiliza los números naturales para iniciar la secuencia, y posteriormente se usan para indizar los elementos de <span class="math inline">\(a\)</span> que continuarán con el desarrollo de la secuencia.</p>
+<p>Las secuencias también se pueden clasificar por otras características como sus tendencias a estar acotadas, o a crecer o decrecer constantemente con respecto de <span class="math inline">\(n\)</span>. Estas clasificaciones son útiles en modelación ecológica.</p>
+</div>
+</div>
+<div id="continuidad-y-límites" class="section level2" number="5.4">
+<h2><span class="header-section-number">5.4</span> Continuidad y límites</h2>
+</div>
+<div id="derivación" class="section level2" number="5.5">
+<h2><span class="header-section-number">5.5</span> Derivación</h2>
+</div>
+<div id="integración" class="section level2" number="5.6">
+<h2><span class="header-section-number">5.6</span> Integración</h2>
+</div>
+<div id="funciones-trigonométricas-1" class="section level2" number="5.7">
+<h2><span class="header-section-number">5.7</span> Funciones trigonométricas</h2>
+</div>
+<div id="la-recta-como-modelo-universal-y-sus-transformaciones-1" class="section level2" number="5.8">
+<h2><span class="header-section-number">5.8</span> La recta como modelo “universal” y sus transformaciones</h2>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="encuadre-de-la-materia.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="unidad-ii-introducción-a-los-modelos-determinísticos.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -514,15 +514,15 @@ donde \(\varepsilon\) es el \emph{error} que hemos introducido. Técnicamente pa
 \hline
 Determinista & Estocástico\\
 \hline
-5.08 & 5.240588\\
+5.08 & 4.647928\\
 \hline
-5.08 & 4.849426\\
+5.08 & 5.189420\\
 \hline
-5.08 & 4.904563\\
+5.08 & 4.867832\\
 \hline
-5.08 & 5.243678\\
+5.08 & 5.091572\\
 \hline
-5.08 & 4.959686\\
+5.08 & 5.167651\\
 \hline
 \end{tabular}
 \end{table}
@@ -1054,7 +1054,9 @@ Otra característica de las sucesiones es que sus elementos están ordenados, es
 
 Una sucesión de los números naturales suele nombrarse como \(\{a_n\}\), seguida de la regla de correspondencia entre el conjunto \(n\) y \(a\). Así por ejemplo:
 
-\[ \{a_n\} = 2n\]
+\begin{equation} 
+    \{a_n\} = 2n \label{eq:a2n}
+\end{equation}
 
 es una sucesión de los números naturales pares, tal que:
 
@@ -1070,10 +1072,15 @@ Esta notación, sin embargo no es universal, por ejemplo:
 \hypertarget{tipos-de-sucesiones}{%
 \section{Tipos de sucesiones}\label{tipos-de-sucesiones}}
 
-La sucesión anterior es un ejemplo muy sencillo y poco útil en la modelación ecológica, pero es un punto de partida para entender la notación y el concepto. Existen sucesiones, sin embargo, que tienen implicaciones importantes para el desarrollo de modelos dinámicos, como las \textbf{sucesiones por recurrencia}. En estas sucesiones, la regla de correspondencia indica algún tipo de operación con elementos de \(n\) en posiciones previas. Así por ejemplo, la sucesión:
+La sucesión anterior es un ejemplo muy sencillo y poco útil en la modelación ecológica, pero es un punto de partida para entender la notación y el concepto. Existen sucesiones, sin embargo, que tienen implicaciones importantes para el desarrollo de modelos dinámicos, como las \textbf{sucesiones por recurrencia}.
+
+\hypertarget{sucesiones-por-recurrencia}{%
+\subsection{Sucesiones por recurrencia}\label{sucesiones-por-recurrencia}}
+
+En estas sucesiones, la regla de correspondencia indica algún tipo de operación con elementos de \(n\) en posiciones previas. Así por ejemplo, la sucesión:
 
 \begin{equation}
-\{a_n\} = a_{n_1} + a_{n-2} \label{eq:fibonacci}
+\{a_n\} = a_{n-1} + a_{n-2} \label{eq:fibonacci}
 \end{equation}
 
 se conoce como sucesión de Fibonacci, en la que, el elemento \(n\) se obtiene sumando los elementos \(n-1\) y \(n-2\) de la secuencia \(\{a_n\}\).
@@ -1119,6 +1126,13 @@ La secuencia de finonacci, tiene un comportamiento parecido a la función expone
 
 \caption{Representación gráfica de la secuencia de Fibonacci.}\label{fig:fibo-fig}
 \end{figure}
+
+\hypertarget{otras-sucesiones}{%
+\subsection{Otras sucesiones}\label{otras-sucesiones}}
+
+A diferencia de la sucesión de la ecuación \eqref{eq:a2n}, la sucesión de Fibonacci, utiliza los números naturales para iniciar la secuencia, y posteriormente se usan para indizar los elementos de \(a\) que continuarán con el desarrollo de la secuencia.
+
+Las secuencias también se pueden clasificar por otras características como sus tendencias a estar acotadas, o a crecer o decrecer constantemente con respecto de \(n\). Estas clasificaciones son útiles en modelación ecológica.
 
 \hypertarget{continuidad-y-luxedmites}{%
 \section{Continuidad y límites}\label{continuidad-y-luxedmites}}

@@ -1,0 +1,65 @@
+En matemáticas, de manera muy general, las sucesiones pueden ser entendidas como una función cuyo dominio **siempre** es el conjunto o un subconjunto de los números naturales, mientras que el codominio puede pertenecer a cualquier otro conjunto. En notación tradicional de funciones tenemos entonces que $x \in \mathbb{N}$, mientras que:
+
+\begin{equation}
+y(x) \in \begin{cases}\mathbb{R}\\ \mathbb{Z}\\ \mathbb{N} \end{cases}
+\end{equation}
+
+Otra característica de las sucesiones es que sus elementos están ordenados, es decir, cada elemento en el dominio y codominio tiene un sitio particular, de modo que si los conjuntos $a_n = \{A, B, C\}$ y $a_m = \{C, A, B\}$, $a_n \neq a_m$, puesto que, aunque contengan los mismos elementos $A, B$ y $C$, estos tienen posiciones diferentes dentro de $a_n$ y $a_m$.
+
+## Notación de sucesiones
+
+Una sucesión de los números naturales suele nombrarse como $\{a_n\}$, seguida de la regla de correspondencia entre el conjunto $n$ y $a$. Así por ejemplo:
+
+\begin{equation} 
+    \{a_n\} = 2n (\#eq:a2n)
+\end{equation}
+
+es una sucesión de los números naturales pares, tal que:
+
+$$a_1 = 1, a_2 = 4, a_3 = 6, a_4 = 8 \dots$$
+Esta notación, sin embargo no es universal, por ejemplo:
+
+-$(a_n) = a_1, a_2, a_3, \dots$
+
+-$(a_k)_{k=1}^m = a_1, a_2, a_3, \dots, a_m$
+
+-$\{a_n\}_{n \in \mathbb{N}} = a_1, a_2, a_3, \dots$
+
+## Tipos de sucesiones
+
+La sucesión anterior es un ejemplo muy sencillo y poco útil en la modelación ecológica, pero es un punto de partida para entender la notación y el concepto. Existen sucesiones, sin embargo, que tienen implicaciones importantes para el desarrollo de modelos dinámicos, como las **sucesiones por recurrencia**.
+
+### Sucesiones por recurrencia
+
+En estas sucesiones, la regla de correspondencia indica algún tipo de operación con elementos de $n$ en posiciones previas. Así por ejemplo, la sucesión:
+
+\begin{equation}
+\{a_n\} = a_{n-1} + a_{n-2} (\#eq:fibonacci)
+\end{equation}
+
+se conoce como sucesión de Fibonacci, en la que, el elemento $n$ se obtiene sumando los elementos $n-1$ y $n-2$ de la secuencia $\{a_n\}$. 
+```{r tab-fib, echo = FALSE, fig.align='center'}
+n <- 1:10
+a <- numeric(10)
+a[1] <- n[1]; a[2]<- a[1]
+for(i in 3:10){a[i] <- a[i-1] + a[i-2]}
+tabla <- data.frame(n = n, a = a)
+knitr::kable(tabla, caption = "Secuencia de Fibonacci para los diez primeros números naturales.", label = "fibo-tabla")
+```
+
+La secuencia de finonacci, tiene un comportamiento parecido a la función exponencial, en el sentido de que el crecimiento de $a$ es más rápido conforme los valores de $a$ son mayores.
+
+```{r fibo-fig, echo = F, fig.align='center', fig.width=5, fig.height=5, fig.cap="Representación gráfica de la secuencia de Fibonacci."}
+plot(n, a, type = "s", col = "red", ylab = expression(a[n]))
+```
+
+### Otras sucesiones 
+
+A diferencia de la sucesión de la ecuación \@ref(eq:a2n), la sucesión de Fibonacci, utiliza los números naturales para iniciar la secuencia, y posteriormente se usan para indizar los elementos de $a$ que continuarán con el desarrollo de la secuencia.
+
+Las secuencias también se pueden clasificar por otras características como sus tendencias a estar acotadas, o a crecer o decrecer constantemente con respecto de $n$. Estas clasificaciones son útiles en modelación ecológica.
+
+
+
+
+

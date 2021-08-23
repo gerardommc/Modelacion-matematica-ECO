@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2020/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Mod-mat-ECO.aux
+The style file: apalike.bst
+Database file #1: book.bib
+Database file #2: packages.bib
+Database file #3: citas.bib
+Warning--empty journal in wilenski2003honey
+You've used 7 entries,
+            1935 wiz_defined-function locations,
+            519 strings with 4806 characters,
+and the built_in function-call counts, 2326 in all, are:
+= -- 224
+> -- 66
+< -- 6
++ -- 26
+- -- 20
+* -- 184
+:= -- 417
+add.period$ -- 20
+call.type$ -- 7
+change.case$ -- 43
+chr.to.int$ -- 7
+cite$ -- 8
+duplicate$ -- 97
+empty$ -- 180
+format.name$ -- 29
+if$ -- 445
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 9
+newline$ -- 37
+num.names$ -- 21
+pop$ -- 39
+preamble$ -- 1
+purify$ -- 45
+quote$ -- 0
+skip$ -- 75
+stack$ -- 0
+substring$ -- 165
+swap$ -- 6
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 38
+warning$ -- 1
+while$ -- 21
+width$ -- 0
+write$ -- 88
+(There was 1 warning)

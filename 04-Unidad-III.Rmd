@@ -1,2 +1,23 @@
-# Unidad III - Introducción al cáculo diferencial e integral
+# Unidad III: Introducción al cálculo diferencial e integral
+
+## Sucesiones
+
+```{r echo = F, child="Unidad-III/Sucesiones.Rmd"}
+
+```
+
+## Continuidad y límites
+
+
+## Derivación
+
+
+## Integración
+
+
+## Funciones trigonométricas
+
+
+## La recta como modelo "universal" y sus transformaciones
+
 
