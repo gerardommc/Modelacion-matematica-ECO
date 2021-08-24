@@ -36,6 +36,11 @@ eq:a2n
 eq:fibonacci
 tab:fibo-tabla
 fig:fibo-fig
+eq:susc-crec
+fig:susc-crec
+fig:susc-decrec
+fig:susc-logis
+eq:susc-logis
 preámbulo
 encuadre-de-la-materia
 criterios-de-evaluación
@@ -85,7 +90,8 @@ sucesiones
 notación-de-sucesiones
 tipos-de-sucesiones
 sucesiones-por-recurrencia
-otras-sucesiones
+sucesiones-recurrentes-más-avanzadas
+ejercicio-1
 continuidad-y-límites
 derivación
 integración

@@ -24,7 +24,7 @@
 <meta name="author" content="Gerardo Martín" />
 
 
-<meta name="date" content="2021-08-23" />
+<meta name="date" content="2021-08-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -151,7 +151,6 @@ div.csl-indent {
 <li class="chapter" data-level="5.3" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#tipos-de-sucesiones"><i class="fa fa-check"></i><b>5.3</b> Tipos de sucesiones</a>
 <ul>
 <li class="chapter" data-level="5.3.1" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#sucesiones-por-recurrencia"><i class="fa fa-check"></i><b>5.3.1</b> Sucesiones por recurrencia</a></li>
-<li class="chapter" data-level="5.3.2" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#otras-sucesiones"><i class="fa fa-check"></i><b>5.3.2</b> Otras sucesiones</a></li>
 </ul></li>
 <li class="chapter" data-level="5.4" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#continuidad-y-límites"><i class="fa fa-check"></i><b>5.4</b> Continuidad y límites</a></li>
 <li class="chapter" data-level="5.5" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#derivación"><i class="fa fa-check"></i><b>5.5</b> Derivación</a></li>
@@ -188,6 +187,15 @@ div.csl-indent {
 <p><span class="math display">\[\begin{equation}
 y(x) \in \begin{cases}\mathbb{R}\\ \mathbb{Z}\\ \mathbb{N} \end{cases}
 \end{equation}\]</span></p>
+<p>La mayoría de las sucesiones, sin embargo que se utilizan en ecología, corresponden a:</p>
+<p><span class="math display">\[\begin{equation}
+    f: 
+    \begin{aligned}[t] 
+            \mathbb{N}_0 \rightarrow \mathbb{R} \\
+            n \rightarrow f(n)
+    \end{aligned}
+\end{equation}\]</span></p>
+<p>una función <span class="math inline">\(f\)</span> de los números naturales, incluido el cero (<span class="math inline">\(\mathbb{N}_0\)</span>) que produce números reales (<span class="math inline">\(\mathbb{R}\)</span>), cuyo dominio es <span class="math inline">\(n\)</span>, y codominio es <span class="math inline">\(f(n)\)</span>.</p>
 <p>Otra característica de las sucesiones es que sus elementos están ordenados, es decir, cada elemento en el dominio y codominio tiene un sitio particular, de modo que si los conjuntos <span class="math inline">\(a_n = \{A, B, C\}\)</span> y <span class="math inline">\(a_m = \{C, A, B\}\)</span>, <span class="math inline">\(a_n \neq a_m\)</span>, puesto que, aunque contengan los mismos elementos <span class="math inline">\(A, B\)</span> y <span class="math inline">\(C\)</span>, estos tienen posiciones diferentes dentro de <span class="math inline">\(a_n\)</span> y <span class="math inline">\(a_m\)</span>.</p>
 </div>
 <div id="notación-de-sucesiones" class="section level2" number="5.2">
@@ -271,11 +279,44 @@ Esta notación, sin embargo no es universal, por ejemplo:</p>
 Figura 5.1: Representación gráfica de la secuencia de Fibonacci.
 </p>
 </div>
+<div id="sucesiones-recurrentes-más-avanzadas" class="section level4" number="5.3.1.1">
+<h4><span class="header-section-number">5.3.1.1</span> Sucesiones recurrentes más avanzadas</h4>
+<p>Las sucesiones recurrentes pueden ser también concebidas como modelos dinámicos en tiempo discreto, donde el tiempo está representado por el conjunto de los números naturales, así, por ejemplo, el crecimiento de una población lo podemos representar como:</p>
+<p><span class="math display" id="eq:susc-crec">\[\begin{equation}
+    N_{t} = r N_{t-1} \tag{5.3}
+\end{equation}\]</span></p>
+<p>Como podemos ver, en <a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#eq:susc-crec">(5.3)</a>, el crecimiento por unidad de tiempo es lineal con respecto del número de individuos en el periodo de tiempo inmediatamente previo (<span class="math inline">\(rN_{t-1}\)</span>).</p>
+<div class="figure" style="text-align: center"><span id="fig:susc-crec"></span>
+<img src="Mod-mat-ECO_files/figure-html/susc-crec-1.png" alt="Simulación de la sucesión de crecimiento poblacional en tiempo discreto, para 10 unidades de tiempo, con r = 1.5, y una población inicial de N = 1." width="480" />
+<p class="caption">
+Figura 5.2: Simulación de la sucesión de crecimiento poblacional en tiempo discreto, para 10 unidades de tiempo, con r = 1.5, y una población inicial de N = 1.
+</p>
 </div>
-<div id="otras-sucesiones" class="section level3" number="5.3.2">
-<h3><span class="header-section-number">5.3.2</span> Otras sucesiones</h3>
-<p>A diferencia de la sucesión de la ecuación <a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#eq:a2n">(5.1)</a>, la sucesión de Fibonacci, utiliza los números naturales para iniciar la secuencia, y posteriormente se usan para indizar los elementos de <span class="math inline">\(a\)</span> que continuarán con el desarrollo de la secuencia.</p>
-<p>Las secuencias también se pueden clasificar por otras características como sus tendencias a estar acotadas, o a crecer o decrecer constantemente con respecto de <span class="math inline">\(n\)</span>. Estas clasificaciones son útiles en modelación ecológica.</p>
+<p>La sucesión descrita por la ecuación <a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#eq:susc-crec">(5.3)</a> es fácil de simular con una computadora, con aplicaciones tan populares como las hojas de cáculo como excel.</p>
+<p>Con este tipo de sucesiones, es posible comenzar a utilizar conceptos básicos de cálculo. Podemos por ejemplo, tomar la misma sucesión de la ecuación <a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#eq:susc-crec">(5.3)</a>, con una población inicial de <span class="math inline">\(N = 50\)</span>, y <span class="math inline">\(r = 0.6\)</span>, y simular por un periodo de tiempo de 20, para ver hacia qué valor se aproxima <span class="math inline">\(N_t\)</span> (<a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#fig:susc-decrec">5.3</a>).</p>
+<div class="figure" style="text-align: center"><span id="fig:susc-decrec"></span>
+<img src="Mod-mat-ECO_files/figure-html/susc-decrec-1.png" alt="Simulación para un valor inicial de N = 50, por 20 unidades de tiempo, y r = 0.6" width="480" />
+<p class="caption">
+Figura 5.3: Simulación para un valor inicial de N = 50, por 20 unidades de tiempo, y r = 0.6
+</p>
+</div>
+<p>En cada simulación, <span class="math inline">\(N_t\)</span> cambia de acuerdo con el valor de <span class="math inline">\(N_{t-1}\)</span>. Como es evidente, si <span class="math inline">\(r &gt; 1\)</span>, <span class="math inline">\(N_t\)</span> crece, y mientras <span class="math inline">\(t \rightarrow \infty\)</span>, <span class="math inline">\(N_t \rightarrow \infty\)</span>. En el caso contrario, cuando <span class="math inline">\(r &lt; 1\)</span> y <span class="math inline">\(t \rightarrow \infty\)</span>, <span class="math inline">\(N_t \rightarrow 0\)</span></p>
+<p>En estos casos, decimos que por ejemplo para <span class="math inline">\(r &lt; 1\)</span>, <span class="math inline">\(N\)</span> está acotada por <span class="math inline">\(0\)</span>. Hay otras sucesiones, por ejemplo la de crecimiento logístico, que está acotada por la capacidad de carga, incluso si <span class="math inline">\(r &gt; 0\)</span>.</p>
+<div class="figure" style="text-align: center"><span id="fig:susc-logis"></span>
+<img src="Mod-mat-ECO_files/figure-html/susc-logis-1.png" alt="Simulación para un valor inicial de N = 1, por 50 unidades de tiempo, r = 0.5, y capacidad de carga K = 50" width="480" />
+<p class="caption">
+Figura 5.4: Simulación para un valor inicial de N = 1, por 50 unidades de tiempo, r = 0.5, y capacidad de carga K = 50
+</p>
+</div>
+<p>La sucesión para el crecimiento logístico en tiempo discreto es:</p>
+<p><span class="math display" id="eq:susc-logis">\[\begin{equation}
+N_{t} = N_{t-1} + r N_{t-1} \left(1 - \frac{N_{t-1}}{K} \right) \tag{5.4}
+\end{equation}\]</span></p>
+</div>
+<div id="ejercicio-1" class="section level4" number="5.3.1.2">
+<h4><span class="header-section-number">5.3.1.2</span> Ejercicio</h4>
+<p>Utilizando la hoja de cálculo para la sucesión de crecimiento poblacional en tiempo discreto, adaptala para simular el crecimiento poblacional probando los valores de <span class="math inline">\(r\)</span> dese 0.5 hasta 3.5 en incrementos de 0.5, y grafícalos. ¿Qué pasa con <span class="math inline">\(N_t\)</span>?</p>
+</div>
 </div>
 </div>
 <div id="continuidad-y-límites" class="section level2" number="5.4">
