@@ -116,4 +116,5 @@ N_{t} = N_{t-1} + r N_{t-1} \left(1 - \frac{N_{t-1}}{K} \right) (\#eq:susc-logis
 
 #### Ejercicio
 
-Utilizando la hoja de cálculo para la sucesión de crecimiento poblacional en tiempo discreto, adaptala para simular el crecimiento poblacional probando los valores de $r$ dese 0.5 hasta 3.5 en incrementos de 0.5, y grafícalos. ¿Qué pasa con $N_t$?
+Utilizando la hoja de cálculo para la sucesión de crecimiento poblacional en tiempo discreto, adaptala para simular el crecimiento poblacional probando los valores de $r$ dese 0.5 hasta 3.5 en incrementos de 0.25, y grafícalos. ¿Qué pasa con $N_t$?
+
