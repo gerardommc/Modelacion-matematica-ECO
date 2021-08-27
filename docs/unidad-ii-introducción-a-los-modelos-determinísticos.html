@@ -140,8 +140,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="4.6.1" data-path="unidad-ii-introducción-a-los-modelos-determinísticos.html"><a href="unidad-ii-introducción-a-los-modelos-determinísticos.html#el-logaritmo"><i class="fa fa-check"></i><b>4.6.1</b> El logaritmo</a></li>
 <li class="chapter" data-level="4.6.2" data-path="unidad-ii-introducción-a-los-modelos-determinísticos.html"><a href="unidad-ii-introducción-a-los-modelos-determinísticos.html#la-función-exponencial"><i class="fa fa-check"></i><b>4.6.2</b> La función exponencial</a></li>
-<li class="chapter" data-level="4.6.3" data-path="unidad-ii-introducción-a-los-modelos-determinísticos.html"><a href="unidad-ii-introducción-a-los-modelos-determinísticos.html#linealizado-la-función-exponencial"><i class="fa fa-check"></i><b>4.6.3</b> Linealizado la función exponencial</a></li>
-<li class="chapter" data-level="4.6.4" data-path="unidad-ii-introducción-a-los-modelos-determinísticos.html"><a href="unidad-ii-introducción-a-los-modelos-determinísticos.html#relevancia-de-la-recta"><i class="fa fa-check"></i><b>4.6.4</b> Relevancia de la recta</a></li>
+<li class="chapter" data-level="4.6.3" data-path="unidad-ii-introducción-a-los-modelos-determinísticos.html"><a href="unidad-ii-introducción-a-los-modelos-determinísticos.html#relevancia-de-la-recta"><i class="fa fa-check"></i><b>4.6.3</b> Relevancia de la recta</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><i class="fa fa-check"></i><b>5</b> Unidad III: Introducción al cálculo diferencial e integral</a>
@@ -408,13 +407,13 @@ Figura 4.15: Representación en 3d de la función trigonométrica z = cos(x) sen
 <div id="la-recta-como-modelo-universal-y-sus-transformaciones" class="section level2" number="4.6">
 <h2><span class="header-section-number">4.6</span> La recta como modelo “universal” y sus transformaciones</h2>
 <p>De los modelos vistos anteriormente, la línea recta es el más flexible y común de todos. Por su simplicidad, puede ser utilizado para representar muchos fenómenos de la naturaleza, incluso aquellos cuyo comportamiento es… !no lineal¡</p>
-<p>Cuando decimos no lineal, nos referimos generalmente a los casos en que cuando una relación de correspondencia es representada en el plano cartesiano los puntos que la forman no dibujan una línea recta. Como vimos anteriormente, matemáticamente es posible concebir como lineales reglas de corresondencia que no son lineales en el plano cartesiano, de ahí que la función de la línea recta pueda ser tan flexible. Para que una ecuación sea considerada como lineal, debe cumplir con las siguientes características:</p>
+<p>Cuando decimos no lineal, nos referimos, generalmente, a los casos en que una regla de correspondencia entre <span class="math inline">\(x\)</span> y <span class="math inline">\(y\)</span> representada en el plano cartesiano no forman una línea recta. Ya hemos visto que, matemáticamente, es posible concebir como lineales reglas de corresondencia que geométricamente no son lineales, de ahí que la línea recta sea tan flexible. Para que una ecuación sea considerada como lineal debe cumplir con las siguientes características:</p>
 <ol style="list-style-type: decimal">
-<li>Las variables sólo pueden ser añadidas unas con otras</li>
-<li>La multiplicación sólo puede ocurrir con constantes</li>
-<li>Las variables están elevadas a la potencia 1</li>
+<li>Sólo hay adición de variables</li>
+<li>Sólo hay multiplicación con constantes</li>
+<li>Las variables solo están elevadas a la potencia 1</li>
 </ol>
-<p>Con base en estas definiciones, las siguientes ecuaciones no son lineales</p>
+<p>Con base en estas definiciones, las siguientes ecuaciones <strong>no</strong> son lineales</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(xy = 1\)</span></li>
 <li><span class="math inline">\(y = a + b x^2\)</span></li>
@@ -423,30 +422,30 @@ Figura 4.15: Representación en 3d de la función trigonométrica z = cos(x) sen
 <p>Aún cuando estas expresiones no son lineales, es posible transformar algunas de ellas para que adquieran propiedades lineales. Para comenzar, el caso 1, no puede ser linealizado. Para el caso 2, ya vimos un transformación posible, si asumimos que existe una <span class="math inline">\(x&#39;\)</span> tal que <span class="math inline">\(x&#39; = x^2\)</span>. Para el caso 3 hay que usar un poco más de conocimiento de dos funciones matemáticas, el logaritmo y la exponencial.</p>
 <div id="el-logaritmo" class="section level3" number="4.6.1">
 <h3><span class="header-section-number">4.6.1</span> El logaritmo</h3>
-<p>Para entender cómo funciona la transformación logaritmica, revisemos el significado del logaritmo. Supongamos que queremos encontrar el valor de la incógnita <span class="math inline">\(x\)</span> en la siguiente ecuación:</p>
+<p>Para entender cómo funciona la transformación logarítmica, revisemos qué hace el logaritmo. Supongamos que queremos encontrar el valor de la incógnita <span class="math inline">\(x\)</span> en la siguiente ecuación:</p>
 <p><span class="math display">\[10^x = 20\]</span>
 La operación necesaria para invertir el radical <span class="math inline">\(10^x\)</span> y encontrar el valor de <span class="math inline">\(x\)</span> es precisamente el logaritmo base 10, de modo que:</p>
 <p><span class="math display">\[\log_{10} 10^x = \log_{10} 20\]</span>
 <span class="math display">\[x \log_{10} 10 = \log_{10} 20\]</span>
 sabemos que <span class="math inline">\(\log_{10} 10 = 1\)</span> pues <span class="math inline">\(10^1 = 10\)</span> por lo que:</p>
 <p><span class="math display">\[x = \log_{10} 20 \approx 1.3\]</span>
-Así como en esta ocasión utilizamos <span class="math inline">\(\log_{10}\)</span> (logaritmo base 10), se puede utilizar como base cualquier número <span class="math inline">\(b &gt; 0\)</span> positivo que esté en el conjunto de los números reales. El logaritmo más común recibe el nombre de natural, que utiliza de base la constante <span class="math inline">\(e = 2.718282 ...\)</span> de Euler. La convención en escritura de logaritmos es:</p>
+Así como en esta ocasión utilizamos <span class="math inline">\(\log_{10}\)</span> (logaritmo base 10), se puede utilizar como base cualquier número <span class="math inline">\(b &gt; 0\)</span>, si está en el conjunto de los números reales (positivos). El logaritmo más común recibe el nombre de natural, que utiliza de base la constante <span class="math inline">\(e = 2.718282 ...\)</span> de Euler. La convención en escritura de logaritmos es:</p>
 <ul>
 <li>Logaritmo natural: <span class="math inline">\(\ln\)</span></li>
 <li>Logaritmo base 10: <span class="math inline">\(\log\)</span></li>
-<li>Logaritmo base <span class="math inline">\(b &gt; 0, b \in \mathbb{R}\)</span></li>
+<li>Logaritmo base <span class="math inline">\(b &gt; 0, b \in \mathbb{R}\)</span>: <span class="math inline">\(\log_b\)</span></li>
 </ul>
-<p>Aún cuando esta es la convención más común, en la modelación, la mayoría de las veces que se utiliza <span class="math inline">\(\log\)</span> se refiere a <span class="math inline">\(\ln\)</span>, de modo que a menos que se especifique la base, <span class="math inline">\(\log\)</span> y <span class="math inline">\(\ln\)</span> significan <span class="math inline">\(\log_e\)</span>.</p>
+<p>Aún cuando esta es la convención más común, en la modelación, la mayoría de las veces que se utiliza <span class="math inline">\(\log\)</span> se refiere a <span class="math inline">\(\ln\)</span>, de modo que a menos que se especifique la base, <span class="math inline">\(\log\)</span> y <span class="math inline">\(\ln\)</span> también significan <span class="math inline">\(\log_e\)</span>.</p>
 </div>
 <div id="la-función-exponencial" class="section level3" number="4.6.2">
 <h3><span class="header-section-number">4.6.2</span> La función exponencial</h3>
 <p>Una de las funciones más comunes en aplicaciones matemáticas es la exponencial que se denota por <span class="math inline">\(\exp(x)\)</span>, que significa <span class="math inline">\(e^x\)</span>. De este modo cuando <span class="math inline">\(y\)</span> es una función exponencial de <span class="math inline">\(x\)</span>, tenemos que:</p>
 <p><span class="math display">\[y(x) = \exp(x) = e^x\]</span>
 La función exponencial puede tomar formas más complejas, por ejemplo, conteniendo una ecuación lineal:</p>
-<p><span class="math display">\[y(x) = \exp(a + bx) = e^{a + bx}\]</span></p>
-</div>
-<div id="linealizado-la-función-exponencial" class="section level3" number="4.6.3">
-<h3><span class="header-section-number">4.6.3</span> Linealizado la función exponencial</h3>
+<p><span class="math display">\[y(x) = \exp(a + bx) = e^{a + bx}\]</span>
+y dadas las reglas de los exponentes, también es equivalente a:</p>
+<p><span class="math display">\[y(x) = e^a e^{bx} = a&#39; e^{bx}\]</span>
+### Linealizado la función exponencial</p>
 <p>Como se ha mostrado en esta sección, transformar una función exponencial en lineal es relativamente sencillo. En sentido literal, las transformaciones logaritmicas no son lineales sino log-lineales pues:</p>
 <p><span class="math display" id="eq:expon">\[\begin{equation}
     y(x) = e^{a + bx} \tag{4.3}
@@ -457,9 +456,9 @@ La función exponencial puede tomar formas más complejas, por ejemplo, contenie
 \end{equation}\]</span></p>
 <p>donde el lado izquierdo es una función logarítmica y el derecho es estrictamente lineal. Matemáticamente entonces, la transformación es lineal <span class="math inline">\(\forall x \in \mathbb{R}\)</span>, puesto que <span class="math inline">\(\log y\)</span> puede tomar cualquier valor entre <span class="math inline">\(-\infty\)</span> y <span class="math inline">\(+\infty\)</span>. Entonces, la ecuación número 3 de la lista de ecuaciones no-lineales al principio de esta sección es:</p>
 <p><span class="math display">\[\log y(x) = \ln y(x) = x\]</span></p>
-<p>Esta equivalencia, como veremos más adelante y como verán en modelación estadística, es súper útil en la modelación de sistemas que cambian con el tiempo.</p>
-<div id="representación-gráfica-de-la-función-exponencial" class="section level4" number="4.6.3.1">
-<h4><span class="header-section-number">4.6.3.1</span> Representación gráfica de la función exponencial</h4>
+<p>Esta equivalencia, como veremos más adelante y como verán en modelación estadística, es sumamente útil en la modelación de sistemas dinámicos.</p>
+<div id="representación-gráfica-de-la-función-exponencial" class="section level4" number="4.6.2.1">
+<h4><span class="header-section-number">4.6.2.1</span> Representación gráfica de la función exponencial</h4>
 <p>En la función exponencial, la variable <span class="math inline">\(y\)</span> crece muy rápido. De hecho, su crecimiento en cualquier punto es proporcional al valor que tiene en ese punto. Es decir que si tomamos un punto cualquiera en <span class="math inline">\(y\)</span> y dibujamos una tangente a ese punto, la pendiente de esa recta tendrá el mismo valor que <span class="math inline">\(y\)</span>.</p>
 <div class="figure" style="text-align: center"><span id="fig:expon"></span>
 <img src="Mod-mat-ECO_files/figure-html/expon-1.png" alt="Representación gráfica de la función exponencial. El punto rojo representa y = exp(1.5), de modo que la pendiente de la recta tangente a la curva (en rojo) en ese punto es precisamente exp(1.5)." width="480" />
@@ -484,8 +483,8 @@ N(t) = \exp(r \cdot t) \tag{4.5}
     \log N = r \cdot t
 \end{equation}\]</span></p>
 </div>
-<div id="representación-gráfica-del-logaritmo" class="section level4" number="4.6.3.2">
-<h4><span class="header-section-number">4.6.3.2</span> Representación gráfica del logaritmo</h4>
+<div id="representación-gráfica-del-logaritmo" class="section level4" number="4.6.2.2">
+<h4><span class="header-section-number">4.6.2.2</span> Representación gráfica del logaritmo</h4>
 <p>A diferencia de la función exponencial, donde el crecimiento de <span class="math inline">\(y\)</span> es cada vez más <em>rápido</em>, en el logaritmo es más lento (figura <a href="unidad-ii-introducción-a-los-modelos-determinísticos.html#fig:log">4.18</a>).</p>
 <div class="figure" style="text-align: center"><span id="fig:log"></span>
 <img src="Mod-mat-ECO_files/figure-html/log-1.png" alt="Representación gráfica del logaritmo con y = log x." width="480" />
@@ -495,8 +494,8 @@ Figura 4.18: Representación gráfica del logaritmo con y = log x.
 </div>
 </div>
 </div>
-<div id="relevancia-de-la-recta" class="section level3" number="4.6.4">
-<h3><span class="header-section-number">4.6.4</span> Relevancia de la recta</h3>
+<div id="relevancia-de-la-recta" class="section level3" number="4.6.3">
+<h3><span class="header-section-number">4.6.3</span> Relevancia de la recta</h3>
 <p>Una vez cubiertas las funciones logarítmicas y exponenciales, hemos comenzado a vislumbrar la relevancia más amplia de la recta para fenómenos que no son lineales. En el cálculi diferencial, la recta nos da los elementos para entender el significado de la derivada, y también es el bloque que utilizaremos para implementar métodos para integrar de manera relativamente sencilla ecuaciones que no se pueden integrar a mano.</p>
 
 </div>

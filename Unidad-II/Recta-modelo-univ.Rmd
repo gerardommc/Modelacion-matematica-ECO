@@ -1,13 +1,13 @@
 
 De los modelos vistos anteriormente, la línea recta es el más flexible y común de todos. Por su simplicidad, puede ser utilizado para representar muchos fenómenos de la naturaleza, incluso aquellos cuyo comportamiento es... !no lineal¡
 
-Cuando decimos no lineal, nos referimos generalmente a los casos en que cuando una relación de correspondencia es representada en el plano cartesiano los puntos que la forman no dibujan una línea recta. Como vimos anteriormente, matemáticamente es posible concebir como lineales reglas de corresondencia que no son lineales en el plano cartesiano, de ahí que la función de la línea recta pueda ser tan flexible. Para que una ecuación sea considerada como lineal, debe cumplir con las siguientes características:
+Cuando decimos no lineal, nos referimos, generalmente, a los casos en que una regla de correspondencia entre $x$ y $y$ representada en el plano cartesiano no forman una línea recta. Ya hemos visto que, matemáticamente, es posible concebir como lineales reglas de corresondencia que geométricamente no son lineales, de ahí que la línea recta sea tan flexible. Para que una ecuación sea considerada como lineal debe cumplir con las siguientes características:
 
-1. Las variables sólo pueden ser añadidas unas con otras
-2. La multiplicación sólo puede ocurrir con constantes
-3. Las variables están elevadas a la potencia 1
+1. Sólo hay adición de variables
+2. Sólo hay multiplicación con constantes
+3. Las variables solo están elevadas a la potencia 1
 
-Con base en estas definiciones, las siguientes ecuaciones no son lineales
+Con base en estas definiciones, las siguientes ecuaciones **no** son lineales
 
 1. $xy = 1$
 2. $y = a + b x^2$
@@ -17,7 +17,7 @@ Aún cuando estas expresiones no son lineales, es posible transformar algunas de
 
 ### El logaritmo
 
-Para entender cómo funciona la transformación logaritmica, revisemos el significado del logaritmo. Supongamos que queremos encontrar el valor de la incógnita $x$ en la siguiente ecuación:
+Para entender cómo funciona la transformación logarítmica, revisemos  qué hace el logaritmo. Supongamos que queremos encontrar el valor de la incógnita $x$ en la siguiente ecuación:
 
 $$10^x = 20$$
 La operación necesaria para invertir el radical $10^x$ y encontrar el valor de $x$ es precisamente el logaritmo base 10, de modo que:
@@ -27,13 +27,13 @@ $$x \log_{10} 10 = \log_{10} 20$$
 sabemos que $\log_{10} 10 = 1$ pues $10^1 = 10$ por lo que:
 
 $$x = \log_{10} 20 \approx 1.3$$
-Así como en esta ocasión utilizamos $\log_{10}$ (logaritmo base 10), se puede utilizar como base cualquier número $b > 0$ positivo que esté en el conjunto de los números reales. El logaritmo más común recibe el nombre de natural, que utiliza de base la constante $e = 2.718282 ...$ de Euler. La convención en escritura de logaritmos es:
+Así como en esta ocasión utilizamos $\log_{10}$ (logaritmo base 10), se puede utilizar como base cualquier número $b > 0$, si está en el conjunto de los números reales (positivos). El logaritmo más común recibe el nombre de natural, que utiliza de base la constante $e = 2.718282 ...$ de Euler. La convención en escritura de logaritmos es:
 
 - Logaritmo natural: $\ln$
 - Logaritmo base 10: $\log$
-- Logaritmo base $b > 0,  b \in \mathbb{R}$
+- Logaritmo base $b > 0,  b \in \mathbb{R}$: $\log_b$
 
-Aún cuando esta es la convención más común, en la modelación, la mayoría de las veces que se utiliza $\log$ se refiere a $\ln$, de modo que a menos que se especifique la base, $\log$ y $\ln$ significan $\log_e$.
+Aún cuando esta es la convención más común, en la modelación, la mayoría de las veces que se utiliza $\log$ se refiere a $\ln$, de modo que a menos que se especifique la base, $\log$ y $\ln$ también significan $\log_e$.
 
 ### La función exponencial
 
@@ -43,7 +43,9 @@ $$y(x) = \exp(x) = e^x$$
 La función exponencial puede tomar formas más complejas, por ejemplo, conteniendo una ecuación lineal:
 
 $$y(x) = \exp(a + bx) = e^{a + bx}$$
+y dadas las reglas de los exponentes, también es equivalente a:
 
+$$y(x) = e^a e^{bx} = a' e^{bx}$$
 ### Linealizado la función exponencial
 
 Como se ha mostrado en esta sección, transformar una función exponencial en lineal es relativamente sencillo. En sentido literal, las transformaciones logaritmicas no son lineales sino log-lineales pues:
@@ -62,7 +64,7 @@ donde el lado izquierdo es una función logarítmica y el derecho es estrictamen
 
 $$\log y(x) = \ln y(x) = x$$
 
-Esta equivalencia, como veremos más adelante y como verán en modelación estadística, es súper útil en la modelación de sistemas que cambian con el tiempo.
+Esta equivalencia, como veremos más adelante y como verán en modelación estadística, es sumamente útil en la modelación de sistemas dinámicos.
 
 #### Representación gráfica de la función exponencial
 
@@ -75,6 +77,7 @@ plot(x, y, type = "l", main = "Función exponencial")
 points(1.5, exp(1.5), col = "red", pch = 20)
 abline(a = -2.227, b = exp(1.5), lty = 2, col = "red")
 ```
+
 Esta relación entre el valor de la curva y la pendiente tiene implicaciones importantísimas en modelación de poblaciones, pues expone las razones por las cuales el crecimiento demográfico puede ser descrito como *exponencial*: el crecimiento neto de una población, el total de individuos nuevos que se incorporarán a la población, en ese instante es proporcional al número de individuos repoductivos de esa población. Es por esta razón que el número total de individuos que nacen en una población es más grande cuantos más individuos haya, a pesar de que la tasa reproductiva por unidad de tiempo sea la misma. 
 
 Veamos como ejemplo, que el crecimiento de la humanidad, desde que se pueden obtener estimaciones, es aproximadamente exponencial \@ref(fig:popn-wd).

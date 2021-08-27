@@ -81,7 +81,6 @@ representación-en-3d
 la-recta-como-modelo-universal-y-sus-transformaciones
 el-logaritmo
 la-función-exponencial
-linealizado-la-función-exponencial
 representación-gráfica-de-la-función-exponencial
 representación-gráfica-del-logaritmo
 relevancia-de-la-recta
