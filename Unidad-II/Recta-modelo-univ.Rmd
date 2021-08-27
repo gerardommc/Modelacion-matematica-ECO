@@ -98,7 +98,6 @@ Donde $r$ es la tasa reproductiva de la población y utilizamos $N$ en lugar de 
     \log N = r \cdot t
 \end{equation}
 
-
 #### Representación gráfica del logaritmo
 
 A diferencia de la función exponencial, donde el crecimiento de $y$ es cada vez más *rápido*, en el logaritmo es más lento (figura \@ref(fig:log)).
@@ -111,4 +110,4 @@ plot(x2, y2, type = "l", main = "Función logarítmica", ylab = "y", xlab ="x")
 
 ### Relevancia de la recta
 
-Una vez cubiertas las funciones logarítmicas y exponenciales, hemos comenzado a vislumbrar la relevancia más amplia de la recta para fenómenos que no son lineales. En el cálculi diferencial, la recta nos da los elementos para entender el significado de la derivada, y también es el bloque que utilizaremos para implementar métodos para integrar de manera relativamente sencilla ecuaciones que no se pueden integrar a mano.
+Una vez cubiertas las funciones logarítmicas y exponenciales, hemos comenzado a vislumbrar la relevancia más amplia de la recta para fenómenos que no son lineales. En el cálculo diferencial, la recta nos da los elementos para entender el significado de la derivada, y también es el bloque fundamental para implementar métodos de integración numérica relativamente sencillos, para ecuaciones diferenciales que no se pueden integrar analíticamente.
