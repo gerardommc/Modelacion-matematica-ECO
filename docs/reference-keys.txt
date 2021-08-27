@@ -89,7 +89,7 @@ unidad-iii-introducción-al-cálculo-diferencial-e-integral
 sucesiones
 notación-de-sucesiones
 tipos-de-sucesiones
-sucesiones-por-recurrencia
+sucesiones-recurrentes
 sucesiones-recurrentes-más-avanzadas
 ejercicio-1
 continuidad-y-límites

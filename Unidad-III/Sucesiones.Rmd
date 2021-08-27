@@ -18,7 +18,7 @@ una función $f$ de los números naturales, incluido el cero ($\mathbb{N}_0$) qu
 
 Otra característica de las sucesiones es que sus elementos están ordenados, es decir, cada elemento en el dominio y codominio tiene un sitio particular, de modo que si los conjuntos $a_n = \{A, B, C\}$ y $a_m = \{C, A, B\}$, $a_n \neq a_m$, puesto que, aunque contengan los mismos elementos $A, B$ y $C$, estos tienen posiciones diferentes dentro de $a_n$ y $a_m$.
 
-## Notación de sucesiones
+### Notación de sucesiones
 
 Una sucesión de los números naturales suele nombrarse como $\{a_n\}$, seguida de la regla de correspondencia entre el conjunto $n$ y $a$. Así por ejemplo:
 
@@ -37,11 +37,11 @@ Esta notación, sin embargo no es universal, por ejemplo:
 
 -$\{a_n\}_{n \in \mathbb{N}} = a_1, a_2, a_3, \dots$
 
-## Tipos de sucesiones
+### Tipos de sucesiones
 
 La sucesión anterior es un ejemplo muy sencillo y poco útil en la modelación ecológica, pero es un punto de partida para entender la notación y el concepto. Existen sucesiones, sin embargo, que tienen implicaciones importantes para el desarrollo de modelos dinámicos, como las **sucesiones por recurrencia**.
 
-### Sucesiones por recurrencia
+#### Sucesiones recurrentes
 
 En estas sucesiones, la regla de correspondencia indica algún tipo de operación con elementos de $n$ en posiciones previas. Así por ejemplo, la sucesión:
 
@@ -75,7 +75,7 @@ Las sucesiones recurrentes pueden ser también concebidas como modelos dinámico
 
 Como podemos ver, en \@ref(eq:susc-crec), el crecimiento por unidad de tiempo es lineal con respecto del número de individuos en el periodo de tiempo inmediatamente previo ($rN_{t-1}$).
 
-```{r susc-crec, echo=F, fig.align='center', fig.height=4, fig.width=5, fig.cap="Simulación de la sucesión de crecimiento poblacional en tiempo discreto, para 10 unidades de tiempo, con r = 1.5, y una población inicial de N = 1."}
+```{r susc-crec, echo=F, fig.align='center', fig.height=5, fig.width=5, fig.cap="Simulación de la sucesión de crecimiento poblacional en tiempo discreto, para 10 unidades de tiempo, con r = 1.5, y una población inicial de N = 1."}
 t <- 0:10
 N <- numeric(length(t))
 N[1] <- 1
@@ -87,7 +87,7 @@ La sucesión descrita por la ecuación \@ref(eq:susc-crec) es fácil de simular 
 
 Con este tipo de sucesiones, es posible comenzar a utilizar conceptos básicos de cálculo. Podemos por ejemplo, tomar la misma sucesión de la ecuación \@ref(eq:susc-crec), con una población inicial de $N = 50$, y $r = 0.6$, y simular por un periodo de tiempo de 20, para ver hacia qué valor se aproxima $N_t$ (\@ref(fig:susc-decrec)).
 
-```{r susc-decrec, echo=F, fig.align='center', fig.height=4, fig.width=5, fig.cap = "Simulación para un valor inicial de N = 50, por 20 unidades de tiempo, y r = 0.6"}
+```{r susc-decrec, echo=F, fig.align='center', fig.height=5, fig.width=5, fig.cap = "Simulación para un valor inicial de N = 50, por 20 unidades de tiempo, y r = 0.6"}
 t <- 0:20
 N <- numeric(length(t))
 N[1] <- 50
@@ -99,7 +99,7 @@ En cada simulación, $N_t$ cambia de acuerdo con el valor de $N_{t-1}$. Como es 
 
 En estos casos, decimos que por ejemplo para $r < 1$, $N$ está acotada por $0$. Hay otras sucesiones, por ejemplo la de crecimiento logístico, que está acotada por la capacidad de carga, incluso si $r > 0$.
 
-```{r susc-logis, echo=F, fig.align='center', fig.height=4, fig.width=5, fig.cap = "Simulación para un valor inicial de N = 1, por 50 unidades de tiempo, r = 0.5, y capacidad de carga K = 50"}
+```{r susc-logis, echo=F, fig.align='center', fig.height=5, fig.width=5, fig.cap = "Simulación para un valor inicial de N = 1, por 50 unidades de tiempo, r = 0.5, y capacidad de carga K = 50"}
 t <- 0:50
 N <- numeric(length(t))
 N[1] <- 1
@@ -116,5 +116,5 @@ N_{t} = N_{t-1} + r N_{t-1} \left(1 - \frac{N_{t-1}}{K} \right) (\#eq:susc-logis
 
 #### Ejercicio
 
-Utilizando la hoja de cálculo para la sucesión de crecimiento poblacional en tiempo discreto, adaptala para simular el crecimiento poblacional probando los valores de $r$ dese 0.5 hasta 3.5 en incrementos de 0.25, y grafícalos. ¿Qué pasa con $N_t$?
+Utilizando la hoja de cálculo para la sucesión de crecimiento poblacional en tiempo discreto, adaptala para simular el crecimiento poblacional probando los valores de $r$ dese 0.5 hasta 3.5 en incrementos de 0.25, y grafícalos. ¿Qué pasa con $N_t$ con los valores de $r$ probados?
 
