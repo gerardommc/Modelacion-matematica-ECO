@@ -36,4 +36,9 @@
 
 ```
 
+## Representación de las funciones en 3 dimensiones
+
+```{r echo = F, child="Unidad-II/3D.Rmd"}
+
+```
 

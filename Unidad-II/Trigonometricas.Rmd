@@ -79,33 +79,4 @@ x <- seq(-10, 10, len = 100)
 y = 2*cos(x)^2 + 0.1 * x
 plot(x, y, xlab = "x", ylab = "y", type = "l")
 ```
-#### Representación en 3D
-
-Hasta ahora sólo hemos visto representaciones de las funciones en dos dimensiones. Las representaciones de las funciones en 3d, sin embargo pueden ser confusas. Veamos por ejemplo la representación 3d de un plano:
-
-```{r 3d-1, echo=F, fig.align='center', fig.height=4, fig.width=5, fig.cap="Representación gráfica de la función $z(x, y) = x + y$."}
-library(lattice)
-
-df.1 <- expand.grid(x = -5:5, y = -5:5)
-df.1$z <- with(df.1, x + y)
-wireframe(z ~ x + y, df.1, drape = T)
-```
-
-Para poder hacer esta gráfica, es necesario hacer los cáculos para todas las combinaciones posibles de $x$ y $y$, de modo que conocemos todos los valores posibles de $z$ para cada par de valores del dominio. Si en la representación en dos dimensiones, necesitamos $n$ valores, en la representación 3d necesitamos $2 \times n^2$, lo cual produce $n^2$ diferentes valores de $z$.
-
-Las funciones trigonométricas pueden representarse 
-
-```{r trig-3d, echo=F, fig.align='center', fig.cap="Representación en 3d de la función trigonométrica z = cos(x) sen(y).", fig.height=4, fig.width=5}
-library(plot3D)
-df.1 <- expand.grid(x = seq(-pi, pi, len = 20),
-                    y = seq(-pi, pi, len = 20))
-df.1$z <- with(df.1, cos(y) * sin(x))
-
-mat <- matrix(df.1$z, nrow = 20, ncol = 20)
-
-wireframe(z ~ x + y, df.1, drape = T)
-```
-
-
-
 

@@ -1,0 +1,42 @@
+Hasta ahora sólo hemos visto funciones de dos variables, y su representación en el plano cartesiano. Las funciones de tres variables, requieren ser representadas en 3d. Puesto que hay tres dimensiones, pueden ser confusas. Para comenzar, al conveción para funciones de tres variables es que hay dos dominios llamados $x$ y $y$, y un solo codominio llamado $z$, por lo que $z$ es una función $z(x, y)$. La gráfica de estas funciones, pueden ser en efecto sólo una línea en el epacio, o un plano, o algo mucho más complejo. Para representar un plano, necesitamos una ecuación lineal como
+
+$$z(x, y) = x + y$$
+y hacer los cálculos de $z$ para todas las combinaciones posibles de $x$ y $y$, por ejemplo:
+
+```{r tabla.xy, echo = F}
+x <- 0:3
+y <- 0:3
+
+tabla.xy <- expand.grid(x = x, y = y)
+tabla.xy$z <- with(tabla.xy, x + y)
+knitr::kable(tabla.xy, caption = "Todas las combinaciones posibles de (x, y) y el valor resultante de z.")
+```
+
+De
+
+```{r 3d-1, echo=F, fig.align='center', fig.height=4, fig.width=5, fig.cap="Representación gráfica de la función $z(x, y) = x + y$."}
+library(lattice)
+
+df.1 <- expand.grid(x = -5:5, y = -5:5)
+df.1$z <- with(df.1, x + y)
+wireframe(z ~ x + y, df.1, drape = T)
+```
+
+Para poder hacer esta gráfica, es necesario hacer los cáculos para todas las combinaciones posibles de $x$ y $y$, de modo que conocemos todos los valores posibles de $z$ para cada par de valores del dominio. Si en la representación en dos dimensiones, necesitamos $n$ valores, en la representación 3d necesitamos $2 \times n^2$, lo cual produce $n^2$ diferentes valores de $z$.
+
+Las funciones trigonométricas pueden representarse 
+
+```{r trig-3d, echo=F, fig.align='center', fig.cap="Representación en 3d de la función trigonométrica $z(x, y) = cos(x) sin(y)$.", fig.height=4, fig.width=5}
+library(plot3D)
+df.1 <- expand.grid(x = seq(-pi, pi, len = 20),
+                    y = seq(-pi, pi, len = 20))
+df.1$z <- with(df.1, cos(y) * sin(x))
+
+mat <- matrix(df.1$z, nrow = 20, ncol = 20)
+
+wireframe(z ~ x + y, df.1, drape = T)
+```
+
+
+
+

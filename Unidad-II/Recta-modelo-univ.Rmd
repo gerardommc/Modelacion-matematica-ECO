@@ -46,7 +46,8 @@ $$y(x) = \exp(a + bx) = e^{a + bx}$$
 y dadas las reglas de los exponentes, también es equivalente a:
 
 $$y(x) = e^a e^{bx} = a' e^{bx}$$
-### Linealizado la función exponencial
+
+#### Linealizando la función exponencial
 
 Como se ha mostrado en esta sección, transformar una función exponencial en lineal es relativamente sencillo. En sentido literal, las transformaciones logaritmicas no son lineales sino log-lineales pues:
 
@@ -86,16 +87,22 @@ Veamos como ejemplo, que el crecimiento de la humanidad, desde que se pueden obt
 knitr::include_graphics("Unidad-II/popn.png")
 ```
 
-A diferencia del ejemplo de la figura \@ref(fig:expon), donde $y = \exp(x)$, para representar el crecimiento de la población humana tenemos que medir la tasa reproductiva, de modo que podamos representar a la pobación como una función del tiempo:
+A diferencia del ejemplo de la figura \@ref(fig:expon), donde $y = \exp(x)$, para representar el crecimiento de la población humana tenemos que medir la tasa reproductiva, de modo que podamos establecer la relación directa entre el tiempo y el tamaño de la población. En otras palabras, medir cuántos individuos son producidos en promedio por cada individuo presente en la población en cada unidad de tiempo:
 
 \begin{equation}
 N(t) = \exp(r \cdot t) (\#eq:poblac)
 \end{equation}
 
-Donde $r$ es la tasa reproductiva de la población y utilizamos $N$ en lugar de $y$ para representar al número de individuos, y $t$ en lugar de $x$ para dejar claro que las unidades de $x$ representan al tiempo. Si utilizamos el conocimiento de la subsección anterior, veremos que al aplicar el logaritmo a ambos lados de la ecuación \@ref(eq:poblac) obtenemos ¡una ecuación lineal!
+donde $r$ es la tasa reproductiva de la población y utilizamos $N$ en lugar de $y$ para representar al $N$úmero de individuos, y $t$ en lugar de $x$ para dejar claro que $x$ representa tiempo. Si utilizamos el conocimiento de la subsección anterior, veremos que al aplicar el logaritmo a ambos lados de la ecuación \@ref(eq:poblac) obtenemos ¡una ecuación lineal!
 
 \begin{equation}
     \log N = r \cdot t
+\end{equation}
+
+Es evidente que un modelo tan sencillo como este tiene serias deficiencias biológicas. Por ejemplo, cuando $t = 0$, $\exp(r \cdot t) = 1$, de modo que se asume que siempre habrá cuando menos un individuo presente. Esto puede o no ser cierto, por lo que una forma más generalizable incluye un intercepto para el tamaño poblacional inicial:
+
+\begin{equation}
+    N(t) = N_0 e^{r \cdot t} \rightarrow \log N(t) = \log N_0 + r \cdot t
 \end{equation}
 
 #### Representación gráfica del logaritmo
