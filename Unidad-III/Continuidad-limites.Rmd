@@ -52,4 +52,13 @@ knitr::include_graphics("Unidad-III/Limite-x.png")
 knitr::include_graphics("Unidad-III/Limite-abs-x.png")
 ```
 
-#### Límites por un solo lado
+Aún cuando estas funciones no satisfacen la definición estricta de límite, es posible encontrar los límites de la función para $f(a)$, dependiendo del lado por el que $x \rightarrow a$. Veamos el ejemplo de $f(x) = |x|/x$ dado en la figura \@ref(fig:limite-indef). El límite que nos interesa es
+
+$$ \lim \limits_{x \rightarrow 0} \frac{|x|}{x}$$
+Por lo que sabemos hay dos maneras que acercarnos a $0$, una por el lado positivo, $x \rightarrow 0^{+}$, y otra por el lado negativo $x \rightarrow 0^-$. Así entonces podemos establecer dos límites:
+
+1. $\lim \limits_{x \rightarrow 0^+} \frac{|x|}{x} = 1$
+2. $\lim \limits_{x \rightarrow 0^-} \frac{|x|}{x} = -1$
+
+#### ¿Cómo se encuentran los límites?
+

@@ -100,8 +100,6 @@ sucesiones-recurrentes-más-avanzadas
 ejercicio-1
 continuidad-y-límites
 el-límite
-límites-por-un-solo-lado
+cómo-se-encuentran-los-límites
 derivación
 integración
-funciones-trigonométricas-1
-la-recta-como-modelo-universal-y-sus-transformaciones-1

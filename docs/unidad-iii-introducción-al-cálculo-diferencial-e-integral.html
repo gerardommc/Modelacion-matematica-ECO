@@ -157,8 +157,6 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="5.3" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#derivación"><i class="fa fa-check"></i><b>5.3</b> Derivación</a></li>
 <li class="chapter" data-level="5.4" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#integración"><i class="fa fa-check"></i><b>5.4</b> Integración</a></li>
-<li class="chapter" data-level="5.5" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#funciones-trigonométricas-1"><i class="fa fa-check"></i><b>5.5</b> Funciones trigonométricas</a></li>
-<li class="chapter" data-level="5.6" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#la-recta-como-modelo-universal-y-sus-transformaciones-1"><i class="fa fa-check"></i><b>5.6</b> La recta como modelo “universal” y sus transformaciones</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -375,8 +373,15 @@ Figura 5.8: Ejemplo gráfico de una función con límite definido para cualquier
 Figura 5.9: Ejemplo gráfico de una función sin límite definido cuando x→0 (equis tiende a cero). Nota cómo hay dos valores posibles a los que la función se acerca cuando x→0, ya sea cuando uno se acerca a 0 por el lado positivo de <span class="math inline">\(x\)</span> o el lado negativo de <span class="math inline">\(x\)</span>.
 </p>
 </div>
-<div id="límites-por-un-solo-lado" class="section level4" number="5.2.1.1">
-<h4><span class="header-section-number">5.2.1.1</span> Límites por un solo lado</h4>
+<p>Aún cuando estas funciones no satisfacen la definición estricta de límite, es posible encontrar los límites de la función para <span class="math inline">\(f(a)\)</span>, dependiendo del lado por el que <span class="math inline">\(x \rightarrow a\)</span>. Veamos el ejemplo de <span class="math inline">\(f(x) = |x|/x\)</span> dado en la figura <a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#fig:limite-indef">5.9</a>. El límite que nos interesa es</p>
+<p><span class="math display">\[ \lim \limits_{x \rightarrow 0} \frac{|x|}{x}\]</span>
+Por lo que sabemos hay dos maneras que acercarnos a <span class="math inline">\(0\)</span>, una por el lado positivo, <span class="math inline">\(x \rightarrow 0^{+}\)</span>, y otra por el lado negativo <span class="math inline">\(x \rightarrow 0^-\)</span>. Así entonces podemos establecer dos límites:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\lim \limits_{x \rightarrow 0^+} \frac{|x|}{x} = 1\)</span></li>
+<li><span class="math inline">\(\lim \limits_{x \rightarrow 0^-} \frac{|x|}{x} = -1\)</span></li>
+</ol>
+<div id="cómo-se-encuentran-los-límites" class="section level4" number="5.2.1.1">
+<h4><span class="header-section-number">5.2.1.1</span> ¿Cómo se encuentran los límites?</h4>
 </div>
 </div>
 </div>
@@ -385,12 +390,6 @@ Figura 5.9: Ejemplo gráfico de una función sin límite definido cuando x→0 (
 </div>
 <div id="integración" class="section level2" number="5.4">
 <h2><span class="header-section-number">5.4</span> Integración</h2>
-</div>
-<div id="funciones-trigonométricas-1" class="section level2" number="5.5">
-<h2><span class="header-section-number">5.5</span> Funciones trigonométricas</h2>
-</div>
-<div id="la-recta-como-modelo-universal-y-sus-transformaciones-1" class="section level2" number="5.6">
-<h2><span class="header-section-number">5.6</span> La recta como modelo “universal” y sus transformaciones</h2>
 
 </div>
 </div>
