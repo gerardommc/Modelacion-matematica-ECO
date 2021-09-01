@@ -34,7 +34,7 @@ En el sentido estricto de la palabra, límite es el valor al que se acerca una f
 
 donde $\lim$ indica que necesitamos estimar el límite de la función, cuando su dominio $x$ toma valores cada vez más cercanos a algún valor específico $a$ ($x \rightarrow a$). Aquí es necesario especificar que cuando hablamos de límites **siempre** nos acercamos al valor de interés $a$ tanto por medio de valores de $x>a$ como $x<a$, es decir alrededor de un intervalo de valores de $x$ que comunmente se denomina como $a \pm \delta$. Entonces, el límite de $f(x)$ existe si todos los valores de $f(a \pm \delta)$ convergen alrededor de un mismo punto. 
 
-Revisa la aplicación de Geogebra [Límites](https://www.geogebra.org/m/b76f7gpx) para visualizar este fenómeno. Juega con los valores de $\delta$ y $a$ para ver cómo están definidos los valores de la función alrededor de $a$ para la función de la línea recta. Posteriormente, cambia la ecuación por:
+Revisa la aplicación de Geogebra [Límites](https://www.geogebra.org/classic/b76f7gpx) para visualizar este fenómeno. Juega con los valores de $\delta$ y $a$ para ver cómo están definidos los valores de la función alrededor de $a$ para la función de la línea recta. Posteriormente, cambia la ecuación por:
 
 1. $f(x) = \frac{|x|}{x}$
 2. $f(x)= \frac{1}{x}$
