@@ -1,12 +1,55 @@
 La continuidad y los límites son la puerta de entrada a la derivación y por lo tanto a las ecuaciones diferenciales. Cuando decimos que una función es contínua en un intervalo definido del dominio $(x_1, x_2)$, quiere decir que $f(x)$ está definida para todos y cada uno de los posibles valores de $x$ en ese intervalo. Existen muchas funciones que no son contínuas, por ejemplo:
 
 \begin{equation}
-    y(x) = \frac{x - 1}{x - 1}
+    f(x) = \frac{x - 1}{x - 1} (\#eq:disc-1)
 \end{equation}
 
-Como es evidente, dicha ecuación está definida para todos los valores posibles de $x$, excepto $x = 0$. En este caso, la función debe ser evaluada en $0/0$, lo cual es una indeterminación, no existe.
+Como es evidente, dicha ecuación está definida para todos los valores posibles de $x$, excepto $x = 1$, porque $f(1) = \frac{1 - 1}{1-1} = \frac{0}{0}$, lo cual es una indeterminación, no existe.
 
-```{r discont, echo = F}
+```{r discont, echo = F, fig.align='center', fig.cap="Ejemplo de función con discontinuidad."}
 knitr::include_graphics("Unidad-III/Func-discont.png")
 ```
 
+Hay funciones con discontinuidades, gráficamente más evidentes que \@ref(eq:disc-1), como la hipérbola, $f(x) = 1/x$ (figura \@ref(fig:hiperb)) o $g(x) = |x|/x$, o aquellas con condicionales.
+
+```{r hiperb, echo = F, fig.align='center', fig.cap="La hipérbola."}
+knitr::include_graphics("Unidad-III/Hiperbola.png")
+```
+
+```{r absol, echo = F, fig.align='center', fig.cap="Cociente de valor absoluto."}
+knitr::include_graphics("Unidad-III/Deriv-absol.png")
+```
+
+Como resulta geométricamente evidente, todas estas funciones son discontínuas para algún valor de $x$, sin embargo existe una diferencia muy importante entre ellas y es que el valor que pueden tomar en torno al punto en que son discontínuas depende de qué lado nos acerquemos a este punto. Para la equación $f(x) = \frac{x-1}{x-1}$, resulta claro que si nos acercamos a $f(1)$ desde un valor $x>1$, llegamos a un valor similar de $f$ que si nos acercamos a $f(1)$ por medio de un valor de $x < 1$. Esto no sucede con las función $g(x) = |x|/x$ puesto que si nos acercamos a $g(0)$ por el lado positivo de $x$ nos acercamos a $g = 1$, mientras que, por el lado negativo, nos acercamos a $g = -1$. 
+
+En este momento entonces es necesario comenzar a hablar del concepto de **límite**. 
+
+### El límite
+
+En el sentido estricto de la palabra, límite es el valor al que se acerca una función para un valor específico del dominio. En matemáticas, existe una notación específica para decir esto:
+
+\begin{equation}
+\lim \limits_{x \rightarrow a} x + 1
+\end{equation}
+
+donde $\lim$ indica que necesitamos estimar el límite de la función, cuando su dominio $x$ toma valores cada vez más cercanos a algún valor específico $a$ ($x \rightarrow a$). Aquí es necesario especificar que cuando hablamos de límites **siempre** nos acercamos al valor de interés $a$ tanto por medio de valores de $x>a$ como $x<a$, es decir alrededor de un intervalo de valores de $x$ que comunmente se denomina como $a \pm \delta$. Entonces, el límite de $f(x)$ existe si todos los valores de $f(a \pm \delta)$ convergen alrededor de un mismo punto. 
+
+Revisa la aplicación de Geogebra [Límites](https://www.geogebra.org/m/b76f7gpx) para visualizar este fenómeno. Juega con los valores de $\delta$ y $a$ para ver cómo están definidos los valores de la función alrededor de $a$ para la función de la línea recta. Posteriormente, cambia la ecuación por:
+
+1. $f(x) = \frac{|x|}{x}$
+2. $f(x)= \frac{1}{x}$
+
+para examinar qué pasa con $f(x)$ cuando $x \rightarrow 0$
+
+En los casos en que los valores de $f(x)$ tienden a un valor único para $f(a + \delta)$ y $f(a - \delta)$, el límite de la función sí existe (figura \@ref(fig:discont)). En cambio, como ocurre para funciones como $1/x$ y $|x|/x$, existe más de un valor al que ambas funciones se aproximan (figuras \@ref(fig:hiperb) y \@ref(fig:absol)) dependiendo se si se evalúa $f(a + \delta)$ ó $f(a - \delta)$, el límite no existe.
+
+```{r limite-def, echo = F, fig.align='center', fig.cap="Ejemplo gráfico de una función con límite definido para cualquier valor de $x$. El valor $a$ al que $x$ se aproxima está marcado en el eje $x$ con una cruz roja, y el tamaño de ð alrededor de $a$ está delimitado con las marcas rosas. Nota cómo todos los valores posibles de $f(x)$ alrededor de $f(a)$ convergen en el mismo punto correspondiente a $f(a)$."}
+knitr::include_graphics("Unidad-III/Limite-x.png")
+```
+
+
+```{r limite-indef, echo = F, fig.align='center', fig.cap = "Ejemplo gráfico de una función sin límite definido cuando x→0 (equis tiende a cero). Nota cómo hay dos valores posibles a los que la función se acerca cuando x→0, ya sea cuando uno se acerca a 0 por el lado positivo de $x$ o el lado negativo de $x$."}
+knitr::include_graphics("Unidad-III/Limite-abs-x.png")
+```
+
+#### Límites por un solo lado

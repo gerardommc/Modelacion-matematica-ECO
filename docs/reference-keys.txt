@@ -41,6 +41,12 @@ fig:susc-crec
 fig:susc-decrec
 fig:susc-logis
 eq:susc-logis
+eq:disc-1
+fig:discont
+fig:hiperb
+fig:absol
+fig:limite-def
+fig:limite-indef
 preámbulo
 encuadre-de-la-materia
 criterios-de-evaluación
@@ -93,6 +99,8 @@ sucesiones-recurrentes
 sucesiones-recurrentes-más-avanzadas
 ejercicio-1
 continuidad-y-límites
+el-límite
+límites-por-un-solo-lado
 derivación
 integración
 funciones-trigonométricas-1
