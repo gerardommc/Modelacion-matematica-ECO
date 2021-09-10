@@ -101,5 +101,8 @@ ejercicio-1
 continuidad-y-límites
 el-límite
 cómo-se-encuentran-los-límites
+representación-equivalente-de-las-funciones
+factorización
+conjugación-racional
 derivación
 integración

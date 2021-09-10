@@ -62,3 +62,85 @@ Por lo que sabemos hay dos maneras que acercarnos a $0$, una por el lado positiv
 
 #### ¿Cómo se encuentran los límites?
 
+Enncontrar límites puede ser problemático, por lo que existe una variedad de estrategias cuyo uso depende del tipo de expresión que estemos evaluando. Por lo general, si tenemos $\lim\limits_{x \rightarrow a} f(x)$ se puede comenzar por evaluar $f(a)$, con lo que tenemos tres posibilidades:
+
+1. $f(a) = \frac{b}{0}, b \neq 0$ (una asíntota vertical como en $1/x$)
+2. $f(a) = b$ (límite encontrado)
+3. $f(a) = \frac{0}{0}$ (indeterminación)
+
+En el caso **1**, es probable que el límite no exista, lo cual depende de que $\lim\limits_{x \rightarrow a^-} f(x) = \lim\limits_{x \rightarrow a^+} f(x)$. Para el caso **2**, el límite está claramente definido y no hay mayor problema. En el caso **3**, es necesario encontrar una manera equivalente de representar a $f(a)$.
+
+#### Representación equivalente de las funciones
+
+Las tres estrategias más comunes para resolver límites donde $f(a) = \frac{0}{0}$ son:
+
+1. Factorizar $f(a)$
+2. Conjugar $f(a)$
+3. Usar identidades trigonométricas
+
+Cabe aclarar que muchas de las transformaciones aquí descritas surten efecto bajo el supuesto de que $x \neq a$, aunque una vez transformadas las funciones en efecto las evaluamos asumiendo que $x = a$. Con esto en mente veamos un ejemplo para cada estrategia.
+
+##### Factorización
+
+Factorizar consiste en representar un polinomio como una serie de productos de binomios (generalmente). Así, por ejemplo:
+
+\begin{equation}
+    \lim \limits_{x \rightarrow -3} \frac{x^2 + x -6}{x + 3}
+\end{equation}
+
+por sustitución directa tenemos que
+
+\begin{equation}
+\frac{(-3)^2 - 3 - 6}{-3 + 3} = \frac{0}{0}
+\end{equation}
+ 
+ Y una vez factorizado, asumiendo que $x \neq 3$ tenemos
+ 
+ \begin{equation}
+ \frac{x^2 + x - 6}{x + 3} = \frac{(x + 3)(x - 2)}{x + 3} = x-2
+ \end{equation}
+
+por lo tanto, utilizando sustitución directa en la forma factorizada tenemos que:
+
+\begin{equation}
+ \lim\limits_{x \rightarrow 3} x - 2 = - 3 - 2 = -5
+\end{equation}
+
+##### Conjugación racional
+
+Una expresión conjugada de un binomio está basada en la identidad:
+
+$$ a^2 - b^2 =(a + b)(a - b)$$
+
+Esta identidad se puede extender a los radicales:
+
+$$ a - b = (\sqrt{a} + \sqrt{b})(\sqrt{a} - \sqrt{b})$$
+
+De modod que el conjugado de $a + b$ es $a-b$, y el de $\sqrt{a} + \sqrt{b}$ es $\sqrt{a} - \sqrt{b}$.
+
+La aplicación de conjugados entonces es particularmente útil cuando queremos evaluar un el límite de una funcion racional con radicales. Por ejemplo en:
+
+\begin{equation}
+\lim \limits_{x \rightarrow 0} \frac{\sqrt{1 + x}-1}{x}
+\end{equation}
+
+por sustitución directa obtenemos \frac{0}{0}, pero no es posible factorizar el numerador, por lo tanto podemos utilizar el conjugado de $\sqrt{1 + x} - 1$. La manera de hacerlo es, primero identificar el cojugado como:
+
+\begin{equation}
+    \sqrt{1 + x} + 1
+\end{equation}
+
+Y multiplicar tanto el nuemerados como denominador por el conjugado:
+
+\begin{equation}
+  \frac{\sqrt{1 + x}-1}{x} \cdot  \frac{\sqrt{1 + x} + 1}{\sqrt{1 + x} + 1} = \frac{1 + x-1}{x(\sqrt{1 + x} + 1)} = \frac{1}{\sqrt{1 + x} + 1}
+\end{equation}
+
+Con lo que ya podemos evaluar:
+
+\begin{equation}
+\lim\limits_{x \rightarrow 0} \frac{1}{\sqrt{1 + x} + 1} = \frac{1}{1 + 1} = \frac{1}{2}
+\end{equation}
+
+##### Identidades trigonométricas
+

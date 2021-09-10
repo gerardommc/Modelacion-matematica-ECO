@@ -24,7 +24,7 @@
 <meta name="author" content="Gerardo Martín" />
 
 
-<meta name="date" content="2021-09-01" />
+<meta name="date" content="2021-09-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -382,6 +382,66 @@ Por lo que sabemos hay dos maneras que acercarnos a <span class="math inline">\(
 </ol>
 <div id="cómo-se-encuentran-los-límites" class="section level4" number="5.2.1.1">
 <h4><span class="header-section-number">5.2.1.1</span> ¿Cómo se encuentran los límites?</h4>
+<p>Enncontrar límites puede ser problemático, por lo que existe una variedad de estrategias cuyo uso depende del tipo de expresión que estemos evaluando. Por lo general, si tenemos <span class="math inline">\(\lim\limits_{x \rightarrow a} f(x)\)</span> se puede comenzar por evaluar <span class="math inline">\(f(a)\)</span>, con lo que tenemos tres posibilidades:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(f(a) = \frac{b}{0}, b \neq 0\)</span> (una asíntota vertical como en <span class="math inline">\(1/x\)</span>)</li>
+<li><span class="math inline">\(f(a) = b\)</span> (límite encontrado)</li>
+<li><span class="math inline">\(f(a) = \frac{0}{0}\)</span> (indeterminación)</li>
+</ol>
+<p>En el caso <strong>1</strong>, es probable que el límite no exista, lo cual depende de que <span class="math inline">\(\lim\limits_{x \rightarrow a^-} f(x) = \lim\limits_{x \rightarrow a^+} f(x)\)</span>. Para el caso <strong>2</strong>, el límite está claramente definido y no hay mayor problema. En el caso <strong>3</strong>, es necesario encontrar una manera equivalente de representar a <span class="math inline">\(f(a)\)</span>.</p>
+</div>
+<div id="representación-equivalente-de-las-funciones" class="section level4" number="5.2.1.2">
+<h4><span class="header-section-number">5.2.1.2</span> Representación equivalente de las funciones</h4>
+<p>Las tres estrategias más comunes para resolver límites donde <span class="math inline">\(f(a) = \frac{0}{0}\)</span> son:</p>
+<ol style="list-style-type: decimal">
+<li>Factorizar <span class="math inline">\(f(a)\)</span></li>
+<li>Conjugar <span class="math inline">\(f(a)\)</span></li>
+<li>Usar identidades trigonométricas</li>
+</ol>
+<p>Cabe aclarar que muchas de las transformaciones aquí descritas surten efecto bajo el supuesto de que <span class="math inline">\(x \neq a\)</span>, aunque una vez transformadas las funciones en efecto las evaluamos asumiendo que <span class="math inline">\(x = a\)</span>. Con esto en mente veamos un ejemplo para cada estrategia.</p>
+<div id="factorización" class="section level5" number="5.2.1.2.1">
+<h5><span class="header-section-number">5.2.1.2.1</span> Factorización</h5>
+<p>Factorizar consiste en representar un polinomio como una serie de productos de binomios (generalmente). Así, por ejemplo:</p>
+<p><span class="math display">\[\begin{equation}
+    \lim \limits_{x \rightarrow -3} \frac{x^2 + x -6}{x + 3}
+\end{equation}\]</span></p>
+<p>por sustitución directa tenemos que</p>
+<p><span class="math display">\[\begin{equation}
+\frac{(-3)^2 - 3 - 6}{-3 + 3} = \frac{0}{0}
+\end{equation}\]</span></p>
+<p>Y una vez factorizado, asumiendo que <span class="math inline">\(x \neq 3\)</span> tenemos</p>
+<p><span class="math display">\[\begin{equation}
+ \frac{x^2 + x - 6}{x + 3} = \frac{(x + 3)(x - 2)}{x + 3} = x-2
+ \end{equation}\]</span></p>
+<p>por lo tanto, utilizando sustitución directa en la forma factorizada tenemos que:</p>
+<p><span class="math display">\[\begin{equation}
+ \lim\limits_{x \rightarrow 3} x - 2 = - 3 - 2 = -5
+\end{equation}\]</span></p>
+</div>
+<div id="conjugación-racional" class="section level5" number="5.2.1.2.2">
+<h5><span class="header-section-number">5.2.1.2.2</span> Conjugación racional</h5>
+<p>Una expresión conjugada de un binomio está basada en la identidad:</p>
+<p><span class="math display">\[ a^2 - b^2 =(a + b)(a - b)\]</span></p>
+<p>Esta identidad se puede extender a los radicales:</p>
+<p><span class="math display">\[ a - b = (\sqrt{a} + \sqrt{b})(\sqrt{a} - \sqrt{b})\]</span></p>
+<p>De modod que el conjugado de <span class="math inline">\(a + b\)</span> es <span class="math inline">\(a-b\)</span>, y el de <span class="math inline">\(\sqrt{a} + \sqrt{b}\)</span> es <span class="math inline">\(\sqrt{a} - \sqrt{b}\)</span>.</p>
+<p>La aplicación de conjugados entonces es particularmente útil cuando queremos evaluar un el límite de una funcion racional con radicales. Por ejemplo en:</p>
+<p><span class="math display">\[\begin{equation}
+\lim \limits_{x \rightarrow 0} \frac{\sqrt{1 + x}-1}{x}
+\end{equation}\]</span></p>
+<p>por sustitución directa obtenemos , pero no es posible factorizar el numerador, por lo tanto podemos utilizar el conjugado de <span class="math inline">\(\sqrt{1 + x} - 1\)</span>. La manera de hacerlo es, primero identificar el cojugado como:</p>
+<p><span class="math display">\[\begin{equation}
+    \sqrt{1 + x} + 1
+\end{equation}\]</span></p>
+<p>Y multiplicar tanto el nuemerados como denominador por el conjugado:</p>
+<p><span class="math display">\[\begin{equation}
+  \frac{\sqrt{1 + x}-1}{x} \cdot  \frac{\sqrt{1 + x} + 1}{\sqrt{1 + x} + 1} = \frac{1 + x-1}{x(\sqrt{1 + x} + 1)} = \frac{1}{\sqrt{1 + x} + 1}
+\end{equation}\]</span></p>
+<p>Con lo que ya podemos evaluar:</p>
+<p><span class="math display">\[\begin{equation}
+\lim\limits_{x \rightarrow 0} \frac{1}{\sqrt{1 + x} + 1} = \frac{1}{1 + 1} = \frac{1}{2}
+\end{equation}\]</span></p>
+</div>
 </div>
 </div>
 </div>
