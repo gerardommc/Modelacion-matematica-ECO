@@ -155,7 +155,10 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="5.2.1" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#el-límite"><i class="fa fa-check"></i><b>5.2.1</b> El límite</a></li>
 </ul></li>
-<li class="chapter" data-level="5.3" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#derivación"><i class="fa fa-check"></i><b>5.3</b> Derivación</a></li>
+<li class="chapter" data-level="5.3" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#derivación"><i class="fa fa-check"></i><b>5.3</b> Derivación</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#ejemplos-2"><i class="fa fa-check"></i><b>5.3.1</b> Ejemplos</a></li>
+</ul></li>
 <li class="chapter" data-level="5.4" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#integración"><i class="fa fa-check"></i><b>5.4</b> Integración</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
@@ -487,6 +490,27 @@ Por lo que sabemos hay dos maneras que acercarnos a <span class="math inline">\(
 </div>
 <div id="derivación" class="section level2" number="5.3">
 <h2><span class="header-section-number">5.3</span> Derivación</h2>
+<p>Hasta el momento hemos mencionado en repetidas ocasiones una serie de conceptos relacionados muy íntimamente con la derivación. En esencia, en cálculo, el proceso de derivación se utiliza para estimar la pendiente de una recta tangente a un punto cualquiera que forma parte de una función (Figura <a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#fig:deriv">5.10</a>).</p>
+<div class="figure" style="text-align: center"><span id="fig:deriv"></span>
+<img src="Mod-mat-ECO_files/figure-html/deriv-1.png" alt="Representación gráfica de la tangente a un punto en la curva exponencial." width="480" />
+<p class="caption">
+Figura 5.10: Representación gráfica de la tangente a un punto en la curva exponencial.
+</p>
+</div>
+<p>El proceso de estimar la pendiente de una tangente a la función en un punto <span class="math inline">\((x, f(x))\)</span> consiste en estimar el límite:</p>
+<p><span class="math display" id="eq:derivada">\[\begin{equation}
+\lim \limits_{h \rightarrow 0} \frac{f(x + h) - f(x)}{x - (x + h)} \tag{5.6}
+\end{equation}\]</span></p>
+<p>Resolverlo no requiere de un conocimiento profundo para encontrar que por sustitución directa de <span class="math inline">\(h = 0\)</span>, se obtiene una undeterminación (<span class="math inline">\(0/0\)</span>). Sin embargo para entender mejor de qué se trata el límite de la ecuación <a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#eq:derivada">(5.6)</a> podemos explorarlo con la <a href="https://www.geogebra.org/classic/rjttr8kq">aplicación para derivadas</a>.</p>
+<div id="ejemplos-2" class="section level3" number="5.3.1">
+<h3><span class="header-section-number">5.3.1</span> Ejemplos</h3>
+<p>Comencemos con una ecuación cuadrática:</p>
+<p><span class="math display">\[ y = x^2\]</span>
+Con lo que la derivada sería:</p>
+<p><span class="math display">\[\begin{equation}
+\lim \limits_{h \rightarrow 0} \frac{(x + h)^2 - x}{h}
+\end{equation}\]</span></p>
+</div>
 </div>
 <div id="integración" class="section level2" number="5.4">
 <h2><span class="header-section-number">5.4</span> Integración</h2>

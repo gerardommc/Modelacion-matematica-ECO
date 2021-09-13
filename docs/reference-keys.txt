@@ -1,16 +1,16 @@
-fig:unnamed-chunk-17
 fig:unnamed-chunk-18
+fig:unnamed-chunk-19
 eq:juv
 eq:ad
 fig:juve-ad
 fig:volterra
 fig:lepto
-fig:unnamed-chunk-19
+fig:unnamed-chunk-20
 fig:volterra-diag
 eq:pulgadas
-tab:unnamed-chunk-22
-fig:unnamed-chunk-23
+tab:unnamed-chunk-23
 fig:unnamed-chunk-24
+fig:unnamed-chunk-25
 fig:parabola
 fig:parabola-2
 fig:parabola-3
@@ -47,6 +47,8 @@ fig:hiperb
 fig:absol
 fig:limite-def
 fig:limite-indef
+fig:deriv
+eq:derivada
 preámbulo
 encuadre-de-la-materia
 criterios-de-evaluación
@@ -107,4 +109,5 @@ conjugación-racional
 identidades-trigonométricas
 equivalencias-de-límites
 derivación
+ejemplos-2
 integración

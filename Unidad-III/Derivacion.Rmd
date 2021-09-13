@@ -1,0 +1,29 @@
+Hasta el momento hemos mencionado en repetidas ocasiones una serie de conceptos relacionados muy íntimamente con la derivación. En esencia, en cálculo, el proceso de derivación se utiliza para estimar la pendiente de una recta tangente a un punto cualquiera que forma parte de una función (Figura \@ref(fig:deriv)).
+
+```{r deriv, echo=F, fig.align='center', fig.cap="Representación gráfica de la tangente a un punto en la curva exponencial.", fig.height=5, fig.width=5}
+x <- seq(-2, 2, len = 100)
+y = exp(x)
+plot(x, y, type = "l", main = "Tangente a la función exponencial")
+points(1.5, exp(1.5), col = "red", pch = 20)
+abline(a = -2.227, b = exp(1.5), lty = 2, col = "red")
+```
+
+El proceso de estimar la pendiente de una tangente a la función en un punto $(x, f(x))$ consiste en estimar el límite:
+
+\begin{equation}
+\lim \limits_{h \rightarrow 0} \frac{f(x + h) - f(x)}{x - (x + h)} (\#eq:derivada)
+\end{equation}
+
+Resolverlo no requiere de un conocimiento profundo para encontrar que por sustitución directa de $h = 0$, se obtiene una undeterminación ($0/0$). Sin embargo para entender mejor de qué se trata el límite de la ecuación \@ref(eq:derivada) podemos explorarlo con la [aplicación para derivadas](https://www.geogebra.org/classic/rjttr8kq).
+
+### Ejemplos
+
+Comencemos con una ecuación cuadrática:
+
+$$ y = x^2$$
+Con lo que la derivada sería:
+
+\begin{equation}
+\lim \limits_{h \rightarrow 0} \frac{(x + h)^2 - x^2}{h}
+\end{equation}
+
