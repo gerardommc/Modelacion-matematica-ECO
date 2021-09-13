@@ -104,5 +104,7 @@ cómo-se-encuentran-los-límites
 representación-equivalente-de-las-funciones
 factorización
 conjugación-racional
+identidades-trigonométricas
+equivalencias-de-límites
 derivación
 integración

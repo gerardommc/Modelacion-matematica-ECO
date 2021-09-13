@@ -144,3 +144,52 @@ Con lo que ya podemos evaluar:
 
 ##### Identidades trigonométricas
 
+Cuano es necesario evaluar el límite de una función trigonométrica, es útil echar mano de las identidades, además de las ya bien conocidas, las pitagóricas:
+
+1. $\mathrm{sen}^2 \theta + \cos^2 \theta = 1$ 
+2. $\sec^2 \theta - \tan^2 \theta = 1$
+3. $\csc^2 \theta  - \cot^2 \theta = 1$
+
+Comencemos por ver un ejemplo basado en las identidades basadas en los cocientes.
+
+\begin{equation}
+\lim \limits_{x \rightarrow 0} \frac{3x \tan x}{\mathrm{sen}x}
+\end{equation}
+
+por sustitución directa tenemos que:
+
+\begin{equation}
+\frac{3(0)\tan 0}{\mathrm{sen} 0} = \frac{0}{0}
+\end{equation}
+
+lo que indica que necesitamos representar a la función de una manera alternativa, echando mano de las identidades. Sabemos que:
+
+\begin{equation}
+\tan \theta = \frac{\mathrm{sen} \theta}{\cos \theta}
+\end{equation}
+
+por lo tanto podemos representar la función como:
+
+\begin{equation}
+\frac{3x \tan x}{\mathrm{sen}x} = \frac{3x \mathrm{sen} x}{\cos^2 x} = \frac{3x}{\cos x}
+\end{equation}
+
+Entonces, tenemos el límite que puede ser evaluado por sustitución directa:
+
+\begin{equation}
+\lim \limits_{x \rightarrow 0} \frac{3x}{\cos x} = \frac{3(0)}{\cos 0} = \frac{0}{1} = 0
+\end{equation}
+
+#### Equivalencias de límites
+
+Los límites, como hemos visto, son números reales, por lo que todos los axiomas que ya conocemos aplican a los números reales:
+
+1. $\lim \limits_{x \rightarrow a} f(x) + g(x) = \lim \limits_{x \rightarrow a} f(x) + \lim \limits_{x \rightarrow a} g(x)$
+
+2. $\lim \limits_{x \rightarrow a} f(x) \cdot g(x) = \lim \limits_{x \rightarrow a} f(x) \cdot \lim \limits_{x \rightarrow a} g(x)$
+
+3. $\lim \limits_{x \rightarrow a} \frac{f(x)}{g(x)} = \frac{\lim \limits_{x \rightarrow a} f(x) }{ \lim \limits_{x \rightarrow a} g(x)}$
+
+4. $\lim \limits_{x \rightarrow a} c f(x) = c \lim \limits_{x \rightarrow a} f(x)$
+
+5. $\lim \limits_{x \rightarrow a} f(x)^2 = \left( \lim \limits_{x \rightarrow a} f(x) \right)^2$
