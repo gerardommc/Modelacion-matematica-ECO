@@ -115,4 +115,5 @@ ejemplos-2
 ecuación-cuadrática
 hiperbola
 notación
+reglas-de-derivación
 integración

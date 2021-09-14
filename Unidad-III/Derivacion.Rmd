@@ -47,7 +47,7 @@ Derivada:
 Podemos comenzar por simplificar las fracciones:
 
 \begin{equation}
-\lim \limits_{h \rightarrow 0} \frac{\frac{x - (x + h)}{x(x + h)}}{-h} = \lim \limits_{h \rightarrow 0} \frac{h}{x^2 + xh} \frac{1}{h} = \lim \limits_{h \rightarrow 0} \frac{1}{x^2}
+\lim \limits_{h \rightarrow 0} \frac{\frac{x - (x + h)}{x(x + h)}}{h} = \lim \limits - \frac{h}{x^2 + xh} \frac{1}{h} = \lim \limits_{h \rightarrow 0} -\frac{1}{x^2}
 \end{equation}
 
 Por lo tanto $y' = \frac{1}{x^2}$
@@ -66,4 +66,7 @@ la cual adolece de claridad, pues a menos que uno conozca bien la fórmula de la
 \frac{df}{dx} = f'(x) (\#eq:Leibniz)
 \end{equation}
 
-donde el numerador $df \approx \Delta f = f(x + h) - f(x)$ y el denominador $dx \approx \Delta x = (x+h) - x$. La letra $d$ se utiliza en lugar de $\Delta$ para indicar que se trata de un cambio contínuo, en lugar de discreto, el uso tradicional de $\Delta$.
+donde el numerador $df = \Delta f = f(x + h) - f(x)$ y el denominador $dx = \Delta x = (x+h) - x = h$. La letra $d$ se utiliza en lugar de $\Delta$ para indicar que se trata de un cambio contínuo, en lugar de discreto, el uso tradicional de $\Delta$.
+
+### Reglas de derivación
+
