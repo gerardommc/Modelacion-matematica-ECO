@@ -24,7 +24,7 @@
 <meta name="author" content="Gerardo Martín" />
 
 
-<meta name="date" content="2021-09-13" />
+<meta name="date" content="2021-09-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -158,6 +158,7 @@ div.csl-indent {
 <li class="chapter" data-level="5.3" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#derivación"><i class="fa fa-check"></i><b>5.3</b> Derivación</a>
 <ul>
 <li class="chapter" data-level="5.3.1" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#ejemplos-2"><i class="fa fa-check"></i><b>5.3.1</b> Ejemplos</a></li>
+<li class="chapter" data-level="5.3.2" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#notación"><i class="fa fa-check"></i><b>5.3.2</b> Notación</a></li>
 </ul></li>
 <li class="chapter" data-level="5.4" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#integración"><i class="fa fa-check"></i><b>5.4</b> Integración</a></li>
 </ul></li>
@@ -504,12 +505,44 @@ Figura 5.10: Representación gráfica de la tangente a un punto en la curva expo
 <p>Resolverlo no requiere de un conocimiento profundo para encontrar que por sustitución directa de <span class="math inline">\(h = 0\)</span>, se obtiene una undeterminación (<span class="math inline">\(0/0\)</span>). Sin embargo para entender mejor de qué se trata el límite de la ecuación <a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#eq:derivada">(5.6)</a> podemos explorarlo con la <a href="https://www.geogebra.org/classic/rjttr8kq">aplicación para derivadas</a>.</p>
 <div id="ejemplos-2" class="section level3" number="5.3.1">
 <h3><span class="header-section-number">5.3.1</span> Ejemplos</h3>
-<p>Comencemos con una ecuación cuadrática:</p>
+<div id="ecuación-cuadrática" class="section level4" number="5.3.1.1">
+<h4><span class="header-section-number">5.3.1.1</span> Ecuación cuadrática:</h4>
 <p><span class="math display">\[ y = x^2\]</span>
 Con lo que la derivada sería:</p>
 <p><span class="math display">\[\begin{equation}
-\lim \limits_{h \rightarrow 0} \frac{(x + h)^2 - x}{h}
+\lim \limits_{h \rightarrow 0} \frac{(x + h)^2 - x^2}{(x+h) - x}
 \end{equation}\]</span></p>
+<p>Utilizando las técnicas para resolver límites podemos que con este último se puede utilizar factorización para obtener:</p>
+<p><span class="math display">\[\begin{equation}
+\lim \limits_{h \rightarrow 0} \frac{(x + h)^2 - x^2}{(x+h) - x} = \lim \limits_{h \rightarrow 0} \frac{((x + h) - x)((x + h) - x)}{(x + h) + x} = \lim \limits_{h \rightarrow 0} (x + h) + x = \lim \limits_{h \rightarrow 0} 2x + h
+\end{equation}\]</span></p>
+<p>Con este resultado podemos ahora sí sustituir <span class="math inline">\(h\)</span> directamente para ver que la derivada <span class="math inline">\(y&#39; = 2x\)</span>.</p>
+</div>
+<div id="hiperbola" class="section level4" number="5.3.1.2">
+<h4><span class="header-section-number">5.3.1.2</span> Hiperbola</h4>
+<p><span class="math display">\[ y = \frac{1}{x}\]</span>
+Derivada:</p>
+<p><span class="math display">\[\begin{equation}
+\lim \limits_{h \rightarrow 0} \frac{\frac{1}{x + h} - \frac{1}{x}}{(x+h) - x}
+\end{equation}\]</span></p>
+<p>Podemos comenzar por simplificar las fracciones:</p>
+<p><span class="math display">\[\begin{equation}
+\lim \limits_{h \rightarrow 0} \frac{\frac{x - (x + h)}{x(x + h)}}{-h} = \lim \limits_{h \rightarrow 0} \frac{h}{x^2 + xh} \frac{1}{h} = \lim \limits_{h \rightarrow 0} \frac{1}{x^2}
+\end{equation}\]</span></p>
+<p>Por lo tanto <span class="math inline">\(y&#39; = \frac{1}{x^2}\)</span></p>
+</div>
+</div>
+<div id="notación" class="section level3" number="5.3.2">
+<h3><span class="header-section-number">5.3.2</span> Notación</h3>
+<p>La técnica de derivación se le atribuye a dos científicos, Isaac Newton y Gottfried Leibniz. La notación que se tradicionalmente enseña para comenzar con cáculo es la de Newton:</p>
+<p><span class="math display" id="eq:Newton">\[\begin{equation}
+f&#39;(x) = \lim \limits_{h \rightarrow 0} \frac{f(x + h) - f(x)}{h} \tag{5.7}
+\end{equation}\]</span></p>
+<p>la cual adolece de claridad, pues a menos que uno conozca bien la fórmula de la derivada no especifica el significado de <span class="math inline">\(f&#39;(x)\)</span>. La notación de Leibniz en cambio, sí lo especifica:</p>
+<p><span class="math display" id="eq:Leibniz">\[\begin{equation}
+\frac{df}{dx} = f&#39;(x) \tag{5.8}
+\end{equation}\]</span></p>
+<p>donde el numerador <span class="math inline">\(df \approx \Delta f = f(x + h) - f(x)\)</span> y el denominador <span class="math inline">\(dx \approx \Delta x = (x+h) - x\)</span>. La letra <span class="math inline">\(d\)</span> se utiliza en lugar de <span class="math inline">\(\Delta\)</span> para indicar que se trata de un cambio contínuo, en lugar de discreto, el uso tradicional de <span class="math inline">\(\Delta\)</span>.</p>
 </div>
 </div>
 <div id="integración" class="section level2" number="5.4">

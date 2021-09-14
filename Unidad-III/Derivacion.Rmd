@@ -18,12 +18,52 @@ Resolverlo no requiere de un conocimiento profundo para encontrar que por sustit
 
 ### Ejemplos
 
-Comencemos con una ecuación cuadrática:
+#### Ecuación cuadrática:
 
 $$ y = x^2$$
 Con lo que la derivada sería:
 
 \begin{equation}
-\lim \limits_{h \rightarrow 0} \frac{(x + h)^2 - x^2}{h}
+\lim \limits_{h \rightarrow 0} \frac{(x + h)^2 - x^2}{(x+h) - x}
 \end{equation}
 
+Utilizando las técnicas para resolver límites podemos que con este último se puede utilizar factorización para obtener:
+
+\begin{equation}
+\lim \limits_{h \rightarrow 0} \frac{(x + h)^2 - x^2}{(x+h) - x} = \lim \limits_{h \rightarrow 0} \frac{((x + h) - x)((x + h) - x)}{(x + h) + x} = \lim \limits_{h \rightarrow 0} (x + h) + x = \lim \limits_{h \rightarrow 0} 2x + h
+\end{equation}
+
+Con este resultado podemos ahora sí sustituir $h$ directamente para ver que la derivada $y' = 2x$.
+
+#### Hiperbola
+
+$$ y = \frac{1}{x}$$
+Derivada:
+
+\begin{equation}
+\lim \limits_{h \rightarrow 0} \frac{\frac{1}{x + h} - \frac{1}{x}}{(x+h) - x}
+\end{equation}
+
+Podemos comenzar por simplificar las fracciones:
+
+\begin{equation}
+\lim \limits_{h \rightarrow 0} \frac{\frac{x - (x + h)}{x(x + h)}}{-h} = \lim \limits_{h \rightarrow 0} \frac{h}{x^2 + xh} \frac{1}{h} = \lim \limits_{h \rightarrow 0} \frac{1}{x^2}
+\end{equation}
+
+Por lo tanto $y' = \frac{1}{x^2}$
+
+### Notación
+
+La técnica de derivación se le atribuye a dos científicos, Isaac Newton y Gottfried Leibniz. La notación que se tradicionalmente enseña para comenzar con cáculo es la de Newton:
+
+\begin{equation}
+f'(x) = \lim \limits_{h \rightarrow 0} \frac{f(x + h) - f(x)}{h} (\#eq:Newton)
+\end{equation}
+
+la cual adolece de claridad, pues a menos que uno conozca bien la fórmula de la derivada no especifica el significado de $f'(x)$. La notación de Leibniz en cambio, sí lo especifica:
+
+\begin{equation}
+\frac{df}{dx} = f'(x) (\#eq:Leibniz)
+\end{equation}
+
+donde el numerador $df \approx \Delta f = f(x + h) - f(x)$ y el denominador $dx \approx \Delta x = (x+h) - x$. La letra $d$ se utiliza en lugar de $\Delta$ para indicar que se trata de un cambio contínuo, en lugar de discreto, el uso tradicional de $\Delta$.

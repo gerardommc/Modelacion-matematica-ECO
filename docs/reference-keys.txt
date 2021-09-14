@@ -49,6 +49,8 @@ fig:limite-def
 fig:limite-indef
 fig:deriv
 eq:derivada
+eq:Newton
+eq:Leibniz
 preámbulo
 encuadre-de-la-materia
 criterios-de-evaluación
@@ -110,4 +112,7 @@ identidades-trigonométricas
 equivalencias-de-límites
 derivación
 ejemplos-2
+ecuación-cuadrática
+hiperbola
+notación
 integración
