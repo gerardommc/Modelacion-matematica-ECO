@@ -24,7 +24,7 @@
 <meta name="author" content="Gerardo Martín" />
 
 
-<meta name="date" content="2021-09-14" />
+<meta name="date" content="2021-09-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -547,6 +547,19 @@ f&#39;(x) = \lim \limits_{h \rightarrow 0} \frac{f(x + h) - f(x)}{h} \tag{5.7}
 </div>
 <div id="reglas-de-derivación" class="section level3" number="5.3.3">
 <h3><span class="header-section-number">5.3.3</span> Reglas de derivación</h3>
+<p>Como ya se habrán dado cuenta, la primera regla de la derivación está relacionada con los exponentes. Por ejemplo, la derivadas de <span class="math inline">\(f(x) = x^2\)</span> y <span class="math inline">\(f(x) = \frac{1}{x}\)</span>, son <span class="math inline">\(\frac{df}{dx} = 2x\)</span> y <span class="math inline">\(\frac{df}{dx} = - \frac{1}{x^2}\)</span> respectivamente. Nota, que en ambos casos, los exponentes de cada <span class="math inline">\(x\)</span>, se convirtieron en coeficientes en <span class="math inline">\(\frac{df}{dx}\)</span>, y que restamos <span class="math inline">\(1\)</span> a cada exponente de <span class="math inline">\(x\)</span>:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(x^2 \rightarrow 2x^{2-1} = 2x^1 = 2x\)</span></li>
+<li><span class="math inline">\(1/x = x^{-1} \rightarrow -1x^{-1-1} = -x^{-2} = - 1/x^2\)</span></li>
+</ol>
+<p>Entonces la primera regla de la derivación, se puede aplicar a muchas funciones. Si $f(x) = x^n $, $ = nx^{n-1} $.</p>
+<p>En casos donde <span class="math inline">\(x\)</span> aparece más de una vez, se considera que:</p>
+<p><span class="math display">\[f(x) = f_1(x) + f_2{x} + \dots + f_n(x)\]</span></p>
+<p>Y dado que la derivada es un límite, sabemos que <span class="math inline">\(f&#39;(x) = f&#39;_1(x) + f&#39;_2(x) + \dots + f&#39;_n(x)\)</span>.</p>
+<p>Por ejemplo, si tenemos la función</p>
+<p><span class="math display">\[y = a + bx + cx^2 + dx^3 = ax^0 + bx^1 + cx^2 + dx^3\]</span></p>
+<p>su derivada será</p>
+<p><span class="math display">\[ \frac{dy}{dx} = 0ax^{0-1} + bx^{1-1} + 2cx^{2-1} + 3dx^{3-1}= b + 2cx + 3dx^2\]</span></p>
 </div>
 </div>
 <div id="integración" class="section level2" number="5.4">
