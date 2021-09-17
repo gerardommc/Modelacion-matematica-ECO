@@ -116,4 +116,8 @@ ecuación-cuadrática
 hiperbola
 notación
 reglas-de-derivación
+potencias
+productos
+cocientes
+funciones-en-cadena
 integración

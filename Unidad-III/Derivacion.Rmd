@@ -70,6 +70,8 @@ donde el numerador $df = \Delta f = f(x + h) - f(x)$ y el denominador $dx = \Del
 
 ### Reglas de derivación
 
+#### Potencias
+
 Como ya se habrán dado cuenta, la primera regla de la derivación está relacionada con los exponentes. Por ejemplo, la derivadas de $f(x) = x^2$ y $f(x) = \frac{1}{x}$, son $\frac{df}{dx} = 2x$ y $\frac{df}{dx} = - \frac{1}{x^2}$ respectivamente. Nota, que en ambos casos, los exponentes de cada $x$, se convirtieron en coeficientes en $\frac{df}{dx}$, y que restamos $1$ a cada exponente de $x$:
 
 1. $x^2 \rightarrow 2x^{2-1} = 2x^1 = 2x$
@@ -90,3 +92,28 @@ $$y = a + bx + cx^2 + dx^3 = ax^0 + bx^1 + cx^2 + dx^3$$
 su derivada será
 
 $$ \frac{dy}{dx} = 0ax^{0-1} + bx^{1-1} + 2cx^{2-1} + 3dx^{3-1}= b + 2cx + 3dx^2$$
+
+#### Productos
+
+Si $h(x) = f(x)g(x)$ entonces:
+$$h'(x) = f'(x)g(x) + f(x)g'(x)$$
+
+#### Cocientes
+
+Si $h(x) = \frac{f(x)}{g(x)}$, entonces:
+
+$$h'(x) = \frac{f'(x)g(x) - f(x)g'(x)}{g(x)^2}$$
+
+#### Funciones en cadena
+
+Una función en cadena es aquella en que $h(x) = (f \circ g)(x) = f(g(x))$, entonces:
+
+$$h'(x) = f'(g(x))g'(x) = (f \circ g)'(x) g'(x)$$
+
+Aquí es preciso dar un ejemplo:
+
+$$h(x) = (3x-1)^2$$
+
+donde está claro que $g(x) = 3x^2-1$ y que $f(u) = u^2$. Por lo tanto si evaluamos $f'(u)$ cuando $u = 3x^2-1$, entonces $f'(u) = 2(3x^2-1)$. Por el otro lado, tenemos que, aplicando la regla de las potnecias, $g'(x) = 6x$. Entonces:
+
+$$h'(x) = 2(3x^2-1)6x$$
