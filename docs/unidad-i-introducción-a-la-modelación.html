@@ -24,7 +24,7 @@
 <meta name="author" content="Gerardo Martín" />
 
 
-<meta name="date" content="2021-09-17" />
+<meta name="date" content="2021-09-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -160,6 +160,8 @@ div.csl-indent {
 <li class="chapter" data-level="5.3.1" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#ejemplos-2"><i class="fa fa-check"></i><b>5.3.1</b> Ejemplos</a></li>
 <li class="chapter" data-level="5.3.2" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#notación"><i class="fa fa-check"></i><b>5.3.2</b> Notación</a></li>
 <li class="chapter" data-level="5.3.3" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#reglas-de-derivación"><i class="fa fa-check"></i><b>5.3.3</b> Reglas de derivación</a></li>
+<li class="chapter" data-level="5.3.4" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#representación-geométrica-de-la-derivada"><i class="fa fa-check"></i><b>5.3.4</b> Representación geométrica de la derivada</a></li>
+<li class="chapter" data-level="5.3.5" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#aplicaciones"><i class="fa fa-check"></i><b>5.3.5</b> Aplicaciones</a></li>
 </ul></li>
 <li class="chapter" data-level="5.4" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#integración"><i class="fa fa-check"></i><b>5.4</b> Integración</a></li>
 </ul></li>
@@ -192,7 +194,7 @@ div.csl-indent {
 <div id="qué-es-un-modelo" class="section level3" number="3.1.1">
 <h3><span class="header-section-number">3.1.1</span> ¿Qué es un modelo?</h3>
 <p>Imaginemos a seis personas invidentes, con la tarea de encontrar qué es el objeto que está frente a ellas usando únicamente el tacto. En la parábola de los seis hombres ciegos, el objeto es un elefante, de modo que la imágen que cada uno de ellos se forma del objeto depende enteramente de la parte del elefante que están tocando.</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-18"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-19"></span>
 <img src="Unidad-I/elefante.png" alt="La parábola de los seis hombres ciegos inspeccionando un elefante." width="582" />
 <p class="caption">
 Figura 3.1: La parábola de los seis hombres ciegos inspeccionando un elefante.
@@ -214,7 +216,7 @@ Figura 3.1: La parábola de los seis hombres ciegos inspeccionando un elefante.
 <li>Proponer una serie de modelos alternativos</li>
 <li>Determinar una estrategia para seleccionar uno solo de los modelos que propuse para logar el objetivo</li>
 </ol>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-19"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-20"></span>
 <img src="Unidad-I/Diagrama-dearrollo.png" alt=" Diagrama de mi estrategia para desarrollar modelos." width="306" />
 <p class="caption">
 Figura 3.2:  Diagrama de mi estrategia para desarrollar modelos.
@@ -310,7 +312,7 @@ Figura 3.5: Las barras (eje <span class="math inline">\(y\)</span>) indican el c
 <li>Diseño de productos</li>
 </ol>
 <p><span class="citation"><a href="#ref-haefner1998modeling" role="doc-biblioref">Haefner</a> (<a href="#ref-haefner1998modeling" role="doc-biblioref">1998</a>)</span> sumariza estos usos potenciales de los modelos de acuerdo con el nivel de entendimiento y calidad de datos en distintas áreas del conocimieto.</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-20"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-21"></span>
 <img src="Unidad-I/uso-modelos.png" alt="Relación entre el entendimiento y calidad de los datos, y los potenciales usos de los modelos en las diferentes disciplinas científicas [@haefner1998modeling]." width="648" />
 <p class="caption">
 Figura 3.6: Relación entre el entendimiento y calidad de los datos, y los potenciales usos de los modelos en las diferentes disciplinas científicas <span class="citation">(<a href="#ref-haefner1998modeling" role="doc-biblioref">Haefner 1998</a>)</span>.
@@ -399,7 +401,7 @@ cm = 2.54 \times in + \varepsilon
 \]</span></p>
 <p>donde <span class="math inline">\(\varepsilon\)</span> es el <em>error</em> que hemos introducido. Técnicamente para hacer esto utilizamos un generador de números aleatorios en el lenguaje de programación <strong>R</strong>. Veamos una serie de conversiones:</p>
 <table>
-<caption><span id="tab:unnamed-chunk-23">Tabla 3.1: </span>Cinco realizaciones para la conversión de dos pulgadas a centímetros con el modelo determinista y estocástico.</caption>
+<caption><span id="tab:unnamed-chunk-24">Tabla 3.1: </span>Cinco realizaciones para la conversión de dos pulgadas a centímetros con el modelo determinista y estocástico.</caption>
 <thead>
 <tr class="header">
 <th align="center">Determinista</th>
@@ -409,23 +411,23 @@ cm = 2.54 \times in + \varepsilon
 <tbody>
 <tr class="odd">
 <td align="center">5.08</td>
-<td align="center">5.284433</td>
+<td align="center">5.241960</td>
 </tr>
 <tr class="even">
 <td align="center">5.08</td>
-<td align="center">4.624242</td>
+<td align="center">4.770922</td>
 </tr>
 <tr class="odd">
 <td align="center">5.08</td>
-<td align="center">4.722414</td>
+<td align="center">4.976430</td>
 </tr>
 <tr class="even">
 <td align="center">5.08</td>
-<td align="center">4.833738</td>
+<td align="center">5.253306</td>
 </tr>
 <tr class="odd">
 <td align="center">5.08</td>
-<td align="center">4.798633</td>
+<td align="center">5.495847</td>
 </tr>
 </tbody>
 </table>

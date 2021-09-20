@@ -1,16 +1,16 @@
-fig:unnamed-chunk-18
 fig:unnamed-chunk-19
+fig:unnamed-chunk-20
 eq:juv
 eq:ad
 fig:juve-ad
 fig:volterra
 fig:lepto
-fig:unnamed-chunk-20
+fig:unnamed-chunk-21
 fig:volterra-diag
 eq:pulgadas
-tab:unnamed-chunk-23
-fig:unnamed-chunk-24
+tab:unnamed-chunk-24
 fig:unnamed-chunk-25
+fig:unnamed-chunk-26
 fig:parabola
 fig:parabola-2
 fig:parabola-3
@@ -51,6 +51,8 @@ fig:deriv
 eq:derivada
 eq:Newton
 eq:Leibniz
+eq:log-N
+eq:integ-limite
 preámbulo
 encuadre-de-la-materia
 criterios-de-evaluación
@@ -120,4 +122,6 @@ potencias
 productos
 cocientes
 funciones-en-cadena
+representación-geométrica-de-la-derivada
+aplicaciones
 integración

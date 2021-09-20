@@ -117,3 +117,55 @@ $$h(x) = (3x-1)^2$$
 donde está claro que $g(x) = 3x^2-1$ y que $f(u) = u^2$. Por lo tanto si evaluamos $f'(u)$ cuando $u = 3x^2-1$, entonces $f'(u) = 2(3x^2-1)$. Por el otro lado, tenemos que, aplicando la regla de las potnecias, $g'(x) = 6x$. Entonces:
 
 $$h'(x) = 2(3x^2-1)6x$$
+
+### Representación geométrica de la derivada
+
+Como resultado del proceso de derivación de una función $f(x)$ se obtiene una segunda función $f'(x)$ ó $\frac{d}{dx}f$ cufo valor corresponde a la pendiente de una tangente para cada par de valores $(x, f(x))$.
+
+La aplicación [Interpretación de la derivada](https://www.geogebra.org/classic/w3spjhc7), muestra ambas funciones y la recta tangente a $(x,f(x))$. Observa la pendiente de esta tangente y las coordenadas $(x, f'(x))$.
+
+### Aplicaciones
+
+Uno de los modelos más generalizables que se utilizan en ecología es el de crecimiento exponencial:
+
+$$N(t) = e^{rt}$$
+
+Como vimos anteriormente, este modelo se puede linealizar utilizando el logaritmo:
+
+\begin{equation}
+\ln N(t) = rt (\#eq:log-N)
+\end{equation}
+
+y si resolvemos para $r$, obtenemos que:
+
+$$r = \frac{\ln N}{t}$$
+
+la pendiente, o tasa de crecimiento de una poblaciones equivalente a $\ln N/t$, para cualquier período de tiempo. Volvamos sin embargo a la ecuación \@ref(eq:log-N), diferenciándola. Para esto utilizaremos la diferenciación implícita, pues necesitamos conocer:
+
+1. $\frac{d}{dt}rt = r$
+2. $\frac{d}{dt}N(t) \ln N = \frac{d}{dt} \frac{1}{N}$
+
+por lo tanto:
+
+$$\frac{dN}{dt} \frac{1}{N} = t$$
+
+Con lo que obtenemos la siguiente ecuación diferencial:
+
+\begin{equation}
+\frac{dN}{dt} = rN
+\end{equation}
+
+De este modo podemos ver que, el crecimiento instantáneo de una población durante el intervalo $dt$ es equivalente a la tasa de crecimiento exponencial $r$. Más adelante veremos por qué $f(x) = \ln x$, $f'(x) = 1/x$, por el momento esta equivalencia nos sirve para ver que si $N(t) = e^{rt}$:
+
+$$\frac{dN}{dt} = e^{rt} = rN$$
+Y si separamos ambos lados $N$ y $t$, tenemos:
+
+$$\frac{dN}{N} = r \cdot dt$$
+
+Por lo tanto, la derivada nos sirve para estudiar de cerca la tasa de crecimiento en relación al cambio de población $dN$ y de tiempo $dt$, con un modelo lineal.
+
+
+
+
+
+

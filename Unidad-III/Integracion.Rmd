@@ -1,0 +1,18 @@
+La integración es el proceso inverso a la derivación, es decir que la integral de la derivada $\frac{d}{dx}f$ es $f(x)$. El proceso de integración es de suma importancia pues la mayoría de los modelos dinámicos se formulan como ecuaciones diferenciales, los cuales se integran con la computadora para simulación.
+
+La notación tradicional de las integrales es:
+
+\begin{equation}
+    \int_a^b \!f(x) dx
+\end{equation}
+
+I se lee, la integral de $f(x)$ entre $a$ y $b$, donde $(a, b)$ es el intervalo de valores de $x$ en el que se evaluará la integral. Para las integrales se usa el signo $\int$, el cual es una "S", para suma. Al igual que en derivada, el signo $d$ es la versión contínua de $\Delta$, en las integrales $\int$ es la versión contínua de $\sum$.
+
+Matemáticamente, tal como la derivada, la integral es un límite de una función discreta:
+
+\begin{equation}
+    \int_a^b \!f(x) dx = \lim \limits_{n \righarrow \infty} \sum_{i = 1}^n f(x_i) \Delta x (\#eq:integ-limite)
+\end{equation}
+
+La ecuación \@ref(eq:integ-limite) parece muy complicada, pero en principio es muy sencilla. Enfoquémonos en el lado derecho, que comenzando con el operador de sumatoria $\sum$ indica que para cada valor $x_i$, se evalúa la función $f$, y se multiplica por la distancia que hay entre $x_i$ y $x_{i-1}$ ($\Delta x$). Si pensamos esto en el plano cartesiano, $f(x_i)$ es la distancia entre $0$ y el valor de $y$ en $f(x_i)$, por lo que al multiplicarlo por $\Delta x$ estamos obteniendo el área del rectángulo con lados de longitud $\Delta x$ y $f(x_i)$. Nota que conforme $n \rightarrow \infty$, la longiud de $\Delta x$ disminuye tanto, que el número de rectángulos con área $\Delta x \times f(x_i)$ tiende a infinito.
+

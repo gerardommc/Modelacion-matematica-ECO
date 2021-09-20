@@ -24,7 +24,7 @@
 <meta name="author" content="Gerardo Martín" />
 
 
-<meta name="date" content="2021-09-17" />
+<meta name="date" content="2021-09-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -160,6 +160,8 @@ div.csl-indent {
 <li class="chapter" data-level="5.3.1" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#ejemplos-2"><i class="fa fa-check"></i><b>5.3.1</b> Ejemplos</a></li>
 <li class="chapter" data-level="5.3.2" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#notación"><i class="fa fa-check"></i><b>5.3.2</b> Notación</a></li>
 <li class="chapter" data-level="5.3.3" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#reglas-de-derivación"><i class="fa fa-check"></i><b>5.3.3</b> Reglas de derivación</a></li>
+<li class="chapter" data-level="5.3.4" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#representación-geométrica-de-la-derivada"><i class="fa fa-check"></i><b>5.3.4</b> Representación geométrica de la derivada</a></li>
+<li class="chapter" data-level="5.3.5" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#aplicaciones"><i class="fa fa-check"></i><b>5.3.5</b> Aplicaciones</a></li>
 </ul></li>
 <li class="chapter" data-level="5.4" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#integración"><i class="fa fa-check"></i><b>5.4</b> Integración</a></li>
 </ul></li>
@@ -583,9 +585,52 @@ f&#39;(x) = \lim \limits_{h \rightarrow 0} \frac{f(x + h) - f(x)}{h} \tag{5.7}
 <p><span class="math display">\[h&#39;(x) = 2(3x^2-1)6x\]</span></p>
 </div>
 </div>
+<div id="representación-geométrica-de-la-derivada" class="section level3" number="5.3.4">
+<h3><span class="header-section-number">5.3.4</span> Representación geométrica de la derivada</h3>
+<p>Como resultado del proceso de derivación de una función <span class="math inline">\(f(x)\)</span> se obtiene una segunda función <span class="math inline">\(f&#39;(x)\)</span> ó <span class="math inline">\(\frac{d}{dx}f\)</span> cufo valor corresponde a la pendiente de una tangente para cada par de valores <span class="math inline">\((x, f(x))\)</span>.</p>
+<p>La aplicación <a href="https://www.geogebra.org/classic/w3spjhc7">Interpretación de la derivada</a>, muestra ambas funciones y la recta tangente a <span class="math inline">\((x,f(x))\)</span>. Observa la pendiente de esta tangente y las coordenadas <span class="math inline">\((x, f&#39;(x))\)</span>.</p>
+</div>
+<div id="aplicaciones" class="section level3" number="5.3.5">
+<h3><span class="header-section-number">5.3.5</span> Aplicaciones</h3>
+<p>Uno de los modelos más generalizables que se utilizan en ecología es el de crecimiento exponencial:</p>
+<p><span class="math display">\[N(t) = e^{rt}\]</span></p>
+<p>Como vimos anteriormente, este modelo se puede linealizar utilizando el logaritmo:</p>
+<p><span class="math display" id="eq:log-N">\[\begin{equation}
+\ln N(t) = rt \tag{5.9}
+\end{equation}\]</span></p>
+<p>y si resolvemos para <span class="math inline">\(r\)</span>, obtenemos que:</p>
+<p><span class="math display">\[r = \frac{\ln N}{t}\]</span></p>
+<p>la pendiente, o tasa de crecimiento de una poblaciones equivalente a <span class="math inline">\(\ln N/t\)</span>, para cualquier período de tiempo. Volvamos sin embargo a la ecuación <a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#eq:log-N">(5.9)</a>, diferenciándola. Para esto utilizaremos la diferenciación implícita, pues necesitamos conocer:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\frac{d}{dt}rt = r\)</span></li>
+<li><span class="math inline">\(\frac{d}{dt}N(t) \ln N = \frac{d}{dt} \frac{1}{N}\)</span></li>
+</ol>
+<p>por lo tanto:</p>
+<p><span class="math display">\[\frac{dN}{dt} \frac{1}{N} = t\]</span></p>
+<p>Con lo que obtenemos la siguiente ecuación diferencial:</p>
+<p><span class="math display">\[\begin{equation}
+\frac{dN}{dt} = rN
+\end{equation}\]</span></p>
+<p>De este modo podemos ver que, el crecimiento instantáneo de una población durante el intervalo <span class="math inline">\(dt\)</span> es equivalente a la tasa de crecimiento exponencial <span class="math inline">\(r\)</span>. Más adelante veremos por qué <span class="math inline">\(f(x) = \ln x\)</span>, <span class="math inline">\(f&#39;(x) = 1/x\)</span>, por el momento esta equivalencia nos sirve para ver que si <span class="math inline">\(N(t) = e^{rt}\)</span>:</p>
+<p><span class="math display">\[\frac{dN}{dt} = e^{rt} = rN\]</span>
+Y si separamos ambos lados <span class="math inline">\(N\)</span> y <span class="math inline">\(t\)</span>, tenemos:</p>
+<p><span class="math display">\[\frac{dN}{N} = r \cdot dt\]</span></p>
+<p>Por lo tanto, la derivada nos sirve para estudiar de cerca la tasa de crecimiento en relación al cambio de población <span class="math inline">\(dN\)</span> y de tiempo <span class="math inline">\(dt\)</span>, con un modelo lineal.</p>
+</div>
 </div>
 <div id="integración" class="section level2" number="5.4">
 <h2><span class="header-section-number">5.4</span> Integración</h2>
+<p>La integración es el proceso inverso a la derivación, es decir que la integral de la derivada <span class="math inline">\(\frac{d}{dx}f\)</span> es <span class="math inline">\(f(x)\)</span>. El proceso de integración es de suma importancia pues la mayoría de los modelos dinámicos se formulan como ecuaciones diferenciales, los cuales se integran con la computadora para simulación.</p>
+<p>La notación tradicional de las integrales es:</p>
+<p><span class="math display">\[\begin{equation}
+    \int_a^b \!f(x) dx
+\end{equation}\]</span></p>
+<p>I se lee, la integral de <span class="math inline">\(f(x)\)</span> entre <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span>, donde <span class="math inline">\((a, b)\)</span> es el intervalo de valores de <span class="math inline">\(x\)</span> en el que se evaluará la integral. Para las integrales se usa el signo <span class="math inline">\(\int\)</span>, el cual es una “S,” para suma. Al igual que en derivada, el signo <span class="math inline">\(d\)</span> es la versión contínua de <span class="math inline">\(\Delta\)</span>, en las integrales <span class="math inline">\(\int\)</span> es la versión contínua de <span class="math inline">\(\sum\)</span>.</p>
+<p>Matemáticamente, tal como la derivada, la integral es un límite de una función discreta:</p>
+<p><span class="math display" id="eq:integ-limite">\[\begin{equation}
+    \int_a^b \!f(x) dx = \lim \limits_{n \righarrow \infty} \sum_{i = 1}^n f(x_i) \Delta x \tag{5.10}
+\end{equation}\]</span></p>
+<p>La ecuación <a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#eq:integ-limite">(5.10)</a> parece muy complicada, pero en principio es muy sencilla. Enfoquémonos en el lado derecho, que comenzando con el operador de sumatoria <span class="math inline">\(\sum\)</span> indica que para cada valor <span class="math inline">\(x_i\)</span>, se evalúa la función <span class="math inline">\(f\)</span>, y se multiplica por la distancia que hay entre <span class="math inline">\(x_i\)</span> y <span class="math inline">\(x_{i-1}\)</span> (<span class="math inline">\(\Delta x\)</span>). Si pensamos esto en el plano cartesiano, <span class="math inline">\(f(x_i)\)</span> es la distancia entre <span class="math inline">\(0\)</span> y el valor de <span class="math inline">\(y\)</span> en <span class="math inline">\(f(x_i)\)</span>, por lo que al multiplicarlo por <span class="math inline">\(\Delta x\)</span> estamos obteniendo el área del rectángulo con lados de longitud <span class="math inline">\(\Delta x\)</span> y <span class="math inline">\(f(x_i)\)</span>. Nota que conforme <span class="math inline">\(n \rightarrow \infty\)</span>, la longiud de <span class="math inline">\(\Delta x\)</span> disminuye tanto, que el número de rectángulos con área <span class="math inline">\(\Delta x \times f(x_i)\)</span> tiende a infinito.</p>
 
 </div>
 </div>
