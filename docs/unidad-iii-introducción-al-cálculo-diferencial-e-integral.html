@@ -24,7 +24,7 @@
 <meta name="author" content="Gerardo Martín" />
 
 
-<meta name="date" content="2021-09-20" />
+<meta name="date" content="2021-09-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -163,7 +163,11 @@ div.csl-indent {
 <li class="chapter" data-level="5.3.4" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#representación-geométrica-de-la-derivada"><i class="fa fa-check"></i><b>5.3.4</b> Representación geométrica de la derivada</a></li>
 <li class="chapter" data-level="5.3.5" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#aplicaciones"><i class="fa fa-check"></i><b>5.3.5</b> Aplicaciones</a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#integración"><i class="fa fa-check"></i><b>5.4</b> Integración</a></li>
+<li class="chapter" data-level="5.4" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#integración"><i class="fa fa-check"></i><b>5.4</b> Integración</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#área-bajo-una-recta"><i class="fa fa-check"></i><b>5.4.1</b> Área bajo una recta</a></li>
+<li class="chapter" data-level="5.4.2" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#integración-como-antiderivada"><i class="fa fa-check"></i><b>5.4.2</b> Integración como antiderivada</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -620,18 +624,55 @@ Y si separamos ambos lados <span class="math inline">\(N\)</span> y <span class=
 </div>
 <div id="integración" class="section level2" number="5.4">
 <h2><span class="header-section-number">5.4</span> Integración</h2>
-<p>La integración es el proceso inverso a la derivación, es decir que la integral de la derivada <span class="math inline">\(\frac{d}{dx}f\)</span> es <span class="math inline">\(f(x)\)</span>. El proceso de integración es de suma importancia pues la mayoría de los modelos dinámicos se formulan como ecuaciones diferenciales, los cuales se integran con la computadora para simulación.</p>
-<p>La notación tradicional de las integrales es:</p>
+<p>** Sección en construcción, no usar estos materiales**</p>
+<p>La integración es el proceso de estimación del área bajo la curva de una función. En el sentido estricto, el proceso de integración es el
+inverso a la derivación, es decir que la integral de la derivada <span class="math inline">\(\frac{d}{dx}f\)</span> es <span class="math inline">\(f(x)\)</span>. La integración es de suma importancia pues la mayoría de los modelos dinámicos se formulan como ecuaciones diferenciales, los cuales normalmente se integran con la computadora.</p>
+<p>Al igual que con límites y derivadas, hay toda una notación que se utiliza en la integración. La notación tradicional de las integrales es:</p>
 <p><span class="math display">\[\begin{equation}
     \int_a^b \!f(x) dx
 \end{equation}\]</span></p>
-<p>I se lee, la integral de <span class="math inline">\(f(x)\)</span> entre <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span>, donde <span class="math inline">\((a, b)\)</span> es el intervalo de valores de <span class="math inline">\(x\)</span> en el que se evaluará la integral. Para las integrales se usa el signo <span class="math inline">\(\int\)</span>, el cual es una “S,” para suma. Al igual que en derivada, el signo <span class="math inline">\(d\)</span> es la versión contínua de <span class="math inline">\(\Delta\)</span>, en las integrales <span class="math inline">\(\int\)</span> es la versión contínua de <span class="math inline">\(\sum\)</span>.</p>
-<p>Matemáticamente, tal como la derivada, la integral es un límite de una función discreta:</p>
+<p>I se lee, la integral de <span class="math inline">\(f(x)\)</span> entre <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span>. <span class="math inline">\((a, b)\)</span> corresponde a dos valores mínimo (<span class="math inline">\(a\)</span>) y máximo (<span class="math inline">\(b\)</span>) de <span class="math inline">\(x\)</span> en el que se evaluará la integral. El símbolo <span class="math inline">\(\int\)</span>, es una “S,” e indica la suma de valores contínuos. Al igual que en la derivada, el signo <span class="math inline">\(d\)</span> es la versión contínua de <span class="math inline">\(\Delta\)</span>, en las integrales <span class="math inline">\(\int\)</span> es la versión contínua de <span class="math inline">\(\sum\)</span>.</p>
+<p>Al igual que la derivada, la integral es un límite de una función discreta:</p>
 <p><span class="math display" id="eq:integ-limite">\[\begin{equation}
-    \int_a^b \!f(x) dx = \lim \limits_{n \righarrow \infty} \sum_{i = 1}^n f(x_i) \Delta x \tag{5.10}
+    \int_a^b \!f(x) dx = \lim \limits_{n \rightarrow \infty} \sum_{i = 1}^n f(x_i) \Delta x \tag{5.10}
 \end{equation}\]</span></p>
 <p>La ecuación <a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#eq:integ-limite">(5.10)</a> parece muy complicada, pero en principio es muy sencilla. Enfoquémonos en el lado derecho, que comenzando con el operador de sumatoria <span class="math inline">\(\sum\)</span> indica que para cada valor <span class="math inline">\(x_i\)</span>, se evalúa la función <span class="math inline">\(f\)</span>, y se multiplica por la distancia que hay entre <span class="math inline">\(x_i\)</span> y <span class="math inline">\(x_{i-1}\)</span> (<span class="math inline">\(\Delta x\)</span>). Si pensamos esto en el plano cartesiano, <span class="math inline">\(f(x_i)\)</span> es la distancia entre <span class="math inline">\(0\)</span> y el valor de <span class="math inline">\(y\)</span> en <span class="math inline">\(f(x_i)\)</span>, por lo que al multiplicarlo por <span class="math inline">\(\Delta x\)</span> estamos obteniendo el área del rectángulo con lados de longitud <span class="math inline">\(\Delta x\)</span> y <span class="math inline">\(f(x_i)\)</span>. Nota que conforme <span class="math inline">\(n \rightarrow \infty\)</span>, la longiud de <span class="math inline">\(\Delta x\)</span> disminuye tanto, que el número de rectángulos con área <span class="math inline">\(\Delta x \times f(x_i)\)</span> tiende a infinito.</p>
+<div class="figure" style="text-align: center"><span id="fig:La-integral"></span>
+<img src="Unidad-III/Esquema-integral.png" alt="Representación esquemática de la integral. Nota quq utilizando los rectángulos, es posible aproximar el valor de una integral con rectángulos que pasen por arriba o abajo de la curva." width="446" />
+<p class="caption">
+Figura 5.11: Representación esquemática de la integral. Nota quq utilizando los rectángulos, es posible aproximar el valor de una integral con rectángulos que pasen por arriba o abajo de la curva.
+</p>
+</div>
+<p>Puedes explorar estos conceptos con la <a href="https://www.geogebra.org/classic/wmpqmr4a">aplicación para el área bajo una recta de Geogebra</a>.</p>
+<div id="área-bajo-una-recta" class="section level3" number="5.4.1">
+<h3><span class="header-section-number">5.4.1</span> Área bajo una recta</h3>
+<p>Un ejemplo clásico de integración es el área bajo una recta con pendiente <span class="math inline">\(m \neq 0\)</span> e intercepto <span class="math inline">\(a=0\)</span>, a cual corresponde al área de un triángulo (figura <a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#fig:Area-recta">5.12</a>).</p>
+<div class="figure" style="text-align: center"><span id="fig:Area-recta"></span>
+<img src="Unidad-III/Area-bajo-recta.png" alt="Área bajo la recta f(x) = x, entre el punto A = 0 y B = 1." width="916" />
+<p class="caption">
+Figura 5.12: Área bajo la recta f(x) = x, entre el punto A = 0 y B = 1.
+</p>
+</div>
+<p>Utilizando el método de los rectángulos tenemos que el área sombreada en la figura <a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#fig:Area-recta">5.12</a> entre los puntos <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> se puede aproximar sumando rectángulos con altura <span class="math inline">\(f(x)\)</span> y ancho <span class="math inline">\(\Delta x\)</span>.</p>
+<div class="figure" style="text-align: center"><span id="fig:Recta-area-rect"></span>
+<img src="Unidad-III/Rectangulos.png" alt="Método de los rectángulos para calcular área bajo curva" width="578" />
+<p class="caption">
+Figura 5.13: Método de los rectángulos para calcular área bajo curva
+</p>
+</div>
+<p>Para automatizar este proceso y encontrar todos los valores de <span class="math inline">\(x\)</span> en el intervalo <span class="math inline">\(a, b\)</span>, podemos comenzar por tomar en cuenta el número de rectángulos, como en la figura <a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#fig:Recta-area-rect">5.13</a>, cuantos más rectángulos tenemos el error de cálculo será menor.</p>
+<p>La siguiente consideración será si tomaremos en cuenta el punto inferior o superior del intervalo (figura <a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#fig:La-integral">5.11</a>). Si tomamos en cuenta el punto inferior del intervalo, la altura del primer rectángulo será <span class="math inline">\(f(a)\)</span>, y el ancho será <span class="math inline">\(\Delta x = a + a/n\)</span>.</p>
+</div>
+<div id="integración-como-antiderivada" class="section level3" number="5.4.2">
+<h3><span class="header-section-number">5.4.2</span> Integración como antiderivada</h3>
+<p>Como ya se mencionó, la integral es el proceso opuesto a la derivación, de modo que <span class="math inline">\(\int f&#39;(x) = f(x)\)</span>. En este contexto, resulta fácil inferir bajo la regla de las potencias, que si <span class="math inline">\(f(x) = ax^n\)</span>, <span class="math inline">\(\int f(x) = \frac{ax^{n+1}}{n+1}\)</span>. Si derivamos <span class="math inline">\(\int f(x)\)</span>, veremos que <span class="math inline">\(f(x) = ax^n\)</span>.</p>
+<p>Esta sencillísima técnica es efectiva para funciones sin constantes, puesto que la derivada de una constante es 0. Sin embargo debido a que al integrar una función no tenemos ningún conocimiento sobre la existencia o ausencia de una constante (p. ej. <span class="math inline">\(y = a + bx\)</span>), es necesario asumir su existencia, de modo que:</p>
+<p><span class="math display">\[\begin{equation}
+\int f(x) = \frac{ax^{n+1}}{n+1} + c
+\end{equation}\]</span></p>
+<p>donde <span class="math inline">\(c\)</span> es la constante de integración.</p>
 
+</div>
 </div>
 </div>
             </section>

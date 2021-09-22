@@ -53,6 +53,9 @@ eq:Newton
 eq:Leibniz
 eq:log-N
 eq:integ-limite
+fig:La-integral
+fig:Area-recta
+fig:Recta-area-rect
 preámbulo
 encuadre-de-la-materia
 criterios-de-evaluación
@@ -125,3 +128,5 @@ funciones-en-cadena
 representación-geométrica-de-la-derivada
 aplicaciones
 integración
+área-bajo-una-recta
+integración-como-antiderivada
