@@ -129,4 +129,7 @@ representación-geométrica-de-la-derivada
 aplicaciones
 integración
 área-bajo-una-recta
-integración-como-antiderivada
+el-teorema-funamental-del-cálculo
+antiderivadas-de-funciones
+integración-analítica
+integración-numérica

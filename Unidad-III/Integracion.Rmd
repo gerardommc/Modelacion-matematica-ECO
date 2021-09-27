@@ -1,23 +1,20 @@
-** Sección en construcción, no usar estos materiales**
+La integración es el proceso de estimación del área bajo la curva de una función, y para nosotros como ecólogxs es muyimportante, pues la mayoría de los modelos dinámicos se formulan como ecuaciones diferenciales, los cuales debemos integrar para obtener las soluciones.
 
-La integración es el proceso de estimación del área bajo la curva de una función. En el sentido estricto, el proceso de integración es el
-inverso a la derivación, es decir que la integral de la derivada $\frac{d}{dx}f$ es $f(x)$. La integración es de suma importancia pues la mayoría de los modelos dinámicos se formulan como ecuaciones diferenciales, los cuales normalmente se integran con la computadora.
-
-Al igual que con límites y derivadas, hay toda una notación que se utiliza en la integración. La notación tradicional de las integrales es:
+Al igual que con límites y derivadas, hay toda una notación particular de la integración:
 
 \begin{equation}
     \int_a^b \!f(x) dx
 \end{equation}
 
-I se lee, la integral de $f(x)$ entre $a$ y $b$. $(a, b)$ corresponde a dos valores mínimo ($a$) y máximo ($b$) de $x$ en el que se evaluará la integral. El símbolo $\int$, es una "S", e indica la suma de valores contínuos. Al igual que en la derivada, el signo $d$ es la versión contínua de $\Delta$, en las integrales $\int$ es la versión contínua de $\sum$.
+Y se lee, la integral de $f(x)$ entre $a$ y $b$. $[a, b]$ corresponde a dos valores, mínimo ($a$) y máximo ($b$), de $x$ entre los cuales  se evaluará el área. El símbolo $\int$, es una "S", e indica la suma de valores contínuos. Al igual que en la derivada, el signo $d$ es la versión contínua de $\Delta$, en las integrales $\int$ es la versión contínua de $\sum$.
 
-Al igual que la derivada, la integral es un límite de una función discreta:
+Otra similitud entre la dericada y la integral es que est última es un límite:
 
 \begin{equation}
-    \int_a^b \!f(x) dx = \lim \limits_{n \rightarrow \infty} \sum_{i = 1}^n f(x_i) \Delta x (\#eq:integ-limite)
+    \int_a^b \!f(x) dx = \lim \limits_{n \rightarrow \infty} \sum_{i = 1}^n f(x_i) \Delta x; \Delta x = \frac{b-a}{n} (\#eq:integ-limite)
 \end{equation}
 
-La ecuación \@ref(eq:integ-limite) parece muy complicada, pero en principio es muy sencilla. Enfoquémonos en el lado derecho, que comenzando con el operador de sumatoria $\sum$ indica que para cada valor $x_i$, se evalúa la función $f$, y se multiplica por la distancia que hay entre $x_i$ y $x_{i-1}$ ($\Delta x$). Si pensamos esto en el plano cartesiano, $f(x_i)$ es la distancia entre $0$ y el valor de $y$ en $f(x_i)$, por lo que al multiplicarlo por $\Delta x$ estamos obteniendo el área del rectángulo con lados de longitud $\Delta x$ y $f(x_i)$. Nota que conforme $n \rightarrow \infty$, la longiud de $\Delta x$ disminuye tanto, que el número de rectángulos con área $\Delta x \times f(x_i)$ tiende a infinito.
+Para comprederla, enfoquémonos en el lado derecho, que comenzando con el operador de sumatoria $\sum$ indica que para cada valor $x_i$, se evalúa la función $f$, y se multiplica por la distancia que hay entre $x_i$ y $x_{i-1}$ ($\Delta x$). Si pensamos esto en el plano cartesiano, $f(x_i)$ es la distancia entre $0$ y el valor de $y$ en $f(x_i)$, por lo que al multiplicarlo por $\Delta x$ estamos obteniendo el área de un rectángulo con lados de longitud $\Delta x$ y $f(x_i)$. Nota que conforme $n \rightarrow \infty$, la longiud de $\Delta x$ disminuye tanto, que el número de rectángulos con área $\Delta x \times f(x_i)$ tiende a infinito.
 
 ```{r La-integral, echo = F, fig.align='center', fig.cap="Representación esquemática de la integral. Nota quq utilizando los rectángulos, es posible aproximar el valor de una integral con rectángulos que pasen por arriba o abajo de la curva."}
 knitr::include_graphics("Unidad-III/Esquema-integral.png")
@@ -27,26 +24,35 @@ Puedes explorar estos conceptos con la [aplicación para el área bajo una recta
 
 ### Área bajo una recta
 
-Un ejemplo clásico de integración es el área bajo una recta con pendiente $m \neq 0$ e intercepto $a=0$, a cual corresponde al área de un triángulo (figura \@ref(fig:Area-recta)).
+Un ejemplo clásico de integración es el área bajo una recta con pendiente $m \neq 0$ e intercepto $0$, la cual corresponde al área de un triángulo (figura \@ref(fig:Area-recta)).
 
-```{r Area-recta, echo = F, fig.align='center', fig.cap="Área bajo la recta f(x) = x, entre el punto A = 0 y B = 1."}
+```{r Area-recta, echo = F, fig.align='center', fig.cap="Área bajo la recta f(x) = x, entre el punto 0 y a = 1."}
 knitr::include_graphics("Unidad-III/Area-bajo-recta.png")
 ```
 
-Utilizando el método de los rectángulos tenemos que el área sombreada en la figura \@ref(fig:Area-recta) entre los puntos $A$ y $B$ se puede aproximar sumando rectángulos con altura $f(x)$ y ancho $\Delta x$.
+Utilizando el método de los rectángulos tenemos que el área sombreada en la figura \@ref(fig:Area-recta) entre los puntos $0$ y $a$ se puede aproximar sumando rectángulos con altura $f(x)$ y ancho $\Delta x$.
 
 ```{r Recta-area-rect, echo = F, fig.align='center', fig.cap="Método de los rectángulos para calcular área bajo curva"}
 knitr::include_graphics("Unidad-III/Rectangulos.png")
 ```
 
-Para automatizar este proceso y encontrar todos los valores de $x$ en el intervalo $a, b$, podemos comenzar por tomar en cuenta el número de rectángulos, como en la figura \@ref(fig:Recta-area-rect), cuantos más rectángulos tenemos el error de cálculo será menor.
+Para automatizar este proceso y encontrar todos los valores de $x$ en el intervalo $0, a$, podemos comenzar por tomar en cuenta el número de rectángulos, como en la figura \@ref(fig:Recta-area-rect), cuantos más rectángulos tenemos el error de cálculo será menor.
 
-La siguiente consideración será si tomaremos en cuenta el punto inferior o superior del intervalo (figura \@ref(fig:La-integral)). Si tomamos en cuenta el punto inferior del intervalo, la altura del primer rectángulo será $f(a)$, y el ancho será $\Delta x = a + a/n$.
+La siguiente consideración será si tomaremos en cuenta el punto inferior o superior del intervalo (figura \@ref(fig:La-integral)). Si tomamos en cuenta el punto inferior del intervalo, la altura del primer rectángulo será $f(0)$, y el ancho será $\Delta x = a/n$. Por otra parte, tenemos que los valores de $x$ en que evaluaremos $f(x)$ corresponden a los valores de $x: 0, a/n, 2a/n, 3a/n, \dots, (n-1)a/n, a$, Si comenzamos con $n = 10$, y $a = 1$ tenemos que evaluar $f(x)$ en los valores:
 
+$$x = \left \{ 0, \frac{1}{10}, \frac{1}{10}, \dots, \frac{9}{10}, 1 \right \}$$
 
-### Integración como antiderivada
+Estas integrales se comoces como de Riemann. Por muchos años los matemáticos se dieron a la tarea de encontrar las funciones que resultaban de  incremetar el número de rectángulos bajo la curva de diversas funciones. No fue sino hasta que Newton y Leibniz acuñaron el teorema fundamental del cálculo que se obtuvieron las herramientas necesarias para estimar *fácilmente* el ára bajo la curva de cualquier función.
 
-Como ya se mencionó, la integral es el proceso opuesto a la derivación, de modo que $\int f'(x) = f(x)$. En este contexto, resulta fácil inferir bajo la regla de las potencias, que si $f(x) = ax^n$, $\int f(x) = \frac{ax^{n+1}}{n+1}$. Si derivamos $\int f(x)$, veremos que $f(x) = ax^n$.
+**De aquí en adelante está en construcción, no usar!**
+
+### El teorema funamental del cálculo
+
+Este teorema establece que la integral de una derivada $\frac{d}{dx}f$ es $f(x)$ (la función misma).
+
+#### Antiderivadas de funciones
+
+Bajo la regla de las potencias, que si $f(x) = ax^n$, $\int f(x) = \frac{ax^{n+1}}{n+1}$. Si derivamos $\int f(x)$, veremos que $f(x) = ax^n$.
 
 Esta sencillísima técnica es efectiva para funciones sin constantes, puesto que la derivada de una constante es 0. Sin embargo debido a que al integrar una función no tenemos ningún conocimiento sobre la existencia o ausencia de una constante (p. ej. $y = a + bx$), es necesario asumir su existencia, de modo que:
 
@@ -55,3 +61,7 @@ Esta sencillísima técnica es efectiva para funciones sin constantes, puesto qu
 \end{equation}
 
 donde $c$ es la constante de integración.
+
+### Integración analítica
+
+### Integración numérica
