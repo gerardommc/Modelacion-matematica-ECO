@@ -1,0 +1,3 @@
+Gracias a Thomas Malthus comprendimos qué sucede con una población cuando llega a estar libre de limitantes externas, sin embargo ¿cómo podemos representar lo que sucede con una población cuando existen dichas limitaciones? La respuesta es el modelo logístico. Este modelo es una variación del modelo malthusiano, pero para regular la tasa neta de crecimiento incorpora una segunda función de $N$ que al multiplicar a $r$ se vuelve cero cuando $N$ alcanza un nivel máximo definido matemáticamente.
+
+El crecimiento logístico ocurre en el mundo real más frecuentemente que el malthusiano, pues todos los organismos vivientes crecen a expensas de otros, lo cual también se conoce como denso-dependencia, es decir, que el crecimiento neto depende de la densidad poblacional existente.
