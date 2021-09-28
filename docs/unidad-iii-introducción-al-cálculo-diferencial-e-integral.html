@@ -24,7 +24,7 @@
 <meta name="author" content="Gerardo Martín" />
 
 
-<meta name="date" content="2021-09-27" />
+<meta name="date" content="2021-09-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -167,8 +167,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="5.4.1" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#área-bajo-una-recta"><i class="fa fa-check"></i><b>5.4.1</b> Área bajo una recta</a></li>
 <li class="chapter" data-level="5.4.2" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#el-teorema-funamental-del-cálculo"><i class="fa fa-check"></i><b>5.4.2</b> El teorema funamental del cálculo</a></li>
-<li class="chapter" data-level="5.4.3" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#integración-analítica"><i class="fa fa-check"></i><b>5.4.3</b> Integración analítica</a></li>
-<li class="chapter" data-level="5.4.4" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#integración-numérica"><i class="fa fa-check"></i><b>5.4.4</b> Integración numérica</a></li>
+<li class="chapter" data-level="5.4.3" data-path="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"><a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#aplicaciones-de-la-integración"><i class="fa fa-check"></i><b>5.4.3</b> Aplicaciones de la integración</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
@@ -668,7 +667,11 @@ Figura 5.13: Método de los rectángulos para calcular área bajo curva
 </div>
 <div id="el-teorema-funamental-del-cálculo" class="section level3" number="5.4.2">
 <h3><span class="header-section-number">5.4.2</span> El teorema funamental del cálculo</h3>
-<p>Este teorema establece que la integral de una derivada <span class="math inline">\(\frac{d}{dx}f\)</span> es <span class="math inline">\(f(x)\)</span> (la función misma).</p>
+<p>Este teorema establece, en términos muy generales que</p>
+<p><span class="math display">\[\begin{equation}
+\int \frac{d}{dx}f = f(x)
+\end{equation}\]</span></p>
+<p>la integral de una derivada es la función misma con la que se obtuvo la derivada. Así, llegamos a la antiderivada.</p>
 <div id="antiderivadas-de-funciones" class="section level4" number="5.4.2.1">
 <h4><span class="header-section-number">5.4.2.1</span> Antiderivadas de funciones</h4>
 <p>Bajo la regla de las potencias, que si <span class="math inline">\(f(x) = ax^n\)</span>, <span class="math inline">\(\int f(x) = \frac{ax^{n+1}}{n+1}\)</span>. Si derivamos <span class="math inline">\(\int f(x)\)</span>, veremos que <span class="math inline">\(f(x) = ax^n\)</span>.</p>
@@ -679,12 +682,43 @@ Figura 5.13: Método de los rectángulos para calcular área bajo curva
 <p>donde <span class="math inline">\(c\)</span> es la constante de integración.</p>
 </div>
 </div>
-<div id="integración-analítica" class="section level3" number="5.4.3">
-<h3><span class="header-section-number">5.4.3</span> Integración analítica</h3>
+<div id="aplicaciones-de-la-integración" class="section level3" number="5.4.3">
+<h3><span class="header-section-number">5.4.3</span> Aplicaciones de la integración</h3>
+<div id="cambio-acumulativo" class="section level4" number="5.4.3.1">
+<h4><span class="header-section-number">5.4.3.1</span> Cambio acumulativo</h4>
+<p>El modelo de crecimiento exponencial, basado en la ecuación:</p>
+<p><span class="math display" id="eq:ExponN">\[\begin{equation}
+    N(t) = e^{rt} \tag{5.11}
+\end{equation}\]</span></p>
+<p>es la base de un gran número de modelos en ecología. Cuando transformamos este modelo en una ecuación diferencial, toma una apariencia un tanto diferente. Comencemos por recordar que si <span class="math inline">\(f(x) = e^x\)</span>, entonces <span class="math inline">\(f&#39;(x) = e^x\)</span>. Si agregamos un parámetro <span class="math inline">\(r\)</span> como coeficiente de <span class="math inline">\(x\)</span>, tenemos que <span class="math inline">\(f(x)= e^{rx}\)</span>, resultando exactamente en el modelo <a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html#eq:ExponN">(5.11)</a>.</p>
+<p>Para derivar este modelo necesitamos recordar que:</p>
+<p><span class="math display">\[\frac{d}{dx}(f \circ g)(x) = (f \circ g)&#39;(x)g&#39;(x)\]</span>
+y por analogía <span class="math inline">\((f \circ g)(x) = e^{rt}\)</span> y <span class="math inline">\(g(x) = rt\)</span>, por lo tanto:</p>
+<p><span class="math display">\[\begin{equation}
+\frac{dN}{dt} = r e^{rt}
+\end{equation}\]</span></p>
+<p>donde podemos sustituir <span class="math inline">\(e^{rt}\)</span> por <span class="math inline">\(N\)</span>, para obtener:</p>
+<p><span class="math display">\[\begin{equation}
+\frac{dN}{dt} = r N
+\end{equation}\]</span></p>
+<p>que el cambio inmediato en el número de individuos de la población <span class="math inline">\(N\)</span>, es proporcional a <span class="math inline">\(rN\)</span>. La integral <span class="math inline">\(\int_{0}^{t} \frac{dN}{dt}\)</span> es entonces equivalente al número de individuos en ese momento <span class="math inline">\(t\)</span>, mientras que <span class="math inline">\(\int_{0}^{t} N(t)\)</span> corresponde al número total de individuos que hay y ha habido en esa población!</p>
 </div>
-<div id="integración-numérica" class="section level3" number="5.4.4">
-<h3><span class="header-section-number">5.4.4</span> Integración numérica</h3>
+<div id="integración-analítica-vs-numérica" class="section level4" number="5.4.3.2">
+<h4><span class="header-section-number">5.4.3.2</span> Integración analítica vs numérica</h4>
+<p>En matemáticas, el término <em>analítico</em> se utiliza para describir el proceso de encontrar con herramientas formales de las matemáticas una solución exacta a un problema. Por ejemplo la antiderivación, aplicando a la inversa las relgas de la derivación es la integración analítica. Hay modelos sin embargo que no se pueden resolver con herramientas analíticas, típicamente, aquellos en que no podemos separar las variables dependientes e independientes. En esos casos hacemos integración <em>numérica</em>, que consiste en aproximaciones al valor de la función pero nunca representan las soluciones exactas que se obtienen con integración analítica.</p>
+<p>Veamos la ecuación diferencial:</p>
+<p><span class="math display" id="eq:dif-1">\[\begin{equation}
+\frac{dN}{dt} = rN \tag{5.12}
+\end{equation}\]</span></p>
+<p>corresponde a una función que conocemos como <span class="math inline">\(N = e^{rt}\)</span>, sin embargo podríamos aproximarnos recursivamente a los valores que prediciría <span class="math inline">\(e^{rt}\)</span> utilizando la definición de la derivada. Sabemos que la derivada es la pendiente de una recta, por lo tanto podríamos comenzar por dibujar una recta con pendiente <span class="math inline">\(rN\)</span> partiendo desde <span class="math inline">\(t = 0\)</span>, hasta un punto <span class="math inline">\(0+dx\)</span>. El cambio absoluto de <span class="math inline">\(N\)</span> (<span class="math inline">\(dN\)</span>) sería entonces <span class="math inline">\(rN \times dt\)</span>, cuyo valorr utilizaremos como punto de partida. Mencioné anteriormente que este método es una aproximación, y esto es porque resulta en un error que se va acumulando entre la función verdadera <span class="math inline">\(N = e^{rt}\)</span> y la que aproximamos revirtiendo secuencialmente la derivada (figura ).</p>
+<div class="figure" style="text-align: center"><span id="fig:integ-numer"></span>
+<img src="Mod-mat-ECO_files/figure-html/integ-numer-1.png" alt="Diferencias entre integración analítica vs integración numérica." width="576" />
+<p class="caption">
+Figura 5.14: Diferencias entre integración analítica vs integración numérica.
+</p>
+</div>
 
+</div>
 </div>
 </div>
 </div>

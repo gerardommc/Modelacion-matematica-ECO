@@ -48,7 +48,13 @@ Estas integrales se comoces como de Riemann. Por muchos años los matemáticos s
 
 ### El teorema funamental del cálculo
 
-Este teorema establece que la integral de una derivada $\frac{d}{dx}f$ es $f(x)$ (la función misma).
+Este teorema establece, en términos muy generales que 
+
+\begin{equation}
+\int \frac{d}{dx}f = f(x)
+\end{equation}
+
+la integral de una derivada es la función misma con la que se obtuvo la derivada. Así, llegamos a la antiderivada.
 
 #### Antiderivadas de funciones
 
@@ -62,6 +68,66 @@ Esta sencillísima técnica es efectiva para funciones sin constantes, puesto qu
 
 donde $c$ es la constante de integración.
 
-### Integración analítica
+### Aplicaciones de la integración
 
-### Integración numérica
+#### Cambio acumulativo
+
+El modelo de crecimiento exponencial, basado en la ecuación:
+
+\begin{equation}
+    N(t) = e^{rt} (\#eq:ExponN)
+\end{equation}
+
+es la base de un gran número de modelos en ecología. Cuando transformamos este modelo en una ecuación diferencial, toma una apariencia un tanto diferente. Comencemos por recordar que si $f(x) = e^x$, entonces $f'(x) = e^x$. Si agregamos un parámetro $r$ como coeficiente de $x$, tenemos que $f(x)= e^{rx}$, resultando exactamente en el modelo \@ref(eq:ExponN).
+
+Para derivar este modelo necesitamos recordar que:
+
+$$\frac{d}{dx}(f \circ g)(x) = (f \circ g)'(x)g'(x)$$
+y por analogía $(f \circ g)(x) = e^{rt}$ y $g(x) = rt$, por lo tanto:
+
+\begin{equation}
+\frac{dN}{dt} = r e^{rt}
+\end{equation}
+
+donde podemos sustituir $e^{rt}$ por $N$, para obtener:
+
+\begin{equation}
+\frac{dN}{dt} = r N
+\end{equation}
+
+que el cambio inmediato en el número de individuos de la población $N$, es proporcional a $rN$. La integral $\int_{0}^{t} \frac{dN}{dt}$ es entonces equivalente al número de individuos en ese momento $t$, mientras que $\int_{0}^{t} N(t)$ corresponde al número total de individuos que hay y ha habido en esa población!
+
+#### Integración analítica vs numérica
+
+En matemáticas, el término *analítico* se utiliza para describir el proceso de encontrar con herramientas formales de las matemáticas una solución exacta a un problema. Por ejemplo la antiderivación, aplicando a la inversa las relgas de la derivación es la integración analítica. Hay modelos sin embargo que no se pueden resolver con herramientas analíticas, típicamente, aquellos en que no podemos separar las variables dependientes e independientes. En esos casos hacemos integración *numérica*, que consiste en aproximaciones al valor de la función pero nunca representan las soluciones exactas que se obtienen con integración analítica.
+
+Veamos la ecuación diferencial:
+
+\begin{equation}
+\frac{dN}{dt} = rN (\#eq:dif-1)
+\end{equation}
+
+corresponde a una función que conocemos como $N = e^{rt}$, sin embargo podríamos aproximarnos recursivamente a los valores que prediciría $e^{rt}$ utilizando la definición de la derivada. Sabemos que la derivada es la pendiente de una recta, por lo tanto podríamos comenzar por dibujar una recta con pendiente $rN$ partiendo desde $t = 0$, hasta un punto $0+dx$. El cambio absoluto de $N$ ($dN$) sería entonces $rN \times dt$, cuyo valorr utilizaremos como punto de partida. Mencioné anteriormente que este método es una aproximación, y esto es porque resulta en un error que se va acumulando entre la función verdadera $N = e^{rt}$ y la que aproximamos revirtiendo secuencialmente la derivada (figura ).
+
+```{r integ-numer, echo = F, fig.align='center', fig.cap="Diferencias entre integración analítica vs integración numérica, para r = 0.1, dt = 1, y población inicial de N = 1.", fig.width=6, fig.height=5}
+t <- 0:20
+r <- 0.1
+N <- 1 * exp(r * t)
+
+N.1 <- numeric(21)
+N.1[1] <- 1
+dt <- 1
+for(i in 2:length(N.1)){N.1[i] <- N.1[i-1] + (r*N.1[i-1])*dt}
+
+df.1 <- data.frame(t = t, N = N, modelo = "Analítico")
+df.2 <- data.frame(t = t, N = N.1, modelo = "Numérico")
+
+df.3 <- rbind(df.1, df.2)
+
+library(ggplot2)
+
+ggplot(df.3) + geom_point(aes(x = t, y = N, colour = modelo)) + 
+    geom_line(aes(x = t, y = N, colour = modelo)) + 
+    theme_classic()
+```
+

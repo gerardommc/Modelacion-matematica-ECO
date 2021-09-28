@@ -56,6 +56,9 @@ eq:integ-limite
 fig:La-integral
 fig:Area-recta
 fig:Recta-area-rect
+eq:ExponN
+eq:dif-1
+fig:integ-numer
 preámbulo
 encuadre-de-la-materia
 criterios-de-evaluación
@@ -131,5 +134,6 @@ integración
 área-bajo-una-recta
 el-teorema-funamental-del-cálculo
 antiderivadas-de-funciones
-integración-analítica
-integración-numérica
+aplicaciones-de-la-integración
+cambio-acumulativo
+integración-analítica-vs-numérica
