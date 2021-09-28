@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>References | Modelos Matemáticos en Ecología I</title>
+  <title> 6 Unidad IV: Modelos deterministas basados en ecuaciones diferenciales ordinarias | Modelos Matemáticos en Ecología I</title>
   <meta name="description" content="Sitio del curso de la Licenciatura en Ecología de la ENES unidad Mérida" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="References | Modelos Matemáticos en Ecología I" />
+  <meta property="og:title" content=" 6 Unidad IV: Modelos deterministas basados en ecuaciones diferenciales ordinarias | Modelos Matemáticos en Ecología I" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="References | Modelos Matemáticos en Ecología I" />
+  <meta name="twitter:title" content=" 6 Unidad IV: Modelos deterministas basados en ecuaciones diferenciales ordinarias | Modelos Matemáticos en Ecología I" />
   
   <meta name="twitter:description" content="Sitio del curso de la Licenciatura en Ecología de la ENES unidad Mérida" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html"/>
-
+<link rel="prev" href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"/>
+<link rel="next" href="references.html"/>
 <script src="libs/header-attrs-2.8/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -204,31 +204,92 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="references" class="section level1 unnumbered">
-<h1>References</h1>
+<div id="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias" class="section level1" number="6">
+<h1><span class="header-section-number"> 6</span> Unidad IV: Modelos deterministas basados en ecuaciones diferenciales ordinarias</h1>
+<div id="modelos-lineales-crecimiento-exponencial-malthusiano" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> Modelos lineales: Crecimiento exponencial (Malthusiano)</h2>
+<p>El modelo de crecimiento exponencial también recibe el nombre de “Malthusiano,” en honor al matemático inglés Thomas Malthus, quien acuñó la teoría demográfica subyacente en la publicación anónima de 1798 <em>Ensayo sobre el principio de la población</em>. Este libro trata, no de ecología, sino de las raíces de la pobreza en las sociedades capitalistas, según Malthus, ocasionada por la escasez de recursos. Muchas de las ideas de Malthus, son típicas del pensamiento colonial inglés del período en que vivió, sin embargo, son ecológicamente significativas.</p>
+<p>El modelo malthusiano sugiere que, en ausencia de limitaciones, las poblaciones de humanos tenderían a crecer exponencialmente, de ahí que al modelo:</p>
+<p><span class="math display" id="eq:Malthus">\[\begin{equation}
+ \frac{dN}{dt} = rN \tag{6.1}
+\end{equation}\]</span></p>
+<p>se le llame modelo de crecimiento malthusiano. La intepretación de <span class="math inline">\(r\)</span> como la tasa de crecimiento sin limitación de alimento, espacio y en ausencia de competencia entre individuos o especies, es la principal aportación de Malthus, y ha servido de base para la formulación de teorías como la evolución.</p>
+<div id="interpretación-de-r" class="section level3" number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> Interpretación de <span class="math inline">\(r\)</span></h3>
+<p>Más que tasa de crecimiento, <span class="math inline">\(r\)</span> representa la tasa de cambio del proceso que estamos observando. Estrictamente hablando una población cambia en razón a dos procesos, nacimientos y muertes. De manera relativamente obvia, los nacimientos representan el crecimiento de la población y las muertes del decrecimiento. Por lo tanto, es frecuente considerar que <span class="math inline">\(r = n - m\)</span>, con <span class="math inline">\(n=\)</span> nacimientos y <span class="math inline">\(m=\)</span> muertes. Si sustiuimos esta re-interpretación de <span class="math inline">\(r\)</span>, en la ecuación <a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#eq:Malthus">(6.1)</a> tenemos:</p>
+<p><span class="math display">\[\begin{equation}
+    \frac{dN}{dt} = (n - m)N = nN - mN
+\end{equation}\]</span></p>
+<p>esta re-parametrización del modelo es buena para ejemplificar que si <span class="math inline">\(n &gt; m \rightarrow r&gt;0\)</span>, si <span class="math inline">\(n &lt; m \rightarrow r &lt; 0\)</span> y que si <span class="math inline">\(n = m \rightarrow r = 0\)</span>. El balance entre nacimientos y muertes entonces es la clave para que una población permanezca constante, crezca o disminuya.</p>
+<p>Este balance entre nacimientos y muertes puede también ser concebido como flujos de entrada y salida de un compartimento (figura <a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#fig:nacim-muert">6.1</a>).</p>
+<div class="figure" style="text-align: center"><span id="fig:nacim-muert"></span>
+<img src="Unidad-IV/Malthus-nacim-muert.png" alt="Esquema representativo del modelo de crecimiento malthusiano como flujo de nacimientos y muertes." width="447" />
+<p class="caption">
+Figura 6.1: Esquema representativo del modelo de crecimiento malthusiano como flujo de nacimientos y muertes.
+</p>
+</div>
+</div>
+<div id="análisis-del-modelo" class="section level3" number="6.1.2">
+<h3><span class="header-section-number">6.1.2</span> Análisis del modelo</h3>
+<p>Hasta el momento hemos visto ya muchas de las propiedades el modelo exponencial:</p>
+<ol style="list-style-type: decimal">
+<li>Su derivada es equivalente al valor de la función misma</li>
+<li>Su antiderivada es por lo tanto, igualmente equivalente al valor de la función</li>
+<li>Puede ser representado, como ecuación diferencial, de manera implícita, sin que la variable independiente <span class="math inline">\(t\)</span> aparezca en el lado derecho de la ecuación (<a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#eq:Malthus">(6.1)</a>)</li>
+<li>Al ser representado de manera implícita, el modelo exponencial es lineal con respecto de la variable dependiente del tiempo</li>
+</ol>
+<p>Estas propiedades hacen que analizar el modelo de crecimiento malthusiano sea relativamente sencillo.</p>
+</div>
+<div id="análisis-de-estabilidad" class="section level3" number="6.1.3">
+<h3><span class="header-section-number">6.1.3</span> Análisis de estabilidad</h3>
+<p>Este análisis surge de la pregunta ¿bajo qué condiciones una población <span class="math inline">\(N\)</span> con tasa de crecimiento <span class="math inline">\(r\)</span> permanece constante? Dada la ecuación <a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#eq:Malthus">(6.1)</a> sabemos que si <span class="math inline">\(\frac{dN}{dt} &gt; 0\)</span>, <span class="math inline">\(N \rightarrow \infty\)</span>, por el contrario si <span class="math inline">\(\frac{dN}{dt} &lt; 0\)</span>, <span class="math inline">\(N \rightarrow 0\)</span>. Entonces, para que no haya cambios en <span class="math inline">\(N\)</span>, necesitamos que <span class="math inline">\(\frac{dN}{dt} = 0\)</span>. De esta equivalencia tenemos que si:</p>
+<p><span class="math display">\[rN = 0\]</span>
+Es debido a que, <span class="math inline">\(r=0\)</span> si <span class="math inline">\(N \neq 0\)</span>, ó <span class="math inline">\(N=0\)</span> si <span class="math inline">\(r \neq 0\)</span>. Es decir que el número de individuos <span class="math inline">\(N\)</span> en una población permanecerá constante sólo bajo dos condiciones, si su tasa de crecimiento es cero, ó no tiene individuos.</p>
+</div>
+<div id="períodos-de-duplicación" class="section level3" number="6.1.4">
+<h3><span class="header-section-number">6.1.4</span> Períodos de duplicación</h3>
+<p>Otra pregunta frecuente en el análisis de poblaciones es ¿cuánto tiempo tardará en duplicarse el tamaño de una población? Para responder esta pregunta, necesitamos la forma cerrada de
+la ecuación <a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#eq:Malthus">(6.1)</a>:</p>
+<p><span class="math display" id="eq:Malthus-c">\[\begin{equation}
+N(t) = N_0 e^{rt} \tag{6.2}
+\end{equation}\]</span></p>
+<p>En el análisis de estabilidad encontramos los casos en que <span class="math inline">\(\frac{dN}{dt} = 0\)</span>, por el contrario aquí nos interesa encontrar, con base en la ecuación <a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#eq:Malthus-c">(6.2)</a> cuánto tiempo transcurrirá para que <span class="math inline">\(N(t) = 2N_0\)</span>, lo cual podemos conocer resolviendo:</p>
+<p><span class="math display">\[2N_0 = N_0 e^{rt}\]</span>
+para <span class="math inline">\(t\)</span>:</p>
+<p><span class="math display">\[\begin{align}
+e^{rt} &amp;= 2\\ \notag
+rt &amp;= \ln 2\\ \notag
+t &amp;= \frac{\ln 2}{r}
+\end{align}\]</span></p>
+<p>Es así que podemos representar el período de duplicación de una población cualquiera como una función de su tasa de cambio (figura <a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#fig:periodo-dupl">6.2</a>).</p>
+<div class="figure" style="text-align: center"><span id="fig:periodo-dupl"></span>
+<img src="Mod-mat-ECO_files/figure-html/periodo-dupl-1.png" alt="Período de duplicación en función de la tasa de crecimiento de una población." width="480" />
+<p class="caption">
+Figura 6.2: Período de duplicación en función de la tasa de crecimiento de una población.
+</p>
+</div>
+</div>
+<div id="estimación-de-la-tasa-de-cambio-r" class="section level3" number="6.1.5">
+<h3><span class="header-section-number">6.1.5</span> Estimación de la tasa de cambio <span class="math inline">\(r\)</span></h3>
+<p>Para un ecólogo es de suma utilidad conocer la variación de <span class="math inline">\(r\)</span> para poder medir los efectos del medio ambiente u otras especies sobre los cambios demográficos de una o varias poblaciones. En principio es posible obtener los posibles valores de <span class="math inline">\(r\)</span> a partir de la ecuación <a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#eq:Malthus-c">(6.2)</a>, resolviéndola para <span class="math inline">\(r\)</span>:</p>
+<p><span class="math display">\[\begin{align}
+\frac{N}{N_0} &amp;= e^{rt}\\
+\ln \left(\frac{N}{N_0} \right) &amp;= rt\\
+r &amp;= \frac{\ln N - \ln N_0}{t}
+\end{align}\]</span></p>
+<p>En caso de que tengamos observaciones puntuales de <span class="math inline">\(N\)</span> y <span class="math inline">\(N_0\)</span> a lo largo del tiempo.</p>
+</div>
+<div id="implicaciones-del-crecimiento-exponencial" class="section level3" number="6.1.6">
+<h3><span class="header-section-number">6.1.6</span> Implicaciones del crecimiento exponencial</h3>
+<p>Una manera de visualizar las repercusiones el crecimiento exponencial y los períodos de duplicación queda de manifiesto con el acertijo:</p>
+<p><em>Tenemos una población de bacterias que se duplica cada minuto, y tenemos cuatro frascos para albergarla. El primer frasco tardó una hora en llenarse, ¿cuánto tiempo pasará para que se llenen los tres frascos restantes?</em></p>
+</div>
+</div>
+<div id="modelos-no-lineales-crecimiento-logístico-de-una-población" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> Modelos no lineales: Crecimiento logístico de una población</h2>
+<p>Gracias a Thomas Malthus comprendimos qué sucede con una población cuando llega a estar libre de limitantes externas, sin embargo ¿cómo podemos representar lo que sucede con una población cuando existen dichas limitaciones? La respuesta es el modelo logístico. Este modelo es una variación del modelo malthusiano, pero para regular la tasa neta de crecimiento incorpora una segunda función de <span class="math inline">\(N\)</span> que al multiplicar a <span class="math inline">\(r\)</span> se vuelve cero cuando <span class="math inline">\(N\)</span> alcanza un nivel máximo definido matemáticamente.</p>
+<p>El crecimiento logístico ocurre en el mundo real más frecuentemente que el malthusiano, pues todos los organismos vivientes crecen a expensas de otros, lo cual también se conoce como denso-dependencia, es decir, que el crecimiento neto depende de la densidad poblacional existente.</p>
 
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div class="csl-entry">
-Haefner, James W. 1998. <span>“Modeling Biological Systems.”</span> <em>Bulletin of Mathematical Biology</em> 60 (3): 597.
-</div>
-<div class="csl-entry">
-Holling, Crawford S. 1978. <em>Adaptive Environmental Assessment and Management</em>. John Wiley &amp; Sons.
-</div>
-<div class="csl-entry">
-Holt, John, Stephen Davis, and Herwig Leirs. 2006. <span>“A Model of Leptospirosis Infection in an African Rodent to Determine Risk to Humans: Seasonal Fluctuations and the Impact of Rodent Control.”</span> <em>Acta Tropica</em> 99 (2-3): 218–25.
-</div>
-<div class="csl-entry">
-Karplus, Walter J. 1975. <span>“The Place of Systems Ecology Models in the Spectrum of Mathematical Models.”</span> <em>IN: New Direction in the Analysis of Ecological Systems, Edited by GS Innis. Simulation Council Proceedings Series</em> 5 (2): 225–28.
-</div>
-<div class="csl-entry">
-Otto, Sarah P, and Troy Day. 2011. <em>A Biologist’s Guide to Mathematical Modeling in Ecology and Evolution</em>. Princeton University Press.
-</div>
-<div class="csl-entry">
-Volterra, Vito. 1928. <span>“Variations and Fluctuations of the Number of Individuals in Animal Species Living Together.”</span> <em>ICES Journal of Marine Science</em> 3 (1): 3–51.
-</div>
-<div class="csl-entry">
-Wilenski, Ulrich. 2003. <span>“NetLogo Honeycomb Model.”</span> <a href="http://ccl.northwestern.edu/netlogo/models/Honeycomb">http://ccl.northwestern.edu/netlogo/models/Honeycomb</a>.
-</div>
 </div>
 </div>
             </section>
@@ -236,8 +297,8 @@ Wilenski, Ulrich. 2003. <span>“NetLogo Honeycomb Model.”</span> <a href="htt
           </div>
         </div>
       </div>
-<a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

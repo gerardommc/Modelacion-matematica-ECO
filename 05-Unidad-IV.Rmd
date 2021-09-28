@@ -1,4 +1,4 @@
-#Unidad IV: Modelos deterministas basados en ecuaciones diferenciales ordinarias
+# Unidad IV: Modelos deterministas basados en ecuaciones diferenciales ordinarias
 
 ## Modelos lineales: Crecimiento exponencial (Malthusiano)
 ```{r echo = F, child="Unidad-IV/Modelos-lineales.Rmd"}

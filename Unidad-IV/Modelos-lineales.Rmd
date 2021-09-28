@@ -78,7 +78,7 @@ Para un ecólogo es de suma utilidad conocer la variación de $r$ para poder med
 \begin{align}
 \frac{N}{N_0} &= e^{rt}\\
 \ln \left(\frac{N}{N_0} \right) &= rt\\
-r = \frac{\ln N - \ln N_0}{t}
+r &= \frac{\ln N - \ln N_0}{t}
 \end{align}
 
 En caso de que tengamos observaciones puntuales de $N$ y $N_0$ a lo largo del tiempo.

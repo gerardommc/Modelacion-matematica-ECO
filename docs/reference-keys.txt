@@ -141,6 +141,7 @@ antiderivadas-de-funciones
 aplicaciones-de-la-integración
 cambio-acumulativo
 integración-analítica-vs-numérica
+unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias
 modelos-lineales-crecimiento-exponencial-malthusiano
 interpretación-de-r
 análisis-del-modelo
