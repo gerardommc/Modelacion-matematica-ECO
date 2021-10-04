@@ -24,7 +24,7 @@
 <meta name="author" content="Gerardo Martín" />
 
 
-<meta name="date" content="2021-09-28" />
+<meta name="date" content="2021-10-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -235,7 +235,7 @@ Figura 6.1: Esquema representativo del modelo de crecimiento malthusiano como fl
 <ol style="list-style-type: decimal">
 <li>Su derivada es equivalente al valor de la función misma</li>
 <li>Su antiderivada es por lo tanto, igualmente equivalente al valor de la función</li>
-<li>Puede ser representado, como ecuación diferencial, de manera implícita, sin que la variable independiente <span class="math inline">\(t\)</span> aparezca en el lado derecho de la ecuación (<a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#eq:Malthus">(6.1)</a>)</li>
+<li>Puede ser representado, como ecuación diferencial, de manera implícita, sin que la variable independiente <span class="math inline">\(t\)</span> aparezca en el lado derecho de la ecuación <a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#eq:Malthus">(6.1)</a></li>
 <li>Al ser representado de manera implícita, el modelo exponencial es lineal con respecto de la variable dependiente del tiempo</li>
 </ol>
 <p>Estas propiedades hacen que analizar el modelo de crecimiento malthusiano sea relativamente sencillo.</p>
@@ -287,9 +287,33 @@ r &amp;= \frac{\ln N - \ln N_0}{t}
 </div>
 <div id="modelos-no-lineales-crecimiento-logístico-de-una-población" class="section level2" number="6.2">
 <h2><span class="header-section-number">6.2</span> Modelos no lineales: Crecimiento logístico de una población</h2>
-<p>Gracias a Thomas Malthus comprendimos qué sucede con una población cuando llega a estar libre de limitantes externas, sin embargo ¿cómo podemos representar lo que sucede con una población cuando existen dichas limitaciones? La respuesta es el modelo logístico. Este modelo es una variación del modelo malthusiano, pero para regular la tasa neta de crecimiento incorpora una segunda función de <span class="math inline">\(N\)</span> que al multiplicar a <span class="math inline">\(r\)</span> se vuelve cero cuando <span class="math inline">\(N\)</span> alcanza un nivel máximo definido matemáticamente.</p>
-<p>El crecimiento logístico ocurre en el mundo real más frecuentemente que el malthusiano, pues todos los organismos vivientes crecen a expensas de otros, lo cual también se conoce como denso-dependencia, es decir, que el crecimiento neto depende de la densidad poblacional existente.</p>
+<p>Gracias a Thomas Malthus comprendimos qué sucede con una población cuando llega a estar libre de limitantes externas, sin embargo ¿cómo podemos representar lo que sucede con una población cuando existen dichas limitaciones? La respuesta es el modelo logístico. Este modelo es una variación del modelo malthusiano, pero para regular la tasa neta de crecimiento incorpora una segunda función de <span class="math inline">\(N\)</span> que al multiplicar a <span class="math inline">\(r\)</span> se vuelve cero cuando <span class="math inline">\(N\)</span> alcanza un nivel definido como capacidad de carga (<span class="math inline">\(K\)</span>).</p>
+<p>El crecimiento logístico ocurre en el mundo real más frecuentemente que el malthusiano, pues todos los organismos vivientes crecen a expensas de otros, lo cual también se conoce como denso-dependencia, es decir, que el crecimiento neto de una población disminuye en relación a la cantidad de individuos.</p>
+<p>La ecuación del modelo logístico es:</p>
+<p><span class="math display" id="eq:logis">\[\begin{equation}
+    \frac{dN}{dt} = rN \left(1 - \frac{N}{K} \right) \tag{6.3}
+\end{equation}\]</span></p>
+<p>donde <span class="math inline">\(K\)</span> es la capacidad de carga del área donde la población con <span class="math inline">\(N\)</span> individuos vive. Como es evidente la expresión <span class="math inline">\((1-N/K) \rightarrow 0\)</span> cuando <span class="math inline">\(N \rightarrow K\)</span>. De modo que una población con <span class="math inline">\(N &lt; K\)</span> tenderá a a crecer. Si expandimos <span class="math inline">\(rN(1 - N/K) = rN-rN^2/K\)</span> podemos ver que se trata de una parábola. A diferencia del modelo de crecimiento exponencial, donde la tasa de cambio <span class="math inline">\(r\)</span> es constante, en el modelo logístico, la tasa neta cambia con el tamaño de la población.</p>
+<div class="figure" style="text-align: center"><span id="fig:logis"></span>
+<img src="Mod-mat-ECO_files/figure-html/logis-1.png" alt="Tasa de cambio de N en relación a N en el modelo logístico, con K = 50 y r = 1" width="480" />
+<p class="caption">
+Figura 6.3: Tasa de cambio de N en relación a N en el modelo logístico, con K = 50 y r = 1
+</p>
+</div>
+<p>Algunas propiedades importantes del modelo logístico es que tiene una serie de puntos críticos. Por ejemplo, el tamaño de la población en que ingresa el número máximo de individuos nuevos, el cual corresponde a:</p>
+<p><span class="math display">\[\begin{equation}
+\frac{d\left( \frac{dN}{dt} \right)}{dN} = r - 2rN/K = 0
+\end{equation}\]</span></p>
+<p>con lo que tenemos que:</p>
+<p><span class="math display">\[ N= \frac{K}{2}\]</span></p>
+<p>El crecimiento máximo se da cuando la población se encuentra al 50% de la capacidad de carga.</p>
+<div id="análisis-de-estabilidad-1" class="section level4" number="6.2.0.1">
+<h4><span class="header-section-number">6.2.0.1</span> Análisis de estabilidad</h4>
+<p>Al igual que con el crecimiento malthusiano, nos interesa encontrar en qué situaciones la población será constante, por lo que tenemos que resolver:</p>
+<p><span class="math display">\[\frac{dN}{dt} = 0\]</span>
+para encontrar que hay dos puntos de equilibrio, <span class="math inline">\(N = 0\)</span> y <span class="math inline">\(N = K\)</span>. Estos puntos tienen propiedades diferentes. Por ejemplo, ¿qué sucede con el <span class="math inline">\(N\)</span> si a <span class="math inline">\(N=0\)</span> le sumamos una cantidad muy pequeña <span class="math inline">\(\varepsilon\)</span>? ¿<span class="math inline">\(N\)</span> tenderá a regresar a <span class="math inline">\(0\)</span>? Las mismas preguntas aplican para <span class="math inline">\(N=K\)</span>. Para responderlas tenemos que hacer un paréntesis y echar un vistazo a la integración numérica.</p>
 
+</div>
 </div>
 </div>
             </section>

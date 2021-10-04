@@ -63,6 +63,8 @@ eq:Malthus
 fig:nacim-muert
 eq:Malthus-c
 fig:periodo-dupl
+eq:logis
+fig:logis
 preámbulo
 encuadre-de-la-materia
 criterios-de-evaluación
@@ -150,3 +152,4 @@ períodos-de-duplicación
 estimación-de-la-tasa-de-cambio-r
 implicaciones-del-crecimiento-exponencial
 modelos-no-lineales-crecimiento-logístico-de-una-población
+análisis-de-estabilidad-1

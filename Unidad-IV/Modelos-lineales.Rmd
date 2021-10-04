@@ -30,7 +30,7 @@ Hasta el momento hemos visto ya muchas de las propiedades el modelo exponencial:
 
 1. Su derivada es equivalente al valor de la función misma
 2. Su antiderivada es por lo tanto, igualmente equivalente al valor de la función
-3. Puede ser representado, como ecuación diferencial, de manera implícita, sin que la variable independiente $t$ aparezca en el lado derecho de la ecuación (\@ref(eq:Malthus))
+3. Puede ser representado, como ecuación diferencial, de manera implícita, sin que la variable independiente $t$ aparezca en el lado derecho de la ecuación \@ref(eq:Malthus)
 4. Al ser representado de manera implícita, el modelo exponencial es lineal con respecto de la variable dependiente del tiempo
 
 Estas propiedades hacen que analizar el modelo de crecimiento malthusiano sea relativamente sencillo. 

@@ -1,3 +1,44 @@
-Gracias a Thomas Malthus comprendimos qué sucede con una población cuando llega a estar libre de limitantes externas, sin embargo ¿cómo podemos representar lo que sucede con una población cuando existen dichas limitaciones? La respuesta es el modelo logístico. Este modelo es una variación del modelo malthusiano, pero para regular la tasa neta de crecimiento incorpora una segunda función de $N$ que al multiplicar a $r$ se vuelve cero cuando $N$ alcanza un nivel máximo definido matemáticamente.
+Gracias a Thomas Malthus comprendimos qué sucede con una población cuando llega a estar libre de limitantes externas, sin embargo ¿cómo podemos representar lo que sucede con una población cuando existen dichas limitaciones? La respuesta es el modelo logístico. Este modelo es una variación del modelo malthusiano, pero para regular la tasa neta de crecimiento incorpora una segunda función de $N$ que al multiplicar a $r$ se vuelve cero cuando $N$ alcanza un nivel definido como capacidad de carga ($K$).
 
-El crecimiento logístico ocurre en el mundo real más frecuentemente que el malthusiano, pues todos los organismos vivientes crecen a expensas de otros, lo cual también se conoce como denso-dependencia, es decir, que el crecimiento neto depende de la densidad poblacional existente.
+El crecimiento logístico ocurre en el mundo real más frecuentemente que el malthusiano, pues todos los organismos vivientes crecen a expensas de otros, lo cual también se conoce como denso-dependencia, es decir, que el crecimiento neto de una población disminuye en relación a la cantidad de individuos.
+
+La ecuación del modelo logístico es:
+
+\begin{equation}
+    \frac{dN}{dt} = rN \left(1 - \frac{N}{K} \right) (\#eq:logis)
+\end{equation}
+
+donde $K$ es la capacidad de carga del área donde la población con $N$ individuos vive. Como es evidente la expresión $(1-N/K) \rightarrow 0$ cuando $N \rightarrow K$. De modo que una población con $N < K$ tenderá a a crecer. Si expandimos $rN(1 - N/K) = rN-rN^2/K$ podemos ver que se trata de una parábola. A diferencia del modelo de crecimiento exponencial, donde la tasa de cambio $r$ es constante, en el modelo logístico, la tasa neta cambia con el tamaño de la población.
+
+```{r logis, echo = F, fig.align='center', fig.cap="Tasa de cambio de N en relación a N en el modelo logístico, con K = 50 y r = 1", fig.width=5, fig.height=4.5}
+N <- 0:55
+K <- 50
+r <- 1
+dN <- r*N - r*N^2/K
+plot(N, dN, type = "l", col = "red", ylab = "dN/dt")
+abline(h = 0, col = "grey", lty = 2)
+abline(v = 25, col = "grey", lty = 2)
+abline(v = 50, col = "grey", lty = 3, lwd = 0.75)
+```
+
+Algunas propiedades importantes del modelo logístico es que tiene una serie de puntos críticos. Por ejemplo, el tamaño de la población en que ingresa el número máximo de individuos nuevos, el cual corresponde a:
+
+\begin{equation}
+\frac{d\left( \frac{dN}{dt} \right)}{dN} = r - 2rN/K = 0
+\end{equation}
+
+con lo que tenemos que:
+
+$$ N= \frac{K}{2}$$
+
+El crecimiento máximo se da cuando la población se encuentra al 50% de la capacidad de carga.
+
+#### Análisis de estabilidad
+
+Al igual que con el crecimiento malthusiano, nos interesa encontrar en qué situaciones la población será constante, por lo que tenemos que resolver:
+
+$$\frac{dN}{dt} = 0$$
+para encontrar que hay dos puntos de equilibrio, $N = 0$ y $N = K$. Estos puntos tienen propiedades diferentes. Por ejemplo, ¿qué sucede con el $N$ si a $N=0$ le sumamos una cantidad muy pequeña $\varepsilon$? ¿$N$ tenderá a regresar a $0$? Las mismas preguntas aplican para $N=K$. Para responderlas tenemos que hacer un paréntesis y echar un vistazo a la integración numérica.
+
+
+
