@@ -68,6 +68,9 @@ fig:logis
 fig:equilibrio
 eq:deriv-Euler
 eq:Euler
+fig:logis-Euler
+fig:Estabilidad-1
+fig:Estabilidad-2
 preámbulo
 encuadre-de-la-materia
 criterios-de-evaluación
@@ -157,3 +160,4 @@ implicaciones-del-crecimiento-exponencial
 modelos-no-lineales-crecimiento-logístico-de-una-población
 análisis-de-estabilidad-1
 integración-numérica
+análisis-de-estabilidad-2

@@ -341,8 +341,30 @@ f(x + dx) = f(x) + f&#39;(x) \cdot dx \tag{6.5}
 <p>Estos valores lo utilizaremos para conocer <span class="math inline">\(dN/dt\)</span>:</p>
 <p><span class="math display">\[\frac{dN_0}{dt} = 0.5 \times N_0 \times \left (1 - \frac{N_0}{50} \right)=0.49\]</span></p>
 <p>Por lo tanto <span class="math inline">\(N_1\)</span> es:</p>
-<p><span class="math display">\[N_1 = N_0 + \frac{dN_0}{dt} \times dt = 1 + 0.49 \times 1 = 1.49\]</span>
-Este proceso se repite hasta que <span class="math inline">\(t = t_{max}\)</span>, y obtengamos <span class="math inline">\(N_{t_{max}}\)</span>.</p>
+<p><span class="math display">\[N(1) = N_0 + \frac{dN_0}{dt} \times dt = 1 + 0.49 \times 1 = 1.49\]</span>
+Este proceso se repite hasta que <span class="math inline">\(t = t_{max}\)</span>, y obtengamos <span class="math inline">\(N(t_{max})\)</span>. El código para integrar esta ecuación en <strong>R</strong> es:</p>
+<div class="figure" style="text-align: center"><span id="fig:logis-Euler"></span>
+<img src="Mod-mat-ECO_files/figure-html/logis-Euler-1.png" alt="Simulación del modelo logístico con el método de Euler, con el código descrito aquí." width="480" />
+<p class="caption">
+Figura 6.5: Simulación del modelo logístico con el método de Euler, con el código descrito aquí.
+</p>
+</div>
+</div>
+<div id="análisis-de-estabilidad-2" class="section level5" number="6.2.0.1.2">
+<h5><span class="header-section-number">6.2.0.1.2</span> Análisis de estabilidad</h5>
+<p>Aquí veremos si los puntos de equilibrio <span class="math inline">\(N=0\)</span> y <span class="math inline">\(N=K\)</span> son estables o inestables. Para ello simularemos la ecuación con ambas condiciones iniciales, y les sumaremos una cantidad pequeña <span class="math inline">\(\varepsilon = 0.01\)</span> para ver qué sucede con <span class="math inline">\(N\)</span> en el resto de la simulación. En analogía con el péndulo, esperaríamos que <span class="math inline">\(N \rightarrow N^*\)</span>, el punto de equilibrio estable (<span class="math inline">\(0\)</span> ó <span class="math inline">\(K\)</span>) al aplicar la pertubación <span class="math inline">\(\varepsilon\)</span> con ambas condiciones de inicio.</p>
+<div class="figure" style="text-align: center"><span id="fig:Estabilidad-1"></span>
+<img src="Mod-mat-ECO_files/figure-html/Estabilidad-1.png" alt="Simulaciones para verificar tipo de puntos de equilibrio" width="480" />
+<p class="caption">
+Figura 6.6: Simulaciones para verificar tipo de puntos de equilibrio
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:Estabilidad-2"></span>
+<img src="Mod-mat-ECO_files/figure-html/Estabilidad-2.png" alt="Simulaciones para verificar tipo de puntos de equilibrio" width="480" />
+<p class="caption">
+Figura 6.7: Simulaciones para verificar tipo de puntos de equilibrio
+</p>
+</div>
 
 </div>
 </div>
