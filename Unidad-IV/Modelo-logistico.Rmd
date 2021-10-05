@@ -38,7 +38,44 @@ El crecimiento máximo se da cuando la población se encuentra al 50% de la capa
 Al igual que con el crecimiento malthusiano, nos interesa encontrar en qué situaciones la población será constante, por lo que tenemos que resolver:
 
 $$\frac{dN}{dt} = 0$$
-para encontrar que hay dos puntos de equilibrio, $N = 0$ y $N = K$. Estos puntos tienen propiedades diferentes. Por ejemplo, ¿qué sucede con el $N$ si a $N=0$ le sumamos una cantidad muy pequeña $\varepsilon$? ¿$N$ tenderá a regresar a $0$? Las mismas preguntas aplican para $N=K$. Para responderlas tenemos que hacer un paréntesis y echar un vistazo a la integración numérica.
+para encontrar que hay dos puntos de equilibrio, $N = 0$ y $N = K$. Estos puntos tienen propiedades diferentes. Por ejemplo, ¿qué sucede con el $N$ si a $N=0$ le sumamos una cantidad muy pequeña $\varepsilon$? ¿$N$ tenderá a regresar a $0$? Un ejemplo de este tipo de dinámicas en el mundo real se presenta con un péndulo, el cual tiene dos puntos de equilibrio, uno estable (donde el péndulo descansa en ausencia de una fuerza lateral), y otro inestable 
 
+```{r equilibrio, echo = F, fig.align='center', fig.cap="Puntos de equilibrio de un péndulo."}
+knitr::include_graphics("Unidad-IV/Puntos-equilibrio.png")
+```
 
+Las mismas preguntas aplican para $N=K$. Para responderlas tenemos que hacer un paréntesis y echar un vistazo a la integración numérica.
+
+##### Integración numérica
+
+Esta técnica de integración está basada en la definición de la derivada como límite:
+
+\begin{equation}
+f'(x) = \lim \limits_{h \rightarrow 0} \frac{f(x + h) - f(x)}{h} (\#eq:deriv-Euler)
+\end{equation}
+
+donde se asume que $h = dx$, con $dx \approx 0$, es decir, que $dx$ es una cantidad arbitrariamente pequeña. De modo que sustituimos $dx$ por $h$ en \@ref(eq:deriv-Euler) y resolvemos para $f(x + dx)$ para obtener:
+
+\begin{equation}
+f(x + dx) = f(x) + f'(x) \cdot dx (\#eq:Euler)
+\end{equation}
+
+Este método es el más sencillo de los métodos numéricos de integración, y ha servido de punto de partida para el desarrollo de métodos más complejos y precisos.
+
+Para integrar numéricamente el modelo logístico, utilizando la técnica de Euler \@ref(eq:Euler), para lo que necesitamos conocer:
+
+1. $r = 0.5$: la tasa neta de crecimiento poblacional
+2. $K = 50$: la capacidad de carga poblacional
+3. $N_0 = 1$: El tamaño inicial de la población
+4. $dt = 1$: El tamaño de los incrementos de la variable independiente $t$
+5. $t_{max}$: El tiempo máximo de simulación
+
+Estos valores lo utilizaremos para conocer $dN/dt$:
+
+$$\frac{dN_0}{dt} = 0.5 \times N_0 \times \left (1 - \frac{N_0}{50} \right)=0.49$$
+
+Por lo tanto $N_1$ es:
+
+$$N_1 = N_0 + \frac{dN_0}{dt} \times dt = 1 + 0.49 \times 1 = 1.49$$
+Este proceso se repite hasta que $t = t_{max}$, y obtengamos $N_{t_{max}}$.
 

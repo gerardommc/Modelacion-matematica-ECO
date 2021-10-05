@@ -65,6 +65,9 @@ eq:Malthus-c
 fig:periodo-dupl
 eq:logis
 fig:logis
+fig:equilibrio
+eq:deriv-Euler
+eq:Euler
 preámbulo
 encuadre-de-la-materia
 criterios-de-evaluación
@@ -153,3 +156,4 @@ estimación-de-la-tasa-de-cambio-r
 implicaciones-del-crecimiento-exponencial
 modelos-no-lineales-crecimiento-logístico-de-una-población
 análisis-de-estabilidad-1
+integración-numérica
