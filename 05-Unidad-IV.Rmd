@@ -11,3 +11,9 @@
 
 ```
 
+## Modelos en tiempo contínuo vs discreto
+
+```{r echo = F, child = "Unidad-IV/Continuo-discreto.Rmd"}
+
+```
+

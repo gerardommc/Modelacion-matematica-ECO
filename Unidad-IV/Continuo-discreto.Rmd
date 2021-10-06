@@ -1,0 +1,122 @@
+Todos los modelos que hemos visto en la presente unidad son dinámicos, representan procesos que cambian con el tiempo y su principal insumo son la condiciones presentes del sistema, las cuales determinan el estado futuro. Aprendimos a integrar ecuaciones diferenciales utilizando la definición de la derivada, y revirtiéndola asumiendo que $h \approx dt$. Este proceso, es en esencia una discretización del tiempo, es decir, en lugar de evaluar $f(t)$ para todos los puntos $t$ posibles, lo aproximamos para intervalos separados por $dt$. Por lo tanto las ecuaciones diferenciales integradas con métodos numéricos tienen algunas similitudes con los modelos en tiempo discreto:
+
+Los modelos en tiempo discreto se conocen como ecuaciones en diferencias finitas, en comparación con las ecuaciones diferenciales que representan el tiempo de manera contínua.
+
+La difefencia entre estos modelos consiste en los tiempos en que ocurren los eventos que representan. En los modelos de crecimiento poblacional los eventos representan la incorporación de invidiuos nuevos a la población. Por lo tanto, en un modelo de crecimiento contínuo los individuos nuevos entrar a la población "todo el tiempo".
+
+### Crecimiento exponencial en tiempo discreto
+
+Las ecuaciones de los modelos contínuo y discreto corresponden a:
+
+\begin{align}
+\frac{dN}{dt} & = rN (\#eq:exp-cont) \\
+N_{t+1} & = \lambda N (\#eq:exp-disc) 
+\end{align}
+
+donde las tasas de cambio son $r$ y $\lambda$. En el caso del modelo en tiempo discreto \@ref(eq:exp-disc), se utiliza el parámetro $\lambda$, puesto que  $\lambda = e^r$
+
+El crecimiento discreto tiene sentido biológico cuando los nacimientos de las poblaciones de algún organismo se sincronizan en un período de tiempo muy corto. El crecimiento exponencial contínuo, en contraste, representa las dinámicas de organismos que pueden reproducirse en cualquier momento. En un modelo de crecimiento discreto, los individuos nuevos entran a la población solamente en un momento preciso. La cantidad de individuos que ingresa a la pobalación al final de cada intervalo es la misma que en un modelo en tiempo contínuo (Figura \@ref(fig:disc-cont)). Por lo tanto, la selección de modelo tiene que estar informada por la biología del problema.
+
+```{r disc-cont, echo = F, fig.align='center', fig.cap="Diferencia entre modelos en tiempo contínuo (línea discontínua roja) y discreto (escalones en azul).", fig.width=5, fig.height=4.5}
+t<- 0:24
+r <- 0.1
+lambda <- exp(r)
+N <- exp(r * t)
+
+N.disc <- numeric(25)
+N.disc[1] <- 1
+
+for(i in 2:25)N.disc[i] <- lambda * N.disc[i-1]
+
+plot(t, N, col = "red", type = "l", lty = 4, lwd = 1.5)
+lines(t, N.disc, col = "navy", type = "s", lwd = 2)
+```
+
+La escala exponencial del parámetro $\lambda$ hace que la solución sea exacta, en comparación con la aproximación numérica con la ecuación de Euler del modelo en tiempo contínuo.
+
+### Crecimiento logístico en tiempo discreto
+
+El modelo discreto es:
+
+\begin{equation}
+N_{t+1} = \lambda N \left (1 - \frac{N}{K} \right)
+\end{equation}
+
+en este caso $\lamda$ está en la misma escala  que en la ecuación \@ref(eq:exp-disc). Como ya vimos anteriormente, esta versión del modelo de crecimiento logístico, tiene una serie de propiedades distintas al modelo contínuo, por lo que nos enfocaremos en este aspecto. Para ello, transformaremos sustuiremos $N$ por $x_t = N_t/K$, para analizar el tamaño de $N$ en relación a la capacidad de carga:
+
+\begin{equation}
+x_{t+1} = b(1-x_t)x_t (\#eq:logis-disc)
+\end{equation}
+
+El análisis del comportamiento del modelo logístico es más fácil si se hace gráficamente, en especial porque puede ser complejo, porque puede ser caótico (Figura \@ref(fig:caos-logis))
+
+```{r echo = F}
+t <- 1:50
+b <- c(2.8, 3.3, 3.9)
+
+x.out <- numeric(length(t))
+
+for(i in seq_along(b)){
+    x <- numeric(length(t))
+    x[1] <- 0.01
+    for(j in 2:length(t)){
+        x[j] <- b[i]*(1 - x[j-1])*x[j-1]
+    }
+    x.out <- rbind(x.out, x)
+}
+
+xt <- t(x.out)[,-1]
+```
+
+```{r caos-logis, echo = F, fig.align='center', fig.cap="Ejemplos del comportamiento dinámico del modelo de crecimiento logístico, para tres valores de la tasa de crecimiento. En las figuras de la izquiera se muestra la correspondencia entre el tamaño de la población en t y el tamaño en t+1.", fig.width=10, fig.height=13.5}
+x.x <- seq(0, 1, len = 50)
+
+df.1 <- data.frame(x.1 = b[1]*(1-x.x)*x.x,
+                   x.1.= b[1]*(1-2*x.x),
+                   x.2 = b[2]*(1-x.x)*x.x,
+                   x.2.= b[2]*(1-2*x.x),
+                   x.3 = b[3]*(1-x.x)*x.x,
+                   x.3.= b[3]*(1-2*x.x),
+                   x = x.x)
+
+par(mfrow = c(3, 2))
+with(df.1, {plot(x.x, x.1, type = "l", col = "red", 
+                 ylim = c(0, 1), main = "b = 2.8",
+                 xlab = expression(x[t]), ylab = expression(x[t+1]));
+    lines(x.x, x.x, col = "grey");
+    for(i in 1:48){
+        lines(c(xt[i+1, 1], xt[i+1, 1]), c(xt[i+1, 1], xt[i+2, 1]), col = "navy")
+        lines(c(xt[i, 1], xt[i+1, 1]), c(xt[i+1, 1], xt[i+1, 1]), col = "navy")
+    }})
+plot(t, xt[, 1], type = "l", col = "navy", xlab = "Tiempo", ylab = "x")
+points(t, xt[, 1], pch = 20, col = "navy")
+
+with(df.1, {plot(x.x, x.2, type = "l", col = "red",
+                 ylim = c(0, 1), main = "b = 3.3",
+                 xlab = expression(x[t]), ylab = expression(x[t+1]));
+    lines(x.x, x.x, col = "grey");
+    for(i in 1:48){
+        lines(c(xt[i+1, 2], xt[i+1, 2]), c(xt[i+1, 2], xt[i+2, 2]), col = "navy")
+        lines(c(xt[i, 2], xt[i+1, 2]), c(xt[i+1, 2], xt[i+1, 2]), col = "navy")
+    }})
+plot(t, xt[, 2], type = "l", col = "navy", xlab = "Tiempo", ylab = "x")
+points(t, xt[, 2], pch = 20, col = "navy")
+
+with(df.1, {plot(x.x, x.3, type = "l", col = "red",
+                 ylim = c(0, 1), main = "b = 3.9",
+                 xlab = expression(x[t]), ylab = expression(x[t+1]));
+    lines(x.x, x.x, col = "grey");
+    for(i in 1:48){
+        lines(c(xt[i+1, 3], xt[i+1, 3]), c(xt[i+1, 3], xt[i+2, 3]), col = "navy")
+        lines(c(xt[i, 3], xt[i+1, 3]), c(xt[i+1, 3], xt[i+1, 3]), col = "navy")
+    }})
+plot(t, xt[, 3], type = "l", col = "navy", xlab = "Tiempo", ylab = "x")
+points(t, xt[, 3], pch = 20, col = "navy")
+
+```
+
+#### Implicaciones para sistemas ecológicos
+
+Las dinámicas producidas por el sencillísimo modelo logístico en tiempo discreto sugieren que un sistema ecológico con esas características bien podría tener un comportamiento caótico. Como ecólogos es preciso preguntarnos si sólo se trata de artefactos matemáticos producto de la simplificación, o si en posible su ocurrencia. Modelos más complejos que toman en cuenta la existencia de diferentes sexos, por ejemplo, tienen un comportamiento más estable que los modelos sin esas estructuras [@berryman1989ecological, @Scheuring2002IsCD].
+
+La diferencia esencial entre el caos producido por el modelo logístico y el comportamiento errático de muchos sistemas ecológicos está en que el caos forma parte del funcionamiento del sistema, es determinístico, mientras que las variaciones de un sistema ecológico generalmente se consideran como fuerzas externas que cambian con el tiempo y que afectan al sistema.
