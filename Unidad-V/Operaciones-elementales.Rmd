@@ -1,0 +1,215 @@
+Las operaciones elementales con matrices son similares a las aritméticas tradicionales. Para ejemplificarlas aquí denotamos a una matriz cualquiera con letras mayúsculas.
+
+### Suma de matrices
+
+Si las matrices $A$ y $B$ tienenlas mismas dimensiones $m \times n$ ($m$ = número de filas, $n$ = número de columnas):
+
+$$A + B = C$$
+La adición de $A$ con $B$ resulta en una tercera matriz $C$ con dimensiones $m \times n$, tanto si $m = n$ como $m \neq n$, es decir si las matrices $A$ y $B$ son cuadradas ($m = n$) como rectangulares.
+
+Para esto tenemos que considerar qué sucede con los elementos de $A$ y $B$ dentro de $C$:
+
+\begin{equation}
+A = \left[ 
+\begin{array}{ccc}
+a_{1, 2} & \dots & a_{1, n} \\
+\vdots   & \ddots & \vdots \\
+a_{n, 1} & \dots & a_{n, n}
+\end{array} \right]
+\end{equation}
+
+\begin{equation}
+B = \left[ 
+\begin{array}{ccc}
+b_{1, 2} & \dots & b_{1, n} \\
+\vdots   & \ddots& \vdots \\
+b_{n, 1} & \dots & b_{n, n}
+\end{array} \right]
+\end{equation}
+
+\begin{equation}
+C = \left[ 
+\begin{array}{ccc}
+a_{1, 2} + b_{1, 2} & \dots & a_{1, n} + b_{1, n} \\
+\vdots   & \ddots & \vdots \\
+a_{n, 1} + b_{n, 1} & \dots & a_{n, n} + b_{n, n}
+\end{array} \right]
+\end{equation}
+
+Es claro que también:
+
+$$B+A = C$$
+
+Lo cual resulta importante resaltar pues la conmutatividad no funciona para la multiplicación de matrices. Otras cualidades de la adición de matrices, dadas las condiciones de dimensiones son:
+
+1. $(A+B)+C=A+(B+C)$
+2. $A + 0 = A$
+
+### Multiplicación por un escalar
+
+Es frecuente multiplicar una matriz por una constante $c$, tal que $c \times A = cA$:
+
+\begin{equation}
+c \times A = \left[ 
+\begin{array}{ccc}
+c  \cdot  a_{1, 2} & \dots & c \cdot a_{1, n} \\
+\vdots   & \ddots & \vdots \\
+c \cdot  a_{n, 1} & \dots & c  \cdot  a_{n, n}
+\end{array} \right]
+\end{equation}
+
+### Transposición
+
+La transposición es el cambio de filas y columnas por columnas y filas, por ejemplo:
+
+\begin{equation}
+A = \left[ 
+\begin{array}{rrr}
+1 & 2 & 3 \\
+4 & 5 & 6
+\end{array}
+\right]
+\end{equation}
+
+Con lo que la matriz $A$ transpuesta $A^T = A'$ es:
+
+\begin{equation}
+A' = \left[
+\begin{array}{rr}
+1 & 4 \\
+2 & 5 \\
+3 & 6
+\end{array}
+\right]
+\end{equation}
+
+### Multiplicación de matrices
+
+Para entender la multiplicación de matrices es necesario definirla, pues es más complicada que cualquiera de las operaciones que hemos visto anteriormente.
+
+Supongamos que $C$ es una matriz producto de la multiplicación de las matrices $A$ y $B$:
+
+$$C = AB$$
+
+Para que esto sea posible es necesario que $A$ y $B$ tengan dimensiones específicas pues:
+
+\begin{equation}
+C = \left[
+\begin{array}{rrr}
+ &        & \\
+ & c_{ij} & \\
+ &        &
+\end{array}
+\right] =
+\left[ 
+\begin{array}{ccc}
+ & & & \\
+a_{i, 1} & \dots & a_{i, l} \\
+ & & &
+\end{array}
+\right] \times
+\left[ 
+\begin{array}{ccc}
+ & b_{1, j} & \\
+ & \vdots & \\
+ & b_{l, j} & 
+\end{array}
+\right] (\#eq:mat-mult)
+\end{equation}
+
+Como resulta evidente, el número de **columnas** de la matriz $A$ debe ser igual al número de **filas** de la matriz $B$. De modo que podemos resumir que las dimensiones deben ser:
+
+- $A \rightarrow m \times l$
+- $B \rightarrow l \times n$
+
+#### Ejemplos
+
+\begin{equation}
+A = \left[ 
+\begin{array}
+\ 1 & 2 & 3 \\
+-1& 0 & 4
+\end{array}
+\right]
+\end{equation}
+ 
+y
+ 
+\begin{equation}
+B = \left[ 
+\begin{array}
+\ 1 & 2 & 3 & -3\\
+0 &-1 & 4 & 0 \\
+-1& 0 &-2 & 1
+\end{array}
+\right]
+\end{equation}
+
+Solución:
+
+\begin{equation}
+C = AB = \left[ 
+\begin{array}
+\ 1 & 2 & 3 \\
+-1& 0 & 4
+\end{array}
+\right]
+
+\left[ 
+\begin{array}
+\ 1 & 2 & 3 & -3\\
+0 &-1 & 4 & 0 \\
+-1& 0 &-2 & 1
+\end{array}
+\right]
+\end{equation}
+
+Como vimos en la definición de multiplicación, tenemos que muiltiplicar las filas de $A$ por las columnas de $B$, para así obtener los elementos de $C$. Hagamos entonces las operaciones elemento por elemento:
+
+\begin{equation}
+c_{1, 1} = \left[ 
+\begin{array}{rrr}
+\ 1 & 2 & 3
+\end{array}
+\right]
+\left[\begin{array}
+\ 1 \\ 0 \\ -1 \end{array}
+\right] = (1)(1) + (2)(0) + (3)(-1)= -2
+\end{equation}
+
+\begin{equation}
+c_{1, 2} = \left[
+\begin{array}
+1 & 2 & 3
+\end{array}
+\right]
+\left[ 
+\begin{array}
+\ 2 \\ -1 \\0
+\end{array}
+\right] = (1)(2) + (2)(-1) + (3)(0) = 0
+\end{equation}
+
+Y así sucesivamente para obtener:
+
+\begin{equation}
+C = \left[ 
+\begin{array}
+\ c_{1, 1} & c_{1, 2} & c_{1, 3} & c_{1, 4} \\
+c_{2, 1} & c_{2, 2} & c_{2, 3} & c_{2, 4} 
+\end{array}
+\right] =
+\left[ 
+\begin{array}
+\ -2 & 0 & 5 & 0 \\
+-5 & -2 & -11 & 7
+\end{array}
+\right]
+\end{equation}
+
+El resultado es una matriz con tantas filas como $A$ y tantas columnas como $B$. Es decir que si las dimensiones de $A$ son $m \times l$, y las de $B$ son $l \times n$, $C$ tendrá dimensiones $m \times n$.
+
+##### Ejercicio
+
+Haz a mano los cálculos de $c_{i, j}$ que nos faltaron para obtener los valores de $C$.
+

@@ -1,0 +1,185 @@
+### Matriz identidad
+
+Antes de continuar, consideremos la posible existencia de una matriz $I$ tal que $A I = A$, es decir, una matriz que multiplicada por otra matriz de como resultado la matriz original. Esta matriz se conoce como la matriz identidad, y consiste de una matriz cuadrada con ceros en todas las posiciones excepto en la diagonal, por ejemplo:
+
+\begin{equation}
+I = \left[ 
+\begin{array}{ccc}
+\ 1 & 0 & 0 & 0 \\
+  0 & 1 & 0 & 0 \\
+  0 & 0 & 1 & 0 \\
+  0 & 0 & 0 & 1 \\
+\end{array}
+\right]
+\end{equation}
+
+Por el contrario, una matriz inversa es quella matriz $A^{-1}$, tal que $AA^{-1} = I$, al multiplicarla por una matriz cualquiera $A$ da como resultado la matriz identitaria.
+
+### Matriz inversa
+
+La utilidad de este concepto se puede ejemplificar con un sistema de una sola ecuación:
+
+$$2x = 10$$
+
+Esta ecuación podemos concebirla como el producto de dos vectores con dimensiones $1 \times 1$. Para resolverla es necesario multplicar ambos lados de la ecuación por el **inverso** del coeficiente de $x$, de modo que:
+
+$$2^{-1} \cdot 2x = 2^{-1} \cdot 10$$
+
+$$x = \frac{1}{5}$$
+
+Por lo tanto, si tenemos que para un sistema lineal la matriz **cuadrada** $A$ de coeficientes puede ser invertida como $A^{-1}$, esta última contiene la solución al sistema mismo:
+
+$$XA = B$$
+
+$$A^{-1}XA = A^{-1}B \rightarrow X = A^{-1}B$$ 
+
+#### Definción de matriz inversa
+
+Una matriz inversa de $A$ es aquella matriz $B$ que:
+
+$$AB = BA = I_n$$
+
+al ser multiplicada por $A$ tiene como resultado la matriz identidad $I_n$, con dimensiones $n \times n$. La matriz inversa de $A$ también recibe, como ya se mencionó el nombre $A^{-1}$. Cuando se puede obtener la matriz $A^{-1}$ de $A$, se dice que esta última es **invertible** o **no-singular**, de lo contrario se le llama **singular**. Cabe resaltar que la matriz inversa $A^{-1}$ es única para $A$. Si llegaran a existir dos matrices inversas $B$ y $C$ de $A$, entonces $B=C$.
+
+#### Obteniendo una matriz inversa
+
+Para obtener una matriz inversa, también tenemos que resolver un sistema de ecuaciones lineales. Supongamos que $A$ es una matriz de $2 \times 2$:
+
+\begin{equation}
+A = \left[\begin{array}{ccc}
+a_{1, 1} & a_{1, 2} \\
+a_{2, 1} & a_{2, 2}
+\end{array}
+\right]
+\end{equation}
+
+Recordemos que $A$ es la matriz de coeficientes para las variables $x_1, x_2, \dots, x_n$. Entonces la matriz inversa de $A$ es:
+
+\begin{equation}
+B = \left[\begin{array}{ccc}
+b_{1, 1} & b_{1, 2} \\
+b_{2, 1} & b_{2, 2}
+\end{array}
+\right]
+\end{equation}
+
+Por lo tanto la ecuación a resolver es:
+
+\begin{equation}
+\left[\begin{array}{ccc}
+a_{1, 1} & a_{1, 2} \\
+a_{2, 1} & a_{2, 2}
+\end{array}
+\right]
+\left[\begin{array}{ccc}
+b_{1, 1} & b_{1, 2} \\
+b_{2, 1} & b_{2, 2}
+\end{array}
+\right] =
+\left[\begin{array}{ccc}
+1 & 0 \\
+0 & 1
+\end{array}
+\right]
+\end{equation}
+
+donde las incógnitas son los elementos $b_{1,1}, \dots b_{n,n}$ de $B$, la matriz inversa.
+
+##### Ejemplo
+
+Tenemos que encontrar la matriz inversa de la matriz de coeficientes:
+
+\begin{equation}
+A =
+\left[\begin{array}{ccc}
+2 & 5 \\
+1 & 3
+\end{array}
+\right]
+\end{equation}
+
+Por lo tanto el sistema de ecuaciones a resolver es:
+
+\begin{equation}
+\left[\begin{array}{ccc}
+2 & 5 \\
+1 & 3
+\end{array}
+\right]
+\left[\begin{array}{ccc}
+b_{1, 1} & b_{1, 2} \\
+b_{2, 1} & b_{2, 2}
+\end{array}
+\right] =
+\left[\begin{array}{ccc}
+1 & 0 \\
+0 & 1
+\end{array}
+\right]
+\end{equation}
+
+Para ver las ecuaciones a resolver para $B$, tenemos que multiplicar $AB$, con lo que obtenemos:
+
+\begin{align}
+2 b_{1,1} + 5b_{2,1} = 1\ (F_1) & & 2b_{1, 2} + 5b_{2,2} = 0\ (F_1) \\ \notag
+b_{1, 1} + 3b_{2,1} = 0\ (F_2) & & b_{1, 2} + 3b_{2, 2} = 1 (F_2 ) \notag
+\end{align}
+
+Utilizando los métodos que ya conocemos, podemos obtener las soluciones:
+
+\begin{equation}
+B = \left[ 
+\begin{array}
+\ b_{1, 1} & b_{1, 2} \\
+b_{2, 1} & b_{2, 2}
+\end{array}
+\right] =
+\left[ 
+\begin{array}
+\ 3 & -5 \\
+-01 & 2
+\end{array}
+\right]
+\end{equation}
+
+##### Ejercicio
+
+Verifica que las soluciones para $b_{1,1}, b_{1,2}, b_{2,1}, b_{2,2}$ sean las reportadas y que $AB = I_2$
+
+### Determinante de una matriz
+
+Encontrar la matriz inversa de otra matriz $A$ con dimensiones $2 \times 2$, es más fácil de lo que parece, resolviendo el sistema $AB = I_2$. Para cualquier matriz:
+
+\begin{equation}
+A = \left[
+\begin{array}
+\ a_{1,1} & a_{1,2} \\
+a_{2,1} & a_{2,2}
+\end{array}
+\right]
+\end{equation}
+ 
+ $A$ es invertible si $a_{1,1}a_{2,2} - a_{1,2}a_{2,1} \neq 0$ y si:
+ 
+\begin{equation}
+A^{-1} = 
+  \frac{1}{a_{1,1}a_{2,2} - a_{1,2}a_{2,1}}
+    \left[
+      \begin{array}
+        \ a_{2,2} & a_{1,2} \\
+        a_{2,1} & a_{1,1}
+      \end{array}
+    \right] (\#eq:dos-dos)
+\end{equation}
+
+La expresión $a_{1,1}a_{2,2} - a_{1,2}a_{2,1}$ para una matriz $A$ de $2 \times 2$ se conoce como el determinante y se denota como $\mathrm{det} A$ ó $|A|$.
+
+Es posible calcular determinantes para cualquier matriz $A$ con dimensiones $n \times n$, y en todos los casos, es posible obtener $A^{-1}$ si $\mathrm{det}A \neq 0$. Las fórmulas para calcular el determinante de cualquier matriz se van complicando considerablemente conforme aumenta su tamaño, por lo que es necesario utilizar una calculadora de determinantes.
+
+Aquí nos limitaremos a las fórmulas para determinantes de $2\times 2$ (ecuación \@ref(eq:dos-dos). La figura \@ref(fig:det-3) muestra el procedimiento para una matrix de $3 \times 3$. 
+
+```{r det-3, echo = F, fig.align='center', fig.cap="Esquema del procedimiento para calcular el determinante de una matriz de 3 x 3."}
+knitr::include_graphics("Unidad-V/determ.png")
+```
+
+

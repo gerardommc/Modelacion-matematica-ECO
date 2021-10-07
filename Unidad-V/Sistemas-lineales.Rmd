@@ -1,0 +1,274 @@
+Un sistema lineal es un conjunto de ecuaciones lineales donde hay, idealmente, tantas variables como ecuaciones y viceversa. Cuando esta condición se cumple, se dice que el sistema está **completo**. La contraparte de estos sistemas son **incompletos**, y pueden tener más variables que ecuaciones ó más ecuaciones que variables.
+
+Un sistema completo de ecuaciones lineales con dos variables sería:
+
+$$2x + 3y = 4$$
+
+$$4x - 2y =10$$
+Generalizando tenemos que un cualquier sistema lineal puede ser:
+
+\begin{align}
+a_{1,1}x_1+a_{2,1}x_2 + \dots + a_{n,1}x_n & = b_1\\
+a_{1,2}x_1+a_{2,2}x_2 + \dots + a_{n,2}x_n & = b_2\\
+\vdots & \\
+a_{1, n}x_1+a_{2,n}x_2 + \dots + a_{n,n}x_n & = b_n
+\end{align}
+
+Cuando nos enfrentamos a un sistema como estos, la meta es encontrar los valores de $x_1, x_2, \dots , x_3$ que satisfacen las igualdades. Para sistemas de dos ecuaciones, es fácil econtrar la solución utilizando una variedad de métodos, el primero de ellos, por graficación.
+
+### Solución gráfica
+
+La solución para el sistema de ecuaciones del primer ejemplo:
+
+\begin{align}
+2x + 3y & = 4\\
+4x - 2y & =10
+\end{align} 
+
+sería:
+
+```{r echo = F, fig.align='center', fig.cap="Solución gráfica del sistema de ecuaciones para dos variables"}
+knitr::include_graphics("Unidad-V/Soln-grafica-1.png")
+```
+
+### Solución algebráica
+
+El método más sencillo en esta ocasión sería resolver la ecuación 2 para $y$, pues la podemos simplificar dividiendo ambos lados entre 2:
+
+$$ (4x - 2y)/2 = (10)/2 \rightarrow 2x - y = 5$$
+de donde obtenemos que:
+
+$$y = 2x-5$$
+
+Este valor de $y$ en térmonos de $x$, lo podemos sustituir en, la ecuación 1:
+
+$$2x+3(2x-5) = 4$$
+
+y resolvemos para $x$ para obtener:
+
+$$8x = 19 \rightarrow x = 19/8=2.375$$
+
+Y entonces sustituimos a $x$ en:
+
+$y = 2(2.375) - 5 = -0.25$
+
+Como se puede apreciar, resolver simples ecuaciones lineales puede ser laborioso. Es por ello que se desarrolló el álgebra de matrices, para resolver de eficientemente, sistemas de ecuaciones lineales con muchas variables. En esta unidad revisaremos brevemente los conceptos y técnicas más importantes del álgebra de matrices.
+
+### Sistemas lineales sin solución
+
+En ocasiones, aunque un sistema de ecuaciones sea aparentemente completo, puede no tener solución. Por ejemplo el sistema:
+
+\begin{align}
+x + y & = 1 \\
+2x + 2y & = 4
+\end{align}
+
+no tiene solución, lo cual se manifiesta gráficamente como dos líneas paralelas. Esto quiere decir que no existe un par de valores $x$ y $y$ que satisfagan las ecuaciones del sistema.
+
+```{r sin-soln, echo = F, fig.align='center', fig.cap="Representación gráfica de un sistema linea sin solución."}
+knitr::include_graphics("Unidad-V/Sistema-no-solucion.png")
+```
+
+Si intentamos sumar o restar ambas ecuaciones terminamos con una contradicción. Tomemos por ejemplo la primera ecuación, multiplicada por $-2$ para obtener:
+
+$$(x + y = 1) \times -2 \rightarrow -2x-2y = -2$$
+
+Y al sumarla a la segunda ecuación:
+
+$$2x - 2x + 2y - 2y = 4-2 \rightarrow 0 = 2$$
+
+### Resolviendo sistemas lineales más complejos
+
+Cualquier sistema de ecuaciones lineales son solución se puede revolver con los métodos que hemos aprendido hasta el momento. Como hemos visto, en estos métodos es fácil cometer errores, máxime con sistemas más complejos con muchas variables y ecuaciones. El método ideal sería aquel que:
+
+1. Evita manipulaciones riesgosas de las ecuaciones
+2. Permite encontrar todas las soluciones posibles
+3. Permite identificar sistemas sin solución
+
+En la tarea de aprender a utilizar dichos métodos cabe resaltar que las incógnitas ($x, y, z, \dots$) juegan un papel secundario, lo más importante son los coeficientes de cada una en las distintas ecuaciones.
+
+Para comenzar a visualizar un sistema lineal como matriz, echemos un vistazo al siguiente sistema:
+
+\begin{align}
+x+y+z+t & = 1 \\
+x-y-z+t & = 3 \\
+-x-y+z-t & = 1\\
+-3x+y-3z-3t &= 4
+\end{align}
+
+cuyos coeficientes podemos representar en una matriz como:
+
+$$A = \left[
+\begin{array}{rrrr}
+1 & 1 & 1 & 1 \\
+1 &-1 &-1 & 1 \\
+-1&-1 & 1 &-1 \\
+-3& 1 &-3 &-3
+\end{array}
+\right]$$
+
+
+Nota que cada columna corresponde con cada una de las variables $x, y, z, t$, y los números que contiene la matriz $A$ son sus coeficientes. Usando este mismo arreglo, podemos representar todo el sistema de ecuaciones como el producto de un vector $x, y, z, t$ y la matriz $A$:
+
+\begin{equation}
+\left[
+\begin{array} {r}
+x \\ y \\ z \\ t
+\end{array}
+\right]
+\left[
+\begin{array}{rrrr}
+1 & 1 & 1 & 1 \\
+1 &-1 &-1 & 1 \\
+-1&-1 & 1 &-1 \\
+-3& 1 &-3 &-3
+\end{array} 
+\right] = 
+\left[\begin{array}{r}
+1 \\ 3 \\ 1 \\ 4
+\end{array}\right] (\#eq:sist-matriz)
+\end{equation}
+
+Dado que para las operaciones necesarias para resolverlo, sólo necesitamos la matriz de coeficientes $A$ y el vector de equivalencias podemos representar el sistema con su matriz aumentada:
+
+\begin{equation}
+\left[
+\begin{array}{rrrr|l}
+1 & 1 & 1 & 1 & 1\\
+1 &-1 &-1 & 1 & 3\\
+-1&-1 & 1 &-1 & 1\\
+-3& 1 &-3 &-3 & 4
+\end{array} \right] (\#eq:Aumentada)
+\end{equation}
+
+Para resolver sistemas como este necesitamos aprender a hacer algunas operaciones con filas que no alteran el estado del sistema lineal:
+
+1. Intercambiar filas
+2. Multiplicar una fila por un escalar $c \neq 0$
+3. Sumar dos filas
+
+Ninguna de estas operaciones afectan las soluciones posibles del sistema (si las hay). Utilizando estas operaciones, la meta es transformar la matriz aumentada (\@ref(eq:Aumentada)), en un a matriz que contenga ceros bajo la diagonal (**Triángulo superior**), y así poder sustituir los valores comenzando con la última fila. El sistema de ecuaciones \@ref(eq:sist-matriz), no tiene solución, por lo que solamente nos sirve, por el momento para establecer los conceptos. A continuación lo aplicamos con un sistema más sencillo. 
+
+### Ejemplo
+
+Dado el sitema linea:
+
+\begin{align}
+2x - 1y + 3z &= 9\\
+3x + 5y - z  &= 10\\
+4x + 2y - 3z &= -1
+\end{align}
+
+la matriz aumentada es:
+
+\begin{equation}
+\left[
+\begin{array}{rrr|l}
+ 2 & -1& 3 & 9 \\
+ 3 & 5 &-1 & 10\\
+ 4 & 2 &-3 &-1
+\end{array}
+\right]
+\begin{array}
+\ (F_1) \\ (F_2) \\ (F_3)
+\end{array}
+\end{equation}
+
+A continuación se muestra en el lado izquierdo, las operaciones correspondientes a las filas de las matrices:
+
+\begin{equation}
+\begin{array}{r}
+(F_1) \\ -3(F_1)+2(F_2) \\ 2(F_1)-(F_3)
+\end{array}
+\left[
+\begin{array}{rrr|r}
+2 &-1 & 3 & 9 \\
+0 &13 &-11&-7 \\
+0 &-4 & 9 &19
+\end{array}
+\right]
+\begin{array}{r}
+\ (F_4) \\ (F_5) \\ (F_6)
+\end{array}
+\end{equation}
+
+Ahora la fila 1 se llama $(F_4)$, hicimos $-3(F_1)+2(F_2)$ para eliminar el coeficiente $a_{2,1} = 3$, y ahora lo llamamos $(F_5)$. Lo único que debemos hacer ahora, es encontrar cómo eliminar $a_{2,3}$ en $(F_6)$, para obtener la matriz con ceros bajo la diagonal:
+
+\begin{equation}
+\begin{array}{r}
+(F_4) \\ (F_5) \\ 4(F_5)+13(F_6)
+\end{array}
+\left[
+\begin{array}{rrr|r}
+2 &-1 & 3 & 9 \\
+0 &13 &-11&-7 \\
+0 & 0 &73 &219
+\end{array}
+\right]
+\begin{array}{r}
+(F_7) \\ (F_8) \\ (F_9)
+\end{array}
+\end{equation}
+
+A partir de aquí, tenemos una ecuación on una sola variable:
+
+$$73z = 219$$
+Con la cual podemos sustituir desde $(R_9)$ hacia $(R_7)$ para obtener los valores de $x$ y $y$ que satisfacen al sistema lineal.
+
+### Sistemas indeterminados
+
+Cuando hay más variables que ecuaciones, no es posible encontrar una solución única al sistema, veamos un ejemplo de estos sistemas:
+
+\begin{align}
+2x+2y-z &= 1 \\
+2x-y+z &= 2
+\end{align}
+
+cuya matriz aumentada es:
+
+\begin{equation}
+\left[
+\begin{array}{rrr|r}
+2 & 2 & -1& 1 \\
+1 & -1& 1 & 2
+\end{array} \right]
+\begin{array}
+(F_1) \\ (F_2)
+\end{array}
+\end{equation}
+
+Lo primero que notamos es que, al haber más variables que ecuaciones, la matriz de coeficientes, tiene más columnas que filas. Entonces, vamos a comenzar por eliminar el coeficiente $a_{2,1} = 2$, haciendo $(F_1)-F_2$:
+
+\begin{equation}
+\begin{array}{r}
+(R_1) \\ (R_1) - (R_2)
+\end{array}
+\left[ 
+\begin{array}{rrr|r}
+2 & 2 &-1 & 1\\
+0 & 3 &-2 &-1
+\end{array}
+\right]
+\begin{array}{r}
+(R_3) \\ (R_4)
+\end{array}
+\end{equation}
+
+A partir de este punto sólo podemos expresar las soluciones para $x$ y $y$ en términos de $z$:
+
+\begin{align}
+2x + 2y - z &= 1 \\
+3y - 2z & = -1
+\end{align}
+
+Por lo tanto:
+
+$$y = - \frac{1}{3} + \frac{2}{3}z$$
+
+y sustituyendo $y$ en la primera ecuación encontramos que:
+
+$$x = \frac{5}{6} - \frac{1}{6}z$$
+
+Para reportar un conjunto de soluciones para todo el sistema, podemos crear una variable ficticia $t = z$, con lo que la solución al sistema es:
+
+$$\left\{(x, y, z): x = \frac{5}{6} - \frac{1}{6}z, y = - \frac{1}{3} + \frac{2}{3}z, z = t \right\}$$

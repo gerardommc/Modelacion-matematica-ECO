@@ -1,0 +1,121 @@
+Para hablar de vectores y valores propios necesitamos definir a un vector como una matriz con una sola columna y $n$ filas. Todos los ejemplos que veremos aquí son de vectores de $2 \times 1$.
+
+Los vectores en el sentido en que los trataremos aquí, representan *indicaciones* de movimiento en el plano cartesiano. Por ejemplo el vector:
+
+$$\left[ 
+\begin{array}{cc}
+2 \\ 3
+\end{array}
+\right]$$
+
+indica un movimiento de dos posiciones a la derecha en el eje $x$ y tres posiciones arriba en el eje $y$ (vector $\mathbf{u}$ en la figura )
+
+```{r vectores, echo = F, fig.align='center', fig.cap="Ejemplos de vectores **u** = (2, 3), **u**=(6, 0) y **w** = **u** + **v**."}
+knitr::include_graphics("Unidad-V/Vectores.png")
+```
+
+Las operaciones con vectrores son iguales que las operaciones con matrices, de modo que el vector $\mathbf{w}$ de la figura \@ref(fig:vectores) es:
+
+$$\mathbf{w} =\left[
+\begin{array}{c}
+2 \\ 3
+\end{array}
+\right]  + 
+\left[
+\begin{array}{c}
+6 \\ 0
+\end{array}
+\right] = 
+\left[
+\begin{array}{c}
+2 + 6 \\ 3 +0
+\end{array}
+\right] =
+\left[
+\begin{array}{c}
+8 \\ 3
+\end{array}
+\right]$$
+
+Cuando multiplicamos un vector cualquiera por un escalar, éste alargará el vector en relación a su magnitud, tal que :
+
+$$
+\mathbf{a} = 2 \times \mathbf{u} = \left[ \begin{array}{c} 4 \\ 6 \end{array} \right]
+$$
+
+```{r vector-escalar, echo = F, fig.align='center', fig.cap="Multiplicación de vector por un escalar."}
+knitr::include_graphics("Unidad-V/Mult-vector.png")
+```
+
+La operación que nos más concierne, sin embargo, en el caso de los valores y vectores propios es la multiplcación de un vector $\mathbf{x}$ por una matriz $A$.
+
+Con base en las reglas de multiplicación sabemos que para el vector $\mathbf{x}$ con dimensiones $2 \times 1$ y la matriz $A$ con dimensiones $2 \times 2$, el producto $A \mathbf{x}$ tendrá dimensiones de $2 \times 1$. Dicha multiplicación se conoce como el mapa de $\mathbf{x}$ y se escribe:
+
+\begin{equation}
+\mathbf{x} \mapsto A\mathbf{x} (\#eq:mapa)
+\end{equation}
+
+Por ejemplo:
+
+\begin{equation}
+    \left[ 
+    \begin{array}{c}
+    1 \\ 2
+    \end{array}
+    \right]
+    \cdot
+    \left[
+    \begin{array}{cc}
+    3 & 2 \\
+    1 & 4
+    \end{array}
+    \right] = 
+    \left[
+    \begin{array}{c}
+    7 \\ 9
+    \end{array}
+    \right]
+\end{equation}
+
+donde $\mathbf{x}$ es el vector $(1, 2)$, y el mapa $A \mathbf{x}$ es el vector $(7, 9)$.
+
+El concepto de **vector y valor propio** está basado en $\mathbf{x} \mapsto A \mathbf{x}$. Específicamente $A \mathbf{x}$ es el vector propio y el valor propio es una constante que satisface:
+
+\begin{equation}
+A \mathbf{x} = \lambda \mathbf{x} (\#eq:valor-propio)
+\end{equation}
+
+Este tipo de operaciones tiene muchas aplicaciones, entre ellas está el resolver sistemas de ecuaciones. Aunque sólo veremos ejemplos con vectores de $2 \times 1$, todos los ejemplos son generalizables a vectores con cualquier número de filas.
+
+Para calcular $\lambda$ al igual que hicimos para $A^{-1}$, comenzamos por resolver la ecuación \@ref(eq:valor-propio):
+
+$$A \mathbf{x} = \lambda I \mathbf{x} \rightarrow (A - \lambda I) \mathbf{x} = 0$$
+La parte $\lambda I \mathbf{x}$ se debe a que $I \mathbf{x} = \mathbf{x}$, pero necesitamos una matriz cuadrada para resolver a continuación.
+
+Dado que $\mathbf{x} \neq 0$, necesitamos que $A - \lambda I$ sea singular ($|A| = 0$), de modo que necesitamos encontrar un valor de $\lambda$ que satisfaga $\det (A - \lambda I) = 0$. Entonces si nuestra matriz:
+
+$$A = \left[
+\begin{array}{cc}
+1 & 2 \\
+3 & 2
+\end{array}
+\right]$$
+
+entonces:
+
+$$A - \lambda I = \left[
+\begin{array}{cc}
+1 - \lambda & 2 \\
+3 & 2 - \lambda
+\end{array}
+\right]$$
+
+cuyo determinante será:
+
+$$\begin{align}
+(1 - \lambda)(2-\lambda) - (2)(3) &= 2 - 3 \lambda +\lambda^2 -6\\
+& = \lambda^2 - 3 \lambda -4 \\
+& = (\lambda + 1)(\lambda - 4)
+\end{align}$$
+
+por lo tanto tenemos las soluciones $\lambda_1 = -1$ y $\lambda_2 = 4$. Como es evidente, los vectores propios $A \mathbf{x}$ que satisfacen los valores propios no son únicos, pero cada valor propio $\lambda$ está asociado a un vector propio. Para los sistemas lineales con más de dos variables habrá tantos valores propios como dimensiones.
