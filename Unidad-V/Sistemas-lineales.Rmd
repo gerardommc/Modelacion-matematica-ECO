@@ -230,7 +230,7 @@ cuya matriz aumentada es:
 \left[
 \begin{array}{rrr|r}
 2 & 2 & -1& 1 \\
-1 & -1& 1 & 2
+2 & -1& 1 & 2
 \end{array} \right]
 \begin{array}
 (F_1) \\ (F_2)
@@ -241,7 +241,7 @@ Lo primero que notamos es que, al haber más variables que ecuaciones, la matriz
 
 \begin{equation}
 \begin{array}{r}
-(R_1) \\ (R_1) - (R_2)
+(F_1) \\ (F_1) - (F_2)
 \end{array}
 \left[ 
 \begin{array}{rrr|r}
@@ -250,7 +250,7 @@ Lo primero que notamos es que, al haber más variables que ecuaciones, la matriz
 \end{array}
 \right]
 \begin{array}{r}
-(R_3) \\ (R_4)
+(F_3) \\ (F_4)
 \end{array}
 \end{equation}
 
