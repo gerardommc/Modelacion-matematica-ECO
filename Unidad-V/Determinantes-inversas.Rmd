@@ -137,7 +137,7 @@ b_{2, 1} & b_{2, 2}
 \left[ 
 \begin{array}
 \ 3 & -5 \\
--01 & 2
+-1 & 2
 \end{array}
 \right]
 \end{equation}
@@ -148,7 +148,44 @@ Verifica que las soluciones para $b_{1,1}, b_{1,2}, b_{2,1}, b_{2,2}$ sean las r
 
 ### Determinante de una matriz
 
-Encontrar la matriz inversa de otra matriz $A$ con dimensiones $2 \times 2$, es más fácil de lo que parece, resolviendo el sistema $AB = I_2$. Para cualquier matriz:
+Para continuar con este tema revisaremos rápidamente, qué es y qué hacen los vectores. Por ejemplo, la matriz:
+
+$$
+A = \left[ 
+\begin{array}{cc}
+3 & 0 \\
+0 & 2
+\end{array}
+\right]
+$$
+
+puede concebirse como dos vectores $A_1 = \left[\begin{array}{c}3 \\ 0 \end{array} \right]$ y $A_2 = \left[\begin{array}{c}0 \\ 2 \end{array} \right]$. Cada uno de estos vectores pueden representarse geométricamente como *indicaciones* de movimiento en el plano cartesiano. El vector $A_1$ indica $3$ pasos en dirección $x$ y $0$ en dirección $y$. $A_2$ indica $0$ pasos en dirección $x$ y $2$ en dirección $y$.
+
+Cuando representamos estos vectores en el plano vemos que $A_1$ está alineado con el eje $x$ y $A_2$ con el $y$, y el área formada por ambos corresponde al producto de la primera diagonal de $A$, $3 \times 2$ (figura \@ref(fig:det)).
+
+```{r det, echo = F, fig.align='center', fig.cap="Representación gráfica del determinante de la matriz A"}
+knitr::include_graphics("Unidad-V/Determinante.png")
+```
+
+Cuando las matrices utilizadas en una transformación lineal (que multiplican a un vector, por ejemplo), no tienen ceros en las casillas fuera de las diagonales, el área proyectada por los vectores será un rombo, por lo que hay que sustraer el área fuera del producto de la diagonal. Por ejemplo la matriz
+
+$$
+A = \left[ 
+\begin{array}{cc}
+1 & 1 \\
+\frac{1}{2} & 2
+\end{array}
+\right]
+$$
+```{r det-2, echo = F, fig.align='center', fig.cap="Representación del área formada por matriz sin ceros fuera de la diagonal"}
+knitr::include_graphics("Unidad-V/Determ-2.png")
+```
+
+con lo que el área formada por los vectores es $1 \times 2 - 1/2 \times 1= 3/2$. El área formada por una matriz recibe el nombre de *determinante* ($\mathrm{det}A$ ó $|A|$), puesto que es el efecto neto de la transformación lineal producida por la matriz en el vector a que afecta.
+
+El determinante puede utilizarse con muchos propósitos, uno de ellos es invertir una matriz. Para cualquier matriz $A$ con dimensiones $2 \times 2$, $A$ es invertible si el área que ésta produce es mayor a $0$.
+
+De manera más general:
 
 \begin{equation}
 A = \left[
@@ -156,18 +193,24 @@ A = \left[
 \ a_{1,1} & a_{1,2} \\
 a_{2,1} & a_{2,2}
 \end{array}
-\right]
+\right] (\#eq:mat-A)
 \end{equation}
  
- $A$ es invertible si $a_{1,1}a_{2,2} - a_{1,2}a_{2,1} \neq 0$ y si:
+ $A^{-1}$ existe si $a_{1,1}a_{2,2} - a_{1,2}a_{2,1} \neq 0$ (figura \@ref(fig:det-3))
  
+```{r det-3, echo = F, fig.align='center', fig.cap="Representación de matriz con determinante de 0."}
+knitr::include_graphics("Unidad-V/Deter-3.png")
+```
+
+Para calcular una matriz inversa usando el determinante, necesitamos encontrar la matriz **adjunta transpuesta**. Para una matriz de $2 \times 2$ como \@ref(eq:mat-A): 
+
 \begin{equation}
 A^{-1} = 
   \frac{1}{a_{1,1}a_{2,2} - a_{1,2}a_{2,1}}
     \left[
       \begin{array}
-        \ a_{2,2} & a_{1,2} \\
-        a_{2,1} & a_{1,1}
+        \ a_{2,2} & -a_{1,2} \\
+        -a_{2,1} & a_{1,1}
       \end{array}
     \right] (\#eq:dos-dos)
 \end{equation}
@@ -176,9 +219,9 @@ La expresión $a_{1,1}a_{2,2} - a_{1,2}a_{2,1}$ para una matriz $A$ de $2 \times
 
 Es posible calcular determinantes para cualquier matriz $A$ con dimensiones $n \times n$, y en todos los casos, es posible obtener $A^{-1}$ si $\mathrm{det}A \neq 0$. Las fórmulas para calcular el determinante de cualquier matriz se van complicando considerablemente conforme aumenta su tamaño, por lo que es necesario utilizar una calculadora de determinantes.
 
-Aquí nos limitaremos a las fórmulas para determinantes de $2\times 2$ (ecuación \@ref(eq:dos-dos). La figura \@ref(fig:det-3) muestra el procedimiento para una matrix de $3 \times 3$. 
+Aquí nos limitaremos a las fórmulas para determinantes de $2\times 2$ (ecuación \@ref(eq:dos-dos). La figura \@ref(fig:det3x3) muestra el procedimiento para una matrix de $3 \times 3$. 
 
-```{r det-3, echo = F, fig.align='center', fig.cap="Esquema del procedimiento para calcular el determinante de una matriz de 3 x 3."}
+```{r det3x3, echo = F, fig.align='center', fig.cap="Esquema del procedimiento para calcular el determinante de una matriz de 3 x 3."}
 knitr::include_graphics("Unidad-V/determ.png")
 ```
 

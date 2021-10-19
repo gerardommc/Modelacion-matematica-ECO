@@ -24,7 +24,7 @@
 <meta name="author" content="Gerardo Martín" />
 
 
-<meta name="date" content="2021-10-13" />
+<meta name="date" content="2021-10-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -835,7 +835,7 @@ b_{2, 1} &amp; b_{2, 2}
 \left[ 
 \begin{array}
 \ 3 &amp; -5 \\
--01 &amp; 2
+-1 &amp; 2
 \end{array}
 \right]
 \end{equation}\]</span></p>
@@ -848,33 +848,74 @@ b_{2, 1} &amp; b_{2, 2}
 </div>
 <div id="determinante-de-una-matriz" class="section level3" number="7.3.3">
 <h3><span class="header-section-number">7.3.3</span> Determinante de una matriz</h3>
-<p>Encontrar la matriz inversa de otra matriz <span class="math inline">\(A\)</span> con dimensiones <span class="math inline">\(2 \times 2\)</span>, es más fácil de lo que parece, resolviendo el sistema <span class="math inline">\(AB = I_2\)</span>. Para cualquier matriz:</p>
-<p><span class="math display">\[\begin{equation}
+<p>Para continuar con este tema revisaremos rápidamente, qué es y qué hacen los vectores. Por ejemplo, la matriz:</p>
+<p><span class="math display">\[
+A = \left[ 
+\begin{array}{cc}
+3 &amp; 0 \\
+0 &amp; 2
+\end{array}
+\right]
+\]</span></p>
+<p>puede concebirse como dos vectores <span class="math inline">\(A_1 = \left[\begin{array}{c}3 \\ 0 \end{array} \right]\)</span> y <span class="math inline">\(A_2 = \left[\begin{array}{c}0 \\ 2 \end{array} \right]\)</span>. Cada uno de estos vectores pueden representarse geométricamente como <em>indicaciones</em> de movimiento en el plano cartesiano. El vector <span class="math inline">\(A_1\)</span> indica <span class="math inline">\(3\)</span> pasos en dirección <span class="math inline">\(x\)</span> y <span class="math inline">\(0\)</span> en dirección <span class="math inline">\(y\)</span>. <span class="math inline">\(A_2\)</span> indica <span class="math inline">\(0\)</span> pasos en dirección <span class="math inline">\(x\)</span> y <span class="math inline">\(2\)</span> en dirección <span class="math inline">\(y\)</span>.</p>
+<p>Cuando representamos estos vectores en el plano vemos que <span class="math inline">\(A_1\)</span> está alineado con el eje <span class="math inline">\(x\)</span> y <span class="math inline">\(A_2\)</span> con el <span class="math inline">\(y\)</span>, y el área formada por ambos corresponde al producto de la primera diagonal de <span class="math inline">\(A\)</span>, <span class="math inline">\(3 \times 2\)</span> (figura <a href="unidad-ii-introducción-al-álgebra-de-matrices.html#fig:det">7.3</a>).</p>
+<div class="figure" style="text-align: center"><span id="fig:det"></span>
+<img src="Unidad-V/Determinante.png" alt="Representación gráfica del determinante de la matriz A" width="1500" />
+<p class="caption">
+Figura 7.3: Representación gráfica del determinante de la matriz A
+</p>
+</div>
+<p>Cuando las matrices utilizadas en una transformación lineal (que multiplican a un vector, por ejemplo), no tienen ceros en las casillas fuera de las diagonales, el área proyectada por los vectores será un rombo, por lo que hay que sustraer el área fuera del producto de la diagonal. Por ejemplo la matriz</p>
+<span class="math display">\[
+A = \left[ 
+\begin{array}{cc}
+1 &amp; 1 \\
+\frac{1}{2} &amp; 2
+\end{array}
+\right]
+\]</span>
+<div class="figure" style="text-align: center"><span id="fig:det-2"></span>
+<img src="Unidad-V/Determ-2.png" alt="Representación del área formada por matriz sin ceros fuera de la diagonal" width="729" />
+<p class="caption">
+Figura 7.4: Representación del área formada por matriz sin ceros fuera de la diagonal
+</p>
+</div>
+<p>con lo que el área formada por los vectores es <span class="math inline">\(1 \times 2 - 1/2 \times 1= 3/2\)</span>. El área formada por una matriz recibe el nombre de <em>determinante</em> (<span class="math inline">\(\mathrm{det}A\)</span> ó <span class="math inline">\(|A|\)</span>), puesto que es el efecto neto de la transformación lineal producida por la matriz en el vector a que afecta.</p>
+<p>El determinante puede utilizarse con muchos propósitos, uno de ellos es invertir una matriz. Para cualquier matriz <span class="math inline">\(A\)</span> con dimensiones <span class="math inline">\(2 \times 2\)</span>, <span class="math inline">\(A\)</span> es invertible si el área que ésta produce es mayor a <span class="math inline">\(0\)</span>.</p>
+<p>De manera más general:</p>
+<p><span class="math display" id="eq:mat-A">\[\begin{equation}
 A = \left[
 \begin{array}
 \ a_{1,1} &amp; a_{1,2} \\
 a_{2,1} &amp; a_{2,2}
 \end{array}
-\right]
+\right] \tag{7.4}
 \end{equation}\]</span></p>
-<p><span class="math inline">\(A\)</span> es invertible si <span class="math inline">\(a_{1,1}a_{2,2} - a_{1,2}a_{2,1} \neq 0\)</span> y si:</p>
+<p><span class="math inline">\(A^{-1}\)</span> existe si <span class="math inline">\(a_{1,1}a_{2,2} - a_{1,2}a_{2,1} \neq 0\)</span> (figura <a href="unidad-ii-introducción-al-álgebra-de-matrices.html#fig:det-3">7.5</a>)</p>
+<div class="figure" style="text-align: center"><span id="fig:det-3"></span>
+<img src="Unidad-V/Deter-3.png" alt="Representación de matriz con determinante de 0." width="461" />
+<p class="caption">
+Figura 7.5: Representación de matriz con determinante de 0.
+</p>
+</div>
+<p>Para calcular una matriz inversa usando el determinante, necesitamos encontrar la matriz <strong>adjunta transpuesta</strong>. Para una matriz de <span class="math inline">\(2 \times 2\)</span> como <a href="unidad-ii-introducción-al-álgebra-de-matrices.html#eq:mat-A">(7.4)</a>:</p>
 <p><span class="math display" id="eq:dos-dos">\[\begin{equation}
 A^{-1} = 
   \frac{1}{a_{1,1}a_{2,2} - a_{1,2}a_{2,1}}
     \left[
       \begin{array}
-        \ a_{2,2} &amp; a_{1,2} \\
-        a_{2,1} &amp; a_{1,1}
+        \ a_{2,2} &amp; -a_{1,2} \\
+        -a_{2,1} &amp; a_{1,1}
       \end{array}
-    \right] \tag{7.4}
+    \right] \tag{7.5}
 \end{equation}\]</span></p>
 <p>La expresión <span class="math inline">\(a_{1,1}a_{2,2} - a_{1,2}a_{2,1}\)</span> para una matriz <span class="math inline">\(A\)</span> de <span class="math inline">\(2 \times 2\)</span> se conoce como el determinante y se denota como <span class="math inline">\(\mathrm{det} A\)</span> ó <span class="math inline">\(|A|\)</span>.</p>
 <p>Es posible calcular determinantes para cualquier matriz <span class="math inline">\(A\)</span> con dimensiones <span class="math inline">\(n \times n\)</span>, y en todos los casos, es posible obtener <span class="math inline">\(A^{-1}\)</span> si <span class="math inline">\(\mathrm{det}A \neq 0\)</span>. Las fórmulas para calcular el determinante de cualquier matriz se van complicando considerablemente conforme aumenta su tamaño, por lo que es necesario utilizar una calculadora de determinantes.</p>
-<p>Aquí nos limitaremos a las fórmulas para determinantes de <span class="math inline">\(2\times 2\)</span> (ecuación <a href="unidad-ii-introducción-al-álgebra-de-matrices.html#eq:dos-dos">(7.4)</a>. La figura <a href="unidad-ii-introducción-al-álgebra-de-matrices.html#fig:det-3">7.3</a> muestra el procedimiento para una matrix de <span class="math inline">\(3 \times 3\)</span>.</p>
-<div class="figure" style="text-align: center"><span id="fig:det-3"></span>
+<p>Aquí nos limitaremos a las fórmulas para determinantes de <span class="math inline">\(2\times 2\)</span> (ecuación <a href="unidad-ii-introducción-al-álgebra-de-matrices.html#eq:dos-dos">(7.5)</a>. La figura <a href="unidad-ii-introducción-al-álgebra-de-matrices.html#fig:det3x3">7.6</a> muestra el procedimiento para una matrix de <span class="math inline">\(3 \times 3\)</span>.</p>
+<div class="figure" style="text-align: center"><span id="fig:det3x3"></span>
 <img src="Unidad-V/determ.png" alt="Esquema del procedimiento para calcular el determinante de una matriz de 3 x 3." width="312" />
 <p class="caption">
-Figura 7.3: Esquema del procedimiento para calcular el determinante de una matriz de 3 x 3.
+Figura 7.6: Esquema del procedimiento para calcular el determinante de una matriz de 3 x 3.
 </p>
 </div>
 </div>
@@ -892,10 +933,10 @@ Figura 7.3: Esquema del procedimiento para calcular el determinante de una matri
 <div class="figure" style="text-align: center"><span id="fig:vectores"></span>
 <img src="Unidad-V/Vectores.png" alt="Ejemplos de vectores **u** = (2, 3), **u**=(6, 0) y **w** = **u** + **v**." width="1154" />
 <p class="caption">
-Figura 7.4: Ejemplos de vectores <strong>u</strong> = (2, 3), <strong>u</strong>=(6, 0) y <strong>w</strong> = <strong>u</strong> + <strong>v</strong>.
+Figura 7.7: Ejemplos de vectores <strong>u</strong> = (2, 3), <strong>u</strong>=(6, 0) y <strong>w</strong> = <strong>u</strong> + <strong>v</strong>.
 </p>
 </div>
-<p>Las operaciones con vectrores son iguales que las operaciones con matrices, de modo que el vector <span class="math inline">\(\mathbf{w}\)</span> de la figura <a href="unidad-ii-introducción-al-álgebra-de-matrices.html#fig:vectores">7.4</a> es:</p>
+<p>Las operaciones con vectrores son iguales que las operaciones con matrices, de modo que el vector <span class="math inline">\(\mathbf{w}\)</span> de la figura <a href="unidad-ii-introducción-al-álgebra-de-matrices.html#fig:vectores">7.7</a> es:</p>
 <p><span class="math display">\[\mathbf{w} =\left[
 \begin{array}{c}
 2 \\ 3
@@ -923,13 +964,13 @@ Figura 7.4: Ejemplos de vectores <strong>u</strong> = (2, 3), <strong>u</strong>
 <div class="figure" style="text-align: center"><span id="fig:vector-escalar"></span>
 <img src="Unidad-V/Mult-vector.png" alt="Multiplicación de vector por un escalar." width="566" />
 <p class="caption">
-Figura 7.5: Multiplicación de vector por un escalar.
+Figura 7.8: Multiplicación de vector por un escalar.
 </p>
 </div>
 <p>La operación que nos más concierne, sin embargo, en el caso de los valores y vectores propios es la multiplcación de un vector <span class="math inline">\(\mathbf{x}\)</span> por una matriz <span class="math inline">\(A\)</span>.</p>
 <p>Con base en las reglas de multiplicación sabemos que para el vector <span class="math inline">\(\mathbf{x}\)</span> con dimensiones <span class="math inline">\(2 \times 1\)</span> y la matriz <span class="math inline">\(A\)</span> con dimensiones <span class="math inline">\(2 \times 2\)</span>, el producto <span class="math inline">\(A \mathbf{x}\)</span> tendrá dimensiones de <span class="math inline">\(2 \times 1\)</span>. Dicha multiplicación se conoce como el mapa de <span class="math inline">\(\mathbf{x}\)</span> y se escribe:</p>
 <p><span class="math display" id="eq:mapa">\[\begin{equation}
-\mathbf{x} \mapsto A\mathbf{x} \tag{7.5}
+\mathbf{x} \mapsto A\mathbf{x} \tag{7.6}
 \end{equation}\]</span></p>
 <p>Por ejemplo:</p>
 <p><span class="math display">\[\begin{equation}
@@ -954,10 +995,10 @@ Figura 7.5: Multiplicación de vector por un escalar.
 <p>donde <span class="math inline">\(\mathbf{x}\)</span> es el vector <span class="math inline">\((1, 2)\)</span>, y el mapa <span class="math inline">\(A \mathbf{x}\)</span> es el vector <span class="math inline">\((7, 9)\)</span>.</p>
 <p>El concepto de <strong>vector y valor propio</strong> está basado en <span class="math inline">\(\mathbf{x} \mapsto A \mathbf{x}\)</span>. Específicamente <span class="math inline">\(A \mathbf{x}\)</span> es el vector propio y el valor propio es una constante que satisface:</p>
 <p><span class="math display" id="eq:valor-propio">\[\begin{equation}
-A \mathbf{x} = \lambda \mathbf{x} \tag{7.6}
+A \mathbf{x} = \lambda \mathbf{x} \tag{7.7}
 \end{equation}\]</span></p>
 <p>Este tipo de operaciones tiene muchas aplicaciones, entre ellas está el resolver sistemas de ecuaciones. Aunque sólo veremos ejemplos con vectores de <span class="math inline">\(2 \times 1\)</span>, todos los ejemplos son generalizables a vectores con cualquier número de filas.</p>
-<p>Para calcular <span class="math inline">\(\lambda\)</span> al igual que hicimos para <span class="math inline">\(A^{-1}\)</span>, comenzamos por resolver la ecuación <a href="unidad-ii-introducción-al-álgebra-de-matrices.html#eq:valor-propio">(7.6)</a>:</p>
+<p>Para calcular <span class="math inline">\(\lambda\)</span> al igual que hicimos para <span class="math inline">\(A^{-1}\)</span>, comenzamos por resolver la ecuación <a href="unidad-ii-introducción-al-álgebra-de-matrices.html#eq:valor-propio">(7.7)</a>:</p>
 <p><span class="math display">\[A \mathbf{x} = \lambda I \mathbf{x} \rightarrow (A - \lambda I) \mathbf{x} = 0\]</span>
 La parte <span class="math inline">\(\lambda I \mathbf{x}\)</span> se debe a que <span class="math inline">\(I \mathbf{x} = \mathbf{x}\)</span>, pero necesitamos una matriz cuadrada para resolver a continuación.</p>
 <p>Dado que <span class="math inline">\(\mathbf{x} \neq 0\)</span>, necesitamos que <span class="math inline">\(A - \lambda I\)</span> sea singular (<span class="math inline">\(|A| = 0\)</span>), de modo que necesitamos encontrar un valor de <span class="math inline">\(\lambda\)</span> que satisfaga <span class="math inline">\(\det (A - \lambda I) = 0\)</span>. Entonces si nuestra matriz:</p>

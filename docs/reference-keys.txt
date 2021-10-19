@@ -80,8 +80,12 @@ fig:sin-soln
 eq:sist-matriz
 eq:Aumentada
 eq:mat-mult
-eq:dos-dos
+fig:det
+fig:det-2
+eq:mat-A
 fig:det-3
+eq:dos-dos
+fig:det3x3
 fig:vectores
 fig:vector-escalar
 eq:mapa
