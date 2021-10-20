@@ -1,0 +1,56 @@
+Como vimos anteriormente, los valores propios son independientes de los vectores, es decir, los valores reflejan una propiedad de las matrices. Para encontrar los vectores que satisfacen la propiedad:
+
+$$A \vec{x} = \lambda \vec{x}$$
+
+tenemos que resolver la ecuación para los valores de $\lambda$. Pongamos por ejemplo la matriz
+
+$$A = \left[\begin{array}{cc} 1 & 2 \\ 3 & 2 \end{array}\right]$$
+
+tiene los valores propios $\lambda_1 = -1$ y $\lambda_2 = 4$, y la ecuación a resolver para obtener los vectores propios que corresponden con $\lambda_1$ son:
+
+\begin{equation}
+\left[\begin{array}{cc} 1 & 2 \\ 3 & 2 \end{array}\right] 
+\left[\begin{array}{c} x_1 \\ x_2 \end{array} \right] =
+-1 \left[\begin{array}{c} x_1 \\ x_2 \end{array} \right]
+\end{equation}
+
+pasando el lado izquierdo al derecho, factorizando el vector $\vec{v}$, y multiplicando $\lambda$ por la matriz identidad tenemos:
+
+\begin{equation}
+\left(
+\left[\begin{array}{cc} 1 & 2 \\ 3 & 2 \end{array}\right] +
+\left[\begin{array}{cc} 1 & 0 \\ 0 & 1 \end{array} \right] \right) \left[\begin{array}{c} x_1 \\ x_2 \end{array} \right] = \vec{0}
+\end{equation}
+
+y sumando las matrices tenemos:
+
+\begin{equation}
+\left[\begin{array}{cc} 1 + 1 & 2 \\ 3 & 2 + 1 \end{array}\right] \left[\begin{array}{c} x_1 \\ x_2 \end{array} \right] = \vec{0}
+\end{equation}
+
+Una vez encontrado el sistema, podemos resolverlo con el método de la matriz aumentada:
+
+\begin{equation}
+\left[ \begin{array}{cc|c}
+2 & 2 & 0 \\
+3 & 3 & 0
+\end{array}\right] 
+\begin{array}{c}
+(F_1) \\ (F_2)
+\end{array}
+\end{equation}
+
+aunque si lo resolvemos con el método tradicional **siempre** llegaremos a la solución $x_1 = 0; x_2 = 0$. Entonces necesitamos reducir la matrix por fila al modo Echelon. Este método consiste en realizar las operaciones con filas para reducir las filas inferiores a ceros. Por ejemplo, reemplazando $F_2$ con $3 F_1 - 2F_2 $, y dividiendo $F_1/2$:
+
+\begin{equation}
+\left[ \begin{array}{cc|c}
+1 & 1 & 0 \\
+0 & 0 & 0
+\end{array}\right] 
+\begin{array}{c}
+(F_3) \\ (F_4)
+\end{array}
+\end{equation}
+
+Por lo tanto el vector propio para $\lambda_1 = -1$ es $(1, 1)$. El proceso para encontrar el vector propio para $\lambda_2$ es el mismo.
+

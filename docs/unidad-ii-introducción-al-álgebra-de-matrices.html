@@ -24,7 +24,7 @@
 <meta name="author" content="Gerardo Martín" />
 
 
-<meta name="date" content="2021-10-19" />
+<meta name="date" content="2021-10-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -276,7 +276,8 @@ div.csl-indent {
 <li class="chapter" data-level="7.3.2" data-path="unidad-ii-introducción-al-álgebra-de-matrices.html"><a href="unidad-ii-introducción-al-álgebra-de-matrices.html#matriz-inversa"><i class="fa fa-check"></i><b>7.3.2</b> Matriz inversa</a></li>
 <li class="chapter" data-level="7.3.3" data-path="unidad-ii-introducción-al-álgebra-de-matrices.html"><a href="unidad-ii-introducción-al-álgebra-de-matrices.html#determinante-de-una-matriz"><i class="fa fa-check"></i><b>7.3.3</b> Determinante de una matriz</a></li>
 </ul></li>
-<li class="chapter" data-level="7.4" data-path="unidad-ii-introducción-al-álgebra-de-matrices.html"><a href="unidad-ii-introducción-al-álgebra-de-matrices.html#valores-y-vectores-propios"><i class="fa fa-check"></i><b>7.4</b> Valores y vectores propios</a></li>
+<li class="chapter" data-level="7.4" data-path="unidad-ii-introducción-al-álgebra-de-matrices.html"><a href="unidad-ii-introducción-al-álgebra-de-matrices.html#valores-propios"><i class="fa fa-check"></i><b>7.4</b> Valores propios</a></li>
+<li class="chapter" data-level="7.5" data-path="unidad-ii-introducción-al-álgebra-de-matrices.html"><a href="unidad-ii-introducción-al-álgebra-de-matrices.html#vectores-propios"><i class="fa fa-check"></i><b>7.5</b> Vectores propios</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -323,7 +324,7 @@ a_{1, n}x_1+a_{2,n}x_2 + \dots + a_{n,n}x_n &amp; = b_n
 4x - 2y &amp; =10
 \end{align}\]</span></p>
 <p>sería:</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-37"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-38"></span>
 <img src="Unidad-V/Soln-grafica-1.png" alt="Solución gráfica del sistema de ecuaciones para dos variables" width="1500" />
 <p class="caption">
 Figura 7.1: Solución gráfica del sistema de ecuaciones para dos variables
@@ -920,8 +921,8 @@ Figura 7.6: Esquema del procedimiento para calcular el determinante de una matri
 </div>
 </div>
 </div>
-<div id="valores-y-vectores-propios" class="section level2" number="7.4">
-<h2><span class="header-section-number">7.4</span> Valores y vectores propios</h2>
+<div id="valores-propios" class="section level2" number="7.4">
+<h2><span class="header-section-number">7.4</span> Valores propios</h2>
 <p>Para hablar de vectores y valores propios necesitamos definir a un vector como una matriz con una sola columna y <span class="math inline">\(n\)</span> filas. Todos los ejemplos que veremos aquí son de vectores de <span class="math inline">\(2 \times 1\)</span>.</p>
 <p>Los vectores en el sentido en que los trataremos aquí, representan <em>indicaciones</em> de movimiento en el plano cartesiano. Por ejemplo el vector:</p>
 <p><span class="math display">\[\left[ 
@@ -1022,6 +1023,50 @@ La parte <span class="math inline">\(\lambda I \mathbf{x}\)</span> se debe a que
 &amp; = (\lambda + 1)(\lambda - 4)
 \end{align}\]</span></p>
 <p>por lo tanto tenemos las soluciones <span class="math inline">\(\lambda_1 = -1\)</span> y <span class="math inline">\(\lambda_2 = 4\)</span>. Como es evidente, los vectores propios <span class="math inline">\(A \mathbf{x}\)</span> que satisfacen los valores propios no son únicos, pero cada valor propio <span class="math inline">\(\lambda\)</span> está asociado a un vector propio. Para los sistemas lineales con más de dos variables habrá tantos valores propios como dimensiones.</p>
+</div>
+<div id="vectores-propios" class="section level2" number="7.5">
+<h2><span class="header-section-number">7.5</span> Vectores propios</h2>
+<p>Como vimos anteriormente, los valores propios son independientes de los vectores, es decir, los valores reflejan una propiedad de las matrices. Para encontrar los vectores que satisfacen la propiedad:</p>
+<p><span class="math display">\[A \vec{x} = \lambda \vec{x}\]</span></p>
+<p>tenemos que resolver la ecuación para los valores de <span class="math inline">\(\lambda\)</span>. Pongamos por ejemplo la matriz</p>
+<p><span class="math display">\[A = \left[\begin{array}{cc} 1 &amp; 2 \\ 3 &amp; 2 \end{array}\right]\]</span></p>
+<p>tiene los valores propios <span class="math inline">\(\lambda_1 = -1\)</span> y <span class="math inline">\(\lambda_2 = 4\)</span>, y la ecuación a resolver para obtener los vectores propios que corresponden con <span class="math inline">\(\lambda_1\)</span> son:</p>
+<p><span class="math display">\[\begin{equation}
+\left[\begin{array}{cc} 1 &amp; 2 \\ 3 &amp; 2 \end{array}\right] 
+\left[\begin{array}{c} x_1 \\ x_2 \end{array} \right] =
+-1 \left[\begin{array}{c} x_1 \\ x_2 \end{array} \right]
+\end{equation}\]</span></p>
+<p>pasando el lado izquierdo al derecho, factorizando el vector <span class="math inline">\(\vec{v}\)</span>, y multiplicando <span class="math inline">\(\lambda\)</span> por la matriz identidad tenemos:</p>
+<p><span class="math display">\[\begin{equation}
+\left(
+\left[\begin{array}{cc} 1 &amp; 2 \\ 3 &amp; 2 \end{array}\right] +
+\left[\begin{array}{cc} 1 &amp; 0 \\ 0 &amp; 1 \end{array} \right] \right) \left[\begin{array}{c} x_1 \\ x_2 \end{array} \right] = \vec{0}
+\end{equation}\]</span></p>
+<p>y sumando las matrices tenemos:</p>
+<p><span class="math display">\[\begin{equation}
+\left[\begin{array}{cc} 1 + 1 &amp; 2 \\ 3 &amp; 2 + 1 \end{array}\right] \left[\begin{array}{c} x_1 \\ x_2 \end{array} \right] = \vec{0}
+\end{equation}\]</span></p>
+<p>Una vez encontrado el sistema, podemos resolverlo con el método de la matriz aumentada:</p>
+<p><span class="math display">\[\begin{equation}
+\left[ \begin{array}{cc|c}
+2 &amp; 2 &amp; 0 \\
+3 &amp; 3 &amp; 0
+\end{array}\right] 
+\begin{array}{c}
+(F_1) \\ (F_2)
+\end{array}
+\end{equation}\]</span></p>
+<p>aunque si lo resolvemos con el método tradicional <strong>siempre</strong> llegaremos a la solución <span class="math inline">\(x_1 = 0; x_2 = 0\)</span>. Entonces necesitamos reducir la matrix por fila al modo Echelon. Este método consiste en realizar las operaciones con filas para reducir las filas inferiores a ceros. Por ejemplo, reemplazando <span class="math inline">\(F_2\)</span> con $3 F_1 - 2F_2 $, y dividiendo <span class="math inline">\(F_1/2\)</span>:</p>
+<p><span class="math display">\[\begin{equation}
+\left[ \begin{array}{cc|c}
+1 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 0
+\end{array}\right] 
+\begin{array}{c}
+(F_3) \\ (F_4)
+\end{array}
+\end{equation}\]</span></p>
+<p>Por lo tanto el vector propio para <span class="math inline">\(\lambda_1 = -1\)</span> es <span class="math inline">\((1, 1)\)</span>. El proceso para encontrar el vector propio para <span class="math inline">\(\lambda_2\)</span> es el mismo.</p>
 
 </div>
 </div>

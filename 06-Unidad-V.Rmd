@@ -18,9 +18,15 @@
 
 ```
 
-## Valores y vectores propios
+## Valores propios
 
-```{r echo = FALSE, child= "Unidad-V/Vectores-valores-propios.Rmd"}
+```{r echo = FALSE, child= "Unidad-V/Valores-propios.Rmd"}
+
+```
+
+## Vectores propios
+
+```{r echo = FALSE, child = "Unidad-V/Vectores-propios.Rmd"}
 
 ```
 
