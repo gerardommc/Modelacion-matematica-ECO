@@ -58,18 +58,17 @@ Con base en las reglas de multiplicación sabemos que para el vector $\mathbf{x}
 Por ejemplo:
 
 \begin{equation}
-    \left[ 
-    \begin{array}{c}
-    1 \\ 2
-    \end{array}
-    \right]
-    \cdot
     \left[
     \begin{array}{cc}
     3 & 2 \\
     1 & 4
     \end{array}
-    \right] = 
+    \right] \cdot 
+        \left[ 
+    \begin{array}{c}
+    1 \\ 2
+    \end{array}
+    \right]= 
     \left[
     \begin{array}{c}
     7 \\ 9
