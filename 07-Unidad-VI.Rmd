@@ -1,0 +1,8 @@
+# Unidad VI: Modelos lineales de poblaciones estructuradas
+
+## Proyección de matrices para modelos estructurados: la matriz de Leslie
+
+```{r echo = F, child="Unidad-VI/Matriz-leslie.Rmd"}
+
+```
+

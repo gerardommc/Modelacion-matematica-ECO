@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Modelos Matemáticos en Ecología I</title>
+  <title> 8 Unidad VI: Modelos lineales de poblaciones estructuradas | Modelos Matemáticos en Ecología I</title>
   <meta name="description" content="Sitio del curso de la Licenciatura en Ecología de la ENES unidad Mérida" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Modelos Matemáticos en Ecología I" />
+  <meta property="og:title" content=" 8 Unidad VI: Modelos lineales de poblaciones estructuradas | Modelos Matemáticos en Ecología I" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Modelos Matemáticos en Ecología I" />
+  <meta name="twitter:title" content=" 8 Unidad VI: Modelos lineales de poblaciones estructuradas | Modelos Matemáticos en Ecología I" />
   
   <meta name="twitter:description" content="Sitio del curso de la Licenciatura en Ecología de la ENES unidad Mérida" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="encuadre-de-la-materia.html"/>
+<link rel="prev" href="unidad-v-introducción-al-álgebra-de-matrices.html"/>
+<link rel="next" href="references.html"/>
 <script src="libs/header-attrs-2.8/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -304,24 +304,52 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Modelos Matemáticos en Ecología I</h1>
-<p class="author"><em>Gerardo Martín</em></p>
-<p class="date" style="margin-top: 1.5em;"><em>2021-10-22</em></p>
-</div>
-<div id="preámbulo" class="section level1" number="1">
-<h1><span class="header-section-number"> 1</span> Preámbulo</h1>
-<p><img src="logo.png" width="750" style="display: block; margin: auto;" /></p>
-<p>En el curso <strong>Modelos matemáticos en ecología</strong> aprenderemos a utilizar algunas herramientas matemáticas para entender procesos en ecología. Los contenidos del índice se apegan al <a href="Programa-curso.pdf">programa completo del curso</a>, el cual se impartirá en los <a href="Horario.pdf">horarios normales establecidos</a>. Para conocer cuándo, cómo y qué temas se se impartirán puedes consultar la <a href="Estrategia-docente.pdf">estrategia docente</a>.</p>
+<div id="unidad-vi-modelos-lineales-de-poblaciones-estructuradas" class="section level1" number="8">
+<h1><span class="header-section-number"> 8</span> Unidad VI: Modelos lineales de poblaciones estructuradas</h1>
+<div id="proyección-de-matrices-para-modelos-estructurados-la-matriz-de-leslie" class="section level2" number="8.1">
+<h2><span class="header-section-number">8.1</span> Proyección de matrices para modelos estructurados: la matriz de Leslie</h2>
+<p>Los modelos de poblaciones que hemos visto hasta la fecha sólo consideran un estado de desarrollo, tal que toda la población puede ser considerada como <span class="math inline">\(N\)</span>. Al hacer eso,incurrimos en una serie de supuestos biológicos muy fuertes, por ejemplo que todos los individuos nuevos en la población pueden reproducirse en cuanto se incorporan a esta con la misma probabilidad que los individuos más antiguos.</p>
+<p>Parte de estos problemas biológicos que el modelo exponencial (<span class="math inline">\(N_{t+1} = \lambda N_t\)</span>) en tiempo discreto presenta son solucionados por discretización de <span class="math inline">\(N\)</span>, es decir, dividir a <span class="math inline">\(N\)</span> en una serie de compartimentos que representan estados de desarrollo, de modo que:</p>
+<p><span class="math display">\[
+N(t) = \left[\begin{array}{c} N_0(t)\\ N_1(t)\\ \vdots \\ N_n(t) \end{array}\right]
+\]</span></p>
+<p>donde <span class="math inline">\(N_0(t)\)</span> representa el cohorte más joven lo neonatos, y <span class="math inline">\(N_n(t)\)</span> el de mayor edad. Los nacimiento entoces constituyen un flujo de invidiuos nuevos en la población hacia <span class="math inline">\(N_1(t)\)</span>, en función de los cohortes que se pueden reproducir. Para ejemplificar esto, consideremos un organismo cuyas dinámicas ocurren en tiempo discreto, con <span class="math inline">\(N\)</span> dividido en cuatro edades<span class="math inline">\(N_0, N_1, N_2\)</span> y <span class="math inline">\(N_3\)</span>. Consideremos primero cómo ocurre la transición entre estos compartimentos, donde sólo sobreviven 40% de <span class="math inline">\(N_0\)</span> and <span class="math inline">\(N_1\)</span>, 30% de <span class="math inline">\(N_1\)</span> a <span class="math inline">\(N_2\)</span> y 10% de <span class="math inline">\(N_2\)</span> and <span class="math inline">\(N_3\)</span>:</p>
+<p><span class="math display">\[\begin{align}
+N_{1, t+1} &amp;= 0.4 N_{0, t} \\
+N_{2, t+1} &amp;= 0.3 N_{1, t} \\
+N_{3, t+1} &amp;= 0.1 N_{2, t}
+\end{align}\]</span></p>
+<p>Para obtener <span class="math inline">\(N_0(t)\)</span> necesitamos identificar los cohortes o compartimentos que sí se reproducen, entonces si estos son <span class="math inline">\(N_1\)</span> y <span class="math inline">\(N_2\)</span>, la ecuación para <span class="math inline">\(N_0\)</span> es:</p>
+<p><span class="math display">\[\begin{align}
+N_{0, t+1} &amp;= \mathrm{Crías\ nacidas\ de\ madres} N_{1, t} + \mathrm{Crías\ nacidas\ de\ madres} N_{2, t} \\
+N_{0, t+1} &amp;= 2 N_{1, t} + 1.5 N_{2, t}
+\end{align}\]</span></p>
+<p>Claramente, en este modelo estamos asumiendo que la población de interés está constituida únicamente por hembras, de modo que <span class="math inline">\(2\)</span> y <span class="math inline">\(1.5\)</span> es el promedio de hembras nacidas por cada hembra en <span class="math inline">\(N_1\)</span> y <span class="math inline">\(N_2\)</span>. Así tenemos entonces el modelo completo para representar como matriz:</p>
+<p><span class="math display" id="eq:Leslie">\[\begin{equation}
+\left[\begin{array}{c}
+N_{0, t+1} \\ N_{1, t+1} \\ N_{2, t+1} \\ N_{3, t+1}
+\end{array}\right] =
+\left[ 
+\begin{array}{cccc}
+0 &amp; 2 &amp; 1.5 &amp; 0 \\
+0.4 &amp; 0 &amp; 0 &amp; 0 \\
+0  &amp; 0.3&amp; 0 &amp; 0 \\
+0  &amp; 0 &amp; 0.1&amp; 0
+\end{array}
+\right] \tag{8.1}
+\end{equation}\]</span></p>
+<p>La matriz de coeficientes en la ecuación <a href="unidad-vi-modelos-lineales-de-poblaciones-estructuradas.html#eq:Leslie">(8.1)</a> se conoce omo matriz de Leslie, y la notación corta para dichos sistemas de ecuaciones es:</p>
+<p><span class="math display">\[\mathbf{N}(t+1) = L \mathbf{N}(t)\]</span></p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="encuadre-de-la-materia.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="unidad-v-introducción-al-álgebra-de-matrices.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

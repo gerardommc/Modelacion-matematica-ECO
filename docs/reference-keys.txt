@@ -1,16 +1,16 @@
-fig:unnamed-chunk-27
 fig:unnamed-chunk-28
+fig:unnamed-chunk-29
 eq:juv
 eq:ad
 fig:juve-ad
 fig:volterra
 fig:lepto
-fig:unnamed-chunk-29
+fig:unnamed-chunk-30
 fig:volterra-diag
 eq:pulgadas
-tab:unnamed-chunk-32
-fig:unnamed-chunk-33
+tab:unnamed-chunk-33
 fig:unnamed-chunk-34
+fig:unnamed-chunk-35
 fig:parabola
 fig:parabola-2
 fig:parabola-3
@@ -75,7 +75,7 @@ eq:exp-disc
 fig:disc-cont
 eq:logis-disc
 fig:caos-logis
-fig:unnamed-chunk-38
+fig:unnamed-chunk-39
 fig:sin-soln
 eq:sist-matriz
 eq:Aumentada
@@ -90,6 +90,7 @@ fig:vectores
 fig:vector-escalar
 eq:mapa
 eq:valor-propio
+eq:Leslie
 preámbulo
 encuadre-de-la-materia
 criterios-de-evaluación
@@ -184,7 +185,7 @@ modelos-en-tiempo-contínuo-vs-discreto
 crecimiento-exponencial-en-tiempo-discreto
 crecimiento-logístico-en-tiempo-discreto
 implicaciones-para-sistemas-ecológicos
-unidad-ii-introducción-al-álgebra-de-matrices
+unidad-v-introducción-al-álgebra-de-matrices
 sistemas-lineales
 solución-gráfica
 solución-algebráica
@@ -209,3 +210,5 @@ ejercicio-3
 determinante-de-una-matriz
 valores-propios
 vectores-propios
+unidad-vi-modelos-lineales-de-poblaciones-estructuradas
+proyección-de-matrices-para-modelos-estructurados-la-matriz-de-leslie

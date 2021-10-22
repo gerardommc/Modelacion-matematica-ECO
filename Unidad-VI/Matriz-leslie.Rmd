@@ -1,0 +1,47 @@
+Los modelos de poblaciones que hemos visto hasta la fecha sólo consideran un estado de desarrollo, tal que toda la población puede ser considerada como $N$. Al hacer eso,incurrimos en una serie de supuestos biológicos muy fuertes, por ejemplo que todos los individuos nuevos en la población pueden reproducirse en cuanto se incorporan a esta con la misma probabilidad que los individuos más antiguos.
+
+Parte de estos problemas biológicos que el modelo exponencial ($N_{t+1} = \lambda N_t$) en tiempo discreto presenta son solucionados por discretización de $N$, es decir, dividir a $N$ en una serie de compartimentos que representan estados de desarrollo, de modo que:
+
+$$
+N(t) = \left[\begin{array}{c} N_0(t)\\ N_1(t)\\ \vdots \\ N_n(t) \end{array}\right]
+$$
+
+donde $N_0(t)$ representa el cohorte más joven lo neonatos, y $N_n(t)$ el de mayor edad. Los nacimiento entoces constituyen un flujo de invidiuos nuevos en la población hacia $N_1(t)$, en función de los cohortes que se pueden reproducir. Para ejemplificar esto, consideremos un organismo cuyas dinámicas ocurren en tiempo discreto, con $N$ dividido en cuatro edades$N_0, N_1, N_2$ y $N_3$. Consideremos primero cómo ocurre la transición entre estos compartimentos, donde sólo sobreviven 40% de $N_0$ and $N_1$, 30% de $N_1$ a $N_2$ y 10% de $N_2$ and $N_3$:
+
+\begin{align}
+N_{1, t+1} &= 0.4 N_{0, t} \\
+N_{2, t+1} &= 0.3 N_{1, t} \\
+N_{3, t+1} &= 0.1 N_{2, t}
+\end{align}
+
+Para obtener $N_0(t)$ necesitamos identificar los cohortes o compartimentos que sí se reproducen, entonces si estos son $N_1$ y $N_2$, la ecuación para $N_0$ es:
+
+\begin{align}
+N_{0, t+1} &= \mathrm{Crías\ nacidas\ de\ madres} N_{1, t} + \mathrm{Crías\ nacidas\ de\ madres} N_{2, t} \\
+N_{0, t+1} &= 2 N_{1, t} + 1.5 N_{2, t}
+\end{align}
+
+Claramente, en este modelo estamos asumiendo que la población de interés está constituida únicamente por hembras, de modo que $2$ y $1.5$ es el promedio de hembras nacidas por cada hembra en $N_1$ y $N_2$. Así tenemos entonces el modelo completo para representar como matriz:
+
+\begin{equation}
+\left[\begin{array}{c}
+N_{0, t+1} \\ N_{1, t+1} \\ N_{2, t+1} \\ N_{3, t+1}
+\end{array}\right] =
+\left[ 
+\begin{array}{cccc}
+0 & 2 & 1.5 & 0 \\
+0.4 & 0 & 0 & 0 \\
+0  & 0.3& 0 & 0 \\
+0  & 0 & 0.1& 0
+\end{array}
+\right] (\#eq:Leslie)
+\end{equation}
+
+La matriz de coeficientes en la ecuación \@ref(eq:Leslie) se conoce omo matriz de Leslie, y la notación corta para dichos sistemas de ecuaciones es:
+
+$$\mathbf{N}(t+1) = L \mathbf{N}(t)$$
+
+
+
+
+
