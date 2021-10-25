@@ -40,7 +40,7 @@ Una vez encontrado el sistema, podemos resolverlo con el método de la matriz au
 \end{array}
 \end{equation}
 
-aunque si lo resolvemos con el método tradicional **siempre** llegaremos a la solución $x_1 = 0; x_2 = 0$. Entonces necesitamos reducir la matrix por fila al modo Echelon. Este método consiste en realizar las operaciones con filas para reducir las filas inferiores a ceros. Por ejemplo, reemplazando $F_2$ con $3 F_1 - 2F_2 $, y dividiendo $F_1/2$:
+aunque si lo resolvemos con el método tradicional **siempre** llegaremos a la solución $x_1 = 0; x_2 = 0$. Entonces necesitamos reducir la matrix por fila al modo Echelon. Este método consiste en realizar las operaciones con filas para reducir las filas inferiores a ceros. Por ejemplo, reemplazando $F_2$ con $3 F_1 - 2F_2$, y dividiendo $F_1/2$:
 
 \begin{equation}
 \left[ \begin{array}{cc|c}
