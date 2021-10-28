@@ -14,6 +14,11 @@ N_{2, t+1} &= 0.3 N_{1, t} \\
 N_{3, t+1} &= 0.1 N_{2, t}
 \end{align}
 
+```{r Leslie, echo = F, fig.align='center', fig.cap="Diagrama del modelo de proyección de Matrices de Leslie con tres estadíos de desarrollo discretos. Las flechas sólidas representan *flujo* de individuos hacia y desde cada uno de los compartimentos que representa el número de individuos en cada categoría. Las flechas punteadas representan la fuente del flujo de individuos, por ejemplo los Nacimientos en N1 provienen de N2 y N3."}
+knitr::include_graphics("Unidad-VI/Modelo-Leslie.png")
+```
+
+
 Para obtener $N_0(t)$ necesitamos identificar los cohortes o compartimentos que sí se reproducen, entonces si estos son $N_1$ y $N_2$, la ecuación para $N_0$ es:
 
 \begin{align}

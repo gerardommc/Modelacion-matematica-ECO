@@ -24,7 +24,7 @@
 <meta name="author" content="Gerardo Martín" />
 
 
-<meta name="date" content="2021-10-25" />
+<meta name="date" content="2021-10-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -282,6 +282,12 @@ div.csl-indent {
 <li class="chapter" data-level="8" data-path="unidad-vi-modelos-lineales-de-poblaciones-estructuradas.html"><a href="unidad-vi-modelos-lineales-de-poblaciones-estructuradas.html"><i class="fa fa-check"></i><b>8</b> Unidad VI: Modelos lineales de poblaciones estructuradas</a>
 <ul>
 <li class="chapter" data-level="8.1" data-path="unidad-vi-modelos-lineales-de-poblaciones-estructuradas.html"><a href="unidad-vi-modelos-lineales-de-poblaciones-estructuradas.html#proyección-de-matrices-para-modelos-estructurados-la-matriz-de-leslie"><i class="fa fa-check"></i><b>8.1</b> Proyección de matrices para modelos estructurados: la matriz de Leslie</a></li>
+<li class="chapter" data-level="8.2" data-path="unidad-vi-modelos-lineales-de-poblaciones-estructuradas.html"><a href="unidad-vi-modelos-lineales-de-poblaciones-estructuradas.html#análisis-de-los-modelos-de-poblaciones-estructuradas"><i class="fa fa-check"></i><b>8.2</b> Análisis de los modelos de poblaciones estructuradas</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="unidad-vi-modelos-lineales-de-poblaciones-estructuradas.html"><a href="unidad-vi-modelos-lineales-de-poblaciones-estructuradas.html#tablas-de-vida"><i class="fa fa-check"></i><b>8.2.1</b> Tablas de vida</a></li>
+<li class="chapter" data-level="8.2.2" data-path="unidad-vi-modelos-lineales-de-poblaciones-estructuradas.html"><a href="unidad-vi-modelos-lineales-de-poblaciones-estructuradas.html#la-ecuación-de-euler"><i class="fa fa-check"></i><b>8.2.2</b> La ecuación de Euler</a></li>
+<li class="chapter" data-level="8.2.3" data-path="unidad-vi-modelos-lineales-de-poblaciones-estructuradas.html"><a href="unidad-vi-modelos-lineales-de-poblaciones-estructuradas.html#valor-reproductivo-y-autovectores"><i class="fa fa-check"></i><b>8.2.3</b> Valor reproductivo y autovectores</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -319,6 +325,12 @@ N_{1, t+1} &amp;= 0.4 N_{0, t} \\
 N_{2, t+1} &amp;= 0.3 N_{1, t} \\
 N_{3, t+1} &amp;= 0.1 N_{2, t}
 \end{align}\]</span></p>
+<div class="figure" style="text-align: center"><span id="fig:Leslie"></span>
+<img src="Unidad-VI/Modelo-Leslie.png" alt="Diagrama del modelo de proyección de Matrices de Leslie con tres estadíos de desarrollo discretos. Las flechas sólidas representan *flujo* de individuos hacia y desde cada uno de los compartimentos que representa el número de individuos en cada categoría. Las flechas punteadas representan la fuente del flujo de individuos, por ejemplo los Nacimientos en N1 provienen de N2 y N3." width="320" />
+<p class="caption">
+Figura 8.1: Diagrama del modelo de proyección de Matrices de Leslie con tres estadíos de desarrollo discretos. Las flechas sólidas representan <em>flujo</em> de individuos hacia y desde cada uno de los compartimentos que representa el número de individuos en cada categoría. Las flechas punteadas representan la fuente del flujo de individuos, por ejemplo los Nacimientos en N1 provienen de N2 y N3.
+</p>
+</div>
 <p>Para obtener <span class="math inline">\(N_0(t)\)</span> necesitamos identificar los cohortes o compartimentos que sí se reproducen, entonces si estos son <span class="math inline">\(N_1\)</span> y <span class="math inline">\(N_2\)</span>, la ecuación para <span class="math inline">\(N_0\)</span> es:</p>
 <p><span class="math display">\[\begin{align}
 N_{0, t+1} &amp;= \mathrm{Crías\ nacidas\ de\ madres} N_{1, t} + \mathrm{Crías\ nacidas\ de\ madres} N_{2, t} \\
@@ -340,7 +352,213 @@ N_{0, t+1} \\ N_{1, t+1} \\ N_{2, t+1} \\ N_{3, t+1}
 \end{equation}\]</span></p>
 <p>La matriz de coeficientes en la ecuación <a href="unidad-vi-modelos-lineales-de-poblaciones-estructuradas.html#eq:Leslie">(8.1)</a> se conoce omo matriz de Leslie, y la notación corta para dichos sistemas de ecuaciones es:</p>
 <p><span class="math display">\[\mathbf{N}(t+1) = L \mathbf{N}(t)\]</span></p>
+</div>
+<div id="análisis-de-los-modelos-de-poblaciones-estructuradas" class="section level2" number="8.2">
+<h2><span class="header-section-number">8.2</span> Análisis de los modelos de poblaciones estructuradas</h2>
+<div id="tablas-de-vida" class="section level3" number="8.2.1">
+<h3><span class="header-section-number">8.2.1</span> Tablas de vida</h3>
+<p>Las tablas de vida son una herramienta estadística para organizar datos demográficos de fertilidad y supervivencia de las poblaciones. Existen algunas técnicas para generar tablas de vida, y una de las más confiables son los estudios de cohorte (conjunto de individuos que nacen en un período de tiempo específico, por ejemplo). En estos estudios, se lleva un registro cuidadoso de los sucesos de natalidad y mortalidad (<a href="unidad-vi-modelos-lineales-de-poblaciones-estructuradas.html#tab:tabla-vida">8.1</a>).</p>
+<table>
+<caption><span id="tab:tabla-vida">Tabla 8.1: </span>Tabla de vida de borregos de Dall (<em>Ovis dalli</em>) colectada por Olaus Murie en el parque nacional del monte McKinley en Alaska.</caption>
+<thead>
+<tr class="header">
+<th align="left">Edad</th>
+<th align="right">No..Individuos</th>
+<th align="right">Muertes</th>
+<th align="right">Tasa</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">0-0.5</td>
+<td align="right">1000</td>
+<td align="right">54</td>
+<td align="right">0.0540</td>
+</tr>
+<tr class="even">
+<td align="left">0.5-1</td>
+<td align="right">946</td>
+<td align="right">145</td>
+<td align="right">0.1533</td>
+</tr>
+<tr class="odd">
+<td align="left">1-2</td>
+<td align="right">801</td>
+<td align="right">12</td>
+<td align="right">0.0150</td>
+</tr>
+<tr class="even">
+<td align="left">2-3</td>
+<td align="right">789</td>
+<td align="right">13</td>
+<td align="right">0.0165</td>
+</tr>
+<tr class="odd">
+<td align="left">3-4</td>
+<td align="right">776</td>
+<td align="right">12</td>
+<td align="right">0.0155</td>
+</tr>
+<tr class="even">
+<td align="left">4-5</td>
+<td align="right">764</td>
+<td align="right">30</td>
+<td align="right">0.0393</td>
+</tr>
+<tr class="odd">
+<td align="left">5-6</td>
+<td align="right">734</td>
+<td align="right">46</td>
+<td align="right">0.0627</td>
+</tr>
+<tr class="even">
+<td align="left">6-7</td>
+<td align="right">688</td>
+<td align="right">48</td>
+<td align="right">0.0698</td>
+</tr>
+<tr class="odd">
+<td align="left">7-8</td>
+<td align="right">640</td>
+<td align="right">69</td>
+<td align="right">0.1078</td>
+</tr>
+<tr class="even">
+<td align="left">8-9</td>
+<td align="right">571</td>
+<td align="right">132</td>
+<td align="right">0.2312</td>
+</tr>
+<tr class="odd">
+<td align="left">9-10</td>
+<td align="right">439</td>
+<td align="right">187</td>
+<td align="right">0.4260</td>
+</tr>
+<tr class="even">
+<td align="left">10-11</td>
+<td align="right">252</td>
+<td align="right">156</td>
+<td align="right">0.6190</td>
+</tr>
+<tr class="odd">
+<td align="left">11-12</td>
+<td align="right">96</td>
+<td align="right">90</td>
+<td align="right">0.9375</td>
+</tr>
+<tr class="even">
+<td align="left">12-13</td>
+<td align="right">6</td>
+<td align="right">3</td>
+<td align="right">0.5000</td>
+</tr>
+<tr class="odd">
+<td align="left">13-14</td>
+<td align="right">3</td>
+<td align="right">3</td>
+<td align="right">1.0000</td>
+</tr>
+</tbody>
+</table>
+<p>Las tablas de vida entonces, enlistan el número de individuos y el rango de edades al inicio del estudio de cohorte, y el número de muertes que se presentaron mientras los individuos del cohorte se encontraban en cada rango de edades. Este tipo de arreglo permite estimar fácilmente las tasa de mortalidad, como en la tabla <a href="#table:tabla-vida"><strong>??</strong></a>, donde la última columna, es el cociente de la 2a y 3a. Algunas tablas más complejas que la de Olaus Murie contienen una 5a y 6a columnas donde se reporta el número de crías totales y el cociente del número de individuos y crías para cada intervalo de edades.</p>
+<p>Las tablas de vida han permitido describir algunas de las diferentes estrategias de los organismos con base en la probabilidad de morir en función de la edad (figura <a href="unidad-vi-modelos-lineales-de-poblaciones-estructuradas.html#fig:curva-sup">8.2</a>).</p>
+<div class="figure" style="text-align: center"><span id="fig:curva-sup"></span>
+<img src="Mod-mat-ECO_files/figure-html/curva-sup-1.png" alt="Rleación entre edad y supervivencia en *Ovis dalli*, de acuerdo con la tabla de vida del ejemplo." width="480" />
+<p class="caption">
+Figura 8.2: Rleación entre edad y supervivencia en <em>Ovis dalli</em>, de acuerdo con la tabla de vida del ejemplo.
+</p>
+</div>
+<p>La diversidad de estrategias reproductivas existentes resultan en curvas de supervivencia con otras formas. Por ejemplo la curva de <em>Ovis dalli</em> es convexa, lo cual quiere decir que la tasa de mortalidad aumenta con la edad. En plantas sin embargo, la curva es cóncava y quiere decir que las muertes ocurren mayoritariamente a edades tempranas, mientras que una pequeña fracción de individuos sobrevive a edades muy avanzadas.</p>
+<p>Estras estrategias reproductivas también se manifiestan en la estructura de edades dentro de las poblaciones, es decir la cantidad de individuos neonatos, jóvenes y adultos que hay.</p>
+</div>
+<div id="la-ecuación-de-euler" class="section level3" number="8.2.2">
+<h3><span class="header-section-number">8.2.2</span> La ecuación de Euler</h3>
+<p>En demografía, se le conoce como la ecuación característica, y se utiliza para calcular la tasa neta reproductiva de una población. La interpretación del número producido por la ecuación a partir de los datos contenidos en una tabla de vida es <strong>el número de hembras con el que cada hembra es reemplazada</strong>, y este número se conoce como <span class="math inline">\(R_0\)</span>. Para calularlo necesitamos una tabla de vida para un cohorte de hembras, y hacer la suma:</p>
+<p><span class="math display" id="eq:Euler-demog">\[\begin{equation}
+R_0 = \sum l_x m_x \tag{8.2}
+\end{equation}\]</span></p>
+<p>donde <span class="math inline">\(l_x\)</span> es la proporción viva del cohorte en cada categoría de edades (1 - columna 4 de tabla <a href="unidad-vi-modelos-lineales-de-poblaciones-estructuradas.html#tab:tabla-vida">8.1</a>, o tasa de supervivencia por edad), y <span class="math inline">\(m_x\)</span>, el número promedio de descendientes hembras por cada hembra en cada categoría de edades <span class="math inline">\(x\)</span>.</p>
+<p>Para dar un ejemplo utilizaremos otra tabla de vida para ardillas terrestres de Belding <span class="citation">(<a href="#ref-Sherman1984" role="doc-biblioref">Sherman and Morton 1984</a>)</span>:</p>
+<table>
+<caption><span id="tab:tabla-belding">Tabla 8.2: </span>Tabla de vida para hembras de <em>Spermophilus beldingi</em>.</caption>
+<thead>
+<tr class="header">
+<th align="right">Edad</th>
+<th align="right">l_x</th>
+<th align="right">m_x</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">0</td>
+<td align="right">1.000</td>
+<td align="right">0.000</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="right">0.386</td>
+<td align="right">1.040</td>
+</tr>
+<tr class="odd">
+<td align="right">2</td>
+<td align="right">0.197</td>
+<td align="right">2.171</td>
+</tr>
+<tr class="even">
+<td align="right">3</td>
+<td align="right">0.106</td>
+<td align="right">2.450</td>
+</tr>
+<tr class="odd">
+<td align="right">4</td>
+<td align="right">0.054</td>
+<td align="right">3.113</td>
+</tr>
+<tr class="even">
+<td align="right">5</td>
+<td align="right">0.029</td>
+<td align="right">1.875</td>
+</tr>
+<tr class="odd">
+<td align="right">6</td>
+<td align="right">0.014</td>
+<td align="right">1.575</td>
+</tr>
+<tr class="even">
+<td align="right">7</td>
+<td align="right">0.008</td>
+<td align="right">2.000</td>
+</tr>
+<tr class="odd">
+<td align="right">8</td>
+<td align="right">0.006</td>
+<td align="right">1.440</td>
+</tr>
+<tr class="even">
+<td align="right">9</td>
+<td align="right">0.002</td>
+<td align="right">1.632</td>
+</tr>
+</tbody>
+</table>
+<p>Como es evidente, nos queda por calcular <span class="math inline">\(l_x m_x\)</span> que corresponde al producto de las 2a y 3a columnas. Una vez obtenido el producto podemos hacer la sumatoria, el código de <strong>R</strong> para hacer estas operaciones es:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="unidad-vi-modelos-lineales-de-poblaciones-estructuradas.html#cb3-1" aria-hidden="true" tabindex="-1"></a>lxmx <span class="ot">&lt;-</span> tab2<span class="sc">$</span>l_x<span class="sc">*</span>tab2<span class="sc">$</span>m_x</span>
+<span id="cb3-2"><a href="unidad-vi-modelos-lineales-de-poblaciones-estructuradas.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(lxmx)</span></code></pre></div>
+<pre><code>## [1] 1.361258</code></pre>
+<p>lo que indica que cada hembra en promedio será reemplazada por 1.36 hembras.</p>
+<p>El concepto de <span class="math inline">\(R_0\)</span> es también muy utilizado en epidemiología, donde tiene las mismas implicaciones. Si cada hembra es reemplazada en promedio por otra hembra (<span class="math inline">\(R_0 \approx 1\)</span>), la población permanecerá estable, por el contrario si <span class="math inline">\(R_0 &lt; 1\)</span> la población tenderá a extinguirse. En epidemiología cada infectado deberá contagiar a más de uno para que haya una epidemia.</p>
+</div>
+<div id="valor-reproductivo-y-autovectores" class="section level3" number="8.2.3">
+<h3><span class="header-section-number">8.2.3</span> Valor reproductivo y autovectores</h3>
 
+</div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Sherman1984" class="csl-entry">
+Sherman, P W, and M L Morton. 1984. <span>“Demography of Belding’s Ground Squirrels.”</span> <em>Ecology</em> 65: 1617–28.
 </div>
 </div>
             </section>

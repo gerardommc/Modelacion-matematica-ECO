@@ -6,3 +6,9 @@
 
 ```
 
+## Análisis de los modelos de poblaciones estructuradas
+
+```{r echo =F, child = "Unidad-VI/Analisis.Rmd"}
+
+```
+

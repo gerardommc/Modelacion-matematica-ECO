@@ -1,0 +1,49 @@
+### Tablas de vida
+
+Las tablas de vida son una herramienta estadística para organizar datos demográficos de fertilidad y supervivencia de las poblaciones. Existen algunas técnicas para generar tablas de vida, y una de las más confiables son los estudios de cohorte (conjunto de individuos que nacen en un período de tiempo específico, por ejemplo). En estos estudios, se lleva un registro cuidadoso de los sucesos de natalidad y mortalidad (\@ref(tab:tabla-vida)).
+
+```{r tabla-vida, echo = F}
+tab <- read.csv("Tabla-vida.csv")
+knitr::kable(tab, caption = "Tabla de vida de borregos de Dall (*Ovis dalli*) colectada por Olaus Murie en el parque nacional del monte McKinley en Alaska.")
+```
+
+Las tablas de vida entonces, enlistan el número de individuos y el rango de edades al inicio del estudio de cohorte, y el número de muertes que se presentaron mientras los individuos del cohorte se encontraban en cada rango de edades. Este tipo de arreglo permite estimar fácilmente las tasa de mortalidad, como en la tabla \@ref(table:tabla-vida), donde la última columna, es el cociente de la 2a y 3a. Algunas tablas más complejas que la de Olaus Murie contienen una 5a y 6a columnas donde se reporta el número de crías totales y el cociente del número de individuos y crías para cada intervalo de edades.
+
+Las tablas de vida han permitido describir algunas de las diferentes estrategias de los organismos con base en la probabilidad de morir en función de la edad (figura \@ref(fig:curva-sup)).
+
+```{r curva-sup, echo = F, fig.width=5, fig.height=4.5, fig.align='center', fig.cap="Rleación entre edad y supervivencia en *Ovis dalli*, de acuerdo con la tabla de vida del ejemplo."}
+with(tab, plot(1:15, No..Individuos, type = "l", col = "red", xlab = "Edad", ylab = "No. Individuos"))
+```
+La diversidad de estrategias reproductivas existentes resultan en curvas de supervivencia con otras formas. Por ejemplo la curva de *Ovis dalli* es convexa, lo cual quiere decir que la tasa de mortalidad aumenta con la edad. En plantas sin embargo, la curva es cóncava y quiere decir que las muertes ocurren mayoritariamente a edades tempranas, mientras que una pequeña fracción de individuos sobrevive a edades muy avanzadas.
+
+Estras estrategias reproductivas también se manifiestan en la estructura de edades dentro de las poblaciones, es decir la cantidad de individuos neonatos, jóvenes y adultos que hay.
+
+### La ecuación de Euler
+
+En demografía, se le conoce como la ecuación característica, y se utiliza para calcular la tasa neta reproductiva de una población. La interpretación del número producido por la ecuación a partir de los datos contenidos en una tabla de vida es **el número de hembras con el que cada hembra es reemplazada**, y este número se conoce como $R_0$. Para calularlo necesitamos una tabla de vida para un cohorte de hembras, y hacer la suma:
+
+\begin{equation}
+R_0 = \sum l_x m_x (\#eq:Euler-demog)
+\end{equation}
+
+donde $l_x$ es la proporción viva del cohorte en cada categoría de edades (1 - columna 4 de tabla \@ref(tab:tabla-vida), o tasa de supervivencia por edad), y $m_x$, el número promedio de descendientes hembras por cada hembra en cada categoría de edades $x$.
+
+Para dar un ejemplo utilizaremos otra tabla de vida para ardillas terrestres de Belding [@Sherman1984]:
+
+```{r tabla-belding, echo = F}
+tab2 <- read.csv("Tabla-beldings.csv")
+knitr::kable(tab2, caption = "Tabla de vida para hembras de *Spermophilus beldingi*.")
+```
+
+Como es evidente, nos queda por calcular $l_x m_x$ que corresponde al producto de las 2a y 3a columnas. Una vez obtenido el producto podemos hacer la sumatoria, el código de **R** para hacer estas operaciones es:
+
+```{r echo = T}
+lxmx <- tab2$l_x*tab2$m_x
+sum(lxmx)
+```
+lo que indica que cada hembra en promedio será reemplazada por 1.36 hembras.
+
+El concepto de $R_0$ es también muy utilizado en epidemiología, donde tiene las mismas implicaciones. Si cada hembra es reemplazada en promedio por otra hembra ($R_0 \approx 1$), la población permanecerá estable, por el contrario si $R_0 < 1$ la población tenderá a extinguirse. En epidemiología cada infectado deberá contagiar a más de uno para que haya una epidemia.
+
+### Valor reproductivo y autovectores
+
