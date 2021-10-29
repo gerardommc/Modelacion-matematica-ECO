@@ -47,3 +47,11 @@ El concepto de $R_0$ es también muy utilizado en epidemiología, donde tiene la
 
 ### Valor reproductivo y autovectores
 
+Las matrices de coeficientes de transición entre estados de desarrollo y las tasas de natalidad asociadas a cada estado pueden ser representadas con menos parámetros puesto que el crecimiento de la población continúa siendo exponencial. La manera de representar toda la matriz de coeficientes como uno sólo es con los valores propios. Veamos el ejemplo de la ecuación \@ref(eq:Leslie), cuyos valores propios son:
+
+$$\lambda = \{0, 0.99, -0.24, -0.75 \}$$
+
+Algunos de estos valores propios, como los negativos, son evidentemente, biológicamente insignificantes. En la práctica se elije sólamente uno de los valores propios, denominado **valor dominante** y que corresponde al valor más grande.
+
+Como ya vimos en la unidad de álgebra de matrices, los valores propios también pueden ser números complejos, pero las implicaciones biológicas de estos valores propios no forman parte de esta unidad de modelos lineales.
+
