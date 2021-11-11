@@ -1,0 +1,2 @@
+
+Los modelos con matriz de Leslie tienen muchas aplicaciones en ecología, debido a que son sumamente flexibles y relativamente fáciles de implementar. Para comprender primero cómo funcionan y el tipode dinámicas que surgen con estos modelos echemos un vistazo al [script de R](Unidad-VI/Modelos-matriz.R)

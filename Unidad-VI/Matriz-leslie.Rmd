@@ -47,6 +47,3 @@ La matriz de coeficientes en la ecuación \@ref(eq:Leslie) se conoce omo matriz 
 $$\mathbf{N}(t+1) = L \mathbf{N}(t)$$
 
 
-
-
-

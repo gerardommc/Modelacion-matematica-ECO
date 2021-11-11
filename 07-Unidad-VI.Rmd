@@ -12,3 +12,9 @@
 
 ```
 
+## Aplicaciones de lo modelo de matrices
+
+```{r echo = F, child = "Unidad-VI/Aplicaciones.Rmd"}
+
+```
+
