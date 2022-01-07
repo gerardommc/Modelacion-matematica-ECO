@@ -12,11 +12,11 @@ for(t in 2:ncol(N)){
     N[,t] <- L %*% N[, t-1]
 }
 
-plot(1:ncol(N), N[1, ], type = "s", col = "red")
-plot(1:ncol(N), N[2, ], type = "s", col = "red")
+plot(1:ncol(N), N[1, ], type = "s", col = "red", main = expression(N[1]))
+plot(1:ncol(N), N[2, ], type = "s", col = "red", main = expression(N[2]))
 
-plot(1:ncol(N), N[1, ]/colSums(N), type = "l", col = "red")
-plot(1:ncol(N), N[2, ]/colSums(N), type = "l", col = "red")
+plot(1:ncol(N), N[1, ]/colSums(N), type = "l", col = "red", main = expression(N[1]))
+plot(1:ncol(N), N[2, ]/colSums(N), type = "l", col = "red", main = expression(N[2]))
 
 plot(1:ncol(N), colSums(N), type = "s", col = "red")
 
