@@ -6,8 +6,8 @@
 ]{book}
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
-\usepackage{ifxetex,ifluatex}
-\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+\usepackage{iftex}
+\ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
@@ -33,14 +33,46 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
-\hypersetup{
-  pdftitle={Modelos Matemáticos en Ecología I},
-  pdfauthor={Gerardo Martín},
-  hidelinks,
-  pdfcreator={LaTeX via pandoc}}
-\urlstyle{same} % disable monospaced font for URLs
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
@@ -69,15 +101,23 @@
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
 \usepackage{booktabs}
-\ifluatex
+\ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Modelos Matemáticos en Ecología I},
+  pdfauthor={Gerardo Martín},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
 
 \title{Modelos Matemáticos en Ecología I}
 \author{Gerardo Martín}
-\date{2021-08-23}
+\date{2022-08-22}
 
 \begin{document}
 \maketitle
@@ -168,7 +208,7 @@ Imaginemos a seis personas invidentes, con la tarea de encontrar qué es el obje
 
 }
 
-\caption{La parábola de los seis hombres ciegos inspeccionando un elefante.}\label{fig:unnamed-chunk-15}
+\caption{La parábola de los seis hombres ciegos inspeccionando un elefante.}\label{fig:unnamed-chunk-30}
 \end{figure}
 
 Quien toque los colmillos podrá pensar que se trata de una lanza, la trompa podría tratarse de una serpiente, la cola de una cuerda, las patas troncos de árbol y el cuerpo una pared. Es evidente que todas las hipótesis presentadas después de la inspección fueron erróneas, y que cuando estudiamos al mundo lo haremos igual, con la descripción de tan sólo una fracción de éste. Un séptimo hombre que pregunte a los otros seis qué fue lo que vieron podría formarse una imágen más completa del \emph{sistema} para proponer otra hipótesis: se trata de un objeto grande reposando sobre cuatro columnas con apéndices adelante y atrás.
@@ -205,7 +245,7 @@ Las hipótesis propuestas por los seis hombres representan modelos, es decir sim
 
 }
 
-\caption{ Diagrama de mi estrategia para desarrollar modelos.}\label{fig:unnamed-chunk-16}
+\caption{ Diagrama de mi estrategia para desarrollar modelos.}\label{fig:unnamed-chunk-31}
 \end{figure}
 
 La estrategia general que les doy puede, por el momento, sonar un tanto abstracta, pero la iremos poniendo en práctica conforme avanza el curso para que al final, esperemos, tenga más sentido que ahorita.
@@ -366,7 +406,7 @@ Así como existe un uso adecuado de los modelos, es muy fácil darles un mal uso
 
 }
 
-\caption{Relación entre el entendimiento y calidad de los datos, y los potenciales usos de los modelos en las diferentes disciplinas científicas [@haefner1998modeling].}\label{fig:unnamed-chunk-17}
+\caption{Relación entre el entendimiento y calidad de los datos, y los potenciales usos de los modelos en las diferentes disciplinas científicas [@haefner1998modeling].}\label{fig:unnamed-chunk-32}
 \end{figure}
 
 \hypertarget{tipos-de-modelos}{%
@@ -508,21 +548,21 @@ donde \(\varepsilon\) es el \emph{error} que hemos introducido. Técnicamente pa
 
 \begin{table}
 
-\caption{\label{tab:unnamed-chunk-20}Cinco realizaciones para la conversión de dos pulgadas a centímetros con el modelo determinista y estocástico.}
+\caption{\label{tab:unnamed-chunk-35}Cinco realizaciones para la conversión de dos pulgadas a centímetros con el modelo determinista y estocástico.}
 \centering
 \begin{tabular}[t]{c|c}
 \hline
 Determinista & Estocástico\\
 \hline
-5.08 & 4.647928\\
+5.08 & 5.165393\\
 \hline
-5.08 & 5.189420\\
+5.08 & 4.665356\\
 \hline
-5.08 & 4.867832\\
+5.08 & 4.590375\\
 \hline
-5.08 & 5.091572\\
+5.08 & 5.034567\\
 \hline
-5.08 & 5.167651\\
+5.08 & 5.057283\\
 \hline
 \end{tabular}
 \end{table}
@@ -562,22 +602,22 @@ Comencemos por dar un repaso del plano cartesiano. Este consiste de la represent
 
 \begin{figure}
 
-{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/unnamed-chunk-21-1} 
+{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/unnamed-chunk-36-1} 
 
 }
 
-\caption{Ejemplo del plano cartesiado mostrando en rojo la correspondencia de valores para $y(x) = x$, donde los puntos corresponden a los pares de valores $(x = -1, y = -1), (-0.5, -0.5), (0, 0), (0.5, 0.5), (1, 1)$.}\label{fig:unnamed-chunk-21}
+\caption{Ejemplo del plano cartesiado mostrando en rojo la correspondencia de valores para $y(x) = x$, donde los puntos corresponden a los pares de valores $(x = -1, y = -1), (-0.5, -0.5), (0, 0), (0.5, 0.5), (1, 1)$.}\label{fig:unnamed-chunk-36}
 \end{figure}
 
 Ahora veamos, con un ejemplo gráfico por qué la constante \(a\) recibe el nombre de \emph{pendiente}.
 
 \begin{figure}
 
-{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/unnamed-chunk-22-1} 
+{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/unnamed-chunk-37-1} 
 
 }
 
-\caption{Gráficas de las funciones $y(x) = 0.5 x$ (en rojo) y $y(x) = 0.5 + 0.5 x$ (azul). Las líneas punteadas en colores indican el efecto de las constantes $a$ y $b$, mientas que Δ$x$ denota el cambio de una unidad de $x$.}\label{fig:unnamed-chunk-22}
+\caption{Gráficas de las funciones $y(x) = 0.5 x$ (en rojo) y $y(x) = 0.5 + 0.5 x$ (azul). Las líneas punteadas en colores indican el efecto de las constantes $a$ y $b$, mientas que Δ$x$ denota el cambio de una unidad de $x$.}\label{fig:unnamed-chunk-37}
 \end{figure}
 
 Como podemos ver, de manera más general, la línea recta es generada por una regla de correspondencia muy sencilla, un conjunto de valores \(X\) son multiplicados por un escalar \(a\), a los que se les puede añadir un \emph{intercepto} \(b\). El intercepto siempre es el valor de \(y(x)\) cuando \(x = 0\).
@@ -678,7 +718,11 @@ A estas alturas, ya te podrás haber dado cuenta de ciertas propiedades de las p
 \hypertarget{cuxf3nicas}{%
 \section{Cónicas}\label{cuxf3nicas}}
 
-De manera muy general, una cónica es el conjunto de soluciones para una ecuación cuadrática cuando menos en dos variables. En este sentido, las parábolas, vistas en la sección anterior, son un tipo de cónica. Ejemplos:
+De manera muy general, una cónica es el conjunto de soluciones para una ecuación cuadrática cuando menos en dos variables. Por lo tanto, las parábolas, vistas en la sección anterior, son un tipo de cónica. Geométricamente las cónicas surgen a partir de la intersección entre un plano y dos conos tridimensionales superpuestos en sus vértices.
+
+\includegraphics{https://www.mathplanet.com/Oldsite/media/28029/conic.png}
+
+Las diferentes formas geométricas generadas por las cónicas pueden ser descritas algebráicamente por las siquiente expresiones (figura \ref{fig:conicas}):
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -694,8 +738,6 @@ De manera muy general, una cónica es el conjunto de soluciones para una ecuaci�
 \item
   \(x^2 - y = 0\)
 \end{enumerate}
-
-Debido a la generalidad de la definición de \emph{cónicas}, las ecuaciones 1-5 tienen una variedad de formas muy distintas, en comparación con las secciones de rectas y parábolas (Figura \ref{fig:conicas}). La mayoría de estas forman surgen como solución a la intersección de un plano bidimensional con una línea rotando sobre un eje definido dentro de ella en un espacio tridimencional (\href{https://www.mathplanet.com/Oldsite/media/28029/conic.png}{ver ejemplo})
 
 \begin{figure}
 
@@ -859,52 +901,25 @@ El coseno, por otro lado, nos es muy útil para forzar la oscilación de algún 
 \caption{Gráfica de la función $y = 2 cos(x)^2 + 0.1  x$.}\label{fig:coseno-forz}
 \end{figure}
 
-\hypertarget{representaciuxf3n-en-3d}{%
-\subsubsection{Representación en 3D}\label{representaciuxf3n-en-3d}}
-
-Hasta ahora sólo hemos visto representaciones de las funciones en dos dimensiones. Las representaciones de las funciones en 3d, sin embargo pueden ser confusas. Veamos por ejemplo la representación 3d de un plano:
-
-\begin{figure}
-
-{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/3d-1-1} 
-
-}
-
-\caption{Representación gráfica de la función $z(x, y) = x + y$.}\label{fig:3d-1}
-\end{figure}
-
-Para poder hacer esta gráfica, es necesario hacer los cáculos para todas las combinaciones posibles de \(x\) y \(y\), de modo que conocemos todos los valores posibles de \(z\) para cada par de valores del dominio. Si en la representación en dos dimensiones, necesitamos \(n\) valores, en la representación 3d necesitamos \(2 \times n^2\), lo cual produce \(n^2\) diferentes valores de \(z\).
-
-Las funciones trigonométricas pueden representarse
-
-\begin{figure}
-
-{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/trig-3d-1} 
-
-}
-
-\caption{Representación en 3d de la función trigonométrica z = cos(x) sen(y).}\label{fig:trig-3d}
-\end{figure}
-
 \hypertarget{la-recta-como-modelo-universal-y-sus-transformaciones}{%
 \section{La recta como modelo ``universal'' y sus transformaciones}\label{la-recta-como-modelo-universal-y-sus-transformaciones}}
 
 De los modelos vistos anteriormente, la línea recta es el más flexible y común de todos. Por su simplicidad, puede ser utilizado para representar muchos fenómenos de la naturaleza, incluso aquellos cuyo comportamiento es\ldots{} !no lineal¡
 
-Cuando decimos no lineal, nos referimos generalmente a los casos en que cuando una relación de correspondencia es representada en el plano cartesiano los puntos que la forman no dibujan una línea recta. Como vimos anteriormente, matemáticamente es posible concebir como lineales reglas de corresondencia que no son lineales en el plano cartesiano, de ahí que la función de la línea recta pueda ser tan flexible. Para que una ecuación sea considerada como lineal, debe cumplir con las siguientes características:
+Cuando decimos no lineal, nos referimos, generalmente, a los casos en que una regla de correspondencia entre \(x\) y \(y\) representada en el plano cartesiano no forman una línea recta. Ya hemos visto que, matemáticamente, es posible concebir como lineales reglas de corresondencia que geométricamente no son lineales, de ahí que la línea recta sea tan flexible. Para que una ecuación sea considerada como lineal debe cumplir con las siguientes características:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Las variables sólo pueden ser añadidas unas con otras
+  Sólo hay adición de variables
 \item
-  La multiplicación sólo puede ocurrir con constantes
+  Sólo hay multiplicación con constantes
 \item
-  Las variables están elevadas a la potencia 1
+  Las variables solo están elevadas a la potencia 1
 \end{enumerate}
 
-Con base en estas definiciones, las siguientes ecuaciones no son lineales
+Con base en estas definiciones, las siguientes ecuaciones \textbf{no} son lineales
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -922,7 +937,7 @@ Aún cuando estas expresiones no son lineales, es posible transformar algunas de
 \hypertarget{el-logaritmo}{%
 \subsection{El logaritmo}\label{el-logaritmo}}
 
-Para entender cómo funciona la transformación logaritmica, revisemos el significado del logaritmo. Supongamos que queremos encontrar el valor de la incógnita \(x\) en la siguiente ecuación:
+Para entender cómo funciona la transformación logarítmica, revisemos qué hace el logaritmo. Supongamos que queremos encontrar el valor de la incógnita \(x\) en la siguiente ecuación:
 
 \[10^x = 20\]
 La operación necesaria para invertir el radical \(10^x\) y encontrar el valor de \(x\) es precisamente el logaritmo base 10, de modo que:
@@ -932,7 +947,7 @@ La operación necesaria para invertir el radical \(10^x\) y encontrar el valor d
 sabemos que \(\log_{10} 10 = 1\) pues \(10^1 = 10\) por lo que:
 
 \[x = \log_{10} 20 \approx 1.3\]
-Así como en esta ocasión utilizamos \(\log_{10}\) (logaritmo base 10), se puede utilizar como base cualquier número \(b > 0\) positivo que esté en el conjunto de los números reales. El logaritmo más común recibe el nombre de natural, que utiliza de base la constante \(e = 2.718282 ...\) de Euler. La convención en escritura de logaritmos es:
+Así como en esta ocasión utilizamos \(\log_{10}\) (logaritmo base 10), se puede utilizar como base cualquier número \(b > 0\), si está en el conjunto de los números reales (positivos). El logaritmo más común recibe el nombre de natural, que utiliza de base la constante \(e = 2.718282 ...\) de Euler. La convención en escritura de logaritmos es:
 
 \begin{itemize}
 \tightlist
@@ -941,10 +956,10 @@ Así como en esta ocasión utilizamos \(\log_{10}\) (logaritmo base 10), se pued
 \item
   Logaritmo base 10: \(\log\)
 \item
-  Logaritmo base \(b > 0, b \in \mathbb{R}\)
+  Logaritmo base \(b > 0, b \in \mathbb{R}\): \(\log_b\)
 \end{itemize}
 
-Aún cuando esta es la convención más común, en la modelación, la mayoría de las veces que se utiliza \(\log\) se refiere a \(\ln\), de modo que a menos que se especifique la base, \(\log\) y \(\ln\) significan \(\log_e\).
+Aún cuando esta es la convención más común, en la modelación, la mayoría de las veces que se utiliza \(\log\) se refiere a \(\ln\), de modo que a menos que se especifique la base, \(\log\) y \(\ln\) también significan \(\log_e\).
 
 \hypertarget{la-funciuxf3n-exponencial}{%
 \subsection{La función exponencial}\label{la-funciuxf3n-exponencial}}
@@ -955,9 +970,12 @@ Una de las funciones más comunes en aplicaciones matemáticas es la exponencial
 La función exponencial puede tomar formas más complejas, por ejemplo, conteniendo una ecuación lineal:
 
 \[y(x) = \exp(a + bx) = e^{a + bx}\]
+y dadas las reglas de los exponentes, también es equivalente a:
 
-\hypertarget{linealizado-la-funciuxf3n-exponencial}{%
-\subsection{Linealizado la función exponencial}\label{linealizado-la-funciuxf3n-exponencial}}
+\[y(x) = e^a e^{bx} = a' e^{bx}\]
+
+\hypertarget{linealizando-la-funciuxf3n-exponencial}{%
+\subsubsection{Linealizando la función exponencial}\label{linealizando-la-funciuxf3n-exponencial}}
 
 Como se ha mostrado en esta sección, transformar una función exponencial en lineal es relativamente sencillo. En sentido literal, las transformaciones logaritmicas no son lineales sino log-lineales pues:
 
@@ -975,7 +993,7 @@ donde el lado izquierdo es una función logarítmica y el derecho es estrictamen
 
 \[\log y(x) = \ln y(x) = x\]
 
-Esta equivalencia, como veremos más adelante y como verán en modelación estadística, es súper útil en la modelación de sistemas que cambian con el tiempo.
+Esta equivalencia, como veremos más adelante y como verán en modelación estadística, es sumamente útil en la modelación de sistemas dinámicos.
 
 \hypertarget{representaciuxf3n-gruxe1fica-de-la-funciuxf3n-exponencial}{%
 \subsubsection{Representación gráfica de la función exponencial}\label{representaciuxf3n-gruxe1fica-de-la-funciuxf3n-exponencial}}
@@ -1004,16 +1022,22 @@ Veamos como ejemplo, que el crecimiento de la humanidad, desde que se pueden obt
 \caption{Población humana a lo largo del tiempo, según estimaciones de [Our world in data](https://ourworldindata.org/world-population-growth).}\label{fig:popn-wd}
 \end{figure}
 
-A diferencia del ejemplo de la figura \ref{fig:expon}, donde \(y = \exp(x)\), para representar el crecimiento de la población humana tenemos que medir la tasa reproductiva, de modo que podamos representar a la pobación como una función del tiempo:
+A diferencia del ejemplo de la figura \ref{fig:expon}, donde \(y = \exp(x)\), para representar el crecimiento de la población humana tenemos que medir la tasa reproductiva, de modo que podamos establecer la relación directa entre el tiempo y el tamaño de la población. En otras palabras, medir cuántos individuos son producidos en promedio por cada individuo presente en la población en cada unidad de tiempo:
 
 \begin{equation}
 N(t) = \exp(r \cdot t) \label{eq:poblac}
 \end{equation}
 
-Donde \(r\) es la tasa reproductiva de la población y utilizamos \(N\) en lugar de \(y\) para representar al número de individuos, y \(t\) en lugar de \(x\) para dejar claro que las unidades de \(x\) representan al tiempo. Si utilizamos el conocimiento de la subsección anterior, veremos que al aplicar el logaritmo a ambos lados de la ecuación \eqref{eq:poblac} obtenemos ¡una ecuación lineal!
+donde \(r\) es la tasa reproductiva de la población y utilizamos \(N\) en lugar de \(y\) para representar al \(N\)úmero de individuos, y \(t\) en lugar de \(x\) para dejar claro que \(x\) representa tiempo. Si utilizamos el conocimiento de la subsección anterior, veremos que al aplicar el logaritmo a ambos lados de la ecuación \eqref{eq:poblac} obtenemos ¡una ecuación lineal!
 
 \begin{equation}
     \log N = r \cdot t
+\end{equation}
+
+Es evidente que un modelo tan sencillo como este tiene serias deficiencias biológicas. Por ejemplo, cuando \(t = 0\), \(\exp(r \cdot t) = 1\), de modo que se asume que siempre habrá cuando menos un individuo presente. Esto puede o no ser cierto, por lo que una forma más generalizable incluye un intercepto para el tamaño poblacional inicial:
+
+\begin{equation}
+    N(t) = N_0 e^{r \cdot t} \rightarrow \log N(t) = \log N_0 + r \cdot t
 \end{equation}
 
 \hypertarget{representaciuxf3n-gruxe1fica-del-logaritmo}{%
@@ -1033,7 +1057,82 @@ A diferencia de la función exponencial, donde el crecimiento de \(y\) es cada v
 \hypertarget{relevancia-de-la-recta}{%
 \subsection{Relevancia de la recta}\label{relevancia-de-la-recta}}
 
-Una vez cubiertas las funciones logarítmicas y exponenciales, hemos comenzado a vislumbrar la relevancia más amplia de la recta para fenómenos que no son lineales. En el cálculi diferencial, la recta nos da los elementos para entender el significado de la derivada, y también es el bloque que utilizaremos para implementar métodos para integrar de manera relativamente sencilla ecuaciones que no se pueden integrar a mano.
+Una vez cubiertas las funciones logarítmicas y exponenciales, hemos comenzado a vislumbrar la relevancia más amplia de la recta para fenómenos que no son lineales. En el cálculo diferencial, la recta nos da los elementos para entender el significado de la derivada, y también es el bloque fundamental para implementar métodos de integración numérica relativamente sencillos, para ecuaciones diferenciales que no se pueden integrar analíticamente.
+
+\hypertarget{representaciuxf3n-de-las-funciones-en-3-dimensiones}{%
+\section{Representación de las funciones en 3 dimensiones}\label{representaciuxf3n-de-las-funciones-en-3-dimensiones}}
+
+Hasta ahora sólo hemos visto funciones de dos variables, y su representación en el plano cartesiano. Las funciones de tres variables, requieren ser representadas en 3d. Puesto que hay tres dimensiones, pueden ser confusas. Para comenzar, al conveción para funciones de tres variables es que hay dos dominios llamados \(x\) y \(y\), y un solo codominio llamado \(z\), por lo que \(z\) es una función \(z(x, y)\). La gráfica de estas funciones, pueden ser en efecto sólo una línea en el epacio, o un plano, o algo mucho más complejo. Para representar un plano, necesitamos una ecuación lineal como
+
+\[z(x, y) = x + y\]
+y hacer los cálculos de \(z\) para todas las combinaciones posibles de \(x\) y \(y\), por ejemplo:
+
+\begin{table}
+
+\caption{(\#tab:tabla.xy)Todas las combinaciones posibles de (x, y) y el valor resultante de z.}
+\centering
+\begin{tabular}[t]{r|r|r}
+\hline
+x & y & z\\
+\hline
+0 & 0 & 0\\
+\hline
+1 & 0 & 1\\
+\hline
+2 & 0 & 2\\
+\hline
+3 & 0 & 3\\
+\hline
+0 & 1 & 1\\
+\hline
+1 & 1 & 2\\
+\hline
+2 & 1 & 3\\
+\hline
+3 & 1 & 4\\
+\hline
+0 & 2 & 2\\
+\hline
+1 & 2 & 3\\
+\hline
+2 & 2 & 4\\
+\hline
+3 & 2 & 5\\
+\hline
+0 & 3 & 3\\
+\hline
+1 & 3 & 4\\
+\hline
+2 & 3 & 5\\
+\hline
+3 & 3 & 6\\
+\hline
+\end{tabular}
+\end{table}
+
+De
+
+\begin{figure}
+
+{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/3d-1-1} 
+
+}
+
+\caption{Representación gráfica de la función $z(x, y) = x + y$.}\label{fig:3d-1}
+\end{figure}
+
+Para poder hacer esta gráfica, es necesario hacer los cáculos para todas las combinaciones posibles de \(x\) y \(y\), de modo que conocemos todos los valores posibles de \(z\) para cada par de valores del dominio. Si en la representación en dos dimensiones, necesitamos \(n\) valores, en la representación 3d necesitamos \(2 \times n^2\), lo cual produce \(n^2\) diferentes valores de \(z\).
+
+Las funciones trigonométricas pueden representarse
+
+\begin{figure}
+
+{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/trig-3d-1} 
+
+}
+
+\caption{Representación en 3d de la función trigonométrica $z(x, y) = cos(x) sin(y)$.}\label{fig:trig-3d}
+\end{figure}
 
 \hypertarget{unidad-iii-introducciuxf3n-al-cuxe1lculo-diferencial-e-integral}{%
 \chapter{Unidad III: Introducción al cálculo diferencial e integral}\label{unidad-iii-introducciuxf3n-al-cuxe1lculo-diferencial-e-integral}}
@@ -1047,10 +1146,22 @@ En matemáticas, de manera muy general, las sucesiones pueden ser entendidas com
 y(x) \in \begin{cases}\mathbb{R}\\ \mathbb{Z}\\ \mathbb{N} \end{cases}
 \end{equation}
 
+La mayoría de las sucesiones, sin embargo que se utilizan en ecología, corresponden a:
+
+\begin{equation}
+    f: 
+    \begin{aligned}[t] 
+            \mathbb{N}_0 \rightarrow \mathbb{R} \\
+            n \rightarrow f(n)
+    \end{aligned}
+\end{equation}
+
+una función \(f\) de los números naturales, incluido el cero (\(\mathbb{N}_0\)) que produce números reales (\(\mathbb{R}\)), cuyo dominio es \(n\), y codominio es \(f(n)\).
+
 Otra característica de las sucesiones es que sus elementos están ordenados, es decir, cada elemento en el dominio y codominio tiene un sitio particular, de modo que si los conjuntos \(a_n = \{A, B, C\}\) y \(a_m = \{C, A, B\}\), \(a_n \neq a_m\), puesto que, aunque contengan los mismos elementos \(A, B\) y \(C\), estos tienen posiciones diferentes dentro de \(a_n\) y \(a_m\).
 
 \hypertarget{notaciuxf3n-de-sucesiones}{%
-\section{Notación de sucesiones}\label{notaciuxf3n-de-sucesiones}}
+\subsection{Notación de sucesiones}\label{notaciuxf3n-de-sucesiones}}
 
 Una sucesión de los números naturales suele nombrarse como \(\{a_n\}\), seguida de la regla de correspondencia entre el conjunto \(n\) y \(a\). Así por ejemplo:
 
@@ -1070,12 +1181,12 @@ Esta notación, sin embargo no es universal, por ejemplo:
 -\(\{a_n\}_{n \in \mathbb{N}} = a_1, a_2, a_3, \dots\)
 
 \hypertarget{tipos-de-sucesiones}{%
-\section{Tipos de sucesiones}\label{tipos-de-sucesiones}}
+\subsection{Tipos de sucesiones}\label{tipos-de-sucesiones}}
 
 La sucesión anterior es un ejemplo muy sencillo y poco útil en la modelación ecológica, pero es un punto de partida para entender la notación y el concepto. Existen sucesiones, sin embargo, que tienen implicaciones importantes para el desarrollo de modelos dinámicos, como las \textbf{sucesiones por recurrencia}.
 
-\hypertarget{sucesiones-por-recurrencia}{%
-\subsection{Sucesiones por recurrencia}\label{sucesiones-por-recurrencia}}
+\hypertarget{sucesiones-recurrentes}{%
+\subsubsection{Sucesiones recurrentes}\label{sucesiones-recurrentes}}
 
 En estas sucesiones, la regla de correspondencia indica algún tipo de operación con elementos de \(n\) en posiciones previas. Así por ejemplo, la sucesión:
 
@@ -1127,27 +1238,2234 @@ La secuencia de finonacci, tiene un comportamiento parecido a la función expone
 \caption{Representación gráfica de la secuencia de Fibonacci.}\label{fig:fibo-fig}
 \end{figure}
 
-\hypertarget{otras-sucesiones}{%
-\subsection{Otras sucesiones}\label{otras-sucesiones}}
+\hypertarget{sucesiones-recurrentes-muxe1s-avanzadas}{%
+\subsubsection{Sucesiones recurrentes más avanzadas}\label{sucesiones-recurrentes-muxe1s-avanzadas}}
 
-A diferencia de la sucesión de la ecuación \eqref{eq:a2n}, la sucesión de Fibonacci, utiliza los números naturales para iniciar la secuencia, y posteriormente se usan para indizar los elementos de \(a\) que continuarán con el desarrollo de la secuencia.
+Las sucesiones recurrentes pueden ser también concebidas como modelos dinámicos en tiempo discreto, donde el tiempo está representado por el conjunto de los números naturales, así, por ejemplo, el crecimiento de una población lo podemos representar como:
 
-Las secuencias también se pueden clasificar por otras características como sus tendencias a estar acotadas, o a crecer o decrecer constantemente con respecto de \(n\). Estas clasificaciones son útiles en modelación ecológica.
+\begin{equation}
+    N_{t} = r N_{t-1} \label{eq:susc-crec}
+\end{equation}
+
+Como podemos ver, en \eqref{eq:susc-crec}, el crecimiento por unidad de tiempo es lineal con respecto del número de individuos en el periodo de tiempo inmediatamente previo (\(rN_{t-1}\)).
+
+\begin{figure}
+
+{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/susc-crec-1} 
+
+}
+
+\caption{Simulación de la sucesión de crecimiento poblacional en tiempo discreto, para 10 unidades de tiempo, con r = 1.5, y una población inicial de N = 1.}\label{fig:susc-crec}
+\end{figure}
+
+La sucesión descrita por la ecuación \eqref{eq:susc-crec} es fácil de simular con una computadora, con aplicaciones tan populares como las hojas de cáculo como excel.
+
+Con este tipo de sucesiones, es posible comenzar a utilizar conceptos básicos de cálculo. Podemos por ejemplo, tomar la misma sucesión de la ecuación \eqref{eq:susc-crec}, con una población inicial de \(N = 50\), y \(r = 0.6\), y simular por un periodo de tiempo de 20, para ver hacia qué valor se aproxima \(N_t\) (\ref{fig:susc-decrec}).
+
+\begin{figure}
+
+{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/susc-decrec-1} 
+
+}
+
+\caption{Simulación para un valor inicial de N = 50, por 20 unidades de tiempo, y r = 0.6}\label{fig:susc-decrec}
+\end{figure}
+
+En cada simulación, \(N_t\) cambia de acuerdo con el valor de \(N_{t-1}\). Como es evidente, si \(r > 1\), \(N_t\) crece, y mientras \(t \rightarrow \infty\), \(N_t \rightarrow \infty\). En el caso contrario, cuando \(r < 1\) y \(t \rightarrow \infty\), \(N_t \rightarrow 0\)
+
+En estos casos, decimos que por ejemplo para \(r < 1\), \(N\) está acotada por \(0\). Hay otras sucesiones, por ejemplo la de crecimiento logístico, que está acotada por la capacidad de carga, incluso si \(r > 0\).
+
+\begin{figure}
+
+{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/susc-logis-1} 
+
+}
+
+\caption{Simulación para un valor inicial de N = 1, por 50 unidades de tiempo, r = 0.5, y capacidad de carga K = 50}\label{fig:susc-logis}
+\end{figure}
+
+La sucesión para el crecimiento logístico en tiempo discreto es:
+
+\begin{equation}
+N_{t} = N_{t-1} + r N_{t-1} \left(1 - \frac{N_{t-1}}{K} \right) \label{eq:susc-logis}
+\end{equation}
+
+\hypertarget{ejercicio-1}{%
+\subsubsection{Ejercicio}\label{ejercicio-1}}
+
+Utilizando la hoja de cálculo para la sucesión de crecimiento poblacional en tiempo discreto, adaptala para simular el crecimiento poblacional probando los valores de \(r\) dese 0.5 hasta 3.5 en incrementos de 0.25, y grafícalos. ¿Qué pasa con \(N_t\) con los valores de \(r\) probados?
 
 \hypertarget{continuidad-y-luxedmites}{%
 \section{Continuidad y límites}\label{continuidad-y-luxedmites}}
 
+La continuidad y los límites son la puerta de entrada a la derivación y por lo tanto a las ecuaciones diferenciales. Cuando decimos que una función es contínua en un intervalo definido del dominio \((x_1, x_2)\), quiere decir que \(f(x)\) está definida para todos y cada uno de los posibles valores de \(x\) en ese intervalo. Existen muchas funciones que no son contínuas, por ejemplo:
+
+\begin{equation}
+    f(x) = \frac{x - 1}{x - 1} \label{eq:disc-1}
+\end{equation}
+
+Como es evidente, dicha ecuación está definida para todos los valores posibles de \(x\), excepto \(x = 1\), porque \(f(1) = \frac{1 - 1}{1-1} = \frac{0}{0}\), lo cual es una indeterminación, no existe.
+
+\begin{figure}
+
+{\centering \includegraphics[width=41.67in]{Unidad-III/Func-discont} 
+
+}
+
+\caption{Ejemplo de función con discontinuidad.}\label{fig:discont}
+\end{figure}
+
+Hay funciones con discontinuidades, gráficamente más evidentes que \eqref{eq:disc-1}, como la hipérbola, \(f(x) = 1/x\) (figura \ref{fig:hiperb}) o \(g(x) = |x|/x\), o aquellas con condicionales.
+
+\begin{figure}
+
+{\centering \includegraphics[width=41.67in]{Unidad-III/Hiperbola} 
+
+}
+
+\caption{La hipérbola.}\label{fig:hiperb}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=41.67in]{Unidad-III/Deriv-absol} 
+
+}
+
+\caption{Cociente de valor absoluto.}\label{fig:absol}
+\end{figure}
+
+Como resulta geométricamente evidente, todas estas funciones son discontínuas para algún valor de \(x\), sin embargo existe una diferencia muy importante entre ellas y es que el valor que pueden tomar en torno al punto en que son discontínuas depende de qué lado nos acerquemos a este punto. Para la equación \(f(x) = \frac{x-1}{x-1}\), resulta claro que si nos acercamos a \(f(1)\) desde un valor \(x>1\), llegamos a un valor similar de \(f\) que si nos acercamos a \(f(1)\) por medio de un valor de \(x < 1\). Esto no sucede con las función \(g(x) = |x|/x\) puesto que si nos acercamos a \(g(0)\) por el lado positivo de \(x\) nos acercamos a \(g = 1\), mientras que, por el lado negativo, nos acercamos a \(g = -1\).
+
+En este momento entonces es necesario comenzar a hablar del concepto de \textbf{límite}.
+
+\hypertarget{el-luxedmite}{%
+\subsection{El límite}\label{el-luxedmite}}
+
+En el sentido estricto de la palabra, límite es el valor al que se acerca una función para un valor específico del dominio. En matemáticas, existe una notación específica para decir esto:
+
+\begin{equation}
+\lim \limits_{x \rightarrow a} x + 1
+\end{equation}
+
+donde \(\lim\) indica que necesitamos estimar el límite de la función, cuando su dominio \(x\) toma valores cada vez más cercanos a algún valor específico \(a\) (\(x \rightarrow a\)). Aquí es necesario especificar que cuando hablamos de límites \textbf{siempre} nos acercamos al valor de interés \(a\) tanto por medio de valores de \(x>a\) como \(x<a\), es decir alrededor de un intervalo de valores de \(x\) que comunmente se denomina como \(a \pm \delta\). Entonces, el límite de \(f(x)\) existe si todos los valores de \(f(a \pm \delta)\) convergen alrededor de un mismo punto.
+
+Revisa la aplicación de Geogebra \href{https://www.geogebra.org/classic/b76f7gpx}{Límites} para visualizar este fenómeno. Juega con los valores de \(\delta\) y \(a\) para ver cómo están definidos los valores de la función alrededor de \(a\) para la función de la línea recta. Posteriormente, cambia la ecuación por:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(f(x) = \frac{|x|}{x}\)
+\item
+  \(f(x)= \frac{1}{x}\)
+\end{enumerate}
+
+para examinar qué pasa con \(f(x)\) cuando \(x \rightarrow 0\)
+
+En los casos en que los valores de \(f(x)\) tienden a un valor único para \(f(a + \delta)\) y \(f(a - \delta)\), el límite de la función sí existe (figura \ref{fig:discont}). En cambio, como ocurre para funciones como \(1/x\) y \(|x|/x\), existe más de un valor al que ambas funciones se aproximan (figuras \ref{fig:hiperb} y \ref{fig:absol}) dependiendo se si se evalúa \(f(a + \delta)\) ó \(f(a - \delta)\), el límite no existe.
+
+\begin{figure}
+
+{\centering \includegraphics[width=21.38in]{Unidad-III/Limite-x} 
+
+}
+
+\caption{Ejemplo gráfico de una función con límite definido para cualquier valor de $x$. El valor $a$ al que $x$ se aproxima está marcado en el eje $x$ con una cruz roja, y el tamaño de ð alrededor de $a$ está delimitado con las marcas rosas. Nota cómo todos los valores posibles de $f(x)$ alrededor de $f(a)$ convergen en el mismo punto correspondiente a $f(a)$.}\label{fig:limite-def}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=19.21in]{Unidad-III/Limite-abs-x} 
+
+}
+
+\caption{Ejemplo gráfico de una función sin límite definido cuando x→0 (equis tiende a cero). Nota cómo hay dos valores posibles a los que la función se acerca cuando x→0, ya sea cuando uno se acerca a 0 por el lado positivo de $x$ o el lado negativo de $x$.}\label{fig:limite-indef}
+\end{figure}
+
+Aún cuando estas funciones no satisfacen la definición estricta de límite, es posible encontrar los límites de la función para \(f(a)\), dependiendo del lado por el que \(x \rightarrow a\). Veamos el ejemplo de \(f(x) = |x|/x\) dado en la figura \ref{fig:limite-indef}. El límite que nos interesa es
+
+\[ \lim \limits_{x \rightarrow 0} \frac{|x|}{x}\]
+Por lo que sabemos hay dos maneras que acercarnos a \(0\), una por el lado positivo, \(x \rightarrow 0^{+}\), y otra por el lado negativo \(x \rightarrow 0^-\). Así entonces podemos establecer dos límites:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\lim \limits_{x \rightarrow 0^+} \frac{|x|}{x} = 1\)
+\item
+  \(\lim \limits_{x \rightarrow 0^-} \frac{|x|}{x} = -1\)
+\end{enumerate}
+
+\hypertarget{cuxf3mo-se-encuentran-los-luxedmites}{%
+\subsubsection{¿Cómo se encuentran los límites?}\label{cuxf3mo-se-encuentran-los-luxedmites}}
+
+Enncontrar límites puede ser problemático, por lo que existe una variedad de estrategias cuyo uso depende del tipo de expresión que estemos evaluando. Por lo general, si tenemos \(\lim\limits_{x \rightarrow a} f(x)\) se puede comenzar por evaluar \(f(a)\), con lo que tenemos tres posibilidades:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(f(a) = \frac{b}{0}, b \neq 0\) (una asíntota vertical como en \(1/x\))
+\item
+  \(f(a) = b\) (límite encontrado)
+\item
+  \(f(a) = \frac{0}{0}\) (indeterminación)
+\end{enumerate}
+
+En el caso \textbf{1}, es probable que el límite no exista, lo cual depende de que \(\lim\limits_{x \rightarrow a^-} f(x) = \lim\limits_{x \rightarrow a^+} f(x)\). Para el caso \textbf{2}, el límite está claramente definido y no hay mayor problema. En el caso \textbf{3}, es necesario encontrar una manera equivalente de representar a \(f(a)\).
+
+\hypertarget{representaciuxf3n-equivalente-de-las-funciones}{%
+\subsubsection{Representación equivalente de las funciones}\label{representaciuxf3n-equivalente-de-las-funciones}}
+
+Las tres estrategias más comunes para resolver límites donde \(f(a) = \frac{0}{0}\) son:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Factorizar \(f(a)\)
+\item
+  Conjugar \(f(a)\)
+\item
+  Usar identidades trigonométricas
+\end{enumerate}
+
+Cabe aclarar que muchas de las transformaciones aquí descritas surten efecto bajo el supuesto de que \(x \neq a\), aunque una vez transformadas las funciones en efecto las evaluamos asumiendo que \(x = a\). Con esto en mente veamos un ejemplo para cada estrategia.
+
+\hypertarget{factorizaciuxf3n}{%
+\paragraph{Factorización}\label{factorizaciuxf3n}}
+
+Factorizar consiste en representar un polinomio como una serie de productos de binomios (generalmente). Así, por ejemplo:
+
+\begin{equation}
+    \lim \limits_{x \rightarrow -3} \frac{x^2 + x -6}{x + 3}
+\end{equation}
+
+por sustitución directa tenemos que
+
+\begin{equation}
+\frac{(-3)^2 - 3 - 6}{-3 + 3} = \frac{0}{0}
+\end{equation}
+
+Y una vez factorizado, asumiendo que \(x \neq 3\) tenemos
+
+\begin{equation}
+ \frac{x^2 + x - 6}{x + 3} = \frac{(x + 3)(x - 2)}{x + 3} = x-2
+ \end{equation}
+
+por lo tanto, utilizando sustitución directa en la forma factorizada tenemos que:
+
+\begin{equation}
+ \lim\limits_{x \rightarrow 3} x - 2 = - 3 - 2 = -5
+\end{equation}
+
+\hypertarget{conjugaciuxf3n-racional}{%
+\paragraph{Conjugación racional}\label{conjugaciuxf3n-racional}}
+
+Una expresión conjugada de un binomio está basada en la identidad:
+
+\[ a^2 - b^2 =(a + b)(a - b)\]
+
+Esta identidad se puede extender a los radicales:
+
+\[ a - b = (\sqrt{a} + \sqrt{b})(\sqrt{a} - \sqrt{b})\]
+
+De modod que el conjugado de \(a + b\) es \(a-b\), y el de \(\sqrt{a} + \sqrt{b}\) es \(\sqrt{a} - \sqrt{b}\).
+
+La aplicación de conjugados entonces es particularmente útil cuando queremos evaluar un el límite de una funcion racional con radicales. Por ejemplo en:
+
+\begin{equation}
+\lim \limits_{x \rightarrow 0} \frac{\sqrt{1 + x}-1}{x}
+\end{equation}
+
+por sustitución directa obtenemos \frac{0}{0}, pero no es posible factorizar el numerador, por lo tanto podemos utilizar el conjugado de \(\sqrt{1 + x} - 1\). La manera de hacerlo es, primero identificar el cojugado como:
+
+\begin{equation}
+    \sqrt{1 + x} + 1
+\end{equation}
+
+Y multiplicar tanto el nuemerados como denominador por el conjugado:
+
+\begin{equation}
+  \frac{\sqrt{1 + x}-1}{x} \cdot  \frac{\sqrt{1 + x} + 1}{\sqrt{1 + x} + 1} = \frac{1 + x-1}{x(\sqrt{1 + x} + 1)} = \frac{1}{\sqrt{1 + x} + 1}
+\end{equation}
+
+Con lo que ya podemos evaluar:
+
+\begin{equation}
+\lim\limits_{x \rightarrow 0} \frac{1}{\sqrt{1 + x} + 1} = \frac{1}{1 + 1} = \frac{1}{2}
+\end{equation}
+
+\hypertarget{identidades-trigonomuxe9tricas}{%
+\paragraph{Identidades trigonométricas}\label{identidades-trigonomuxe9tricas}}
+
+Cuano es necesario evaluar el límite de una función trigonométrica, es útil echar mano de las identidades, además de las ya bien conocidas, las pitagóricas:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\mathrm{sen}^2 \theta + \cos^2 \theta = 1\)
+\item
+  \(\sec^2 \theta - \tan^2 \theta = 1\)
+\item
+  \(\csc^2 \theta - \cot^2 \theta = 1\)
+\end{enumerate}
+
+Comencemos por ver un ejemplo basado en las identidades basadas en los cocientes.
+
+\begin{equation}
+\lim \limits_{x \rightarrow 0} \frac{3x \tan x}{\mathrm{sen}x}
+\end{equation}
+
+por sustitución directa tenemos que:
+
+\begin{equation}
+\frac{3(0)\tan 0}{\mathrm{sen} 0} = \frac{0}{0}
+\end{equation}
+
+lo que indica que necesitamos representar a la función de una manera alternativa, echando mano de las identidades. Sabemos que:
+
+\begin{equation}
+\tan \theta = \frac{\mathrm{sen} \theta}{\cos \theta}
+\end{equation}
+
+por lo tanto podemos representar la función como:
+
+\begin{equation}
+\frac{3x \tan x}{\mathrm{sen}x} = \frac{3x \mathrm{sen} x}{\cos^2 x} = \frac{3x}{\cos x}
+\end{equation}
+
+Entonces, tenemos el límite que puede ser evaluado por sustitución directa:
+
+\begin{equation}
+\lim \limits_{x \rightarrow 0} \frac{3x}{\cos x} = \frac{3(0)}{\cos 0} = \frac{0}{1} = 0
+\end{equation}
+
+\hypertarget{equivalencias-de-luxedmites}{%
+\subsubsection{Equivalencias de límites}\label{equivalencias-de-luxedmites}}
+
+Los límites, como hemos visto, son números reales, por lo que todos los axiomas que ya conocemos aplican a los números reales:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \(\lim \limits_{x \rightarrow a} f(x) + g(x) = \lim \limits_{x \rightarrow a} f(x) + \lim \limits_{x \rightarrow a} g(x)\)
+\item
+  \(\lim \limits_{x \rightarrow a} f(x) \cdot g(x) = \lim \limits_{x \rightarrow a} f(x) \cdot \lim \limits_{x \rightarrow a} g(x)\)
+\item
+  \(\lim \limits_{x \rightarrow a} \frac{f(x)}{g(x)} = \frac{\lim \limits_{x \rightarrow a} f(x) }{ \lim \limits_{x \rightarrow a} g(x)}\)
+\item
+  \(\lim \limits_{x \rightarrow a} c f(x) = c \lim \limits_{x \rightarrow a} f(x)\)
+\item
+  \(\lim \limits_{x \rightarrow a} f(x)^2 = \left( \lim \limits_{x \rightarrow a} f(x) \right)^2\)
+\end{enumerate}
+
 \hypertarget{derivaciuxf3n}{%
 \section{Derivación}\label{derivaciuxf3n}}
+
+Hasta el momento hemos mencionado en repetidas ocasiones una serie de conceptos relacionados muy íntimamente con la derivación. En esencia, en cálculo, el proceso de derivación se utiliza para estimar la pendiente de una recta tangente a un punto cualquiera que forma parte de una función (Figura \ref{fig:deriv}).
+
+\begin{figure}
+
+{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/deriv-1} 
+
+}
+
+\caption{Representación gráfica de la tangente a un punto en la curva exponencial.}\label{fig:deriv}
+\end{figure}
+
+El proceso de estimar la pendiente de una tangente a la función en un punto \((x, f(x))\) consiste en estimar el límite:
+
+\begin{equation}
+\lim \limits_{h \rightarrow 0} \frac{f(x + h) - f(x)}{x - (x + h)} \label{eq:derivada}
+\end{equation}
+
+Resolverlo no requiere de un conocimiento profundo para encontrar que por sustitución directa de \(h = 0\), se obtiene una undeterminación (\(0/0\)). Sin embargo para entender mejor de qué se trata el límite de la ecuación \eqref{eq:derivada} podemos explorarlo con la \href{https://www.geogebra.org/classic/rjttr8kq}{aplicación para derivadas}.
+
+\hypertarget{ejemplos-2}{%
+\subsection{Ejemplos}\label{ejemplos-2}}
+
+\hypertarget{ecuaciuxf3n-cuadruxe1tica}{%
+\subsubsection{Ecuación cuadrática:}\label{ecuaciuxf3n-cuadruxe1tica}}
+
+\[ y = x^2\]
+Con lo que la derivada sería:
+
+\begin{equation}
+\lim \limits_{h \rightarrow 0} \frac{(x + h)^2 - x^2}{(x+h) - x}
+\end{equation}
+
+Utilizando las técnicas para resolver límites podemos que con este último se puede utilizar factorización para obtener:
+
+\begin{equation}
+\lim \limits_{h \rightarrow 0} \frac{(x + h)^2 - x^2}{(x+h) - x} = \lim \limits_{h \rightarrow 0} \frac{((x + h) - x)((x + h) - x)}{(x + h) + x} = \lim \limits_{h \rightarrow 0} (x + h) + x = \lim \limits_{h \rightarrow 0} 2x + h
+\end{equation}
+
+Con este resultado podemos ahora sí sustituir \(h\) directamente para ver que la derivada \(y' = 2x\).
+
+\hypertarget{hiperbola}{%
+\subsubsection{Hiperbola}\label{hiperbola}}
+
+\[ y = \frac{1}{x}\]
+Derivada:
+
+\begin{equation}
+\lim \limits_{h \rightarrow 0} \frac{\frac{1}{x + h} - \frac{1}{x}}{(x+h) - x}
+\end{equation}
+
+Podemos comenzar por simplificar las fracciones:
+
+\begin{equation}
+\lim \limits_{h \rightarrow 0} \frac{\frac{x - (x + h)}{x(x + h)}}{h} = \lim \limits - \frac{h}{x^2 + xh} \frac{1}{h} = \lim \limits_{h \rightarrow 0} -\frac{1}{x^2}
+\end{equation}
+
+Por lo tanto \(y' = \frac{1}{x^2}\)
+
+\hypertarget{notaciuxf3n}{%
+\subsection{Notación}\label{notaciuxf3n}}
+
+La técnica de derivación se le atribuye a dos científicos, Isaac Newton y Gottfried Leibniz. La notación que se tradicionalmente enseña para comenzar con cáculo es la de Newton:
+
+\begin{equation}
+f'(x) = \lim \limits_{h \rightarrow 0} \frac{f(x + h) - f(x)}{h} \label{eq:Newton}
+\end{equation}
+
+la cual adolece de claridad, pues a menos que uno conozca bien la fórmula de la derivada no especifica el significado de \(f'(x)\). La notación de Leibniz en cambio, sí lo especifica:
+
+\begin{equation}
+\frac{df}{dx} = f'(x) \label{eq:Leibniz}
+\end{equation}
+
+donde el numerador \(df = \Delta f = f(x + h) - f(x)\) y el denominador \(dx = \Delta x = (x+h) - x = h\). La letra \(d\) se utiliza en lugar de \(\Delta\) para indicar que se trata de un cambio contínuo, en lugar de discreto, el uso tradicional de \(\Delta\).
+
+\hypertarget{reglas-de-derivaciuxf3n}{%
+\subsection{Reglas de derivación}\label{reglas-de-derivaciuxf3n}}
+
+\hypertarget{potencias}{%
+\subsubsection{Potencias}\label{potencias}}
+
+Como ya se habrán dado cuenta, la primera regla de la derivación está relacionada con los exponentes. Por ejemplo, la derivadas de \(f(x) = x^2\) y \(f(x) = \frac{1}{x}\), son \(\frac{df}{dx} = 2x\) y \(\frac{df}{dx} = - \frac{1}{x^2}\) respectivamente. Nota, que en ambos casos, los exponentes de cada \(x\), se convirtieron en coeficientes en \(\frac{df}{dx}\), y que restamos \(1\) a cada exponente de \(x\):
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(x^2 \rightarrow 2x^{2-1} = 2x^1 = 2x\)
+\item
+  \(1/x = x^{-1} \rightarrow -1x^{-1-1} = -x^{-2} = - 1/x^2\)
+\end{enumerate}
+
+Entonces la primera regla de la derivación, se puede aplicar a muchas funciones. Si \$f(x) = x\^{}n \$, \$\frac{df}{dx} = nx\^{}\{n-1\} \$.
+
+En casos donde \(x\) aparece más de una vez, se considera que:
+
+\[f(x) = f_1(x) + f_2{x} + \dots + f_n(x)\]
+
+Y dado que la derivada es un límite, sabemos que \(f'(x) = f'_1(x) + f'_2(x) + \dots + f'_n(x)\).
+
+Por ejemplo, si tenemos la función
+
+\[y = a + bx + cx^2 + dx^3 = ax^0 + bx^1 + cx^2 + dx^3\]
+
+su derivada será
+
+\[ \frac{dy}{dx} = 0ax^{0-1} + bx^{1-1} + 2cx^{2-1} + 3dx^{3-1}= b + 2cx + 3dx^2\]
+
+\hypertarget{productos}{%
+\subsubsection{Productos}\label{productos}}
+
+Si \(h(x) = f(x)g(x)\) entonces:
+\[h'(x) = f'(x)g(x) + f(x)g'(x)\]
+
+\hypertarget{cocientes}{%
+\subsubsection{Cocientes}\label{cocientes}}
+
+Si \(h(x) = \frac{f(x)}{g(x)}\), entonces:
+
+\[h'(x) = \frac{f'(x)g(x) - f(x)g'(x)}{g(x)^2}\]
+
+\hypertarget{funciones-en-cadena}{%
+\subsubsection{Funciones en cadena}\label{funciones-en-cadena}}
+
+Una función en cadena es aquella en que \(h(x) = (f \circ g)(x) = f(g(x))\), entonces:
+
+\[h'(x) = f'(g(x))g'(x) = (f \circ g)'(x) g'(x)\]
+
+Aquí es preciso dar un ejemplo:
+
+\[h(x) = (3x-1)^2\]
+
+donde está claro que \(g(x) = 3x^2-1\) y que \(f(u) = u^2\). Por lo tanto si evaluamos \(f'(u)\) cuando \(u = 3x^2-1\), entonces \(f'(u) = 2(3x^2-1)\). Por el otro lado, tenemos que, aplicando la regla de las potnecias, \(g'(x) = 6x\). Entonces:
+
+\[h'(x) = 2(3x^2-1)6x\]
+
+\hypertarget{representaciuxf3n-geomuxe9trica-de-la-derivada}{%
+\subsection{Representación geométrica de la derivada}\label{representaciuxf3n-geomuxe9trica-de-la-derivada}}
+
+Como resultado del proceso de derivación de una función \(f(x)\) se obtiene una segunda función \(f'(x)\) ó \(\frac{d}{dx}f\) cufo valor corresponde a la pendiente de una tangente para cada par de valores \((x, f(x))\).
+
+La aplicación \href{https://www.geogebra.org/classic/w3spjhc7}{Interpretación de la derivada}, muestra ambas funciones y la recta tangente a \((x,f(x))\). Observa la pendiente de esta tangente y las coordenadas \((x, f'(x))\).
+
+\hypertarget{aplicaciones}{%
+\subsection{Aplicaciones}\label{aplicaciones}}
+
+Uno de los modelos más generalizables que se utilizan en ecología es el de crecimiento exponencial:
+
+\[N(t) = e^{rt}\]
+
+Como vimos anteriormente, este modelo se puede linealizar utilizando el logaritmo:
+
+\begin{equation}
+\ln N(t) = rt \label{eq:log-N}
+\end{equation}
+
+y si resolvemos para \(r\), obtenemos que:
+
+\[r = \frac{\ln N}{t}\]
+
+la pendiente, o tasa de crecimiento de una poblaciones equivalente a \(\ln N/t\), para cualquier período de tiempo. Volvamos sin embargo a la ecuación \eqref{eq:log-N}, diferenciándola. Para esto utilizaremos la diferenciación implícita, pues necesitamos conocer:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\frac{d}{dt}rt = r\)
+\item
+  \(\frac{d}{dt}N(t) \ln N = \frac{d}{dt} \frac{1}{N}\)
+\end{enumerate}
+
+por lo tanto:
+
+\[\frac{dN}{dt} \frac{1}{N} = t\]
+
+Con lo que obtenemos la siguiente ecuación diferencial:
+
+\begin{equation}
+\frac{dN}{dt} = rN
+\end{equation}
+
+De este modo podemos ver que, el crecimiento instantáneo de una población durante el intervalo \(dt\) es equivalente a la tasa de crecimiento exponencial \(r\). Más adelante veremos por qué \(f(x) = \ln x\), \(f'(x) = 1/x\), por el momento esta equivalencia nos sirve para ver que si \(N(t) = e^{rt}\):
+
+\[\frac{dN}{dt} = e^{rt} = rN\]
+Y si separamos ambos lados \(N\) y \(t\), tenemos:
+
+\[\frac{dN}{N} = r \cdot dt\]
+
+Por lo tanto, la derivada nos sirve para estudiar de cerca la tasa de crecimiento en relación al cambio de población \(dN\) y de tiempo \(dt\), con un modelo lineal.
 
 \hypertarget{integraciuxf3n}{%
 \section{Integración}\label{integraciuxf3n}}
 
-\hypertarget{funciones-trigonomuxe9tricas-1}{%
-\section{Funciones trigonométricas}\label{funciones-trigonomuxe9tricas-1}}
+La integración es el proceso de estimación del área bajo la curva de una función, y para nosotros como ecólogxs es muyimportante, pues la mayoría de los modelos dinámicos se formulan como ecuaciones diferenciales, los cuales debemos integrar para obtener las soluciones.
 
-\hypertarget{la-recta-como-modelo-universal-y-sus-transformaciones-1}{%
-\section{La recta como modelo ``universal'' y sus transformaciones}\label{la-recta-como-modelo-universal-y-sus-transformaciones-1}}
+Al igual que con límites y derivadas, hay toda una notación particular de la integración:
+
+\begin{equation}
+    \int_a^b \!f(x) dx
+\end{equation}
+
+Y se lee, la integral de \(f(x)\) entre \(a\) y \(b\). \([a, b]\) corresponde a dos valores, mínimo (\(a\)) y máximo (\(b\)), de \(x\) entre los cuales se evaluará el área. El símbolo \(\int\), es una ``S'', e indica la suma de valores contínuos. Al igual que en la derivada, el signo \(d\) es la versión contínua de \(\Delta\), en las integrales \(\int\) es la versión contínua de \(\sum\).
+
+Otra similitud entre la dericada y la integral es que est última es un límite:
+
+\begin{equation}
+    \int_a^b \!f(x) dx = \lim \limits_{n \rightarrow \infty} \sum_{i = 1}^n f(x_i) \Delta x; \Delta x = \frac{b-a}{n} \label{eq:integ-limite}
+\end{equation}
+
+Para comprederla, enfoquémonos en el lado derecho, que comenzando con el operador de sumatoria \(\sum\) indica que para cada valor \(x_i\), se evalúa la función \(f\), y se multiplica por la distancia que hay entre \(x_i\) y \(x_{i-1}\) (\(\Delta x\)). Si pensamos esto en el plano cartesiano, \(f(x_i)\) es la distancia entre \(0\) y el valor de \(y\) en \(f(x_i)\), por lo que al multiplicarlo por \(\Delta x\) estamos obteniendo el área de un rectángulo con lados de longitud \(\Delta x\) y \(f(x_i)\). Nota que conforme \(n \rightarrow \infty\), la longiud de \(\Delta x\) disminuye tanto, que el número de rectángulos con área \(\Delta x \times f(x_i)\) tiende a infinito.
+
+\begin{figure}
+
+{\centering \includegraphics[width=12.4in]{Unidad-III/Esquema-integral} 
+
+}
+
+\caption{Representación esquemática de la integral. Nota quq utilizando los rectángulos, es posible aproximar el valor de una integral con rectángulos que pasen por arriba o abajo de la curva.}\label{fig:La-integral}
+\end{figure}
+
+Puedes explorar estos conceptos con la \href{https://www.geogebra.org/classic/wmpqmr4a}{aplicación para el área bajo una recta de Geogebra}.
+
+\hypertarget{uxe1rea-bajo-una-recta}{%
+\subsection{Área bajo una recta}\label{uxe1rea-bajo-una-recta}}
+
+Un ejemplo clásico de integración es el área bajo una recta con pendiente \(m \neq 0\) e intercepto \(0\), la cual corresponde al área de un triángulo (figura \ref{fig:Area-recta}).
+
+\begin{figure}
+
+{\centering \includegraphics[width=25.43in]{Unidad-III/Area-bajo-recta} 
+
+}
+
+\caption{Área bajo la recta f(x) = x, entre el punto 0 y a = 1.}\label{fig:Area-recta}
+\end{figure}
+
+Utilizando el método de los rectángulos tenemos que el área sombreada en la figura \ref{fig:Area-recta} entre los puntos \(0\) y \(a\) se puede aproximar sumando rectángulos con altura \(f(x)\) y ancho \(\Delta x\).
+
+\begin{figure}
+
+{\centering \includegraphics[width=16.04in]{Unidad-III/Rectangulos} 
+
+}
+
+\caption{Método de los rectángulos para calcular área bajo curva}\label{fig:Recta-area-rect}
+\end{figure}
+
+Para automatizar este proceso y encontrar todos los valores de \(x\) en el intervalo \(0, a\), podemos comenzar por tomar en cuenta el número de rectángulos, como en la figura \ref{fig:Recta-area-rect}, cuantos más rectángulos tenemos el error de cálculo será menor.
+
+La siguiente consideración será si tomaremos en cuenta el punto inferior o superior del intervalo (figura \ref{fig:La-integral}). Si tomamos en cuenta el punto inferior del intervalo, la altura del primer rectángulo será \(f(0)\), y el ancho será \(\Delta x = a/n\). Por otra parte, tenemos que los valores de \(x\) en que evaluaremos \(f(x)\) corresponden a los valores de \(x: 0, a/n, 2a/n, 3a/n, \dots, (n-1)a/n, a\), Si comenzamos con \(n = 10\), y \(a = 1\) tenemos que evaluar \(f(x)\) en los valores:
+
+\[x = \left \{ 0, \frac{1}{10}, \frac{1}{10}, \dots, \frac{9}{10}, 1 \right \}\]
+
+Estas integrales se comoces como de Riemann. Por muchos años los matemáticos se dieron a la tarea de encontrar las funciones que resultaban de incremetar el número de rectángulos bajo la curva de diversas funciones. No fue sino hasta que Newton y Leibniz acuñaron el teorema fundamental del cálculo que se obtuvieron las herramientas necesarias para estimar \emph{fácilmente} el ára bajo la curva de cualquier función.
+
+\textbf{De aquí en adelante está en construcción, no usar!}
+
+\hypertarget{el-teorema-funamental-del-cuxe1lculo}{%
+\subsection{El teorema funamental del cálculo}\label{el-teorema-funamental-del-cuxe1lculo}}
+
+Este teorema establece, en términos muy generales que
+
+\begin{equation}
+\int \frac{d}{dx}f = f(x)
+\end{equation}
+
+la integral de una derivada es la función misma con la que se obtuvo la derivada. Así, llegamos a la antiderivada.
+
+\hypertarget{antiderivadas-de-funciones}{%
+\subsubsection{Antiderivadas de funciones}\label{antiderivadas-de-funciones}}
+
+Bajo la regla de las potencias, que si \(f(x) = ax^n\), \(\int f(x) = \frac{ax^{n+1}}{n+1}\). Si derivamos \(\int f(x)\), veremos que \(f(x) = ax^n\).
+
+Esta sencillísima técnica es efectiva para funciones sin constantes, puesto que la derivada de una constante es 0. Sin embargo debido a que al integrar una función no tenemos ningún conocimiento sobre la existencia o ausencia de una constante (p.~ej. \(y = a + bx\)), es necesario asumir su existencia, de modo que:
+
+\begin{equation}
+\int f(x) = \frac{ax^{n+1}}{n+1} + c
+\end{equation}
+
+donde \(c\) es la constante de integración.
+
+\hypertarget{aplicaciones-de-la-integraciuxf3n}{%
+\subsection{Aplicaciones de la integración}\label{aplicaciones-de-la-integraciuxf3n}}
+
+\hypertarget{cambio-acumulativo}{%
+\subsubsection{Cambio acumulativo}\label{cambio-acumulativo}}
+
+El modelo de crecimiento exponencial, basado en la ecuación:
+
+\begin{equation}
+    N(t) = e^{rt} \label{eq:ExponN}
+\end{equation}
+
+es la base de un gran número de modelos en ecología. Cuando transformamos este modelo en una ecuación diferencial, toma una apariencia un tanto diferente. Comencemos por recordar que si \(f(x) = e^x\), entonces \(f'(x) = e^x\). Si agregamos un parámetro \(r\) como coeficiente de \(x\), tenemos que \(f(x)= e^{rx}\), resultando exactamente en el modelo \eqref{eq:ExponN}.
+
+Para derivar este modelo necesitamos recordar que:
+
+\[\frac{d}{dx}(f \circ g)(x) = (f \circ g)'(x)g'(x)\]
+y por analogía \((f \circ g)(x) = e^{rt}\) y \(g(x) = rt\), por lo tanto:
+
+\begin{equation}
+\frac{dN}{dt} = r e^{rt}
+\end{equation}
+
+donde podemos sustituir \(e^{rt}\) por \(N\), para obtener:
+
+\begin{equation}
+\frac{dN}{dt} = r N
+\end{equation}
+
+que el cambio inmediato en el número de individuos de la población \(N\), es proporcional a \(rN\). La integral \(\int_{0}^{t} \frac{dN}{dt}\) es entonces equivalente al número de individuos en ese momento \(t\), mientras que \(\int_{0}^{t} N(t)\) corresponde al número total de individuos que hay y ha habido en esa población!
+
+\hypertarget{integraciuxf3n-analuxedtica-vs-numuxe9rica}{%
+\subsubsection{Integración analítica vs numérica}\label{integraciuxf3n-analuxedtica-vs-numuxe9rica}}
+
+En matemáticas, el término \emph{analítico} se utiliza para describir el proceso de encontrar con herramientas formales de las matemáticas una solución exacta a un problema. Por ejemplo la antiderivación, aplicando a la inversa las relgas de la derivación es la integración analítica. Hay modelos sin embargo que no se pueden resolver con herramientas analíticas, típicamente, aquellos en que no podemos separar las variables dependientes e independientes. En esos casos hacemos integración \emph{numérica}, que consiste en aproximaciones al valor de la función pero nunca representan las soluciones exactas que se obtienen con integración analítica.
+
+Veamos la ecuación diferencial:
+
+\begin{equation}
+\frac{dN}{dt} = rN \label{eq:dif-1}
+\end{equation}
+
+corresponde a una función que conocemos como \(N = e^{rt}\), sin embargo podríamos aproximarnos recursivamente a los valores que prediciría \(e^{rt}\) utilizando la definición de la derivada. Sabemos que la derivada es la pendiente de una recta, por lo tanto podríamos comenzar por dibujar una recta con pendiente \(rN\) partiendo desde \(t = 0\), hasta un punto \(0+dx\). El cambio absoluto de \(N\) (\(dN\)) sería entonces \(rN \times dt\), cuyo valorr utilizaremos como punto de partida. Mencioné anteriormente que este método es una aproximación, y esto es porque resulta en un error que se va acumulando entre la función verdadera \(N = e^{rt}\) y la que aproximamos revirtiendo secuencialmente la derivada (figura ).
+
+\begin{figure}
+
+{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/integ-numer-1} 
+
+}
+
+\caption{Diferencias entre integración analítica vs integración numérica, para r = 0.1, dt = 1, y población inicial de N = 1.}\label{fig:integ-numer}
+\end{figure}
+
+\hypertarget{unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias}{%
+\chapter{Unidad IV: Modelos deterministas basados en ecuaciones diferenciales ordinarias}\label{unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias}}
+
+\hypertarget{modelos-lineales-crecimiento-exponencial-malthusiano}{%
+\section{Modelos lineales: Crecimiento exponencial (Malthusiano)}\label{modelos-lineales-crecimiento-exponencial-malthusiano}}
+
+El modelo de crecimiento exponencial también recibe el nombre de ``Malthusiano'', en honor al matemático inglés Thomas Malthus, quien acuñó la teoría demográfica subyacente en la publicación anónima de 1798 \emph{Ensayo sobre el principio de la población}. Este libro trata, no de ecología, sino de las raíces de la pobreza en las sociedades capitalistas, según Malthus, ocasionada por la escasez de recursos. Muchas de las ideas de Malthus, son típicas del pensamiento colonial inglés del período en que vivió, sin embargo, son ecológicamente significativas.
+
+El modelo malthusiano sugiere que, en ausencia de limitaciones, las poblaciones de humanos tenderían a crecer exponencialmente, de ahí que al modelo:
+
+\begin{equation}
+ \frac{dN}{dt} = rN \label{eq:Malthus}
+\end{equation}
+
+se le llame modelo de crecimiento malthusiano. La intepretación de \(r\) como la tasa de crecimiento sin limitación de alimento, espacio y en ausencia de competencia entre individuos o especies, es la principal aportación de Malthus, y ha servido de base para la formulación de teorías como la evolución.
+
+\hypertarget{interpretaciuxf3n-de-r}{%
+\subsection{\texorpdfstring{Interpretación de \(r\)}{Interpretación de r}}\label{interpretaciuxf3n-de-r}}
+
+Más que tasa de crecimiento, \(r\) representa la tasa de cambio del proceso que estamos observando. Estrictamente hablando una población cambia en razón a dos procesos, nacimientos y muertes. De manera relativamente obvia, los nacimientos representan el crecimiento de la población y las muertes del decrecimiento. Por lo tanto, es frecuente considerar que \(r = n - m\), con \(n=\) nacimientos y \(m=\) muertes. Si sustiuimos esta re-interpretación de \(r\), en la ecuación \eqref{eq:Malthus} tenemos:
+
+\begin{equation}
+    \frac{dN}{dt} = (n - m)N = nN - mN
+\end{equation}
+
+esta re-parametrización del modelo es buena para ejemplificar que si \(n > m \rightarrow r>0\), si \(n < m \rightarrow r < 0\) y que si \(n = m \rightarrow r = 0\). El balance entre nacimientos y muertes entonces es la clave para que una población permanezca constante, crezca o disminuya.
+
+Este balance entre nacimientos y muertes puede también ser concebido como flujos de entrada y salida de un compartimento (figura \ref{fig:nacim-muert}).
+
+\begin{figure}
+
+{\centering \includegraphics[width=12.42in]{Unidad-IV/Malthus-nacim-muert} 
+
+}
+
+\caption{Esquema representativo del modelo de crecimiento malthusiano como flujo de nacimientos y muertes.}\label{fig:nacim-muert}
+\end{figure}
+
+\hypertarget{anuxe1lisis-del-modelo}{%
+\subsection{Análisis del modelo}\label{anuxe1lisis-del-modelo}}
+
+Hasta el momento hemos visto ya muchas de las propiedades el modelo exponencial:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Su derivada es equivalente al valor de la función misma
+\item
+  Su antiderivada es por lo tanto, igualmente equivalente al valor de la función
+\item
+  Puede ser representado, como ecuación diferencial, de manera implícita, sin que la variable independiente \(t\) aparezca en el lado derecho de la ecuación \eqref{eq:Malthus}
+\item
+  Al ser representado de manera implícita, el modelo exponencial es lineal con respecto de la variable dependiente del tiempo
+\end{enumerate}
+
+Estas propiedades hacen que analizar el modelo de crecimiento malthusiano sea relativamente sencillo.
+
+\hypertarget{anuxe1lisis-de-estabilidad}{%
+\subsection{Análisis de estabilidad}\label{anuxe1lisis-de-estabilidad}}
+
+Este análisis surge de la pregunta ¿bajo qué condiciones una población \(N\) con tasa de crecimiento \(r\) permanece constante? Dada la ecuación \eqref{eq:Malthus} sabemos que si \(\frac{dN}{dt} > 0\), \(N \rightarrow \infty\), por el contrario si \(\frac{dN}{dt} < 0\), \(N \rightarrow 0\). Entonces, para que no haya cambios en \(N\), necesitamos que \(\frac{dN}{dt} = 0\). De esta equivalencia tenemos que si:
+
+\[rN = 0\]
+Es debido a que, \(r=0\) si \(N \neq 0\), ó \(N=0\) si \(r \neq 0\). Es decir que el número de individuos \(N\) en una población permanecerá constante sólo bajo dos condiciones, si su tasa de crecimiento es cero, ó no tiene individuos.
+
+\hypertarget{peruxedodos-de-duplicaciuxf3n}{%
+\subsection{Períodos de duplicación}\label{peruxedodos-de-duplicaciuxf3n}}
+
+Otra pregunta frecuente en el análisis de poblaciones es ¿cuánto tiempo tardará en duplicarse el tamaño de una población? Para responder esta pregunta, necesitamos la forma cerrada de
+la ecuación \eqref{eq:Malthus}:
+
+\begin{equation}
+N(t) = N_0 e^{rt} \label{eq:Malthus-c}
+\end{equation}
+
+En el análisis de estabilidad encontramos los casos en que \(\frac{dN}{dt} = 0\), por el contrario aquí nos interesa encontrar, con base en la ecuación \eqref{eq:Malthus-c} cuánto tiempo transcurrirá para que \(N(t) = 2N_0\), lo cual podemos conocer resolviendo:
+
+\[2N_0 = N_0 e^{rt}\]
+para \(t\):
+
+\begin{align}
+e^{rt} &= 2\\ \notag
+rt &= \ln 2\\ \notag
+t &= \frac{\ln 2}{r}
+\end{align}
+
+Es así que podemos representar el período de duplicación de una población cualquiera como una función de su tasa de cambio (figura \ref{fig:periodo-dupl}).
+
+\begin{figure}
+
+{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/periodo-dupl-1} 
+
+}
+
+\caption{Período de duplicación en función de la tasa de crecimiento de una población.}\label{fig:periodo-dupl}
+\end{figure}
+
+\hypertarget{estimaciuxf3n-de-la-tasa-de-cambio-r}{%
+\subsection{\texorpdfstring{Estimación de la tasa de cambio \(r\)}{Estimación de la tasa de cambio r}}\label{estimaciuxf3n-de-la-tasa-de-cambio-r}}
+
+Para un ecólogo es de suma utilidad conocer la variación de \(r\) para poder medir los efectos del medio ambiente u otras especies sobre los cambios demográficos de una o varias poblaciones. En principio es posible obtener los posibles valores de \(r\) a partir de la ecuación \eqref{eq:Malthus-c}, resolviéndola para \(r\):
+
+\begin{align}
+\frac{N}{N_0} &= e^{rt}\\
+\ln \left(\frac{N}{N_0} \right) &= rt\\
+r &= \frac{\ln N - \ln N_0}{t}
+\end{align}
+
+En caso de que tengamos observaciones puntuales de \(N\) y \(N_0\) a lo largo del tiempo.
+
+\hypertarget{implicaciones-del-crecimiento-exponencial}{%
+\subsection{Implicaciones del crecimiento exponencial}\label{implicaciones-del-crecimiento-exponencial}}
+
+Una manera de visualizar las repercusiones el crecimiento exponencial y los períodos de duplicación queda de manifiesto con el acertijo:
+
+\emph{Tenemos una población de bacterias que se duplica cada minuto, y tenemos cuatro frascos para albergarla. El primer frasco tardó una hora en llenarse, ¿cuánto tiempo pasará para que se llenen los tres frascos restantes?}
+
+\hypertarget{modelos-no-lineales-crecimiento-loguxedstico-de-una-poblaciuxf3n}{%
+\section{Modelos no lineales: Crecimiento logístico de una población}\label{modelos-no-lineales-crecimiento-loguxedstico-de-una-poblaciuxf3n}}
+
+Gracias a Thomas Malthus comprendimos qué sucede con una población cuando llega a estar libre de limitantes externas, sin embargo ¿cómo podemos representar lo que sucede con una población cuando existen dichas limitaciones? La respuesta es el modelo logístico. Este modelo es una variación del modelo malthusiano, pero para regular la tasa neta de crecimiento incorpora una segunda función de \(N\) que al multiplicar a \(r\) se vuelve cero cuando \(N\) alcanza un nivel definido como capacidad de carga (\(K\)).
+
+El crecimiento logístico ocurre en el mundo real más frecuentemente que el malthusiano, pues todos los organismos vivientes crecen a expensas de otros, lo cual también se conoce como denso-dependencia, es decir, que el crecimiento neto de una población disminuye en relación a la cantidad de individuos.
+
+La ecuación del modelo logístico es:
+
+\begin{equation}
+    \frac{dN}{dt} = rN \left(1 - \frac{N}{K} \right) \label{eq:logis}
+\end{equation}
+
+donde \(K\) es la capacidad de carga del área donde la población con \(N\) individuos vive. Como es evidente la expresión \((1-N/K) \rightarrow 0\) cuando \(N \rightarrow K\). De modo que una población con \(N < K\) tenderá a a crecer. Si expandimos \(rN(1 - N/K) = rN-rN^2/K\) podemos ver que se trata de una parábola. A diferencia del modelo de crecimiento exponencial, donde la tasa de cambio \(r\) es constante, en el modelo logístico, la tasa neta cambia con el tamaño de la población.
+
+\begin{figure}
+
+{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/logis-1} 
+
+}
+
+\caption{Tasa de cambio de N en relación a N en el modelo logístico, con K = 50 y r = 1}\label{fig:logis}
+\end{figure}
+
+Algunas propiedades importantes del modelo logístico es que tiene una serie de puntos críticos. Por ejemplo, el tamaño de la población en que ingresa el número máximo de individuos nuevos, el cual corresponde a:
+
+\begin{equation}
+\frac{d\left( \frac{dN}{dt} \right)}{dN} = r - 2rN/K = 0
+\end{equation}
+
+con lo que tenemos que:
+
+\[ N= \frac{K}{2}\]
+
+El crecimiento máximo se da cuando la población se encuentra al 50\% de la capacidad de carga.
+
+\hypertarget{anuxe1lisis-de-estabilidad-1}{%
+\subsubsection{Análisis de estabilidad}\label{anuxe1lisis-de-estabilidad-1}}
+
+Al igual que con el crecimiento malthusiano, nos interesa encontrar en qué situaciones la población será constante, por lo que tenemos que resolver:
+
+\[\frac{dN}{dt} = 0\]
+para encontrar que hay dos puntos de equilibrio, \(N = 0\) y \(N = K\). Estos puntos tienen propiedades diferentes. Por ejemplo, ¿qué sucede con el \(N\) si a \(N=0\) le sumamos una cantidad muy pequeña \(\varepsilon\)? ¿\(N\) tenderá a regresar a \(0\)? Un ejemplo de este tipo de dinámicas en el mundo real se presenta con un péndulo, el cual tiene dos puntos de equilibrio, uno estable (donde el péndulo descansa en ausencia de una fuerza lateral), y otro inestable
+
+\begin{figure}
+
+{\centering \includegraphics[width=10.22in]{Unidad-IV/Puntos-equilibrio} 
+
+}
+
+\caption{Puntos de equilibrio de un péndulo.}\label{fig:equilibrio}
+\end{figure}
+
+Las mismas preguntas aplican para \(N=K\). Para responderlas tenemos que hacer un paréntesis y echar un vistazo a la integración numérica.
+
+\hypertarget{integraciuxf3n-numuxe9rica}{%
+\paragraph{Integración numérica}\label{integraciuxf3n-numuxe9rica}}
+
+Esta técnica de integración está basada en la definición de la derivada como límite:
+
+\begin{equation}
+f'(x) = \lim \limits_{h \rightarrow 0} \frac{f(x + h) - f(x)}{h} \label{eq:deriv-Euler}
+\end{equation}
+
+donde se asume que \(h = dx\), con \(dx \approx 0\), es decir, que \(dx\) es una cantidad arbitrariamente pequeña. De modo que sustituimos \(dx\) por \(h\) en \eqref{eq:deriv-Euler} y resolvemos para \(f(x + dx)\) para obtener:
+
+\begin{equation}
+f(x + dx) = f(x) + f'(x) \cdot dx \label{eq:Euler}
+\end{equation}
+
+Este método es el más sencillo de los métodos numéricos de integración, y ha servido de punto de partida para el desarrollo de métodos más complejos y precisos.
+
+Para integrar numéricamente el modelo logístico, utilizando la técnica de Euler \eqref{eq:Euler}, para lo que necesitamos conocer:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(r = 0.5\): la tasa neta de crecimiento poblacional
+\item
+  \(K = 50\): la capacidad de carga poblacional
+\item
+  \(N_0 = 1\): El tamaño inicial de la población
+\item
+  \(dt = 1\): El tamaño de los incrementos de la variable independiente \(t\)
+\item
+  \(t_{max}\): El tiempo máximo de simulación
+\end{enumerate}
+
+Estos valores lo utilizaremos para conocer \(dN/dt\):
+
+\[\frac{dN_0}{dt} = 0.5 \times N_0 \times \left (1 - \frac{N_0}{50} \right)=0.49\]
+
+Por lo tanto \(N_1\) es:
+
+\[N(1) = N_0 + \frac{dN_0}{dt} \times dt = 1 + 0.49 \times 1 = 1.49\]
+Este proceso se repite hasta que \(t = t_{max}\), y obtengamos \(N(t_{max})\). El código para integrar esta ecuación en \textbf{R} es:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#Parámetros}
+\NormalTok{dt }\OtherTok{\textless{}{-}} \DecValTok{1}
+\NormalTok{r }\OtherTok{\textless{}{-}} \FloatTok{0.5}
+\NormalTok{K }\OtherTok{\textless{}{-}} \DecValTok{50}
+
+\CommentTok{\# Variables}
+\NormalTok{N }\OtherTok{\textless{}{-}} \FunctionTok{numeric}\NormalTok{(}\DecValTok{25}\NormalTok{)}
+\NormalTok{dN }\OtherTok{\textless{}{-}} \FunctionTok{numeric}\NormalTok{(}\DecValTok{25}\NormalTok{)}
+
+\CommentTok{\# Valores iniciales}
+\NormalTok{N[}\DecValTok{1}\NormalTok{] }\OtherTok{\textless{}{-}} \DecValTok{1}
+\NormalTok{dN[}\DecValTok{1}\NormalTok{] }\OtherTok{\textless{}{-}}\NormalTok{ r}\SpecialCharTok{*}\NormalTok{N[}\DecValTok{1}\NormalTok{] }\SpecialCharTok{*}\NormalTok{ (}\DecValTok{1} \SpecialCharTok{{-}}\NormalTok{ N[}\DecValTok{1}\NormalTok{]}\SpecialCharTok{/}\NormalTok{K)}
+
+\CommentTok{\# Integración}
+\ControlFlowTok{for}\NormalTok{(t }\ControlFlowTok{in} \DecValTok{2}\SpecialCharTok{:}\DecValTok{25}\NormalTok{)\{}
+\NormalTok{    N[t] }\OtherTok{\textless{}{-}}\NormalTok{ N[t}\DecValTok{{-}1}\NormalTok{] }\SpecialCharTok{+}\NormalTok{ dN[t}\DecValTok{{-}1}\NormalTok{] }\SpecialCharTok{*}\NormalTok{ dt}
+\NormalTok{    dN[t] }\OtherTok{\textless{}{-}}\NormalTok{ r}\SpecialCharTok{*}\NormalTok{N[t] }\SpecialCharTok{*}\NormalTok{ (}\DecValTok{1} \SpecialCharTok{{-}}\NormalTok{ N[t]}\SpecialCharTok{/}\NormalTok{K)}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+
+{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/logis-Euler-1} 
+
+}
+
+\caption{Simulación del modelo logístico con el método de Euler, con el código descrito aquí.}\label{fig:logis-Euler}
+\end{figure}
+
+\hypertarget{anuxe1lisis-de-estabilidad-2}{%
+\paragraph{Análisis de estabilidad}\label{anuxe1lisis-de-estabilidad-2}}
+
+Aquí veremos si los puntos de equilibrio \(N=0\) y \(N=K\) son estables o inestables. Para ello simularemos la ecuación con ambas condiciones iniciales, y les sumaremos una cantidad pequeña \(\varepsilon = 0.01\) para ver qué sucede con \(N\) en el resto de la simulación. En analogía con el péndulo, esperaríamos que \(N \rightarrow N^*\), el punto de equilibrio estable (\(0\) ó \(K\)) al aplicar la pertubación \(\varepsilon\) con ambas condiciones de inicio.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dt }\OtherTok{\textless{}{-}} \DecValTok{1}
+\NormalTok{r }\OtherTok{\textless{}{-}} \FloatTok{0.5}
+\NormalTok{K }\OtherTok{\textless{}{-}} \DecValTok{50}
+
+\CommentTok{\# Variables}
+\NormalTok{N }\OtherTok{\textless{}{-}} \FunctionTok{numeric}\NormalTok{(}\DecValTok{25}\NormalTok{)}
+\NormalTok{dN }\OtherTok{\textless{}{-}} \FunctionTok{numeric}\NormalTok{(}\DecValTok{25}\NormalTok{)}
+
+\NormalTok{E }\OtherTok{\textless{}{-}} \FloatTok{0.01}
+
+\CommentTok{\# Valores iniciales}
+\NormalTok{N[}\DecValTok{1}\NormalTok{] }\OtherTok{\textless{}{-}} \DecValTok{0} \SpecialCharTok{+} \FloatTok{0.01}
+\NormalTok{dN[}\DecValTok{1}\NormalTok{] }\OtherTok{\textless{}{-}}\NormalTok{ r}\SpecialCharTok{*}\NormalTok{N[}\DecValTok{1}\NormalTok{] }\SpecialCharTok{*}\NormalTok{ (}\DecValTok{1} \SpecialCharTok{{-}}\NormalTok{ N[}\DecValTok{1}\NormalTok{]}\SpecialCharTok{/}\NormalTok{K)}
+
+\CommentTok{\# Integración}
+\ControlFlowTok{for}\NormalTok{(t }\ControlFlowTok{in} \DecValTok{2}\SpecialCharTok{:}\DecValTok{25}\NormalTok{)\{}
+\NormalTok{    N[t] }\OtherTok{\textless{}{-}}\NormalTok{ N[t}\DecValTok{{-}1}\NormalTok{] }\SpecialCharTok{+}\NormalTok{ dN[t}\DecValTok{{-}1}\NormalTok{] }\SpecialCharTok{*}\NormalTok{ dt}
+\NormalTok{    dN[t] }\OtherTok{\textless{}{-}}\NormalTok{ r}\SpecialCharTok{*}\NormalTok{N[t] }\SpecialCharTok{*}\NormalTok{ (}\DecValTok{1} \SpecialCharTok{{-}}\NormalTok{ N[t]}\SpecialCharTok{/}\NormalTok{K)}
+\NormalTok{\}}
+
+\CommentTok{\#Almacenamos el resultado con la condición inicial N=0+E en otro objeto N0}
+\NormalTok{N0 }\OtherTok{\textless{}{-}}\NormalTok{ N}
+
+\CommentTok{\#Repetimos para N=K+E}
+\NormalTok{N }\OtherTok{\textless{}{-}} \FunctionTok{numeric}\NormalTok{(}\DecValTok{25}\NormalTok{)}
+\NormalTok{dN }\OtherTok{\textless{}{-}} \FunctionTok{numeric}\NormalTok{(}\DecValTok{25}\NormalTok{)}
+
+\NormalTok{N[}\DecValTok{1}\NormalTok{] }\OtherTok{\textless{}{-}}\NormalTok{ K }\SpecialCharTok{+} \FloatTok{0.01}
+\NormalTok{dN[}\DecValTok{1}\NormalTok{] }\OtherTok{\textless{}{-}}\NormalTok{ r}\SpecialCharTok{*}\NormalTok{N[}\DecValTok{1}\NormalTok{] }\SpecialCharTok{*}\NormalTok{ (}\DecValTok{1} \SpecialCharTok{{-}}\NormalTok{ N[}\DecValTok{1}\NormalTok{]}\SpecialCharTok{/}\NormalTok{K)}
+
+\CommentTok{\# Integración}
+\ControlFlowTok{for}\NormalTok{(t }\ControlFlowTok{in} \DecValTok{2}\SpecialCharTok{:}\DecValTok{25}\NormalTok{)\{}
+\NormalTok{    N[t] }\OtherTok{\textless{}{-}}\NormalTok{ N[t}\DecValTok{{-}1}\NormalTok{] }\SpecialCharTok{+}\NormalTok{ dN[t}\DecValTok{{-}1}\NormalTok{] }\SpecialCharTok{*}\NormalTok{ dt}
+\NormalTok{    dN[t] }\OtherTok{\textless{}{-}}\NormalTok{ r}\SpecialCharTok{*}\NormalTok{N[t] }\SpecialCharTok{*}\NormalTok{ (}\DecValTok{1} \SpecialCharTok{{-}}\NormalTok{ N[t]}\SpecialCharTok{/}\NormalTok{K)}
+\NormalTok{\}}
+
+\NormalTok{NK }\OtherTok{\textless{}{-}}\NormalTok{ N}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+
+{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/Estabilidad-1} 
+
+}
+
+\caption{Simulaciones para verificar tipo de puntos de equilibrio}\label{fig:Estabilidad}
+\end{figure}
+
+\hypertarget{modelos-en-tiempo-contuxednuo-vs-discreto}{%
+\section{Modelos en tiempo contínuo vs discreto}\label{modelos-en-tiempo-contuxednuo-vs-discreto}}
+
+Todos los modelos que hemos visto en la presente unidad son dinámicos, representan procesos que cambian con el tiempo y su principal insumo son la condiciones presentes del sistema, las cuales determinan el estado futuro. Aprendimos a integrar ecuaciones diferenciales utilizando la definición de la derivada, y revirtiéndola asumiendo que \(h \approx dt\). Este proceso, es en esencia una discretización del tiempo, es decir, en lugar de evaluar \(f(t)\) para todos los puntos \(t\) posibles, lo aproximamos para intervalos separados por \(dt\). Por lo tanto las ecuaciones diferenciales integradas con métodos numéricos tienen algunas similitudes con los modelos en tiempo discreto:
+
+Los modelos en tiempo discreto se conocen como ecuaciones en diferencias finitas, en comparación con las ecuaciones diferenciales que representan el tiempo de manera contínua.
+
+La difefencia entre estos modelos consiste en los tiempos en que ocurren los eventos que representan. En los modelos de crecimiento poblacional los eventos representan la incorporación de invidiuos nuevos a la población. Por lo tanto, en un modelo de crecimiento contínuo los individuos nuevos entrar a la población ``todo el tiempo''.
+
+\hypertarget{crecimiento-exponencial-en-tiempo-discreto}{%
+\subsection{Crecimiento exponencial en tiempo discreto}\label{crecimiento-exponencial-en-tiempo-discreto}}
+
+Las ecuaciones de los modelos contínuo y discreto corresponden a:
+
+\begin{align}
+\frac{dN}{dt} & = rN \label{eq:exp-cont} \\
+N_{t+1} & = \lambda N \label{eq:exp-disc} 
+\end{align}
+
+donde las tasas de cambio son \(r\) y \(\lambda\). En el caso del modelo en tiempo discreto \eqref{eq:exp-disc}, se utiliza el parámetro \(\lambda\), puesto que \(\lambda = e^r\)
+
+El crecimiento discreto tiene sentido biológico cuando los nacimientos de las poblaciones de algún organismo se sincronizan en un período de tiempo muy corto. El crecimiento exponencial contínuo, en contraste, representa las dinámicas de organismos que pueden reproducirse en cualquier momento. En un modelo de crecimiento discreto, los individuos nuevos entran a la población solamente en un momento preciso. La cantidad de individuos que ingresa a la pobalación al final de cada intervalo es la misma que en un modelo en tiempo contínuo (Figura \ref{fig:disc-cont}). Por lo tanto, la selección de modelo tiene que estar informada por la biología del problema.
+
+\begin{figure}
+
+{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/disc-cont-1} 
+
+}
+
+\caption{Diferencia entre modelos en tiempo contínuo (línea discontínua roja) y discreto (escalones en azul).}\label{fig:disc-cont}
+\end{figure}
+
+La escala exponencial del parámetro \(\lambda\) hace que la solución sea exacta, en comparación con la aproximación numérica con la ecuación de Euler del modelo en tiempo contínuo.
+
+\hypertarget{crecimiento-loguxedstico-en-tiempo-discreto}{%
+\subsection{Crecimiento logístico en tiempo discreto}\label{crecimiento-loguxedstico-en-tiempo-discreto}}
+
+El modelo discreto es:
+
+\begin{equation}
+N_{t+1} = \lambda N \left (1 - \frac{N}{K} \right)
+\end{equation}
+
+en este caso \(\lamda\) está en la misma escala que en la ecuación \eqref{eq:exp-disc}. Como ya vimos anteriormente, esta versión del modelo de crecimiento logístico, tiene una serie de propiedades distintas al modelo contínuo, por lo que nos enfocaremos en este aspecto. Para ello, transformaremos sustuiremos \(N\) por \(x_t = N_t/K\), para analizar el tamaño de \(N\) en relación a la capacidad de carga:
+
+\begin{equation}
+x_{t+1} = b(1-x_t)x_t \label{eq:logis-disc}
+\end{equation}
+
+El análisis del comportamiento del modelo logístico es más fácil si se hace gráficamente, en especial porque puede ser complejo, porque puede ser caótico (Figura \ref{fig:caos-logis})
+
+\begin{figure}
+
+{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/caos-logis-1} 
+
+}
+
+\caption{Ejemplos del comportamiento dinámico del modelo de crecimiento logístico, para tres valores de la tasa de crecimiento. En las figuras de la izquiera se muestra la correspondencia entre el tamaño de la población en t y el tamaño en t+1.}\label{fig:caos-logis}
+\end{figure}
+
+\hypertarget{implicaciones-para-sistemas-ecoluxf3gicos}{%
+\subsubsection{Implicaciones para sistemas ecológicos}\label{implicaciones-para-sistemas-ecoluxf3gicos}}
+
+Las dinámicas producidas por el sencillísimo modelo logístico en tiempo discreto sugieren que un sistema ecológico con esas características bien podría tener un comportamiento caótico. Como ecólogos es preciso preguntarnos si sólo se trata de artefactos matemáticos producto de la simplificación, o si en posible su ocurrencia. Modelos más complejos que toman en cuenta la existencia de diferentes sexos, por ejemplo, tienen un comportamiento más estable que los modelos sin esas estructuras \citep[\citet{Scheuring2002IsCD}]{berryman1989ecological}.
+
+La diferencia esencial entre el caos producido por el modelo logístico y el comportamiento errático de muchos sistemas ecológicos está en que el caos forma parte del funcionamiento del sistema, es determinístico, mientras que las variaciones de un sistema ecológico generalmente se consideran como fuerzas externas que cambian con el tiempo y que afectan al sistema.
+
+\hypertarget{unidad-v-introducciuxf3n-al-uxe1lgebra-de-matrices}{%
+\chapter{Unidad V: Introducción al álgebra de matrices}\label{unidad-v-introducciuxf3n-al-uxe1lgebra-de-matrices}}
+
+\hypertarget{sistemas-lineales}{%
+\section{Sistemas lineales}\label{sistemas-lineales}}
+
+Un sistema lineal es un conjunto de ecuaciones lineales donde hay, idealmente, tantas variables como ecuaciones y viceversa. Cuando esta condición se cumple, se dice que el sistema está \textbf{completo}. La contraparte de estos sistemas son \textbf{incompletos}, y pueden tener más variables que ecuaciones ó más ecuaciones que variables.
+
+Un sistema completo de ecuaciones lineales con dos variables sería:
+
+\[2x + 3y = 4\]
+
+\[4x - 2y =10\]
+Generalizando tenemos que un cualquier sistema lineal puede ser:
+
+\begin{align}
+a_{1,1}x_1+a_{2,1}x_2 + \dots + a_{n,1}x_n & = b_1\\
+a_{1,2}x_1+a_{2,2}x_2 + \dots + a_{n,2}x_n & = b_2\\
+\vdots & \\
+a_{1, n}x_1+a_{2,n}x_2 + \dots + a_{n,n}x_n & = b_n
+\end{align}
+
+Cuando nos enfrentamos a un sistema como estos, la meta es encontrar los valores de \(x_1, x_2, \dots , x_3\) que satisfacen las igualdades. Para sistemas de dos ecuaciones, es fácil econtrar la solución utilizando una variedad de métodos, el primero de ellos, por graficación.
+
+\hypertarget{soluciuxf3n-gruxe1fica}{%
+\subsection{Solución gráfica}\label{soluciuxf3n-gruxe1fica}}
+
+La solución para el sistema de ecuaciones del primer ejemplo:
+
+\begin{align}
+2x + 3y & = 4\\
+4x - 2y & =10
+\end{align}
+
+sería:
+
+\begin{figure}
+
+{\centering \includegraphics[width=41.67in]{Unidad-V/Soln-grafica-1} 
+
+}
+
+\caption{Solución gráfica del sistema de ecuaciones para dos variables}\label{fig:unnamed-chunk-41}
+\end{figure}
+
+\hypertarget{soluciuxf3n-algebruxe1ica}{%
+\subsection{Solución algebráica}\label{soluciuxf3n-algebruxe1ica}}
+
+El método más sencillo en esta ocasión sería resolver la ecuación 2 para \(y\), pues la podemos simplificar dividiendo ambos lados entre 2:
+
+\[ (4x - 2y)/2 = (10)/2 \rightarrow 2x - y = 5\]
+de donde obtenemos que:
+
+\[y = 2x-5\]
+
+Este valor de \(y\) en térmonos de \(x\), lo podemos sustituir en, la ecuación 1:
+
+\[2x+3(2x-5) = 4\]
+
+y resolvemos para \(x\) para obtener:
+
+\[8x = 19 \rightarrow x = 19/8=2.375\]
+
+Y entonces sustituimos a \(x\) en:
+
+\(y = 2(2.375) - 5 = -0.25\)
+
+Como se puede apreciar, resolver simples ecuaciones lineales puede ser laborioso. Es por ello que se desarrolló el álgebra de matrices, para resolver de eficientemente, sistemas de ecuaciones lineales con muchas variables. En esta unidad revisaremos brevemente los conceptos y técnicas más importantes del álgebra de matrices.
+
+\hypertarget{sistemas-lineales-sin-soluciuxf3n}{%
+\subsection{Sistemas lineales sin solución}\label{sistemas-lineales-sin-soluciuxf3n}}
+
+En ocasiones, aunque un sistema de ecuaciones sea aparentemente completo, puede no tener solución. Por ejemplo el sistema:
+
+\begin{align}
+x + y & = 1 \\
+2x + 2y & = 4
+\end{align}
+
+no tiene solución, lo cual se manifiesta gráficamente como dos líneas paralelas. Esto quiere decir que no existe un par de valores \(x\) y \(y\) que satisfagan las ecuaciones del sistema.
+
+\begin{figure}
+
+{\centering \includegraphics[width=41.67in]{Unidad-V/Sistema-no-solucion} 
+
+}
+
+\caption{Representación gráfica de un sistema linea sin solución.}\label{fig:sin-soln}
+\end{figure}
+
+Si intentamos sumar o restar ambas ecuaciones terminamos con una contradicción. Tomemos por ejemplo la primera ecuación, multiplicada por \(-2\) para obtener:
+
+\[(x + y = 1) \times -2 \rightarrow -2x-2y = -2\]
+
+Y al sumarla a la segunda ecuación:
+
+\[2x - 2x + 2y - 2y = 4-2 \rightarrow 0 = 2\]
+
+\hypertarget{resolviendo-sistemas-lineales-muxe1s-complejos}{%
+\subsection{Resolviendo sistemas lineales más complejos}\label{resolviendo-sistemas-lineales-muxe1s-complejos}}
+
+Cualquier sistema de ecuaciones lineales son solución se puede revolver con los métodos que hemos aprendido hasta el momento. Como hemos visto, en estos métodos es fácil cometer errores, máxime con sistemas más complejos con muchas variables y ecuaciones. El método ideal sería aquel que:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Evita manipulaciones riesgosas de las ecuaciones
+\item
+  Permite encontrar todas las soluciones posibles
+\item
+  Permite identificar sistemas sin solución
+\end{enumerate}
+
+En la tarea de aprender a utilizar dichos métodos cabe resaltar que las incógnitas (\(x, y, z, \dots\)) juegan un papel secundario, lo más importante son los coeficientes de cada una en las distintas ecuaciones.
+
+Para comenzar a visualizar un sistema lineal como matriz, echemos un vistazo al siguiente sistema:
+
+\begin{align}
+x+y+z+t & = 1 \\
+x-y-z+t & = 3 \\
+-x-y+z-t & = 1\\
+-3x+y-3z-3t &= 4
+\end{align}
+
+cuyos coeficientes podemos representar en una matriz como:
+
+\[A = \left[
+\begin{array}{rrrr}
+1 & 1 & 1 & 1 \\
+1 &-1 &-1 & 1 \\
+-1&-1 & 1 &-1 \\
+-3& 1 &-3 &-3
+\end{array}
+\right]\]
+
+Nota que cada columna corresponde con cada una de las variables \(x, y, z, t\), y los números que contiene la matriz \(A\) son sus coeficientes. Usando este mismo arreglo, podemos representar todo el sistema de ecuaciones como el producto de un vector \(x, y, z, t\) y la matriz \(A\):
+
+\begin{equation}
+\left[
+\begin{array} {r}
+x \\ y \\ z \\ t
+\end{array}
+\right]
+\left[
+\begin{array}{rrrr}
+1 & 1 & 1 & 1 \\
+1 &-1 &-1 & 1 \\
+-1&-1 & 1 &-1 \\
+-3& 1 &-3 &-3
+\end{array} 
+\right] = 
+\left[\begin{array}{r}
+1 \\ 3 \\ 1 \\ 4
+\end{array}\right] \label{eq:sist-matriz}
+\end{equation}
+
+Dado que para las operaciones necesarias para resolverlo, sólo necesitamos la matriz de coeficientes \(A\) y el vector de equivalencias podemos representar el sistema con su matriz aumentada:
+
+\begin{equation}
+\left[
+\begin{array}{rrrr|l}
+1 & 1 & 1 & 1 & 1\\
+1 &-1 &-1 & 1 & 3\\
+-1&-1 & 1 &-1 & 1\\
+-3& 1 &-3 &-3 & 4
+\end{array} \right] \label{eq:Aumentada}
+\end{equation}
+
+Para resolver sistemas como este necesitamos aprender a hacer algunas operaciones con filas que no alteran el estado del sistema lineal:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Intercambiar filas
+\item
+  Multiplicar una fila por un escalar \(c \neq 0\)
+\item
+  Sumar dos filas
+\end{enumerate}
+
+Ninguna de estas operaciones afectan las soluciones posibles del sistema (si las hay). Utilizando estas operaciones, la meta es transformar la matriz aumentada (\eqref{eq:Aumentada}), en un a matriz que contenga ceros bajo la diagonal (\textbf{Triángulo superior}), y así poder sustituir los valores comenzando con la última fila. El sistema de ecuaciones \eqref{eq:sist-matriz}, no tiene solución, por lo que solamente nos sirve, por el momento para establecer los conceptos. A continuación lo aplicamos con un sistema más sencillo.
+
+\hypertarget{ejemplo}{%
+\subsection{Ejemplo}\label{ejemplo}}
+
+Dado el sitema linea:
+
+\begin{align}
+2x - 1y + 3z &= 9\\
+3x + 5y - z  &= 10\\
+4x + 2y - 3z &= -1
+\end{align}
+
+la matriz aumentada es:
+
+\begin{equation}
+\left[
+\begin{array}{rrr|l}
+ 2 & -1& 3 & 9 \\
+ 3 & 5 &-1 & 10\\
+ 4 & 2 &-3 &-1
+\end{array}
+\right]
+\begin{array}
+\ (F_1) \\ (F_2) \\ (F_3)
+\end{array}
+\end{equation}
+
+A continuación se muestra en el lado izquierdo, las operaciones correspondientes a las filas de las matrices:
+
+\begin{equation}
+\begin{array}{r}
+(F_1) \\ -3(F_1)+2(F_2) \\ 2(F_1)-(F_3)
+\end{array}
+\left[
+\begin{array}{rrr|r}
+2 &-1 & 3 & 9 \\
+0 &13 &-11&-7 \\
+0 &-4 & 9 &19
+\end{array}
+\right]
+\begin{array}{r}
+\ (F_4) \\ (F_5) \\ (F_6)
+\end{array}
+\end{equation}
+
+Ahora la fila 1 se llama \((F_4)\), hicimos \(-3(F_1)+2(F_2)\) para eliminar el coeficiente \(a_{2,1} = 3\), y ahora lo llamamos \((F_5)\). Lo único que debemos hacer ahora, es encontrar cómo eliminar \(a_{2,3}\) en \((F_6)\), para obtener la matriz con ceros bajo la diagonal:
+
+\begin{equation}
+\begin{array}{r}
+(F_4) \\ (F_5) \\ 4(F_5)+13(F_6)
+\end{array}
+\left[
+\begin{array}{rrr|r}
+2 &-1 & 3 & 9 \\
+0 &13 &-11&-7 \\
+0 & 0 &73 &219
+\end{array}
+\right]
+\begin{array}{r}
+(F_7) \\ (F_8) \\ (F_9)
+\end{array}
+\end{equation}
+
+A partir de aquí, tenemos una ecuación on una sola variable:
+
+\[73z = 219\]
+Con la cual podemos sustituir desde \((R_9)\) hacia \((R_7)\) para obtener los valores de \(x\) y \(y\) que satisfacen al sistema lineal.
+
+\hypertarget{sistemas-indeterminados}{%
+\subsection{Sistemas indeterminados}\label{sistemas-indeterminados}}
+
+Cuando hay más variables que ecuaciones, no es posible encontrar una solución única al sistema, veamos un ejemplo de estos sistemas:
+
+\begin{align}
+2x+2y-z &= 1 \\
+2x-y+z &= 2
+\end{align}
+
+cuya matriz aumentada es:
+
+\begin{equation}
+\left[
+\begin{array}{rrr|r}
+2 & 2 & -1& 1 \\
+2 & -1& 1 & 2
+\end{array} \right]
+\begin{array}
+(F_1) \\ (F_2)
+\end{array}
+\end{equation}
+
+Lo primero que notamos es que, al haber más variables que ecuaciones, la matriz de coeficientes, tiene más columnas que filas. Entonces, vamos a comenzar por eliminar el coeficiente \(a_{2,1} = 2\), haciendo \((F_1)-F_2\):
+
+\begin{equation}
+\begin{array}{r}
+(F_1) \\ (F_1) - (F_2)
+\end{array}
+\left[ 
+\begin{array}{rrr|r}
+2 & 2 &-1 & 1\\
+0 & 3 &-2 &-1
+\end{array}
+\right]
+\begin{array}{r}
+(F_3) \\ (F_4)
+\end{array}
+\end{equation}
+
+A partir de este punto sólo podemos expresar las soluciones para \(x\) y \(y\) en términos de \(z\):
+
+\begin{align}
+2x + 2y - z &= 1 \\
+3y - 2z & = -1
+\end{align}
+
+Por lo tanto:
+
+\[y = - \frac{1}{3} + \frac{2}{3}z\]
+
+y sustituyendo \(y\) en la primera ecuación encontramos que:
+
+\[x = \frac{5}{6} - \frac{1}{6}z\]
+
+Para reportar un conjunto de soluciones para todo el sistema, podemos crear una variable ficticia \(t = z\), con lo que la solución al sistema es:
+
+\[\left\{(x, y, z): x = \frac{5}{6} - \frac{1}{6}z, y = - \frac{1}{3} + \frac{2}{3}z, z = t \right\}\]
+
+\hypertarget{operaciones-elementales-con-matrices}{%
+\section{Operaciones elementales con matrices}\label{operaciones-elementales-con-matrices}}
+
+Las operaciones elementales con matrices son similares a las aritméticas tradicionales. Para ejemplificarlas aquí denotamos a una matriz cualquiera con letras mayúsculas.
+
+\hypertarget{suma-de-matrices}{%
+\subsection{Suma de matrices}\label{suma-de-matrices}}
+
+Si las matrices \(A\) y \(B\) tienenlas mismas dimensiones \(m \times n\) (\(m\) = número de filas, \(n\) = número de columnas):
+
+\[A + B = C\]
+La adición de \(A\) con \(B\) resulta en una tercera matriz \(C\) con dimensiones \(m \times n\), tanto si \(m = n\) como \(m \neq n\), es decir si las matrices \(A\) y \(B\) son cuadradas (\(m = n\)) como rectangulares.
+
+Para esto tenemos que considerar qué sucede con los elementos de \(A\) y \(B\) dentro de \(C\):
+
+\begin{equation}
+A = \left[ 
+\begin{array}{ccc}
+a_{1, 2} & \dots & a_{1, n} \\
+\vdots   & \ddots & \vdots \\
+a_{n, 1} & \dots & a_{n, n}
+\end{array} \right]
+\end{equation}
+
+\begin{equation}
+B = \left[ 
+\begin{array}{ccc}
+b_{1, 2} & \dots & b_{1, n} \\
+\vdots   & \ddots& \vdots \\
+b_{n, 1} & \dots & b_{n, n}
+\end{array} \right]
+\end{equation}
+
+\begin{equation}
+C = \left[ 
+\begin{array}{ccc}
+a_{1, 2} + b_{1, 2} & \dots & a_{1, n} + b_{1, n} \\
+\vdots   & \ddots & \vdots \\
+a_{n, 1} + b_{n, 1} & \dots & a_{n, n} + b_{n, n}
+\end{array} \right]
+\end{equation}
+
+Es claro que también:
+
+\[B+A = C\]
+
+Lo cual resulta importante resaltar pues la conmutatividad no funciona para la multiplicación de matrices. Otras cualidades de la adición de matrices, dadas las condiciones de dimensiones son:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \((A+B)+C=A+(B+C)\)
+\item
+  \(A + 0 = A\)
+\end{enumerate}
+
+\hypertarget{multiplicaciuxf3n-por-un-escalar}{%
+\subsection{Multiplicación por un escalar}\label{multiplicaciuxf3n-por-un-escalar}}
+
+Es frecuente multiplicar una matriz por una constante \(c\), tal que \(c \times A = cA\):
+
+\begin{equation}
+c \times A = \left[ 
+\begin{array}{ccc}
+c  \cdot  a_{1, 2} & \dots & c \cdot a_{1, n} \\
+\vdots   & \ddots & \vdots \\
+c \cdot  a_{n, 1} & \dots & c  \cdot  a_{n, n}
+\end{array} \right]
+\end{equation}
+
+\hypertarget{transposiciuxf3n}{%
+\subsection{Transposición}\label{transposiciuxf3n}}
+
+La transposición es el cambio de filas y columnas por columnas y filas, por ejemplo:
+
+\begin{equation}
+A = \left[ 
+\begin{array}{rrr}
+1 & 2 & 3 \\
+4 & 5 & 6
+\end{array}
+\right]
+\end{equation}
+
+Con lo que la matriz \(A\) transpuesta \(A^T = A'\) es:
+
+\begin{equation}
+A' = \left[
+\begin{array}{rr}
+1 & 4 \\
+2 & 5 \\
+3 & 6
+\end{array}
+\right]
+\end{equation}
+
+\hypertarget{multiplicaciuxf3n-de-matrices}{%
+\subsection{Multiplicación de matrices}\label{multiplicaciuxf3n-de-matrices}}
+
+Para entender la multiplicación de matrices es necesario definirla, pues es más complicada que cualquiera de las operaciones que hemos visto anteriormente.
+
+Supongamos que \(C\) es una matriz producto de la multiplicación de las matrices \(A\) y \(B\):
+
+\[C = AB\]
+
+Para que esto sea posible es necesario que \(A\) y \(B\) tengan dimensiones específicas pues:
+
+\begin{equation}
+C = \left[
+\begin{array}{rrr}
+ &        & \\
+ & c_{ij} & \\
+ &        &
+\end{array}
+\right] =
+\left[ 
+\begin{array}{ccc}
+ & & & \\
+a_{i, 1} & \dots & a_{i, l} \\
+ & & &
+\end{array}
+\right] \times
+\left[ 
+\begin{array}{ccc}
+ & b_{1, j} & \\
+ & \vdots & \\
+ & b_{l, j} & 
+\end{array}
+\right] \label{eq:mat-mult}
+\end{equation}
+
+Como resulta evidente, el número de \textbf{columnas} de la matriz \(A\) debe ser igual al número de \textbf{filas} de la matriz \(B\). De modo que podemos resumir que las dimensiones deben ser:
+
+\begin{itemize}
+\tightlist
+\item
+  \(A \rightarrow m \times l\)
+\item
+  \(B \rightarrow l \times n\)
+\end{itemize}
+
+\hypertarget{ejemplos-3}{%
+\subsubsection{Ejemplos}\label{ejemplos-3}}
+
+\begin{equation}
+A = \left[ 
+\begin{array}
+\ 1 & 2 & 3 \\
+-1& 0 & 4
+\end{array}
+\right]
+\end{equation}
+
+y
+
+\begin{equation}
+B = \left[ 
+\begin{array}
+\ 1 & 2 & 3 & -3\\
+0 &-1 & 4 & 0 \\
+-1& 0 &-2 & 1
+\end{array}
+\right]
+\end{equation}
+
+Solución:
+
+\begin{equation}
+C = AB = \left[ 
+\begin{array}
+\ 1 & 2 & 3 \\
+-1& 0 & 4
+\end{array}
+\right]
+
+\left[ 
+\begin{array}
+\ 1 & 2 & 3 & -3\\
+0 &-1 & 4 & 0 \\
+-1& 0 &-2 & 1
+\end{array}
+\right]
+\end{equation}
+
+Como vimos en la definición de multiplicación, tenemos que muiltiplicar las filas de \(A\) por las columnas de \(B\), para así obtener los elementos de \(C\). Hagamos entonces las operaciones elemento por elemento:
+
+\begin{equation}
+c_{1, 1} = \left[ 
+\begin{array}{rrr}
+\ 1 & 2 & 3
+\end{array}
+\right]
+\left[\begin{array}
+\ 1 \\ 0 \\ -1 \end{array}
+\right] = (1)(1) + (2)(0) + (3)(-1)= -2
+\end{equation}
+
+\begin{equation}
+c_{1, 2} = \left[
+\begin{array}
+1 & 2 & 3
+\end{array}
+\right]
+\left[ 
+\begin{array}
+\ 2 \\ -1 \\0
+\end{array}
+\right] = (1)(2) + (2)(-1) + (3)(0) = 0
+\end{equation}
+
+Y así sucesivamente para obtener:
+
+\begin{equation}
+C = \left[ 
+\begin{array}
+\ c_{1, 1} & c_{1, 2} & c_{1, 3} & c_{1, 4} \\
+c_{2, 1} & c_{2, 2} & c_{2, 3} & c_{2, 4} 
+\end{array}
+\right] =
+\left[ 
+\begin{array}
+\ -2 & 0 & 5 & 0 \\
+-5 & -2 & -11 & 7
+\end{array}
+\right]
+\end{equation}
+
+El resultado es una matriz con tantas filas como \(A\) y tantas columnas como \(B\). Es decir que si las dimensiones de \(A\) son \(m \times l\), y las de \(B\) son \(l \times n\), \(C\) tendrá dimensiones \(m \times n\).
+
+\hypertarget{ejercicio-2}{%
+\paragraph{Ejercicio}\label{ejercicio-2}}
+
+Haz a mano los cálculos de \(c_{i, j}\) que nos faltaron para obtener los valores de \(C\).
+
+\hypertarget{determinantes-y-matrices-inversas}{%
+\section{Determinantes y matrices inversas}\label{determinantes-y-matrices-inversas}}
+
+\hypertarget{matriz-identidad}{%
+\subsection{Matriz identidad}\label{matriz-identidad}}
+
+Antes de continuar, consideremos la posible existencia de una matriz \(I\) tal que \(A I = A\), es decir, una matriz que multiplicada por otra matriz de como resultado la matriz original. Esta matriz se conoce como la matriz identidad, y consiste de una matriz cuadrada con ceros en todas las posiciones excepto en la diagonal, por ejemplo:
+
+\begin{equation}
+I = \left[ 
+\begin{array}{ccc}
+\ 1 & 0 & 0 & 0 \\
+  0 & 1 & 0 & 0 \\
+  0 & 0 & 1 & 0 \\
+  0 & 0 & 0 & 1 \\
+\end{array}
+\right]
+\end{equation}
+
+Por el contrario, una matriz inversa es quella matriz \(A^{-1}\), tal que \(AA^{-1} = I\), al multiplicarla por una matriz cualquiera \(A\) da como resultado la matriz identitaria.
+
+\hypertarget{matriz-inversa}{%
+\subsection{Matriz inversa}\label{matriz-inversa}}
+
+La utilidad de este concepto se puede ejemplificar con un sistema de una sola ecuación:
+
+\[2x = 10\]
+
+Esta ecuación podemos concebirla como el producto de dos vectores con dimensiones \(1 \times 1\). Para resolverla es necesario multplicar ambos lados de la ecuación por el \textbf{inverso} del coeficiente de \(x\), de modo que:
+
+\[2^{-1} \cdot 2x = 2^{-1} \cdot 10\]
+
+\[x = \frac{1}{5}\]
+
+Por lo tanto, si tenemos que para un sistema lineal la matriz \textbf{cuadrada} \(A\) de coeficientes puede ser invertida como \(A^{-1}\), esta última contiene la solución al sistema mismo:
+
+\[XA = B\]
+
+\[A^{-1}XA = A^{-1}B \rightarrow X = A^{-1}B\]
+
+\hypertarget{definciuxf3n-de-matriz-inversa}{%
+\subsubsection{Definción de matriz inversa}\label{definciuxf3n-de-matriz-inversa}}
+
+Una matriz inversa de \(A\) es aquella matriz \(B\) que:
+
+\[AB = BA = I_n\]
+
+al ser multiplicada por \(A\) tiene como resultado la matriz identidad \(I_n\), con dimensiones \(n \times n\). La matriz inversa de \(A\) también recibe, como ya se mencionó el nombre \(A^{-1}\). Cuando se puede obtener la matriz \(A^{-1}\) de \(A\), se dice que esta última es \textbf{invertible} o \textbf{no-singular}, de lo contrario se le llama \textbf{singular}. Cabe resaltar que la matriz inversa \(A^{-1}\) es única para \(A\). Si llegaran a existir dos matrices inversas \(B\) y \(C\) de \(A\), entonces \(B=C\).
+
+\hypertarget{obteniendo-una-matriz-inversa}{%
+\subsubsection{Obteniendo una matriz inversa}\label{obteniendo-una-matriz-inversa}}
+
+Para obtener una matriz inversa, también tenemos que resolver un sistema de ecuaciones lineales. Supongamos que \(A\) es una matriz de \(2 \times 2\):
+
+\begin{equation}
+A = \left[\begin{array}{ccc}
+a_{1, 1} & a_{1, 2} \\
+a_{2, 1} & a_{2, 2}
+\end{array}
+\right]
+\end{equation}
+
+Recordemos que \(A\) es la matriz de coeficientes para las variables \(x_1, x_2, \dots, x_n\). Entonces la matriz inversa de \(A\) es:
+
+\begin{equation}
+B = \left[\begin{array}{ccc}
+b_{1, 1} & b_{1, 2} \\
+b_{2, 1} & b_{2, 2}
+\end{array}
+\right]
+\end{equation}
+
+Por lo tanto la ecuación a resolver es:
+
+\begin{equation}
+\left[\begin{array}{ccc}
+a_{1, 1} & a_{1, 2} \\
+a_{2, 1} & a_{2, 2}
+\end{array}
+\right]
+\left[\begin{array}{ccc}
+b_{1, 1} & b_{1, 2} \\
+b_{2, 1} & b_{2, 2}
+\end{array}
+\right] =
+\left[\begin{array}{ccc}
+1 & 0 \\
+0 & 1
+\end{array}
+\right]
+\end{equation}
+
+donde las incógnitas son los elementos \(b_{1,1}, \dots b_{n,n}\) de \(B\), la matriz inversa.
+
+\hypertarget{ejemplo-1}{%
+\paragraph{Ejemplo}\label{ejemplo-1}}
+
+Tenemos que encontrar la matriz inversa de la matriz de coeficientes:
+
+\begin{equation}
+A =
+\left[\begin{array}{ccc}
+2 & 5 \\
+1 & 3
+\end{array}
+\right]
+\end{equation}
+
+Por lo tanto el sistema de ecuaciones a resolver es:
+
+\begin{equation}
+\left[\begin{array}{ccc}
+2 & 5 \\
+1 & 3
+\end{array}
+\right]
+\left[\begin{array}{ccc}
+b_{1, 1} & b_{1, 2} \\
+b_{2, 1} & b_{2, 2}
+\end{array}
+\right] =
+\left[\begin{array}{ccc}
+1 & 0 \\
+0 & 1
+\end{array}
+\right]
+\end{equation}
+
+Para ver las ecuaciones a resolver para \(B\), tenemos que multiplicar \(AB\), con lo que obtenemos:
+
+\begin{align}
+2 b_{1,1} + 5b_{2,1} = 1\ (F_1) & & 2b_{1, 2} + 5b_{2,2} = 0\ (F_1) \\ \notag
+b_{1, 1} + 3b_{2,1} = 0\ (F_2) & & b_{1, 2} + 3b_{2, 2} = 1 (F_2 ) \notag
+\end{align}
+
+Utilizando los métodos que ya conocemos, podemos obtener las soluciones:
+
+\begin{equation}
+B = \left[ 
+\begin{array}
+\ b_{1, 1} & b_{1, 2} \\
+b_{2, 1} & b_{2, 2}
+\end{array}
+\right] =
+\left[ 
+\begin{array}
+\ 3 & -5 \\
+-1 & 2
+\end{array}
+\right]
+\end{equation}
+
+\hypertarget{ejercicio-3}{%
+\paragraph{Ejercicio}\label{ejercicio-3}}
+
+Verifica que las soluciones para \(b_{1,1}, b_{1,2}, b_{2,1}, b_{2,2}\) sean las reportadas y que \(AB = I_2\)
+
+\hypertarget{determinante-de-una-matriz}{%
+\subsection{Determinante de una matriz}\label{determinante-de-una-matriz}}
+
+Para continuar con este tema revisaremos rápidamente, qué es y qué hacen los vectores. Por ejemplo, la matriz:
+
+\[
+A = \left[ 
+\begin{array}{cc}
+3 & 0 \\
+0 & 2
+\end{array}
+\right]
+\]
+
+puede concebirse como dos vectores \(A_1 = \left[\begin{array}{c}3 \\ 0 \end{array} \right]\) y \(A_2 = \left[\begin{array}{c}0 \\ 2 \end{array} \right]\). Cada uno de estos vectores pueden representarse geométricamente como \emph{indicaciones} de movimiento en el plano cartesiano. El vector \(A_1\) indica \(3\) pasos en dirección \(x\) y \(0\) en dirección \(y\). \(A_2\) indica \(0\) pasos en dirección \(x\) y \(2\) en dirección \(y\).
+
+Cuando representamos estos vectores en el plano vemos que \(A_1\) está alineado con el eje \(x\) y \(A_2\) con el \(y\), y el área formada por ambos corresponde al producto de la primera diagonal de \(A\), \(3 \times 2\) (figura \ref{fig:det}).
+
+\begin{figure}
+
+{\centering \includegraphics[width=41.67in]{Unidad-V/Determinante} 
+
+}
+
+\caption{Representación gráfica del determinante de la matriz A}\label{fig:det}
+\end{figure}
+
+Cuando las matrices utilizadas en una transformación lineal (que multiplican a un vector, por ejemplo), no tienen ceros en las casillas fuera de las diagonales, el área proyectada por los vectores será un rombo, por lo que hay que sustraer el área fuera del producto de la diagonal. Por ejemplo la matriz
+
+\[
+A = \left[ 
+\begin{array}{cc}
+1 & 1 \\
+\frac{1}{2} & 2
+\end{array}
+\right]
+\]
+
+\begin{figure}
+
+{\centering \includegraphics[width=20.25in]{Unidad-V/Determ-2} 
+
+}
+
+\caption{Representación del área formada por matriz sin ceros fuera de la diagonal}\label{fig:det-2}
+\end{figure}
+
+con lo que el área formada por los vectores es \(1 \times 2 - 1/2 \times 1= 3/2\). El área formada por una matriz recibe el nombre de \emph{determinante} (\(\mathrm{det}A\) ó \(|A|\)), puesto que es el efecto neto de la transformación lineal producida por la matriz en el vector a que afecta.
+
+El determinante puede utilizarse con muchos propósitos, uno de ellos es invertir una matriz. Para cualquier matriz \(A\) con dimensiones \(2 \times 2\), \(A\) es invertible si el área que ésta produce es mayor a \(0\).
+
+De manera más general:
+
+\begin{equation}
+A = \left[
+\begin{array}
+\ a_{1,1} & a_{1,2} \\
+a_{2,1} & a_{2,2}
+\end{array}
+\right] \label{eq:mat-A}
+\end{equation}
+
+\(A^{-1}\) existe si \(a_{1,1}a_{2,2} - a_{1,2}a_{2,1} \neq 0\) (figura \ref{fig:det-3})
+
+\begin{figure}
+
+{\centering \includegraphics[width=12.81in]{Unidad-V/Deter-3} 
+
+}
+
+\caption{Representación de matriz con determinante de 0.}\label{fig:det-3}
+\end{figure}
+
+Para calcular una matriz inversa usando el determinante, necesitamos encontrar la matriz \textbf{adjunta transpuesta}. Para una matriz de \(2 \times 2\) como \eqref{eq:mat-A}:
+
+\begin{equation}
+A^{-1} = 
+  \frac{1}{a_{1,1}a_{2,2} - a_{1,2}a_{2,1}}
+    \left[
+      \begin{array}
+        \ a_{2,2} & -a_{1,2} \\
+        -a_{2,1} & a_{1,1}
+      \end{array}
+    \right] \label{eq:dos-dos}
+\end{equation}
+
+La expresión \(a_{1,1}a_{2,2} - a_{1,2}a_{2,1}\) para una matriz \(A\) de \(2 \times 2\) se conoce como el determinante y se denota como \(\mathrm{det} A\) ó \(|A|\).
+
+Es posible calcular determinantes para cualquier matriz \(A\) con dimensiones \(n \times n\), y en todos los casos, es posible obtener \(A^{-1}\) si \(\mathrm{det}A \neq 0\). Las fórmulas para calcular el determinante de cualquier matriz se van complicando considerablemente conforme aumenta su tamaño, por lo que es necesario utilizar una calculadora de determinantes.
+
+Aquí nos limitaremos a las fórmulas para determinantes de \(2\times 2\) (ecuación \eqref{eq:dos-dos}. La figura \ref{fig:det3x3} muestra el procedimiento para una matrix de \(3 \times 3\).
+
+\begin{figure}
+
+{\centering \includegraphics[width=8.65in]{Unidad-V/determ} 
+
+}
+
+\caption{Esquema del procedimiento para calcular el determinante de una matriz de 3 x 3.}\label{fig:det3x3}
+\end{figure}
+
+\hypertarget{valores-propios}{%
+\section{Valores propios}\label{valores-propios}}
+
+Para hablar de vectores y valores propios necesitamos definir a un vector como una matriz con una sola columna y \(n\) filas. Todos los ejemplos que veremos aquí son de vectores de \(2 \times 1\).
+
+Los vectores en el sentido en que los trataremos aquí, representan \emph{indicaciones} de movimiento en el plano cartesiano. Por ejemplo el vector:
+
+\[\left[ 
+\begin{array}{cc}
+2 \\ 3
+\end{array}
+\right]\]
+
+indica un movimiento de dos posiciones a la derecha en el eje \(x\) y tres posiciones arriba en el eje \(y\) (vector \(\mathbf{u}\) en la figura )
+
+\begin{figure}
+
+{\centering \includegraphics[width=32.06in]{Unidad-V/Vectores} 
+
+}
+
+\caption{Ejemplos de vectores **u** = (2, 3), **u**=(6, 0) y **w** = **u** + **v**.}\label{fig:vectores}
+\end{figure}
+
+Las operaciones con vectrores son iguales que las operaciones con matrices, de modo que el vector \(\mathbf{w}\) de la figura \ref{fig:vectores} es:
+
+\[\mathbf{w} =\left[
+\begin{array}{c}
+2 \\ 3
+\end{array}
+\right]  + 
+\left[
+\begin{array}{c}
+6 \\ 0
+\end{array}
+\right] = 
+\left[
+\begin{array}{c}
+2 + 6 \\ 3 +0
+\end{array}
+\right] =
+\left[
+\begin{array}{c}
+8 \\ 3
+\end{array}
+\right]\]
+
+Cuando multiplicamos un vector cualquiera por un escalar, éste alargará el vector en relación a su magnitud, tal que :
+
+\[
+\mathbf{a} = 2 \times \mathbf{u} = \left[ \begin{array}{c} 4 \\ 6 \end{array} \right]
+\]
+
+\begin{figure}
+
+{\centering \includegraphics[width=15.74in]{Unidad-V/Mult-vector} 
+
+}
+
+\caption{Multiplicación de vector por un escalar.}\label{fig:vector-escalar}
+\end{figure}
+
+La operación que nos más concierne, sin embargo, en el caso de los valores y vectores propios es la multiplcación de un vector \(\mathbf{x}\) por una matriz \(A\).
+
+Con base en las reglas de multiplicación sabemos que para el vector \(\mathbf{x}\) con dimensiones \(2 \times 1\) y la matriz \(A\) con dimensiones \(2 \times 2\), el producto \(A \mathbf{x}\) tendrá dimensiones de \(2 \times 1\). Dicha multiplicación se conoce como el mapa de \(\mathbf{x}\) y se escribe:
+
+\begin{equation}
+\mathbf{x} \mapsto A\mathbf{x} \label{eq:mapa}
+\end{equation}
+
+Por ejemplo:
+
+\begin{equation}
+    \left[
+    \begin{array}{cc}
+    3 & 2 \\
+    1 & 4
+    \end{array}
+    \right] \cdot 
+        \left[ 
+    \begin{array}{c}
+    1 \\ 2
+    \end{array}
+    \right]= 
+    \left[
+    \begin{array}{c}
+    7 \\ 9
+    \end{array}
+    \right]
+\end{equation}
+
+donde \(\mathbf{x}\) es el vector \((1, 2)\), y el mapa \(A \mathbf{x}\) es el vector \((7, 9)\).
+
+El concepto de \textbf{vector y valor propio} está basado en \(\mathbf{x} \mapsto A \mathbf{x}\). Específicamente \(A \mathbf{x}\) es el vector propio y el valor propio es una constante que satisface:
+
+\begin{equation}
+A \mathbf{x} = \lambda \mathbf{x} \label{eq:valor-propio}
+\end{equation}
+
+Este tipo de operaciones tiene muchas aplicaciones, entre ellas está el resolver sistemas de ecuaciones. Aunque sólo veremos ejemplos con vectores de \(2 \times 1\), todos los ejemplos son generalizables a vectores con cualquier número de filas.
+
+Para calcular \(\lambda\) al igual que hicimos para \(A^{-1}\), comenzamos por resolver la ecuación \eqref{eq:valor-propio}:
+
+\[A \mathbf{x} = \lambda I \mathbf{x} \rightarrow (A - \lambda I) \mathbf{x} = 0\]
+La parte \(\lambda I \mathbf{x}\) se debe a que \(I \mathbf{x} = \mathbf{x}\), pero necesitamos una matriz cuadrada para resolver a continuación.
+
+Dado que \(\mathbf{x} \neq 0\), necesitamos que \(A - \lambda I\) sea singular (\(|A| = 0\)), de modo que necesitamos encontrar un valor de \(\lambda\) que satisfaga \(\det (A - \lambda I) = 0\). Entonces si nuestra matriz:
+
+\[A = \left[
+\begin{array}{cc}
+1 & 2 \\
+3 & 2
+\end{array}
+\right]\]
+
+entonces:
+
+\[A - \lambda I = \left[
+\begin{array}{cc}
+1 - \lambda & 2 \\
+3 & 2 - \lambda
+\end{array}
+\right]\]
+
+cuyo determinante será:
+
+\[\begin{align}
+(1 - \lambda)(2-\lambda) - (2)(3) &= 2 - 3 \lambda +\lambda^2 -6\\
+& = \lambda^2 - 3 \lambda -4 \\
+& = (\lambda + 1)(\lambda - 4)
+\end{align}\]
+
+por lo tanto tenemos las soluciones \(\lambda_1 = -1\) y \(\lambda_2 = 4\). Como es evidente, los vectores propios \(A \mathbf{x}\) que satisfacen los valores propios no son únicos, pero cada valor propio \(\lambda\) está asociado a un vector propio. Para los sistemas lineales con más de dos variables habrá tantos valores propios como dimensiones.
+
+\hypertarget{vectores-propios}{%
+\section{Vectores propios}\label{vectores-propios}}
+
+Como vimos anteriormente, los valores propios son independientes de los vectores, es decir, los valores reflejan una propiedad de las matrices. Para encontrar los vectores que satisfacen la propiedad:
+
+\[A \vec{x} = \lambda \vec{x}\]
+
+tenemos que resolver la ecuación para los valores de \(\lambda\). Pongamos por ejemplo la matriz
+
+\[A = \left[\begin{array}{cc} 1 & 2 \\ 3 & 2 \end{array}\right]\]
+
+tiene los valores propios \(\lambda_1 = -1\) y \(\lambda_2 = 4\), y la ecuación a resolver para obtener los vectores propios que corresponden con \(\lambda_1\) son:
+
+\begin{equation}
+\left[\begin{array}{cc} 1 & 2 \\ 3 & 2 \end{array}\right] 
+\left[\begin{array}{c} x_1 \\ x_2 \end{array} \right] =
+-1 \left[\begin{array}{c} x_1 \\ x_2 \end{array} \right]
+\end{equation}
+
+pasando el lado izquierdo al derecho, factorizando el vector \(\vec{v}\), y multiplicando \(\lambda\) por la matriz identidad tenemos:
+
+\begin{equation}
+\left(
+\left[\begin{array}{cc} 1 & 2 \\ 3 & 2 \end{array}\right] +
+\left[\begin{array}{cc} 1 & 0 \\ 0 & 1 \end{array} \right] \right) \left[\begin{array}{c} x_1 \\ x_2 \end{array} \right] = \vec{0}
+\end{equation}
+
+y sumando las matrices tenemos:
+
+\begin{equation}
+\left[\begin{array}{cc} 1 + 1 & 2 \\ 3 & 2 + 1 \end{array}\right] \left[\begin{array}{c} x_1 \\ x_2 \end{array} \right] = \vec{0}
+\end{equation}
+
+Una vez encontrado el sistema, podemos resolverlo con el método de la matriz aumentada:
+
+\begin{equation}
+\left[ \begin{array}{cc|c}
+2 & 2 & 0 \\
+3 & 3 & 0
+\end{array}\right] 
+\begin{array}{c}
+(F_1) \\ (F_2)
+\end{array}
+\end{equation}
+
+aunque si lo resolvemos con el método tradicional \textbf{siempre} llegaremos a la solución \(x_1 = 0; x_2 = 0\). Entonces necesitamos reducir la matrix por fila al modo Echelon. Este método consiste en realizar las operaciones con filas para reducir las filas inferiores a ceros. Por ejemplo, reemplazando \(F_2\) con \(3 F_1 - 2F_2\), y dividiendo \(F_1/2\):
+
+\begin{equation}
+\left[ \begin{array}{cc|c}
+1 & 1 & 0 \\
+0 & 0 & 0
+\end{array}\right] 
+\begin{array}{c}
+(F_3) \\ (F_4)
+\end{array}
+\end{equation}
+
+Por lo tanto el vector propio para \(\lambda_1 = -1\) es \((1, 1)\). El proceso para encontrar el vector propio para \(\lambda_2\) es el mismo.
+
+\hypertarget{unidad-vi-modelos-lineales-de-poblaciones-estructuradas}{%
+\chapter{Unidad VI: Modelos lineales de poblaciones estructuradas}\label{unidad-vi-modelos-lineales-de-poblaciones-estructuradas}}
+
+\hypertarget{proyecciuxf3n-de-matrices-para-modelos-estructurados-la-matriz-de-leslie}{%
+\section{Proyección de matrices para modelos estructurados: la matriz de Leslie}\label{proyecciuxf3n-de-matrices-para-modelos-estructurados-la-matriz-de-leslie}}
+
+Los modelos de poblaciones que hemos visto hasta la fecha sólo consideran un estado de desarrollo, tal que toda la población puede ser considerada como \(N\). Al hacer eso,incurrimos en una serie de supuestos biológicos muy fuertes, por ejemplo que todos los individuos nuevos en la población pueden reproducirse en cuanto se incorporan a esta con la misma probabilidad que los individuos más antiguos.
+
+Parte de estos problemas biológicos que el modelo exponencial (\(N_{t+1} = \lambda N_t\)) en tiempo discreto presenta son solucionados por discretización de \(N\), es decir, dividir a \(N\) en una serie de compartimentos que representan estados de desarrollo, de modo que:
+
+\[
+N(t) = \left[\begin{array}{c} N_0(t)\\ N_1(t)\\ \vdots \\ N_n(t) \end{array}\right]
+\]
+
+donde \(N_0(t)\) representa el cohorte más joven lo neonatos, y \(N_n(t)\) el de mayor edad. Los nacimiento entoces constituyen un flujo de invidiuos nuevos en la población hacia \(N_1(t)\), en función de los cohortes que se pueden reproducir. Para ejemplificar esto, consideremos un organismo cuyas dinámicas ocurren en tiempo discreto, con \(N\) dividido en cuatro edades\(N_0, N_1, N_2\) y \(N_3\). Consideremos primero cómo ocurre la transición entre estos compartimentos, donde sólo sobreviven 40\% de \(N_0\) and \(N_1\), 30\% de \(N_1\) a \(N_2\) y 10\% de \(N_2\) and \(N_3\):
+
+\begin{align}
+N_{1, t+1} &= 0.4 N_{0, t} \\
+N_{2, t+1} &= 0.3 N_{1, t} \\
+N_{3, t+1} &= 0.1 N_{2, t}
+\end{align}
+
+\begin{figure}
+
+{\centering \includegraphics[width=8.89in]{Unidad-VI/Modelo-Leslie} 
+
+}
+
+\caption{Diagrama del modelo de proyección de Matrices de Leslie con tres estadíos de desarrollo discretos. Las flechas sólidas representan *flujo* de individuos hacia y desde cada uno de los compartimentos que representa el número de individuos en cada categoría. Las flechas punteadas representan la fuente del flujo de individuos, por ejemplo los Nacimientos en N1 provienen de N2 y N3.}\label{fig:Leslie}
+\end{figure}
+
+Para obtener \(N_0(t)\) necesitamos identificar los cohortes o compartimentos que sí se reproducen, entonces si estos son \(N_1\) y \(N_2\), la ecuación para \(N_0\) es:
+
+\begin{align}
+N_{0, t+1} &= \mathrm{Crías\ nacidas\ de\ madres} N_{1, t} + \mathrm{Crías\ nacidas\ de\ madres} N_{2, t} \\
+N_{0, t+1} &= 2 N_{1, t} + 1.5 N_{2, t}
+\end{align}
+
+Claramente, en este modelo estamos asumiendo que la población de interés está constituida únicamente por hembras, de modo que \(2\) y \(1.5\) es el promedio de hembras nacidas por cada hembra en \(N_1\) y \(N_2\). Así tenemos entonces el modelo completo para representar como matriz:
+
+\begin{equation}
+\left[\begin{array}{c}
+N_{0, t+1} \\ N_{1, t+1} \\ N_{2, t+1} \\ N_{3, t+1}
+\end{array}\right] =
+\left[ 
+\begin{array}{cccc}
+0 & 2 & 1.5 & 0 \\
+0.4 & 0 & 0 & 0 \\
+0  & 0.3& 0 & 0 \\
+0  & 0 & 0.1& 0
+\end{array}
+\right] \label{eq:Leslie}
+\end{equation}
+
+La matriz de coeficientes en la ecuación \eqref{eq:Leslie} se conoce omo matriz de Leslie, y la notación corta para dichos sistemas de ecuaciones es:
+
+\[\mathbf{N}(t+1) = L \mathbf{N}(t)\]
+
+\hypertarget{anuxe1lisis-de-los-modelos-de-poblaciones-estructuradas}{%
+\section{Análisis de los modelos de poblaciones estructuradas}\label{anuxe1lisis-de-los-modelos-de-poblaciones-estructuradas}}
+
+\hypertarget{tablas-de-vida}{%
+\subsection{Tablas de vida}\label{tablas-de-vida}}
+
+Las tablas de vida son una herramienta estadística para organizar datos demográficos de fertilidad y supervivencia de las poblaciones. Existen algunas técnicas para generar tablas de vida, y una de las más confiables son los estudios de cohorte (conjunto de individuos que nacen en un período de tiempo específico, por ejemplo). En estos estudios, se lleva un registro cuidadoso de los sucesos de natalidad y mortalidad (\ref{tab:tabla-vida}).
+
+\begin{table}
+
+\caption{\label{tab:tabla-vida}Tabla de vida de borregos de Dall (*Ovis dalli*) colectada por Olaus Murie en el parque nacional del monte McKinley en Alaska.}
+\centering
+\begin{tabular}[t]{l|r|r|r}
+\hline
+Edad & No..Individuos & Muertes & Tasa\\
+\hline
+0-0.5 & 1000 & 54 & 0.0540\\
+\hline
+0.5-1 & 946 & 145 & 0.1533\\
+\hline
+1-2 & 801 & 12 & 0.0150\\
+\hline
+2-3 & 789 & 13 & 0.0165\\
+\hline
+3-4 & 776 & 12 & 0.0155\\
+\hline
+4-5 & 764 & 30 & 0.0393\\
+\hline
+5-6 & 734 & 46 & 0.0627\\
+\hline
+6-7 & 688 & 48 & 0.0698\\
+\hline
+7-8 & 640 & 69 & 0.1078\\
+\hline
+8-9 & 571 & 132 & 0.2312\\
+\hline
+9-10 & 439 & 187 & 0.4260\\
+\hline
+10-11 & 252 & 156 & 0.6190\\
+\hline
+11-12 & 96 & 90 & 0.9375\\
+\hline
+12-13 & 6 & 3 & 0.5000\\
+\hline
+13-14 & 3 & 3 & 1.0000\\
+\hline
+\end{tabular}
+\end{table}
+
+Las tablas de vida entonces, enlistan el número de individuos y el rango de edades al inicio del estudio de cohorte, y el número de muertes que se presentaron mientras los individuos del cohorte se encontraban en cada rango de edades. Este tipo de arreglo permite estimar fácilmente las tasa de mortalidad, como en la tabla \ref{table:tabla-vida}, donde la última columna, es el cociente de la 2a y 3a. Algunas tablas más complejas que la de Olaus Murie contienen una 5a y 6a columnas donde se reporta el número de crías totales y el cociente del número de individuos y crías para cada intervalo de edades.
+
+Las tablas de vida han permitido describir algunas de las diferentes estrategias de los organismos con base en la probabilidad de morir en función de la edad (figura \ref{fig:curva-sup}).
+
+\begin{figure}
+
+{\centering \includegraphics{Mod-mat-ECO_files/figure-latex/curva-sup-1} 
+
+}
+
+\caption{Rleación entre edad y supervivencia en *Ovis dalli*, de acuerdo con la tabla de vida del ejemplo.}\label{fig:curva-sup}
+\end{figure}
+
+La diversidad de estrategias reproductivas existentes resultan en curvas de supervivencia con otras formas. Por ejemplo la curva de \emph{Ovis dalli} es convexa, lo cual quiere decir que la tasa de mortalidad aumenta con la edad. En plantas sin embargo, la curva es cóncava y quiere decir que las muertes ocurren mayoritariamente a edades tempranas, mientras que una pequeña fracción de individuos sobrevive a edades muy avanzadas.
+
+Estras estrategias reproductivas también se manifiestan en la estructura de edades dentro de las poblaciones, es decir la cantidad de individuos neonatos, jóvenes y adultos que hay.
+
+\hypertarget{la-ecuaciuxf3n-de-euler}{%
+\subsection{La ecuación de Euler}\label{la-ecuaciuxf3n-de-euler}}
+
+En demografía, se le conoce como la ecuación característica, y se utiliza para calcular la tasa neta reproductiva de una población. La interpretación del número producido por la ecuación a partir de los datos contenidos en una tabla de vida es \textbf{el número de hembras con el que cada hembra es reemplazada}, y este número se conoce como \(R_0\). Para calularlo necesitamos una tabla de vida para un cohorte de hembras, y hacer la suma:
+
+\begin{equation}
+R_0 = \sum l_x m_x \label{eq:Euler-demog}
+\end{equation}
+
+donde \(l_x\) es la proporción viva del cohorte en cada categoría de edades (1 - columna 4 de tabla \ref{tab:tabla-vida}, o tasa de supervivencia por edad), y \(m_x\), el número promedio de descendientes hembras por cada hembra en cada categoría de edades \(x\).
+
+Para dar un ejemplo utilizaremos otra tabla de vida para ardillas terrestres de Belding \citep{Sherman1984}:
+
+\begin{table}
+
+\caption{\label{tab:tabla-belding}Tabla de vida para hembras de *Spermophilus beldingi*.}
+\centering
+\begin{tabular}[t]{r|r|r}
+\hline
+Edad & l\_x & m\_x\\
+\hline
+0 & 1.000 & 0.000\\
+\hline
+1 & 0.386 & 1.040\\
+\hline
+2 & 0.197 & 2.171\\
+\hline
+3 & 0.106 & 2.450\\
+\hline
+4 & 0.054 & 3.113\\
+\hline
+5 & 0.029 & 1.875\\
+\hline
+6 & 0.014 & 1.575\\
+\hline
+7 & 0.008 & 2.000\\
+\hline
+8 & 0.006 & 1.440\\
+\hline
+9 & 0.002 & 1.632\\
+\hline
+\end{tabular}
+\end{table}
+
+Como es evidente, nos queda por calcular \(l_x m_x\) que corresponde al producto de las 2a y 3a columnas. Una vez obtenido el producto podemos hacer la sumatoria, el código de \textbf{R} para hacer estas operaciones es:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{lxmx }\OtherTok{\textless{}{-}}\NormalTok{ tab2}\SpecialCharTok{$}\NormalTok{l\_x}\SpecialCharTok{*}\NormalTok{tab2}\SpecialCharTok{$}\NormalTok{m\_x}
+\FunctionTok{sum}\NormalTok{(lxmx)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 1.361258
+\end{verbatim}
+
+lo que indica que cada hembra en promedio será reemplazada por 1.36 hembras.
+
+El concepto de \(R_0\) es también muy utilizado en epidemiología, donde tiene las mismas implicaciones. Si cada hembra es reemplazada en promedio por otra hembra (\(R_0 \approx 1\)), la población permanecerá estable, por el contrario si \(R_0 < 1\) la población tenderá a extinguirse. En epidemiología cada infectado deberá contagiar a más de uno para que haya una epidemia.
+
+\hypertarget{valor-reproductivo-y-autovectores}{%
+\subsection{Valor reproductivo y autovectores}\label{valor-reproductivo-y-autovectores}}
+
+Las matrices de coeficientes de transición entre estados de desarrollo y las tasas de natalidad asociadas a cada estado pueden ser representadas con menos parámetros puesto que el crecimiento de la población continúa siendo exponencial. La manera de representar toda la matriz de coeficientes como uno sólo es con los valores propios. Veamos el ejemplo de la ecuación \eqref{eq:Leslie}, cuyos valores propios son:
+
+\[\lambda = \{0, 0.99, -0.24, -0.75 \}\]
+
+Algunos de estos valores propios, como los negativos, son evidentemente, biológicamente insignificantes. En la práctica se elije sólamente uno de los valores propios, denominado \textbf{valor dominante} y que corresponde al valor más grande.
+
+Como ya vimos en la unidad de álgebra de matrices, los valores propios también pueden ser números complejos, pero las implicaciones biológicas de estos valores propios no forman parte de esta unidad de modelos lineales.
+
+\hypertarget{aplicaciones-de-lo-modelo-de-matrices}{%
+\section{Aplicaciones de lo modelo de matrices}\label{aplicaciones-de-lo-modelo-de-matrices}}
+
+Los modelos con matriz de Leslie tienen muchas aplicaciones en ecología, debido a que son sumamente flexibles y relativamente fáciles de implementar. Para comprender primero cómo funcionan y el tipode dinámicas que surgen con estos modelos echemos un vistazo al \href{Unidad-VI/Modelos-matriz.R}{script de R}
 
   \bibliography{book.bib,packages.bib,citas.bib}
 

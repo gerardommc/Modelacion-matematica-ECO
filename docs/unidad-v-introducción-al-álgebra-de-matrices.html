@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title> 7 Unidad V: Introducción al álgebra de matrices | Modelos Matemáticos en Ecología I</title>
   <meta name="description" content="Sitio del curso de la Licenciatura en Ecología de la ENES unidad Mérida" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content=" 7 Unidad V: Introducción al álgebra de matrices | Modelos Matemáticos en Ecología I" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Sitio del curso de la Licenciatura en Ecología de la ENES unidad Mérida" />
   
@@ -24,7 +23,7 @@
 <meta name="author" content="Gerardo Martín" />
 
 
-<meta name="date" content="2021-11-11" />
+<meta name="date" content="2022-08-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html"/>
 <link rel="next" href="unidad-vi-modelos-lineales-de-poblaciones-estructuradas.html"/>
-<script src="libs/header-attrs-2.8/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,9 +49,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -311,10 +310,10 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="unidad-v-introducción-al-álgebra-de-matrices" class="section level1" number="7">
-<h1><span class="header-section-number"> 7</span> Unidad V: Introducción al álgebra de matrices</h1>
-<div id="sistemas-lineales" class="section level2" number="7.1">
-<h2><span class="header-section-number">7.1</span> Sistemas lineales</h2>
+<div id="unidad-v-introducción-al-álgebra-de-matrices" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number"> 7</span> Unidad V: Introducción al álgebra de matrices<a href="unidad-v-introducción-al-álgebra-de-matrices.html#unidad-v-introducción-al-álgebra-de-matrices" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="sistemas-lineales" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Sistemas lineales<a href="unidad-v-introducción-al-álgebra-de-matrices.html#sistemas-lineales" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Un sistema lineal es un conjunto de ecuaciones lineales donde hay, idealmente, tantas variables como ecuaciones y viceversa. Cuando esta condición se cumple, se dice que el sistema está <strong>completo</strong>. La contraparte de estos sistemas son <strong>incompletos</strong>, y pueden tener más variables que ecuaciones ó más ecuaciones que variables.</p>
 <p>Un sistema completo de ecuaciones lineales con dos variables sería:</p>
 <p><span class="math display">\[2x + 3y = 4\]</span></p>
@@ -327,23 +326,23 @@ a_{1,2}x_1+a_{2,2}x_2 + \dots + a_{n,2}x_n &amp; = b_2\\
 a_{1, n}x_1+a_{2,n}x_2 + \dots + a_{n,n}x_n &amp; = b_n
 \end{align}\]</span></p>
 <p>Cuando nos enfrentamos a un sistema como estos, la meta es encontrar los valores de <span class="math inline">\(x_1, x_2, \dots , x_3\)</span> que satisfacen las igualdades. Para sistemas de dos ecuaciones, es fácil econtrar la solución utilizando una variedad de métodos, el primero de ellos, por graficación.</p>
-<div id="solución-gráfica" class="section level3" number="7.1.1">
-<h3><span class="header-section-number">7.1.1</span> Solución gráfica</h3>
+<div id="solución-gráfica" class="section level3 hasAnchor" number="7.1.1">
+<h3><span class="header-section-number">7.1.1</span> Solución gráfica<a href="unidad-v-introducción-al-álgebra-de-matrices.html#solución-gráfica" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>La solución para el sistema de ecuaciones del primer ejemplo:</p>
 <p><span class="math display">\[\begin{align}
 2x + 3y &amp; = 4\\
 4x - 2y &amp; =10
 \end{align}\]</span></p>
 <p>sería:</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-41"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-41"></span>
 <img src="Unidad-V/Soln-grafica-1.png" alt="Solución gráfica del sistema de ecuaciones para dos variables" width="1500" />
 <p class="caption">
 Figura 7.1: Solución gráfica del sistema de ecuaciones para dos variables
 </p>
 </div>
 </div>
-<div id="solución-algebráica" class="section level3" number="7.1.2">
-<h3><span class="header-section-number">7.1.2</span> Solución algebráica</h3>
+<div id="solución-algebráica" class="section level3 hasAnchor" number="7.1.2">
+<h3><span class="header-section-number">7.1.2</span> Solución algebráica<a href="unidad-v-introducción-al-álgebra-de-matrices.html#solución-algebráica" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>El método más sencillo en esta ocasión sería resolver la ecuación 2 para <span class="math inline">\(y\)</span>, pues la podemos simplificar dividiendo ambos lados entre 2:</p>
 <p><span class="math display">\[ (4x - 2y)/2 = (10)/2 \rightarrow 2x - y = 5\]</span>
 de donde obtenemos que:</p>
@@ -356,15 +355,15 @@ de donde obtenemos que:</p>
 <p><span class="math inline">\(y = 2(2.375) - 5 = -0.25\)</span></p>
 <p>Como se puede apreciar, resolver simples ecuaciones lineales puede ser laborioso. Es por ello que se desarrolló el álgebra de matrices, para resolver de eficientemente, sistemas de ecuaciones lineales con muchas variables. En esta unidad revisaremos brevemente los conceptos y técnicas más importantes del álgebra de matrices.</p>
 </div>
-<div id="sistemas-lineales-sin-solución" class="section level3" number="7.1.3">
-<h3><span class="header-section-number">7.1.3</span> Sistemas lineales sin solución</h3>
+<div id="sistemas-lineales-sin-solución" class="section level3 hasAnchor" number="7.1.3">
+<h3><span class="header-section-number">7.1.3</span> Sistemas lineales sin solución<a href="unidad-v-introducción-al-álgebra-de-matrices.html#sistemas-lineales-sin-solución" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>En ocasiones, aunque un sistema de ecuaciones sea aparentemente completo, puede no tener solución. Por ejemplo el sistema:</p>
 <p><span class="math display">\[\begin{align}
 x + y &amp; = 1 \\
 2x + 2y &amp; = 4
 \end{align}\]</span></p>
 <p>no tiene solución, lo cual se manifiesta gráficamente como dos líneas paralelas. Esto quiere decir que no existe un par de valores <span class="math inline">\(x\)</span> y <span class="math inline">\(y\)</span> que satisfagan las ecuaciones del sistema.</p>
-<div class="figure" style="text-align: center"><span id="fig:sin-soln"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:sin-soln"></span>
 <img src="Unidad-V/Sistema-no-solucion.png" alt="Representación gráfica de un sistema linea sin solución." width="1500" />
 <p class="caption">
 Figura 7.2: Representación gráfica de un sistema linea sin solución.
@@ -375,8 +374,8 @@ Figura 7.2: Representación gráfica de un sistema linea sin solución.
 <p>Y al sumarla a la segunda ecuación:</p>
 <p><span class="math display">\[2x - 2x + 2y - 2y = 4-2 \rightarrow 0 = 2\]</span></p>
 </div>
-<div id="resolviendo-sistemas-lineales-más-complejos" class="section level3" number="7.1.4">
-<h3><span class="header-section-number">7.1.4</span> Resolviendo sistemas lineales más complejos</h3>
+<div id="resolviendo-sistemas-lineales-más-complejos" class="section level3 hasAnchor" number="7.1.4">
+<h3><span class="header-section-number">7.1.4</span> Resolviendo sistemas lineales más complejos<a href="unidad-v-introducción-al-álgebra-de-matrices.html#resolviendo-sistemas-lineales-más-complejos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Cualquier sistema de ecuaciones lineales son solución se puede revolver con los métodos que hemos aprendido hasta el momento. Como hemos visto, en estos métodos es fácil cometer errores, máxime con sistemas más complejos con muchas variables y ecuaciones. El método ideal sería aquel que:</p>
 <ol style="list-style-type: decimal">
 <li>Evita manipulaciones riesgosas de las ecuaciones</li>
@@ -413,8 +412,8 @@ x \\ y \\ z \\ t
 1 &amp;-1 &amp;-1 &amp; 1 \\
 -1&amp;-1 &amp; 1 &amp;-1 \\
 -3&amp; 1 &amp;-3 &amp;-3
-\end{array} 
-\right] = 
+\end{array}
+\right] =
 \left[\begin{array}{r}
 1 \\ 3 \\ 1 \\ 4
 \end{array}\right] \tag{7.1}
@@ -437,8 +436,8 @@ x \\ y \\ z \\ t
 </ol>
 <p>Ninguna de estas operaciones afectan las soluciones posibles del sistema (si las hay). Utilizando estas operaciones, la meta es transformar la matriz aumentada (<a href="unidad-v-introducción-al-álgebra-de-matrices.html#eq:Aumentada">(7.2)</a>), en un a matriz que contenga ceros bajo la diagonal (<strong>Triángulo superior</strong>), y así poder sustituir los valores comenzando con la última fila. El sistema de ecuaciones <a href="unidad-v-introducción-al-álgebra-de-matrices.html#eq:sist-matriz">(7.1)</a>, no tiene solución, por lo que solamente nos sirve, por el momento para establecer los conceptos. A continuación lo aplicamos con un sistema más sencillo.</p>
 </div>
-<div id="ejemplo" class="section level3" number="7.1.5">
-<h3><span class="header-section-number">7.1.5</span> Ejemplo</h3>
+<div id="ejemplo" class="section level3 hasAnchor" number="7.1.5">
+<h3><span class="header-section-number">7.1.5</span> Ejemplo<a href="unidad-v-introducción-al-álgebra-de-matrices.html#ejemplo" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Dado el sitema linea:</p>
 <p><span class="math display">\[\begin{align}
 2x - 1y + 3z &amp;= 9\\
@@ -449,9 +448,9 @@ x \\ y \\ z \\ t
 <p><span class="math display">\[\begin{equation}
 \left[
 \begin{array}{rrr|l}
- 2 &amp; -1&amp; 3 &amp; 9 \\
- 3 &amp; 5 &amp;-1 &amp; 10\\
- 4 &amp; 2 &amp;-3 &amp;-1
+2 &amp; -1&amp; 3 &amp; 9 \\
+3 &amp; 5 &amp;-1 &amp; 10\\
+4 &amp; 2 &amp;-3 &amp;-1
 \end{array}
 \right]
 \begin{array}
@@ -494,8 +493,8 @@ x \\ y \\ z \\ t
 <p><span class="math display">\[73z = 219\]</span>
 Con la cual podemos sustituir desde <span class="math inline">\((R_9)\)</span> hacia <span class="math inline">\((R_7)\)</span> para obtener los valores de <span class="math inline">\(x\)</span> y <span class="math inline">\(y\)</span> que satisfacen al sistema lineal.</p>
 </div>
-<div id="sistemas-indeterminados" class="section level3" number="7.1.6">
-<h3><span class="header-section-number">7.1.6</span> Sistemas indeterminados</h3>
+<div id="sistemas-indeterminados" class="section level3 hasAnchor" number="7.1.6">
+<h3><span class="header-section-number">7.1.6</span> Sistemas indeterminados<a href="unidad-v-introducción-al-álgebra-de-matrices.html#sistemas-indeterminados" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Cuando hay más variables que ecuaciones, no es posible encontrar una solución única al sistema, veamos un ejemplo de estos sistemas:</p>
 <p><span class="math display">\[\begin{align}
 2x+2y-z &amp;= 1 \\
@@ -517,7 +516,7 @@ Con la cual podemos sustituir desde <span class="math inline">\((R_9)\)</span> h
 \begin{array}{r}
 (F_1) \\ (F_1) - (F_2)
 \end{array}
-\left[ 
+\left[
 \begin{array}{rrr|r}
 2 &amp; 2 &amp;-1 &amp; 1\\
 0 &amp; 3 &amp;-2 &amp;-1
@@ -540,17 +539,17 @@ Con la cual podemos sustituir desde <span class="math inline">\((R_9)\)</span> h
 <p><span class="math display">\[\left\{(x, y, z): x = \frac{5}{6} - \frac{1}{6}z, y = - \frac{1}{3} + \frac{2}{3}z, z = t \right\}\]</span></p>
 </div>
 </div>
-<div id="operaciones-elementales-con-matrices" class="section level2" number="7.2">
-<h2><span class="header-section-number">7.2</span> Operaciones elementales con matrices</h2>
+<div id="operaciones-elementales-con-matrices" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Operaciones elementales con matrices<a href="unidad-v-introducción-al-álgebra-de-matrices.html#operaciones-elementales-con-matrices" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Las operaciones elementales con matrices son similares a las aritméticas tradicionales. Para ejemplificarlas aquí denotamos a una matriz cualquiera con letras mayúsculas.</p>
-<div id="suma-de-matrices" class="section level3" number="7.2.1">
-<h3><span class="header-section-number">7.2.1</span> Suma de matrices</h3>
+<div id="suma-de-matrices" class="section level3 hasAnchor" number="7.2.1">
+<h3><span class="header-section-number">7.2.1</span> Suma de matrices<a href="unidad-v-introducción-al-álgebra-de-matrices.html#suma-de-matrices" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Si las matrices <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> tienenlas mismas dimensiones <span class="math inline">\(m \times n\)</span> (<span class="math inline">\(m\)</span> = número de filas, <span class="math inline">\(n\)</span> = número de columnas):</p>
 <p><span class="math display">\[A + B = C\]</span>
 La adición de <span class="math inline">\(A\)</span> con <span class="math inline">\(B\)</span> resulta en una tercera matriz <span class="math inline">\(C\)</span> con dimensiones <span class="math inline">\(m \times n\)</span>, tanto si <span class="math inline">\(m = n\)</span> como <span class="math inline">\(m \neq n\)</span>, es decir si las matrices <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> son cuadradas (<span class="math inline">\(m = n\)</span>) como rectangulares.</p>
 <p>Para esto tenemos que considerar qué sucede con los elementos de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> dentro de <span class="math inline">\(C\)</span>:</p>
 <p><span class="math display">\[\begin{equation}
-A = \left[ 
+A = \left[
 \begin{array}{ccc}
 a_{1, 2} &amp; \dots &amp; a_{1, n} \\
 \vdots   &amp; \ddots &amp; \vdots \\
@@ -558,7 +557,7 @@ a_{n, 1} &amp; \dots &amp; a_{n, n}
 \end{array} \right]
 \end{equation}\]</span></p>
 <p><span class="math display">\[\begin{equation}
-B = \left[ 
+B = \left[
 \begin{array}{ccc}
 b_{1, 2} &amp; \dots &amp; b_{1, n} \\
 \vdots   &amp; \ddots&amp; \vdots \\
@@ -566,7 +565,7 @@ b_{n, 1} &amp; \dots &amp; b_{n, n}
 \end{array} \right]
 \end{equation}\]</span></p>
 <p><span class="math display">\[\begin{equation}
-C = \left[ 
+C = \left[
 \begin{array}{ccc}
 a_{1, 2} + b_{1, 2} &amp; \dots &amp; a_{1, n} + b_{1, n} \\
 \vdots   &amp; \ddots &amp; \vdots \\
@@ -581,11 +580,11 @@ a_{n, 1} + b_{n, 1} &amp; \dots &amp; a_{n, n} + b_{n, n}
 <li><span class="math inline">\(A + 0 = A\)</span></li>
 </ol>
 </div>
-<div id="multiplicación-por-un-escalar" class="section level3" number="7.2.2">
-<h3><span class="header-section-number">7.2.2</span> Multiplicación por un escalar</h3>
+<div id="multiplicación-por-un-escalar" class="section level3 hasAnchor" number="7.2.2">
+<h3><span class="header-section-number">7.2.2</span> Multiplicación por un escalar<a href="unidad-v-introducción-al-álgebra-de-matrices.html#multiplicación-por-un-escalar" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Es frecuente multiplicar una matriz por una constante <span class="math inline">\(c\)</span>, tal que <span class="math inline">\(c \times A = cA\)</span>:</p>
 <p><span class="math display">\[\begin{equation}
-c \times A = \left[ 
+c \times A = \left[
 \begin{array}{ccc}
 c  \cdot  a_{1, 2} &amp; \dots &amp; c \cdot a_{1, n} \\
 \vdots   &amp; \ddots &amp; \vdots \\
@@ -593,11 +592,11 @@ c \cdot  a_{n, 1} &amp; \dots &amp; c  \cdot  a_{n, n}
 \end{array} \right]
 \end{equation}\]</span></p>
 </div>
-<div id="transposición" class="section level3" number="7.2.3">
-<h3><span class="header-section-number">7.2.3</span> Transposición</h3>
+<div id="transposición" class="section level3 hasAnchor" number="7.2.3">
+<h3><span class="header-section-number">7.2.3</span> Transposición<a href="unidad-v-introducción-al-álgebra-de-matrices.html#transposición" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>La transposición es el cambio de filas y columnas por columnas y filas, por ejemplo:</p>
 <p><span class="math display">\[\begin{equation}
-A = \left[ 
+A = \left[
 \begin{array}{rrr}
 1 &amp; 2 &amp; 3 \\
 4 &amp; 5 &amp; 6
@@ -615,8 +614,8 @@ A&#39; = \left[
 \right]
 \end{equation}\]</span></p>
 </div>
-<div id="multiplicación-de-matrices" class="section level3" number="7.2.4">
-<h3><span class="header-section-number">7.2.4</span> Multiplicación de matrices</h3>
+<div id="multiplicación-de-matrices" class="section level3 hasAnchor" number="7.2.4">
+<h3><span class="header-section-number">7.2.4</span> Multiplicación de matrices<a href="unidad-v-introducción-al-álgebra-de-matrices.html#multiplicación-de-matrices" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Para entender la multiplicación de matrices es necesario definirla, pues es más complicada que cualquiera de las operaciones que hemos visto anteriormente.</p>
 <p>Supongamos que <span class="math inline">\(C\)</span> es una matriz producto de la multiplicación de las matrices <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>:</p>
 <p><span class="math display">\[C = AB\]</span></p>
@@ -624,23 +623,23 @@ A&#39; = \left[
 <p><span class="math display" id="eq:mat-mult">\[\begin{equation}
 C = \left[
 \begin{array}{rrr}
- &amp;        &amp; \\
- &amp; c_{ij} &amp; \\
- &amp;        &amp;
+&amp;        &amp; \\
+&amp; c_{ij} &amp; \\
+&amp;        &amp;
 \end{array}
 \right] =
-\left[ 
+\left[
 \begin{array}{ccc}
- &amp; &amp; &amp; \\
+&amp; &amp; &amp; \\
 a_{i, 1} &amp; \dots &amp; a_{i, l} \\
- &amp; &amp; &amp;
+&amp; &amp; &amp;
 \end{array}
 \right] \times
-\left[ 
+\left[
 \begin{array}{ccc}
- &amp; b_{1, j} &amp; \\
- &amp; \vdots &amp; \\
- &amp; b_{l, j} &amp; 
+&amp; b_{1, j} &amp; \\
+&amp; \vdots &amp; \\
+&amp; b_{l, j} &amp;
 \end{array}
 \right] \tag{7.3}
 \end{equation}\]</span></p>
@@ -649,10 +648,10 @@ a_{i, 1} &amp; \dots &amp; a_{i, l} \\
 <li><span class="math inline">\(A \rightarrow m \times l\)</span></li>
 <li><span class="math inline">\(B \rightarrow l \times n\)</span></li>
 </ul>
-<div id="ejemplos-3" class="section level4" number="7.2.4.1">
-<h4><span class="header-section-number">7.2.4.1</span> Ejemplos</h4>
+<div id="ejemplos-3" class="section level4 hasAnchor" number="7.2.4.1">
+<h4><span class="header-section-number">7.2.4.1</span> Ejemplos<a href="unidad-v-introducción-al-álgebra-de-matrices.html#ejemplos-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><span class="math display">\[\begin{equation}
-A = \left[ 
+A = \left[
 \begin{array}
 \ 1 &amp; 2 &amp; 3 \\
 -1&amp; 0 &amp; 4
@@ -661,7 +660,7 @@ A = \left[
 \end{equation}\]</span></p>
 <p>y</p>
 <p><span class="math display">\[\begin{equation}
-B = \left[ 
+B = \left[
 \begin{array}
 \ 1 &amp; 2 &amp; 3 &amp; -3\\
 0 &amp;-1 &amp; 4 &amp; 0 \\
@@ -671,14 +670,14 @@ B = \left[
 \end{equation}\]</span></p>
 <p>Solución:</p>
 <p><span class="math display">\[\begin{equation}
-C = AB = \left[ 
+C = AB = \left[
 \begin{array}
 \ 1 &amp; 2 &amp; 3 \\
 -1&amp; 0 &amp; 4
 \end{array}
 \right]
 
-\left[ 
+\left[
 \begin{array}
 \ 1 &amp; 2 &amp; 3 &amp; -3\\
 0 &amp;-1 &amp; 4 &amp; 0 \\
@@ -688,7 +687,7 @@ C = AB = \left[
 \end{equation}\]</span></p>
 <p>Como vimos en la definición de multiplicación, tenemos que muiltiplicar las filas de <span class="math inline">\(A\)</span> por las columnas de <span class="math inline">\(B\)</span>, para así obtener los elementos de <span class="math inline">\(C\)</span>. Hagamos entonces las operaciones elemento por elemento:</p>
 <p><span class="math display">\[\begin{equation}
-c_{1, 1} = \left[ 
+c_{1, 1} = \left[
 \begin{array}{rrr}
 \ 1 &amp; 2 &amp; 3
 \end{array}
@@ -703,7 +702,7 @@ c_{1, 2} = \left[
 1 &amp; 2 &amp; 3
 \end{array}
 \right]
-\left[ 
+\left[
 \begin{array}
 \ 2 \\ -1 \\0
 \end{array}
@@ -711,13 +710,13 @@ c_{1, 2} = \left[
 \end{equation}\]</span></p>
 <p>Y así sucesivamente para obtener:</p>
 <p><span class="math display">\[\begin{equation}
-C = \left[ 
+C = \left[
 \begin{array}
 \ c_{1, 1} &amp; c_{1, 2} &amp; c_{1, 3} &amp; c_{1, 4} \\
-c_{2, 1} &amp; c_{2, 2} &amp; c_{2, 3} &amp; c_{2, 4} 
+c_{2, 1} &amp; c_{2, 2} &amp; c_{2, 3} &amp; c_{2, 4}
 \end{array}
 \right] =
-\left[ 
+\left[
 \begin{array}
 \ -2 &amp; 0 &amp; 5 &amp; 0 \\
 -5 &amp; -2 &amp; -11 &amp; 7
@@ -725,20 +724,20 @@ c_{2, 1} &amp; c_{2, 2} &amp; c_{2, 3} &amp; c_{2, 4}
 \right]
 \end{equation}\]</span></p>
 <p>El resultado es una matriz con tantas filas como <span class="math inline">\(A\)</span> y tantas columnas como <span class="math inline">\(B\)</span>. Es decir que si las dimensiones de <span class="math inline">\(A\)</span> son <span class="math inline">\(m \times l\)</span>, y las de <span class="math inline">\(B\)</span> son <span class="math inline">\(l \times n\)</span>, <span class="math inline">\(C\)</span> tendrá dimensiones <span class="math inline">\(m \times n\)</span>.</p>
-<div id="ejercicio-2" class="section level5" number="7.2.4.1.1">
-<h5><span class="header-section-number">7.2.4.1.1</span> Ejercicio</h5>
+<div id="ejercicio-2" class="section level5 hasAnchor" number="7.2.4.1.1">
+<h5><span class="header-section-number">7.2.4.1.1</span> Ejercicio<a href="unidad-v-introducción-al-álgebra-de-matrices.html#ejercicio-2" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <p>Haz a mano los cálculos de <span class="math inline">\(c_{i, j}\)</span> que nos faltaron para obtener los valores de <span class="math inline">\(C\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div id="determinantes-y-matrices-inversas" class="section level2" number="7.3">
-<h2><span class="header-section-number">7.3</span> Determinantes y matrices inversas</h2>
-<div id="matriz-identidad" class="section level3" number="7.3.1">
-<h3><span class="header-section-number">7.3.1</span> Matriz identidad</h3>
+<div id="determinantes-y-matrices-inversas" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Determinantes y matrices inversas<a href="unidad-v-introducción-al-álgebra-de-matrices.html#determinantes-y-matrices-inversas" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="matriz-identidad" class="section level3 hasAnchor" number="7.3.1">
+<h3><span class="header-section-number">7.3.1</span> Matriz identidad<a href="unidad-v-introducción-al-álgebra-de-matrices.html#matriz-identidad" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Antes de continuar, consideremos la posible existencia de una matriz <span class="math inline">\(I\)</span> tal que <span class="math inline">\(A I = A\)</span>, es decir, una matriz que multiplicada por otra matriz de como resultado la matriz original. Esta matriz se conoce como la matriz identidad, y consiste de una matriz cuadrada con ceros en todas las posiciones excepto en la diagonal, por ejemplo:</p>
 <p><span class="math display">\[\begin{equation}
-I = \left[ 
+I = \left[
 \begin{array}{ccc}
 \ 1 &amp; 0 &amp; 0 &amp; 0 \\
   0 &amp; 1 &amp; 0 &amp; 0 \\
@@ -749,8 +748,8 @@ I = \left[
 \end{equation}\]</span></p>
 <p>Por el contrario, una matriz inversa es quella matriz <span class="math inline">\(A^{-1}\)</span>, tal que <span class="math inline">\(AA^{-1} = I\)</span>, al multiplicarla por una matriz cualquiera <span class="math inline">\(A\)</span> da como resultado la matriz identitaria.</p>
 </div>
-<div id="matriz-inversa" class="section level3" number="7.3.2">
-<h3><span class="header-section-number">7.3.2</span> Matriz inversa</h3>
+<div id="matriz-inversa" class="section level3 hasAnchor" number="7.3.2">
+<h3><span class="header-section-number">7.3.2</span> Matriz inversa<a href="unidad-v-introducción-al-álgebra-de-matrices.html#matriz-inversa" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>La utilidad de este concepto se puede ejemplificar con un sistema de una sola ecuación:</p>
 <p><span class="math display">\[2x = 10\]</span></p>
 <p>Esta ecuación podemos concebirla como el producto de dos vectores con dimensiones <span class="math inline">\(1 \times 1\)</span>. Para resolverla es necesario multplicar ambos lados de la ecuación por el <strong>inverso</strong> del coeficiente de <span class="math inline">\(x\)</span>, de modo que:</p>
@@ -759,14 +758,14 @@ I = \left[
 <p>Por lo tanto, si tenemos que para un sistema lineal la matriz <strong>cuadrada</strong> <span class="math inline">\(A\)</span> de coeficientes puede ser invertida como <span class="math inline">\(A^{-1}\)</span>, esta última contiene la solución al sistema mismo:</p>
 <p><span class="math display">\[XA = B\]</span></p>
 <p><span class="math display">\[A^{-1}XA = A^{-1}B \rightarrow X = A^{-1}B\]</span></p>
-<div id="definción-de-matriz-inversa" class="section level4" number="7.3.2.1">
-<h4><span class="header-section-number">7.3.2.1</span> Definción de matriz inversa</h4>
+<div id="definción-de-matriz-inversa" class="section level4 hasAnchor" number="7.3.2.1">
+<h4><span class="header-section-number">7.3.2.1</span> Definción de matriz inversa<a href="unidad-v-introducción-al-álgebra-de-matrices.html#definción-de-matriz-inversa" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Una matriz inversa de <span class="math inline">\(A\)</span> es aquella matriz <span class="math inline">\(B\)</span> que:</p>
 <p><span class="math display">\[AB = BA = I_n\]</span></p>
 <p>al ser multiplicada por <span class="math inline">\(A\)</span> tiene como resultado la matriz identidad <span class="math inline">\(I_n\)</span>, con dimensiones <span class="math inline">\(n \times n\)</span>. La matriz inversa de <span class="math inline">\(A\)</span> también recibe, como ya se mencionó el nombre <span class="math inline">\(A^{-1}\)</span>. Cuando se puede obtener la matriz <span class="math inline">\(A^{-1}\)</span> de <span class="math inline">\(A\)</span>, se dice que esta última es <strong>invertible</strong> o <strong>no-singular</strong>, de lo contrario se le llama <strong>singular</strong>. Cabe resaltar que la matriz inversa <span class="math inline">\(A^{-1}\)</span> es única para <span class="math inline">\(A\)</span>. Si llegaran a existir dos matrices inversas <span class="math inline">\(B\)</span> y <span class="math inline">\(C\)</span> de <span class="math inline">\(A\)</span>, entonces <span class="math inline">\(B=C\)</span>.</p>
 </div>
-<div id="obteniendo-una-matriz-inversa" class="section level4" number="7.3.2.2">
-<h4><span class="header-section-number">7.3.2.2</span> Obteniendo una matriz inversa</h4>
+<div id="obteniendo-una-matriz-inversa" class="section level4 hasAnchor" number="7.3.2.2">
+<h4><span class="header-section-number">7.3.2.2</span> Obteniendo una matriz inversa<a href="unidad-v-introducción-al-álgebra-de-matrices.html#obteniendo-una-matriz-inversa" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Para obtener una matriz inversa, también tenemos que resolver un sistema de ecuaciones lineales. Supongamos que <span class="math inline">\(A\)</span> es una matriz de <span class="math inline">\(2 \times 2\)</span>:</p>
 <p><span class="math display">\[\begin{equation}
 A = \left[\begin{array}{ccc}
@@ -802,8 +801,8 @@ b_{2, 1} &amp; b_{2, 2}
 \right]
 \end{equation}\]</span></p>
 <p>donde las incógnitas son los elementos <span class="math inline">\(b_{1,1}, \dots b_{n,n}\)</span> de <span class="math inline">\(B\)</span>, la matriz inversa.</p>
-<div id="ejemplo-1" class="section level5" number="7.3.2.2.1">
-<h5><span class="header-section-number">7.3.2.2.1</span> Ejemplo</h5>
+<div id="ejemplo-1" class="section level5 hasAnchor" number="7.3.2.2.1">
+<h5><span class="header-section-number">7.3.2.2.1</span> Ejemplo<a href="unidad-v-introducción-al-álgebra-de-matrices.html#ejemplo-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <p>Tenemos que encontrar la matriz inversa de la matriz de coeficientes:</p>
 <p><span class="math display">\[\begin{equation}
 A =
@@ -838,13 +837,13 @@ b_{1, 1} + 3b_{2,1} = 0\ (F_2) &amp; &amp; b_{1, 2} + 3b_{2, 2} = 1 (F_2 ) \nota
 \end{align}\]</span></p>
 <p>Utilizando los métodos que ya conocemos, podemos obtener las soluciones:</p>
 <p><span class="math display">\[\begin{equation}
-B = \left[ 
+B = \left[
 \begin{array}
 \ b_{1, 1} &amp; b_{1, 2} \\
 b_{2, 1} &amp; b_{2, 2}
 \end{array}
 \right] =
-\left[ 
+\left[
 \begin{array}
 \ 3 &amp; -5 \\
 -1 &amp; 2
@@ -852,17 +851,17 @@ b_{2, 1} &amp; b_{2, 2}
 \right]
 \end{equation}\]</span></p>
 </div>
-<div id="ejercicio-3" class="section level5" number="7.3.2.2.2">
-<h5><span class="header-section-number">7.3.2.2.2</span> Ejercicio</h5>
+<div id="ejercicio-3" class="section level5 hasAnchor" number="7.3.2.2.2">
+<h5><span class="header-section-number">7.3.2.2.2</span> Ejercicio<a href="unidad-v-introducción-al-álgebra-de-matrices.html#ejercicio-3" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <p>Verifica que las soluciones para <span class="math inline">\(b_{1,1}, b_{1,2}, b_{2,1}, b_{2,2}\)</span> sean las reportadas y que <span class="math inline">\(AB = I_2\)</span></p>
 </div>
 </div>
 </div>
-<div id="determinante-de-una-matriz" class="section level3" number="7.3.3">
-<h3><span class="header-section-number">7.3.3</span> Determinante de una matriz</h3>
+<div id="determinante-de-una-matriz" class="section level3 hasAnchor" number="7.3.3">
+<h3><span class="header-section-number">7.3.3</span> Determinante de una matriz<a href="unidad-v-introducción-al-álgebra-de-matrices.html#determinante-de-una-matriz" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Para continuar con este tema revisaremos rápidamente, qué es y qué hacen los vectores. Por ejemplo, la matriz:</p>
 <p><span class="math display">\[
-A = \left[ 
+A = \left[
 \begin{array}{cc}
 3 &amp; 0 \\
 0 &amp; 2
@@ -871,7 +870,7 @@ A = \left[
 \]</span></p>
 <p>puede concebirse como dos vectores <span class="math inline">\(A_1 = \left[\begin{array}{c}3 \\ 0 \end{array} \right]\)</span> y <span class="math inline">\(A_2 = \left[\begin{array}{c}0 \\ 2 \end{array} \right]\)</span>. Cada uno de estos vectores pueden representarse geométricamente como <em>indicaciones</em> de movimiento en el plano cartesiano. El vector <span class="math inline">\(A_1\)</span> indica <span class="math inline">\(3\)</span> pasos en dirección <span class="math inline">\(x\)</span> y <span class="math inline">\(0\)</span> en dirección <span class="math inline">\(y\)</span>. <span class="math inline">\(A_2\)</span> indica <span class="math inline">\(0\)</span> pasos en dirección <span class="math inline">\(x\)</span> y <span class="math inline">\(2\)</span> en dirección <span class="math inline">\(y\)</span>.</p>
 <p>Cuando representamos estos vectores en el plano vemos que <span class="math inline">\(A_1\)</span> está alineado con el eje <span class="math inline">\(x\)</span> y <span class="math inline">\(A_2\)</span> con el <span class="math inline">\(y\)</span>, y el área formada por ambos corresponde al producto de la primera diagonal de <span class="math inline">\(A\)</span>, <span class="math inline">\(3 \times 2\)</span> (figura <a href="unidad-v-introducción-al-álgebra-de-matrices.html#fig:det">7.3</a>).</p>
-<div class="figure" style="text-align: center"><span id="fig:det"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:det"></span>
 <img src="Unidad-V/Determinante.png" alt="Representación gráfica del determinante de la matriz A" width="1500" />
 <p class="caption">
 Figura 7.3: Representación gráfica del determinante de la matriz A
@@ -879,14 +878,14 @@ Figura 7.3: Representación gráfica del determinante de la matriz A
 </div>
 <p>Cuando las matrices utilizadas en una transformación lineal (que multiplican a un vector, por ejemplo), no tienen ceros en las casillas fuera de las diagonales, el área proyectada por los vectores será un rombo, por lo que hay que sustraer el área fuera del producto de la diagonal. Por ejemplo la matriz</p>
 <span class="math display">\[
-A = \left[ 
+A = \left[
 \begin{array}{cc}
 1 &amp; 1 \\
 \frac{1}{2} &amp; 2
 \end{array}
 \right]
 \]</span>
-<div class="figure" style="text-align: center"><span id="fig:det-2"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:det-2"></span>
 <img src="Unidad-V/Determ-2.png" alt="Representación del área formada por matriz sin ceros fuera de la diagonal" width="729" />
 <p class="caption">
 Figura 7.4: Representación del área formada por matriz sin ceros fuera de la diagonal
@@ -904,7 +903,7 @@ a_{2,1} &amp; a_{2,2}
 \right] \tag{7.4}
 \end{equation}\]</span></p>
 <p><span class="math inline">\(A^{-1}\)</span> existe si <span class="math inline">\(a_{1,1}a_{2,2} - a_{1,2}a_{2,1} \neq 0\)</span> (figura <a href="unidad-v-introducción-al-álgebra-de-matrices.html#fig:det-3">7.5</a>)</p>
-<div class="figure" style="text-align: center"><span id="fig:det-3"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:det-3"></span>
 <img src="Unidad-V/Deter-3.png" alt="Representación de matriz con determinante de 0." width="461" />
 <p class="caption">
 Figura 7.5: Representación de matriz con determinante de 0.
@@ -912,7 +911,7 @@ Figura 7.5: Representación de matriz con determinante de 0.
 </div>
 <p>Para calcular una matriz inversa usando el determinante, necesitamos encontrar la matriz <strong>adjunta transpuesta</strong>. Para una matriz de <span class="math inline">\(2 \times 2\)</span> como <a href="unidad-v-introducción-al-álgebra-de-matrices.html#eq:mat-A">(7.4)</a>:</p>
 <p><span class="math display" id="eq:dos-dos">\[\begin{equation}
-A^{-1} = 
+A^{-1} =
   \frac{1}{a_{1,1}a_{2,2} - a_{1,2}a_{2,1}}
     \left[
       \begin{array}
@@ -924,7 +923,7 @@ A^{-1} =
 <p>La expresión <span class="math inline">\(a_{1,1}a_{2,2} - a_{1,2}a_{2,1}\)</span> para una matriz <span class="math inline">\(A\)</span> de <span class="math inline">\(2 \times 2\)</span> se conoce como el determinante y se denota como <span class="math inline">\(\mathrm{det} A\)</span> ó <span class="math inline">\(|A|\)</span>.</p>
 <p>Es posible calcular determinantes para cualquier matriz <span class="math inline">\(A\)</span> con dimensiones <span class="math inline">\(n \times n\)</span>, y en todos los casos, es posible obtener <span class="math inline">\(A^{-1}\)</span> si <span class="math inline">\(\mathrm{det}A \neq 0\)</span>. Las fórmulas para calcular el determinante de cualquier matriz se van complicando considerablemente conforme aumenta su tamaño, por lo que es necesario utilizar una calculadora de determinantes.</p>
 <p>Aquí nos limitaremos a las fórmulas para determinantes de <span class="math inline">\(2\times 2\)</span> (ecuación <a href="unidad-v-introducción-al-álgebra-de-matrices.html#eq:dos-dos">(7.5)</a>. La figura <a href="unidad-v-introducción-al-álgebra-de-matrices.html#fig:det3x3">7.6</a> muestra el procedimiento para una matrix de <span class="math inline">\(3 \times 3\)</span>.</p>
-<div class="figure" style="text-align: center"><span id="fig:det3x3"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:det3x3"></span>
 <img src="Unidad-V/determ.png" alt="Esquema del procedimiento para calcular el determinante de una matriz de 3 x 3." width="312" />
 <p class="caption">
 Figura 7.6: Esquema del procedimiento para calcular el determinante de una matriz de 3 x 3.
@@ -932,17 +931,17 @@ Figura 7.6: Esquema del procedimiento para calcular el determinante de una matri
 </div>
 </div>
 </div>
-<div id="valores-propios" class="section level2" number="7.4">
-<h2><span class="header-section-number">7.4</span> Valores propios</h2>
+<div id="valores-propios" class="section level2 hasAnchor" number="7.4">
+<h2><span class="header-section-number">7.4</span> Valores propios<a href="unidad-v-introducción-al-álgebra-de-matrices.html#valores-propios" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Para hablar de vectores y valores propios necesitamos definir a un vector como una matriz con una sola columna y <span class="math inline">\(n\)</span> filas. Todos los ejemplos que veremos aquí son de vectores de <span class="math inline">\(2 \times 1\)</span>.</p>
 <p>Los vectores en el sentido en que los trataremos aquí, representan <em>indicaciones</em> de movimiento en el plano cartesiano. Por ejemplo el vector:</p>
-<p><span class="math display">\[\left[ 
+<p><span class="math display">\[\left[
 \begin{array}{cc}
 2 \\ 3
 \end{array}
 \right]\]</span></p>
 <p>indica un movimiento de dos posiciones a la derecha en el eje <span class="math inline">\(x\)</span> y tres posiciones arriba en el eje <span class="math inline">\(y\)</span> (vector <span class="math inline">\(\mathbf{u}\)</span> en la figura )</p>
-<div class="figure" style="text-align: center"><span id="fig:vectores"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:vectores"></span>
 <img src="Unidad-V/Vectores.png" alt="Ejemplos de vectores **u** = (2, 3), **u**=(6, 0) y **w** = **u** + **v**." width="1154" />
 <p class="caption">
 Figura 7.7: Ejemplos de vectores <strong>u</strong> = (2, 3), <strong>u</strong>=(6, 0) y <strong>w</strong> = <strong>u</strong> + <strong>v</strong>.
@@ -953,12 +952,12 @@ Figura 7.7: Ejemplos de vectores <strong>u</strong> = (2, 3), <strong>u</strong>
 \begin{array}{c}
 2 \\ 3
 \end{array}
-\right]  + 
+\right]  +
 \left[
 \begin{array}{c}
 6 \\ 0
 \end{array}
-\right] = 
+\right] =
 \left[
 \begin{array}{c}
 2 + 6 \\ 3 +0
@@ -973,7 +972,7 @@ Figura 7.7: Ejemplos de vectores <strong>u</strong> = (2, 3), <strong>u</strong>
 <p><span class="math display">\[
 \mathbf{a} = 2 \times \mathbf{u} = \left[ \begin{array}{c} 4 \\ 6 \end{array} \right]
 \]</span></p>
-<div class="figure" style="text-align: center"><span id="fig:vector-escalar"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:vector-escalar"></span>
 <img src="Unidad-V/Mult-vector.png" alt="Multiplicación de vector por un escalar." width="566" />
 <p class="caption">
 Figura 7.8: Multiplicación de vector por un escalar.
@@ -991,12 +990,12 @@ Figura 7.8: Multiplicación de vector por un escalar.
     3 &amp; 2 \\
     1 &amp; 4
     \end{array}
-    \right] \cdot 
-        \left[ 
+    \right] \cdot
+        \left[
     \begin{array}{c}
     1 \\ 2
     \end{array}
-    \right]= 
+    \right]=
     \left[
     \begin{array}{c}
     7 \\ 9
@@ -1034,15 +1033,15 @@ La parte <span class="math inline">\(\lambda I \mathbf{x}\)</span> se debe a que
 \end{align}\]</span></p>
 <p>por lo tanto tenemos las soluciones <span class="math inline">\(\lambda_1 = -1\)</span> y <span class="math inline">\(\lambda_2 = 4\)</span>. Como es evidente, los vectores propios <span class="math inline">\(A \mathbf{x}\)</span> que satisfacen los valores propios no son únicos, pero cada valor propio <span class="math inline">\(\lambda\)</span> está asociado a un vector propio. Para los sistemas lineales con más de dos variables habrá tantos valores propios como dimensiones.</p>
 </div>
-<div id="vectores-propios" class="section level2" number="7.5">
-<h2><span class="header-section-number">7.5</span> Vectores propios</h2>
+<div id="vectores-propios" class="section level2 hasAnchor" number="7.5">
+<h2><span class="header-section-number">7.5</span> Vectores propios<a href="unidad-v-introducción-al-álgebra-de-matrices.html#vectores-propios" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Como vimos anteriormente, los valores propios son independientes de los vectores, es decir, los valores reflejan una propiedad de las matrices. Para encontrar los vectores que satisfacen la propiedad:</p>
 <p><span class="math display">\[A \vec{x} = \lambda \vec{x}\]</span></p>
 <p>tenemos que resolver la ecuación para los valores de <span class="math inline">\(\lambda\)</span>. Pongamos por ejemplo la matriz</p>
 <p><span class="math display">\[A = \left[\begin{array}{cc} 1 &amp; 2 \\ 3 &amp; 2 \end{array}\right]\]</span></p>
 <p>tiene los valores propios <span class="math inline">\(\lambda_1 = -1\)</span> y <span class="math inline">\(\lambda_2 = 4\)</span>, y la ecuación a resolver para obtener los vectores propios que corresponden con <span class="math inline">\(\lambda_1\)</span> son:</p>
 <p><span class="math display">\[\begin{equation}
-\left[\begin{array}{cc} 1 &amp; 2 \\ 3 &amp; 2 \end{array}\right] 
+\left[\begin{array}{cc} 1 &amp; 2 \\ 3 &amp; 2 \end{array}\right]
 \left[\begin{array}{c} x_1 \\ x_2 \end{array} \right] =
 -1 \left[\begin{array}{c} x_1 \\ x_2 \end{array} \right]
 \end{equation}\]</span></p>
@@ -1061,7 +1060,7 @@ La parte <span class="math inline">\(\lambda I \mathbf{x}\)</span> se debe a que
 \left[ \begin{array}{cc|c}
 2 &amp; 2 &amp; 0 \\
 3 &amp; 3 &amp; 0
-\end{array}\right] 
+\end{array}\right]
 \begin{array}{c}
 (F_1) \\ (F_2)
 \end{array}
@@ -1071,7 +1070,7 @@ La parte <span class="math inline">\(\lambda I \mathbf{x}\)</span> se debe a que
 \left[ \begin{array}{cc|c}
 1 &amp; 1 &amp; 0 \\
 0 &amp; 0 &amp; 0
-\end{array}\right] 
+\end{array}\right]
 \begin{array}{c}
 (F_3) \\ (F_4)
 \end{array}
@@ -1090,7 +1089,6 @@ La parte <span class="math inline">\(\lambda I \mathbf{x}\)</span> se debe a que
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -1130,6 +1128,10 @@ gitbook.start({
 "text": null
 },
 "download": ["Mod-mat-ECO.pdf", "Mod-mat-ECO.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }

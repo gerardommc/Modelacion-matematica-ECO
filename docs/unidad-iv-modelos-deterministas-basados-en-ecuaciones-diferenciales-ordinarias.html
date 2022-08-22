@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title> 6 Unidad IV: Modelos deterministas basados en ecuaciones diferenciales ordinarias | Modelos Matemáticos en Ecología I</title>
   <meta name="description" content="Sitio del curso de la Licenciatura en Ecología de la ENES unidad Mérida" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content=" 6 Unidad IV: Modelos deterministas basados en ecuaciones diferenciales ordinarias | Modelos Matemáticos en Ecología I" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Sitio del curso de la Licenciatura en Ecología de la ENES unidad Mérida" />
   
@@ -24,7 +23,7 @@
 <meta name="author" content="Gerardo Martín" />
 
 
-<meta name="date" content="2021-11-11" />
+<meta name="date" content="2022-08-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="unidad-iii-introducción-al-cálculo-diferencial-e-integral.html"/>
 <link rel="next" href="unidad-v-introducción-al-álgebra-de-matrices.html"/>
-<script src="libs/header-attrs-2.8/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,9 +49,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -311,33 +310,33 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias" class="section level1" number="6">
-<h1><span class="header-section-number"> 6</span> Unidad IV: Modelos deterministas basados en ecuaciones diferenciales ordinarias</h1>
-<div id="modelos-lineales-crecimiento-exponencial-malthusiano" class="section level2" number="6.1">
-<h2><span class="header-section-number">6.1</span> Modelos lineales: Crecimiento exponencial (Malthusiano)</h2>
-<p>El modelo de crecimiento exponencial también recibe el nombre de “Malthusiano,” en honor al matemático inglés Thomas Malthus, quien acuñó la teoría demográfica subyacente en la publicación anónima de 1798 <em>Ensayo sobre el principio de la población</em>. Este libro trata, no de ecología, sino de las raíces de la pobreza en las sociedades capitalistas, según Malthus, ocasionada por la escasez de recursos. Muchas de las ideas de Malthus, son típicas del pensamiento colonial inglés del período en que vivió, sin embargo, son ecológicamente significativas.</p>
+<div id="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number"> 6</span> Unidad IV: Modelos deterministas basados en ecuaciones diferenciales ordinarias<a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="modelos-lineales-crecimiento-exponencial-malthusiano" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Modelos lineales: Crecimiento exponencial (Malthusiano)<a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#modelos-lineales-crecimiento-exponencial-malthusiano" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>El modelo de crecimiento exponencial también recibe el nombre de “Malthusiano”, en honor al matemático inglés Thomas Malthus, quien acuñó la teoría demográfica subyacente en la publicación anónima de 1798 <em>Ensayo sobre el principio de la población</em>. Este libro trata, no de ecología, sino de las raíces de la pobreza en las sociedades capitalistas, según Malthus, ocasionada por la escasez de recursos. Muchas de las ideas de Malthus, son típicas del pensamiento colonial inglés del período en que vivió, sin embargo, son ecológicamente significativas.</p>
 <p>El modelo malthusiano sugiere que, en ausencia de limitaciones, las poblaciones de humanos tenderían a crecer exponencialmente, de ahí que al modelo:</p>
 <p><span class="math display" id="eq:Malthus">\[\begin{equation}
- \frac{dN}{dt} = rN \tag{6.1}
+\frac{dN}{dt} = rN \tag{6.1}
 \end{equation}\]</span></p>
 <p>se le llame modelo de crecimiento malthusiano. La intepretación de <span class="math inline">\(r\)</span> como la tasa de crecimiento sin limitación de alimento, espacio y en ausencia de competencia entre individuos o especies, es la principal aportación de Malthus, y ha servido de base para la formulación de teorías como la evolución.</p>
-<div id="interpretación-de-r" class="section level3" number="6.1.1">
-<h3><span class="header-section-number">6.1.1</span> Interpretación de <span class="math inline">\(r\)</span></h3>
+<div id="interpretación-de-r" class="section level3 hasAnchor" number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> Interpretación de <span class="math inline">\(r\)</span><a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#interpretación-de-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Más que tasa de crecimiento, <span class="math inline">\(r\)</span> representa la tasa de cambio del proceso que estamos observando. Estrictamente hablando una población cambia en razón a dos procesos, nacimientos y muertes. De manera relativamente obvia, los nacimientos representan el crecimiento de la población y las muertes del decrecimiento. Por lo tanto, es frecuente considerar que <span class="math inline">\(r = n - m\)</span>, con <span class="math inline">\(n=\)</span> nacimientos y <span class="math inline">\(m=\)</span> muertes. Si sustiuimos esta re-interpretación de <span class="math inline">\(r\)</span>, en la ecuación <a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#eq:Malthus">(6.1)</a> tenemos:</p>
 <p><span class="math display">\[\begin{equation}
     \frac{dN}{dt} = (n - m)N = nN - mN
 \end{equation}\]</span></p>
 <p>esta re-parametrización del modelo es buena para ejemplificar que si <span class="math inline">\(n &gt; m \rightarrow r&gt;0\)</span>, si <span class="math inline">\(n &lt; m \rightarrow r &lt; 0\)</span> y que si <span class="math inline">\(n = m \rightarrow r = 0\)</span>. El balance entre nacimientos y muertes entonces es la clave para que una población permanezca constante, crezca o disminuya.</p>
 <p>Este balance entre nacimientos y muertes puede también ser concebido como flujos de entrada y salida de un compartimento (figura <a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#fig:nacim-muert">6.1</a>).</p>
-<div class="figure" style="text-align: center"><span id="fig:nacim-muert"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:nacim-muert"></span>
 <img src="Unidad-IV/Malthus-nacim-muert.png" alt="Esquema representativo del modelo de crecimiento malthusiano como flujo de nacimientos y muertes." width="447" />
 <p class="caption">
 Figura 6.1: Esquema representativo del modelo de crecimiento malthusiano como flujo de nacimientos y muertes.
 </p>
 </div>
 </div>
-<div id="análisis-del-modelo" class="section level3" number="6.1.2">
-<h3><span class="header-section-number">6.1.2</span> Análisis del modelo</h3>
+<div id="análisis-del-modelo" class="section level3 hasAnchor" number="6.1.2">
+<h3><span class="header-section-number">6.1.2</span> Análisis del modelo<a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#análisis-del-modelo" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Hasta el momento hemos visto ya muchas de las propiedades el modelo exponencial:</p>
 <ol style="list-style-type: decimal">
 <li>Su derivada es equivalente al valor de la función misma</li>
@@ -347,14 +346,14 @@ Figura 6.1: Esquema representativo del modelo de crecimiento malthusiano como fl
 </ol>
 <p>Estas propiedades hacen que analizar el modelo de crecimiento malthusiano sea relativamente sencillo.</p>
 </div>
-<div id="análisis-de-estabilidad" class="section level3" number="6.1.3">
-<h3><span class="header-section-number">6.1.3</span> Análisis de estabilidad</h3>
+<div id="análisis-de-estabilidad" class="section level3 hasAnchor" number="6.1.3">
+<h3><span class="header-section-number">6.1.3</span> Análisis de estabilidad<a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#análisis-de-estabilidad" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Este análisis surge de la pregunta ¿bajo qué condiciones una población <span class="math inline">\(N\)</span> con tasa de crecimiento <span class="math inline">\(r\)</span> permanece constante? Dada la ecuación <a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#eq:Malthus">(6.1)</a> sabemos que si <span class="math inline">\(\frac{dN}{dt} &gt; 0\)</span>, <span class="math inline">\(N \rightarrow \infty\)</span>, por el contrario si <span class="math inline">\(\frac{dN}{dt} &lt; 0\)</span>, <span class="math inline">\(N \rightarrow 0\)</span>. Entonces, para que no haya cambios en <span class="math inline">\(N\)</span>, necesitamos que <span class="math inline">\(\frac{dN}{dt} = 0\)</span>. De esta equivalencia tenemos que si:</p>
 <p><span class="math display">\[rN = 0\]</span>
 Es debido a que, <span class="math inline">\(r=0\)</span> si <span class="math inline">\(N \neq 0\)</span>, ó <span class="math inline">\(N=0\)</span> si <span class="math inline">\(r \neq 0\)</span>. Es decir que el número de individuos <span class="math inline">\(N\)</span> en una población permanecerá constante sólo bajo dos condiciones, si su tasa de crecimiento es cero, ó no tiene individuos.</p>
 </div>
-<div id="períodos-de-duplicación" class="section level3" number="6.1.4">
-<h3><span class="header-section-number">6.1.4</span> Períodos de duplicación</h3>
+<div id="períodos-de-duplicación" class="section level3 hasAnchor" number="6.1.4">
+<h3><span class="header-section-number">6.1.4</span> Períodos de duplicación<a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#períodos-de-duplicación" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Otra pregunta frecuente en el análisis de poblaciones es ¿cuánto tiempo tardará en duplicarse el tamaño de una población? Para responder esta pregunta, necesitamos la forma cerrada de
 la ecuación <a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#eq:Malthus">(6.1)</a>:</p>
 <p><span class="math display" id="eq:Malthus-c">\[\begin{equation}
@@ -369,15 +368,15 @@ rt &amp;= \ln 2\\ \notag
 t &amp;= \frac{\ln 2}{r}
 \end{align}\]</span></p>
 <p>Es así que podemos representar el período de duplicación de una población cualquiera como una función de su tasa de cambio (figura <a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#fig:periodo-dupl">6.2</a>).</p>
-<div class="figure" style="text-align: center"><span id="fig:periodo-dupl"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:periodo-dupl"></span>
 <img src="Mod-mat-ECO_files/figure-html/periodo-dupl-1.png" alt="Período de duplicación en función de la tasa de crecimiento de una población." width="480" />
 <p class="caption">
 Figura 6.2: Período de duplicación en función de la tasa de crecimiento de una población.
 </p>
 </div>
 </div>
-<div id="estimación-de-la-tasa-de-cambio-r" class="section level3" number="6.1.5">
-<h3><span class="header-section-number">6.1.5</span> Estimación de la tasa de cambio <span class="math inline">\(r\)</span></h3>
+<div id="estimación-de-la-tasa-de-cambio-r" class="section level3 hasAnchor" number="6.1.5">
+<h3><span class="header-section-number">6.1.5</span> Estimación de la tasa de cambio <span class="math inline">\(r\)</span><a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#estimación-de-la-tasa-de-cambio-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Para un ecólogo es de suma utilidad conocer la variación de <span class="math inline">\(r\)</span> para poder medir los efectos del medio ambiente u otras especies sobre los cambios demográficos de una o varias poblaciones. En principio es posible obtener los posibles valores de <span class="math inline">\(r\)</span> a partir de la ecuación <a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#eq:Malthus-c">(6.2)</a>, resolviéndola para <span class="math inline">\(r\)</span>:</p>
 <p><span class="math display">\[\begin{align}
 \frac{N}{N_0} &amp;= e^{rt}\\
@@ -386,14 +385,14 @@ r &amp;= \frac{\ln N - \ln N_0}{t}
 \end{align}\]</span></p>
 <p>En caso de que tengamos observaciones puntuales de <span class="math inline">\(N\)</span> y <span class="math inline">\(N_0\)</span> a lo largo del tiempo.</p>
 </div>
-<div id="implicaciones-del-crecimiento-exponencial" class="section level3" number="6.1.6">
-<h3><span class="header-section-number">6.1.6</span> Implicaciones del crecimiento exponencial</h3>
+<div id="implicaciones-del-crecimiento-exponencial" class="section level3 hasAnchor" number="6.1.6">
+<h3><span class="header-section-number">6.1.6</span> Implicaciones del crecimiento exponencial<a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#implicaciones-del-crecimiento-exponencial" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Una manera de visualizar las repercusiones el crecimiento exponencial y los períodos de duplicación queda de manifiesto con el acertijo:</p>
 <p><em>Tenemos una población de bacterias que se duplica cada minuto, y tenemos cuatro frascos para albergarla. El primer frasco tardó una hora en llenarse, ¿cuánto tiempo pasará para que se llenen los tres frascos restantes?</em></p>
 </div>
 </div>
-<div id="modelos-no-lineales-crecimiento-logístico-de-una-población" class="section level2" number="6.2">
-<h2><span class="header-section-number">6.2</span> Modelos no lineales: Crecimiento logístico de una población</h2>
+<div id="modelos-no-lineales-crecimiento-logístico-de-una-población" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Modelos no lineales: Crecimiento logístico de una población<a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#modelos-no-lineales-crecimiento-logístico-de-una-población" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Gracias a Thomas Malthus comprendimos qué sucede con una población cuando llega a estar libre de limitantes externas, sin embargo ¿cómo podemos representar lo que sucede con una población cuando existen dichas limitaciones? La respuesta es el modelo logístico. Este modelo es una variación del modelo malthusiano, pero para regular la tasa neta de crecimiento incorpora una segunda función de <span class="math inline">\(N\)</span> que al multiplicar a <span class="math inline">\(r\)</span> se vuelve cero cuando <span class="math inline">\(N\)</span> alcanza un nivel definido como capacidad de carga (<span class="math inline">\(K\)</span>).</p>
 <p>El crecimiento logístico ocurre en el mundo real más frecuentemente que el malthusiano, pues todos los organismos vivientes crecen a expensas de otros, lo cual también se conoce como denso-dependencia, es decir, que el crecimiento neto de una población disminuye en relación a la cantidad de individuos.</p>
 <p>La ecuación del modelo logístico es:</p>
@@ -401,7 +400,7 @@ r &amp;= \frac{\ln N - \ln N_0}{t}
     \frac{dN}{dt} = rN \left(1 - \frac{N}{K} \right) \tag{6.3}
 \end{equation}\]</span></p>
 <p>donde <span class="math inline">\(K\)</span> es la capacidad de carga del área donde la población con <span class="math inline">\(N\)</span> individuos vive. Como es evidente la expresión <span class="math inline">\((1-N/K) \rightarrow 0\)</span> cuando <span class="math inline">\(N \rightarrow K\)</span>. De modo que una población con <span class="math inline">\(N &lt; K\)</span> tenderá a a crecer. Si expandimos <span class="math inline">\(rN(1 - N/K) = rN-rN^2/K\)</span> podemos ver que se trata de una parábola. A diferencia del modelo de crecimiento exponencial, donde la tasa de cambio <span class="math inline">\(r\)</span> es constante, en el modelo logístico, la tasa neta cambia con el tamaño de la población.</p>
-<div class="figure" style="text-align: center"><span id="fig:logis"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:logis"></span>
 <img src="Mod-mat-ECO_files/figure-html/logis-1.png" alt="Tasa de cambio de N en relación a N en el modelo logístico, con K = 50 y r = 1" width="480" />
 <p class="caption">
 Figura 6.3: Tasa de cambio de N en relación a N en el modelo logístico, con K = 50 y r = 1
@@ -414,20 +413,20 @@ Figura 6.3: Tasa de cambio de N en relación a N en el modelo logístico, con K 
 <p>con lo que tenemos que:</p>
 <p><span class="math display">\[ N= \frac{K}{2}\]</span></p>
 <p>El crecimiento máximo se da cuando la población se encuentra al 50% de la capacidad de carga.</p>
-<div id="análisis-de-estabilidad-1" class="section level4" number="6.2.0.1">
-<h4><span class="header-section-number">6.2.0.1</span> Análisis de estabilidad</h4>
+<div id="análisis-de-estabilidad-1" class="section level4 hasAnchor" number="6.2.0.1">
+<h4><span class="header-section-number">6.2.0.1</span> Análisis de estabilidad<a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#análisis-de-estabilidad-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Al igual que con el crecimiento malthusiano, nos interesa encontrar en qué situaciones la población será constante, por lo que tenemos que resolver:</p>
 <p><span class="math display">\[\frac{dN}{dt} = 0\]</span>
 para encontrar que hay dos puntos de equilibrio, <span class="math inline">\(N = 0\)</span> y <span class="math inline">\(N = K\)</span>. Estos puntos tienen propiedades diferentes. Por ejemplo, ¿qué sucede con el <span class="math inline">\(N\)</span> si a <span class="math inline">\(N=0\)</span> le sumamos una cantidad muy pequeña <span class="math inline">\(\varepsilon\)</span>? ¿<span class="math inline">\(N\)</span> tenderá a regresar a <span class="math inline">\(0\)</span>? Un ejemplo de este tipo de dinámicas en el mundo real se presenta con un péndulo, el cual tiene dos puntos de equilibrio, uno estable (donde el péndulo descansa en ausencia de una fuerza lateral), y otro inestable</p>
-<div class="figure" style="text-align: center"><span id="fig:equilibrio"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:equilibrio"></span>
 <img src="Unidad-IV/Puntos-equilibrio.png" alt="Puntos de equilibrio de un péndulo." width="368" />
 <p class="caption">
 Figura 6.4: Puntos de equilibrio de un péndulo.
 </p>
 </div>
 <p>Las mismas preguntas aplican para <span class="math inline">\(N=K\)</span>. Para responderlas tenemos que hacer un paréntesis y echar un vistazo a la integración numérica.</p>
-<div id="integración-numérica" class="section level5" number="6.2.0.1.1">
-<h5><span class="header-section-number">6.2.0.1.1</span> Integración numérica</h5>
+<div id="integración-numérica" class="section level5 hasAnchor" number="6.2.0.1.1">
+<h5><span class="header-section-number">6.2.0.1.1</span> Integración numérica<a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#integración-numérica" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <p>Esta técnica de integración está basada en la definición de la derivada como límite:</p>
 <p><span class="math display" id="eq:deriv-Euler">\[\begin{equation}
 f&#39;(x) = \lim \limits_{h \rightarrow 0} \frac{f(x + h) - f(x)}{h} \tag{6.4}
@@ -468,15 +467,15 @@ Este proceso se repite hasta que <span class="math inline">\(t = t_{max}\)</span
 <span id="cb1-16"><a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#cb1-16" aria-hidden="true" tabindex="-1"></a>    N[t] <span class="ot">&lt;-</span> N[t<span class="dv">-1</span>] <span class="sc">+</span> dN[t<span class="dv">-1</span>] <span class="sc">*</span> dt</span>
 <span id="cb1-17"><a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#cb1-17" aria-hidden="true" tabindex="-1"></a>    dN[t] <span class="ot">&lt;-</span> r<span class="sc">*</span>N[t] <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> N[t]<span class="sc">/</span>K)</span>
 <span id="cb1-18"><a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#cb1-18" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:logis-Euler"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:logis-Euler"></span>
 <img src="Mod-mat-ECO_files/figure-html/logis-Euler-1.png" alt="Simulación del modelo logístico con el método de Euler, con el código descrito aquí." width="480" />
 <p class="caption">
 Figura 6.5: Simulación del modelo logístico con el método de Euler, con el código descrito aquí.
 </p>
 </div>
 </div>
-<div id="análisis-de-estabilidad-2" class="section level5" number="6.2.0.1.2">
-<h5><span class="header-section-number">6.2.0.1.2</span> Análisis de estabilidad</h5>
+<div id="análisis-de-estabilidad-2" class="section level5 hasAnchor" number="6.2.0.1.2">
+<h5><span class="header-section-number">6.2.0.1.2</span> Análisis de estabilidad<a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#análisis-de-estabilidad-2" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <p>Aquí veremos si los puntos de equilibrio <span class="math inline">\(N=0\)</span> y <span class="math inline">\(N=K\)</span> son estables o inestables. Para ello simularemos la ecuación con ambas condiciones iniciales, y les sumaremos una cantidad pequeña <span class="math inline">\(\varepsilon = 0.01\)</span> para ver qué sucede con <span class="math inline">\(N\)</span> en el resto de la simulación. En analogía con el péndulo, esperaríamos que <span class="math inline">\(N \rightarrow N^*\)</span>, el punto de equilibrio estable (<span class="math inline">\(0\)</span> ó <span class="math inline">\(K\)</span>) al aplicar la pertubación <span class="math inline">\(\varepsilon\)</span> con ambas condiciones de inicio.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#cb2-1" aria-hidden="true" tabindex="-1"></a>dt <span class="ot">&lt;-</span> <span class="dv">1</span></span>
 <span id="cb2-2"><a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#cb2-2" aria-hidden="true" tabindex="-1"></a>r <span class="ot">&lt;-</span> <span class="fl">0.5</span></span>
@@ -515,7 +514,7 @@ Figura 6.5: Simulación del modelo logístico con el método de Euler, con el c�
 <span id="cb2-35"><a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#cb2-35" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb2-36"><a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#cb2-36" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-37"><a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#cb2-37" aria-hidden="true" tabindex="-1"></a>NK <span class="ot">&lt;-</span> N</span></code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:Estabilidad"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Estabilidad"></span>
 <img src="Mod-mat-ECO_files/figure-html/Estabilidad-1.png" alt="Simulaciones para verificar tipo de puntos de equilibrio" width="960" />
 <p class="caption">
 Figura 6.6: Simulaciones para verificar tipo de puntos de equilibrio
@@ -524,21 +523,21 @@ Figura 6.6: Simulaciones para verificar tipo de puntos de equilibrio
 </div>
 </div>
 </div>
-<div id="modelos-en-tiempo-contínuo-vs-discreto" class="section level2" number="6.3">
-<h2><span class="header-section-number">6.3</span> Modelos en tiempo contínuo vs discreto</h2>
+<div id="modelos-en-tiempo-contínuo-vs-discreto" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Modelos en tiempo contínuo vs discreto<a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#modelos-en-tiempo-contínuo-vs-discreto" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Todos los modelos que hemos visto en la presente unidad son dinámicos, representan procesos que cambian con el tiempo y su principal insumo son la condiciones presentes del sistema, las cuales determinan el estado futuro. Aprendimos a integrar ecuaciones diferenciales utilizando la definición de la derivada, y revirtiéndola asumiendo que <span class="math inline">\(h \approx dt\)</span>. Este proceso, es en esencia una discretización del tiempo, es decir, en lugar de evaluar <span class="math inline">\(f(t)\)</span> para todos los puntos <span class="math inline">\(t\)</span> posibles, lo aproximamos para intervalos separados por <span class="math inline">\(dt\)</span>. Por lo tanto las ecuaciones diferenciales integradas con métodos numéricos tienen algunas similitudes con los modelos en tiempo discreto:</p>
 <p>Los modelos en tiempo discreto se conocen como ecuaciones en diferencias finitas, en comparación con las ecuaciones diferenciales que representan el tiempo de manera contínua.</p>
-<p>La difefencia entre estos modelos consiste en los tiempos en que ocurren los eventos que representan. En los modelos de crecimiento poblacional los eventos representan la incorporación de invidiuos nuevos a la población. Por lo tanto, en un modelo de crecimiento contínuo los individuos nuevos entrar a la población “todo el tiempo.”</p>
-<div id="crecimiento-exponencial-en-tiempo-discreto" class="section level3" number="6.3.1">
-<h3><span class="header-section-number">6.3.1</span> Crecimiento exponencial en tiempo discreto</h3>
+<p>La difefencia entre estos modelos consiste en los tiempos en que ocurren los eventos que representan. En los modelos de crecimiento poblacional los eventos representan la incorporación de invidiuos nuevos a la población. Por lo tanto, en un modelo de crecimiento contínuo los individuos nuevos entrar a la población “todo el tiempo”.</p>
+<div id="crecimiento-exponencial-en-tiempo-discreto" class="section level3 hasAnchor" number="6.3.1">
+<h3><span class="header-section-number">6.3.1</span> Crecimiento exponencial en tiempo discreto<a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#crecimiento-exponencial-en-tiempo-discreto" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Las ecuaciones de los modelos contínuo y discreto corresponden a:</p>
 <p><span class="math display" id="eq:exp-disc" id="eq:exp-cont">\[\begin{align}
 \frac{dN}{dt} &amp; = rN \tag{6.6} \\
-N_{t+1} &amp; = \lambda N \tag{6.7} 
+N_{t+1} &amp; = \lambda N \tag{6.7}
 \end{align}\]</span></p>
 <p>donde las tasas de cambio son <span class="math inline">\(r\)</span> y <span class="math inline">\(\lambda\)</span>. En el caso del modelo en tiempo discreto <a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#eq:exp-disc">(6.7)</a>, se utiliza el parámetro <span class="math inline">\(\lambda\)</span>, puesto que <span class="math inline">\(\lambda = e^r\)</span></p>
 <p>El crecimiento discreto tiene sentido biológico cuando los nacimientos de las poblaciones de algún organismo se sincronizan en un período de tiempo muy corto. El crecimiento exponencial contínuo, en contraste, representa las dinámicas de organismos que pueden reproducirse en cualquier momento. En un modelo de crecimiento discreto, los individuos nuevos entran a la población solamente en un momento preciso. La cantidad de individuos que ingresa a la pobalación al final de cada intervalo es la misma que en un modelo en tiempo contínuo (Figura <a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#fig:disc-cont">6.7</a>). Por lo tanto, la selección de modelo tiene que estar informada por la biología del problema.</p>
-<div class="figure" style="text-align: center"><span id="fig:disc-cont"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:disc-cont"></span>
 <img src="Mod-mat-ECO_files/figure-html/disc-cont-1.png" alt="Diferencia entre modelos en tiempo contínuo (línea discontínua roja) y discreto (escalones en azul)." width="480" />
 <p class="caption">
 Figura 6.7: Diferencia entre modelos en tiempo contínuo (línea discontínua roja) y discreto (escalones en azul).
@@ -546,8 +545,8 @@ Figura 6.7: Diferencia entre modelos en tiempo contínuo (línea discontínua ro
 </div>
 <p>La escala exponencial del parámetro <span class="math inline">\(\lambda\)</span> hace que la solución sea exacta, en comparación con la aproximación numérica con la ecuación de Euler del modelo en tiempo contínuo.</p>
 </div>
-<div id="crecimiento-logístico-en-tiempo-discreto" class="section level3" number="6.3.2">
-<h3><span class="header-section-number">6.3.2</span> Crecimiento logístico en tiempo discreto</h3>
+<div id="crecimiento-logístico-en-tiempo-discreto" class="section level3 hasAnchor" number="6.3.2">
+<h3><span class="header-section-number">6.3.2</span> Crecimiento logístico en tiempo discreto<a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#crecimiento-logístico-en-tiempo-discreto" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>El modelo discreto es:</p>
 <p><span class="math display">\[\begin{equation}
 N_{t+1} = \lambda N \left (1 - \frac{N}{K} \right)
@@ -557,22 +556,22 @@ N_{t+1} = \lambda N \left (1 - \frac{N}{K} \right)
 x_{t+1} = b(1-x_t)x_t \tag{6.8}
 \end{equation}\]</span></p>
 <p>El análisis del comportamiento del modelo logístico es más fácil si se hace gráficamente, en especial porque puede ser complejo, porque puede ser caótico (Figura <a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#fig:caos-logis">6.8</a>)</p>
-<div class="figure" style="text-align: center"><span id="fig:caos-logis"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:caos-logis"></span>
 <img src="Mod-mat-ECO_files/figure-html/caos-logis-1.png" alt="Ejemplos del comportamiento dinámico del modelo de crecimiento logístico, para tres valores de la tasa de crecimiento. En las figuras de la izquiera se muestra la correspondencia entre el tamaño de la población en t y el tamaño en t+1." width="960" />
 <p class="caption">
 Figura 6.8: Ejemplos del comportamiento dinámico del modelo de crecimiento logístico, para tres valores de la tasa de crecimiento. En las figuras de la izquiera se muestra la correspondencia entre el tamaño de la población en t y el tamaño en t+1.
 </p>
 </div>
-<div id="implicaciones-para-sistemas-ecológicos" class="section level4" number="6.3.2.1">
-<h4><span class="header-section-number">6.3.2.1</span> Implicaciones para sistemas ecológicos</h4>
-<p>Las dinámicas producidas por el sencillísimo modelo logístico en tiempo discreto sugieren que un sistema ecológico con esas características bien podría tener un comportamiento caótico. Como ecólogos es preciso preguntarnos si sólo se trata de artefactos matemáticos producto de la simplificación, o si en posible su ocurrencia. Modelos más complejos que toman en cuenta la existencia de diferentes sexos, por ejemplo, tienen un comportamiento más estable que los modelos sin esas estructuras <span class="citation"><a href="#ref-Scheuring2002IsCD" role="doc-biblioref">Scheuring</a> (<a href="#ref-Scheuring2002IsCD" role="doc-biblioref">2002</a>)</span>.</p>
+<div id="implicaciones-para-sistemas-ecológicos" class="section level4 hasAnchor" number="6.3.2.1">
+<h4><span class="header-section-number">6.3.2.1</span> Implicaciones para sistemas ecológicos<a href="unidad-iv-modelos-deterministas-basados-en-ecuaciones-diferenciales-ordinarias.html#implicaciones-para-sistemas-ecológicos" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Las dinámicas producidas por el sencillísimo modelo logístico en tiempo discreto sugieren que un sistema ecológico con esas características bien podría tener un comportamiento caótico. Como ecólogos es preciso preguntarnos si sólo se trata de artefactos matemáticos producto de la simplificación, o si en posible su ocurrencia. Modelos más complejos que toman en cuenta la existencia de diferentes sexos, por ejemplo, tienen un comportamiento más estable que los modelos sin esas estructuras <span class="citation">Scheuring (<a href="#ref-Scheuring2002IsCD" role="doc-biblioref">2002</a>)</span>.</p>
 <p>La diferencia esencial entre el caos producido por el modelo logístico y el comportamiento errático de muchos sistemas ecológicos está en que el caos forma parte del funcionamiento del sistema, es determinístico, mientras que las variaciones de un sistema ecológico generalmente se consideran como fuerzas externas que cambian con el tiempo y que afectan al sistema.</p>
 
 </div>
 </div>
 </div>
 </div>
-<h3>References</h3>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Scheuring2002IsCD" class="csl-entry">
 Scheuring, István. 2002. <span>“Is Chaos Due to over-Simplification in Models of Population Dynamics?”</span> <em>Selection</em> 2: 179–91.
@@ -588,7 +587,6 @@ Scheuring, István. 2002. <span>“Is Chaos Due to over-Simplification in Models
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -628,6 +626,10 @@ gitbook.start({
 "text": null
 },
 "download": ["Mod-mat-ECO.pdf", "Mod-mat-ECO.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
