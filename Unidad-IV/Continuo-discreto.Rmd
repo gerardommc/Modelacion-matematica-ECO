@@ -42,7 +42,7 @@ El modelo discreto es:
 N_{t+1} = \lambda N \left (1 - \frac{N}{K} \right)
 \end{equation}
 
-en este caso $\lamda$ está en la misma escala  que en la ecuación \@ref(eq:exp-disc). Como ya vimos anteriormente, esta versión del modelo de crecimiento logístico, tiene una serie de propiedades distintas al modelo contínuo, por lo que nos enfocaremos en este aspecto. Para ello, transformaremos sustuiremos $N$ por $x_t = N_t/K$, para analizar el tamaño de $N$ en relación a la capacidad de carga:
+en este caso $\lambda$ está en la misma escala  que en la ecuación \@ref(eq:exp-disc). Como ya vimos anteriormente, esta versión del modelo de crecimiento logístico, tiene una serie de propiedades distintas al modelo contínuo, por lo que nos enfocaremos en este aspecto. Para ello, transformaremos sustuiremos $N$ por $x_t = N_t/K$, para analizar el tamaño de $N$ en relación a la capacidad de carga:
 
 \begin{equation}
 x_{t+1} = b(1-x_t)x_t (\#eq:logis-disc)
